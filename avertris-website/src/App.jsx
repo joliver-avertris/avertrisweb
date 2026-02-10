@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Component as EtheralShadow } from "./components/ui/etheral-shadow";
 
 /* ════════════════════════════════════════════════════════════
    AVERTRIS — Full Bilingual Website (EN / ES) — Mobile Responsive
@@ -476,8 +477,17 @@ function HomePage({ go, lang }) {
   return (
     <>
       {/* Hero */}
-      <section style={{ minHeight: mob ? "80vh" : "92vh", display: "flex", alignItems: "flex-end", padding: "0 0 " + (mob ? "60px" : "80px"), backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%), url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80')`, backgroundSize: "cover", backgroundPosition: "center" }}>
-        <Box mob={mob}>
+      <section style={{ minHeight: mob ? "80vh" : "92vh", display: "flex", alignItems: "flex-end", padding: "0 0 " + (mob ? "60px" : "80px"), position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+          <EtheralShadow
+            color="rgba(255, 107, 0, 1)"
+            animation={{ scale: 80, speed: 70 }}
+            noise={{ opacity: 1, scale: 1.2 }}
+            sizing="fill"
+          />
+        </div>
+        <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)" }} />
+        <Box mob={mob} style={{ position: "relative", zIndex: 2 }}>
           <p style={{ fontSize: mob ? 13 : 15, fontWeight: 400, color: "rgba(255,255,255,0.7)", margin: "0 0 24px", fontFamily: F }}>
             <span style={{ color: V.primary, fontWeight: 600 }}>{t(T.hero.label, L)}</span> {t(T.hero.labelSuffix, L)}
           </p>
