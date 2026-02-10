@@ -1,1 +1,11 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #242424;
+  --primary: #FF6B00;
+}
+
+.dark {
+  --background: oklch(0 0 0);
+}
