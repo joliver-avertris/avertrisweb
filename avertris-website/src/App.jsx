@@ -34,105 +34,132 @@ function useMedia() {
 const T = {
   nav: {
     services: { en: "Services", es: "Servicios" },
+    products: { en: "Products", es: "Productos" },
     cases: { en: "Case studies", es: "Casos de éxito" },
     about: { en: "About", es: "Nosotros" },
     blog: { en: "Blog", es: "Blog" },
-    cta: { en: "Let's talk", es: "Hablemos" },
-    megaBuild: { en: "BUILD", es: "CONSTRUIR" },
-    megaGrow: { en: "GROW", es: "CRECER" },
-    megaTransform: { en: "TRANSFORM", es: "TRANSFORMAR" },
+    cta: { en: "Free consultation", es: "Consulta gratuita" },
+    megaTech: { en: "TECHNOLOGY", es: "TECNOLOGÍA" },
+    megaProducts: { en: "PRODUCTS", es: "PRODUCTOS" },
+    megaGrowth: { en: "GROWTH", es: "CRECIMIENTO" },
   },
   hero: {
-    label: { en: "Custom Software", es: "Software a Medida" },
-    labelSuffix: { en: "& Growth Marketing & AI Enablement Agency", es: "& Marketing de Crecimiento & Habilitación de IA" },
-    h1a: { en: "Driving growth", es: "Impulsando el" },
-    h1b: { en: "through Software", es: "crecimiento con" },
-    h1c: { en: "& AI solutions", es: "Software e IA" },
-    ctaCases: { en: "Read case studies", es: "Ver casos de éxito" },
-    ctaTalk: { en: "Let's talk", es: "Hablemos" },
+    label: { en: "Technology", es: "Tecnología" },
+    labelSuffix: { en: "× Growth Marketing × AI Solutions", es: "× Marketing de Crecimiento × Soluciones de IA" },
+    h1a: { en: "Stop losing money", es: "Deja de perder dinero" },
+    h1b: { en: "on disconnected", es: "con herramientas" },
+    h1c: { en: "tools & teams", es: "y equipos desconectados" },
+    ctaCases: { en: "See how we do it", es: "Mira cómo lo hacemos" },
+    ctaTalk: { en: "Get your free consultation", es: "Obtén tu consulta gratis" },
     svc: [
-      { t: { en: "Custom Software", es: "Software a Medida" }, d: { en: "Design and build scalable web & mobile applications with modern tech stacks tailored to your business", es: "Diseñamos y construimos aplicaciones web y móviles escalables con tecnologías modernas adaptadas a tu negocio" } },
-      { t: { en: "Growth Marketing", es: "Marketing de Crecimiento" }, d: { en: "Data-driven strategies that generate qualified leads and accelerate your revenue pipeline", es: "Estrategias basadas en datos que generan leads calificados y aceleran tu pipeline de ingresos" } },
-      { t: { en: "AI Enablement", es: "Habilitación de IA" }, d: { en: "Practical AI integration that automates workflows and unlocks competitive advantages", es: "Integración práctica de IA que automatiza flujos y desbloquea ventajas competitivas" } },
+      { t: { en: "Avertris Technology", es: "Avertris Technology" }, d: { en: "AI agents, chatbots, voice integrations, custom web & mobile apps — built to automate and scale your operations", es: "Agentes de IA, chatbots, integraciones de voz, apps web y móviles a medida — para automatizar y escalar tus operaciones" } },
+      { t: { en: "Avertris Products", es: "Avertris Products" }, d: { en: "Ready-to-use solutions: AI CRM, AI chatbot SaaS, and Dealer Manager for automotive dealerships in USA & LATAM", es: "Soluciones listas para usar: AI CRM, chatbot SaaS con IA, y Dealer Manager para concesionarios automotrices en USA y LATAM" } },
+      { t: { en: "Avertris Growth", es: "Avertris Growth" }, d: { en: "Paid ads, SEO, automations, CRO, email marketing & attribution analytics that turn traffic into revenue", es: "Paid ads, SEO, automatizaciones, CRO, email marketing y analítica de atribución que convierten tráfico en ingresos" } },
     ],
   },
-  clients: { label: { en: "Our clients", es: "Nuestros clientes" } },
+  clients: { label: { en: "Trusted by growing companies", es: "Empresas que confían en nosotros" } },
   results: {
-    label: { en: "Our track record", es: "Nuestro historial" },
-    title: { en: "Results that speak<br/>for themselves", es: "Resultados que<br/>hablan por sí solos" },
+    label: { en: "Real numbers", es: "Números reales" },
+    title: { en: "Results that justify<br/>the investment", es: "Resultados que justifican<br/>la inversión" },
     stats: [
-      { n: "150", s: "+", l: { en: "Projects Delivered", es: "Proyectos Entregados" }, d: { en: "Across software, marketing, and AI for mid-market businesses", es: "En software, marketing e IA para empresas medianas" } },
       { n: "3.2", s: "x", l: { en: "Avg. Revenue Lift", es: "Aumento Promedio de Ingresos" }, d: { en: "Median ROI within 12 months of growth marketing engagement", es: "ROI promedio en 12 meses de marketing de crecimiento" } },
-      { n: "40", s: "%", l: { en: "Cost Reduction", es: "Reducción de Costos" }, d: { en: "Average savings through AI workflow automation", es: "Ahorro promedio con automatización de flujos con IA" } },
-      { n: "98", s: "%", l: { en: "Client Retention", es: "Retención de Clientes" }, d: { en: "Partnerships built on delivery, transparency, and outcomes", es: "Alianzas basadas en entrega, transparencia y resultados" } },
+      { n: "40", s: "%", l: { en: "Cost Reduction", es: "Reducción de Costos" }, d: { en: "Average savings through AI workflow automation and process optimization", es: "Ahorro promedio con automatización de flujos e IA" } },
+      { n: "2", s: "wk", l: { en: "To First Results", es: "Para Primeros Resultados" }, d: { en: "Our consulting-first approach delivers actionable insights from week one", es: "Nuestro enfoque de consultoría primero entrega resultados accionables desde la semana uno" } },
+      { n: "98", s: "%", l: { en: "Client Retention", es: "Retención de Clientes" }, d: { en: "Clients stay because we deliver outcomes, not just deliverables", es: "Los clientes se quedan porque entregamos resultados, no solo entregables" } },
     ],
   },
   capabilities: {
-    title: { en: "Our core<br/>capabilities", es: "Nuestras<br/>capacidades" },
-    cta: { en: "Let's work together", es: "Trabajemos juntos" },
+    title: { en: "Everything your<br/>business needs", es: "Todo lo que tu<br/>negocio necesita" },
+    cta: { en: "Talk to a specialist", es: "Habla con un especialista" },
     items: [
+      { title: { en: "AI Agents &\nChatbots", es: "Agentes IA y\nChatbots" }, icon: "◇" },
+      { title: { en: "Growth Marketing\n& Paid Ads", es: "Marketing de\nCrecimiento y Ads" }, icon: "↗" },
       { title: { en: "Custom Web &\nMobile Apps", es: "Aplicaciones Web\ny Móviles" }, icon: "</>" },
-      { title: { en: "Growth Marketing\n& SEO", es: "Marketing de\nCrecimiento y SEO" }, icon: "↗" },
-      { title: { en: "AI Strategy &\nIntegration", es: "Estrategia e\nIntegración de IA" }, icon: "◇" },
-      { title: { en: "Marketing\nAutomation", es: "Automatización\nde Marketing" }, icon: "⟳" },
-      { title: { en: "Data Analytics\n& BI", es: "Analítica de\nDatos y BI" }, icon: "▤" },
-      { title: { en: "API Design &\nCloud Infra", es: "Diseño de APIs\ne Infraestructura" }, icon: "☁" },
+      { title: { en: "AI CRM &\nAutomations", es: "CRM con IA y\nAutomatizaciones" }, icon: "⟳" },
+      { title: { en: "SEO &\nContent Strategy", es: "SEO y Estrategia\nde Contenido" }, icon: "▤" },
+      { title: { en: "Analytics &\nAttribution", es: "Analítica y\nAtribución" }, icon: "◎" },
     ],
   },
   whyUs: {
     label: { en: "Why Avertris", es: "Por qué Avertris" },
-    title: { en: "A rare combination<br/>built for mid-market", es: "Una combinación única<br/>para el mercado medio" },
-    desc: { en: "Most agencies specialize in one thing. We integrate custom software, growth marketing, and AI into a single strategy — because the biggest growth comes when all three work together.", es: "La mayoría de las agencias se especializan en una sola cosa. Nosotros integramos software, marketing e IA en una sola estrategia — porque el mayor crecimiento ocurre cuando los tres trabajan juntos." },
-    cta: { en: "Let's talk", es: "Hablemos" },
+    title: { en: "One team that does<br/>what 3 agencies can't", es: "Un equipo que hace lo<br/>que 3 agencias no pueden" },
+    desc: { en: "You're tired of coordinating between your dev team, your marketing agency, and your AI consultant — with none of them talking to each other. We integrate technology, marketing, and AI into one strategy, with one team, from day one.", es: "Estás cansado de coordinar entre tu equipo de desarrollo, tu agencia de marketing y tu consultor de IA — sin que ninguno se comunique. Nosotros integramos tecnología, marketing e IA en una sola estrategia, con un solo equipo, desde el día uno." },
+    cta: { en: "Book a free strategy call", es: "Agenda una llamada estratégica gratis" },
     items: [
-      { icon: "◉", title: { en: "Three pillars, one team", es: "Tres pilares, un equipo" }, desc: { en: "Software + Marketing + AI delivered by a single integrated team. No handoffs, no gaps, no wasted budget.", es: "Software + Marketing + IA entregados por un solo equipo integrado. Sin transferencias, sin brechas, sin presupuesto desperdiciado." } },
-      { icon: "◈", title: { en: "Bilingual & bicultural", es: "Bilingüe y bicultural" }, desc: { en: "Native fluency in English and Spanish. We localize strategy, messaging, and execution for US and LATAM audiences.", es: "Fluidez nativa en inglés y español. Localizamos estrategia, mensajes y ejecución para audiencias de EE.UU. y LATAM." } },
-      { icon: "↗", title: { en: "Nearshore advantage", es: "Ventaja nearshore" }, desc: { en: "Timezone-aligned with US East Coast, 40-50% lower costs than domestic agencies, zero quality compromise.", es: "Alineados con la zona horaria de la costa este de EE.UU., 40-50% menos costo, sin comprometer calidad." } },
-      { icon: "◎", title: { en: "Boutique attention, enterprise quality", es: "Atención boutique, calidad empresarial" }, desc: { en: "Direct access to senior talent. Our founders stay involved in every engagement.", es: "Acceso directo a talento senior. Nuestros fundadores participan en cada proyecto." } },
+      { icon: "◉", title: { en: "Three pillars, one team", es: "Tres pilares, un equipo" }, desc: { en: "Software + Marketing + AI delivered by a single team. No handoffs between agencies, no miscommunication, no wasted budget.", es: "Software + Marketing + IA entregados por un solo equipo. Sin transferencias entre agencias, sin miscomunicación, sin presupuesto desperdiciado." } },
+      { icon: "◈", title: { en: "Bilingual & bicultural", es: "Bilingüe y bicultural" }, desc: { en: "We operate natively in English and Spanish. Strategy, messaging, and execution localized for US and LATAM markets.", es: "Operamos nativamente en inglés y español. Estrategia, mensajes y ejecución localizados para mercados de USA y LATAM." } },
+      { icon: "↗", title: { en: "US quality, competitive pricing", es: "Calidad US, precio competitivo" }, desc: { en: "Our offshore team delivers enterprise-grade work at 40-50% less than US agencies, timezone-aligned.", es: "Nuestro equipo offshore entrega trabajo de nivel empresarial a 40-50% menos que agencias US, alineados en zona horaria." } },
+      { icon: "◎", title: { en: "Consulting-first approach", es: "Enfoque de consultoría primero" }, desc: { en: "We don't start building until we understand your business. Every engagement begins with a strategic consultation.", es: "No empezamos a construir hasta entender tu negocio. Cada proyecto inicia con una consultoría estratégica." } },
     ],
+  },
+  testimonials: {
+    label: { en: "What our clients say", es: "Lo que dicen nuestros clientes" },
+    title: { en: "Trusted by mid-market<br/>leaders", es: "Confianza de líderes<br/>del mercado medio" },
+    items: [
+      { name: "Carlos Méndez", role: { en: "CEO, Catojisa", es: "CEO, Catojisa" }, quote: { en: "Avertris didn't just build us a website — they restructured our entire digital operation. We went from managing everything manually to having automated workflows, better leads, and real visibility into what's working. The ROI paid for itself in the first quarter.", es: "Avertris no solo nos construyó un sitio web — reestructuraron toda nuestra operación digital. Pasamos de manejar todo manualmente a tener flujos automatizados, mejores leads y visibilidad real de lo que funciona. El ROI se pagó solo en el primer trimestre." } },
+      { name: "María Rodriguez", role: { en: "COO, AutoPlus Dealers", es: "COO, AutoPlus Dealers" }, quote: { en: "Dealer Manager transformed how we run our dealership. Inventory, CRM, and operations all in one platform. Their bilingual support means our teams in both countries can use it without friction.", es: "Dealer Manager transformó cómo operamos nuestro concesionario. Inventario, CRM y operaciones en una sola plataforma. Su soporte bilingüe significa que nuestros equipos en ambos países lo usan sin fricción." } },
+      { name: "David Chen", role: { en: "VP Marketing, TechScale Inc", es: "VP Marketing, TechScale Inc" }, quote: { en: "We were spending $15K/month on ads with no clear attribution. Avertris set up our analytics, restructured campaigns, and within 3 months our cost per acquisition dropped 60%. They think like business owners, not just marketers.", es: "Gastábamos $15K/mes en ads sin atribución clara. Avertris configuró nuestra analítica, reestructuró campañas, y en 3 meses nuestro costo por adquisición bajó 60%. Piensan como dueños de negocio, no solo como marketers." } },
+    ],
+  },
+  leadMagnet: {
+    label: { en: "Free resource", es: "Recurso gratuito" },
+    title: { en: "Is your business ready<br/>to scale?", es: "¿Tu negocio está listo<br/>para escalar?" },
+    desc: { en: "Download our free Digital Maturity Assessment — a self-guided scorecard that evaluates your technology, marketing, and AI readiness across 25 key areas. Discover exactly where you're leaving money on the table.", es: "Descarga nuestro Assessment de Madurez Digital gratuito — una evaluación guiada que analiza tu tecnología, marketing y preparación para IA en 25 áreas clave. Descubre exactamente dónde estás dejando dinero sobre la mesa." },
+    bullets: {
+      en: ["Score your tech stack, marketing ops, and AI readiness", "Get a prioritized action plan based on your results", "See benchmarks from 100+ mid-market businesses", "Takes only 10 minutes to complete"],
+      es: ["Evalúa tu stack tecnológico, operaciones de marketing y preparación para IA", "Obtén un plan de acción priorizado basado en tus resultados", "Compara con benchmarks de 100+ empresas medianas", "Solo toma 10 minutos completarlo"],
+    },
+    emailPh: { en: "Your work email", es: "Tu correo corporativo" },
+    btn: { en: "Download free assessment", es: "Descargar assessment gratis" },
+    note: { en: "No spam. Unsubscribe anytime.", es: "Sin spam. Cancela cuando quieras." },
   },
   process: {
     label: { en: "How we work", es: "Cómo trabajamos" },
     title: { en: "Our process", es: "Nuestro proceso" },
-    cta: { en: "Start a project", es: "Iniciar un proyecto" },
+    cta: { en: "Start with a consultation", es: "Empieza con una consulta" },
     steps: [
-      { num: "01", title: { en: "Discovery & Strategy", es: "Descubrimiento y Estrategia" }, desc: { en: "Deep-dive into your business to define a clear roadmap aligning software, marketing, and AI.", es: "Análisis profundo de tu negocio para definir una hoja de ruta clara alineando software, marketing e IA." }, details: { en: ["Business & market analysis", "Technical architecture review", "Growth opportunity mapping", "AI readiness assessment"], es: ["Análisis de negocio y mercado", "Revisión de arquitectura técnica", "Mapeo de oportunidades de crecimiento", "Evaluación de preparación para IA"] } },
-      { num: "02", title: { en: "Build & Execute", es: "Construir y Ejecutar" }, desc: { en: "Agile sprints — shipping fast while maintaining quality and keeping you involved every step.", es: "Sprints ágiles — entregando rápido, manteniendo calidad y contigo en cada paso." }, details: { en: ["Agile development sprints", "Campaign setup & launch", "AI model training & integration", "QA & performance testing"], es: ["Sprints de desarrollo ágil", "Configuración y lanzamiento de campañas", "Entrenamiento e integración de modelos IA", "QA y pruebas de rendimiento"] } },
-      { num: "03", title: { en: "Optimize & Scale", es: "Optimizar y Escalar" }, desc: { en: "Continuously monitor, test, and improve. Data drives every decision as we scale.", es: "Monitoreo continuo, pruebas y mejoras. Los datos guían cada decisión mientras escalamos." }, details: { en: ["Performance monitoring", "A/B testing & CRO", "Iterative feature releases", "Quarterly strategy reviews"], es: ["Monitoreo de rendimiento", "Pruebas A/B y CRO", "Lanzamientos iterativos", "Revisiones estratégicas trimestrales"] } },
+      { num: "01", title: { en: "Strategic Consultation", es: "Consultoría Estratégica" }, desc: { en: "We start every engagement with a paid consulting session to deeply understand your business, challenges, and goals. No cookie-cutter solutions.", es: "Cada proyecto inicia con una consultoría pagada para entender profundamente tu negocio, desafíos y objetivos. Sin soluciones genéricas." }, details: { en: ["Business & operations deep-dive", "Technology audit & gap analysis", "Growth opportunity mapping", "Custom roadmap & investment plan"], es: ["Análisis profundo de negocio y operaciones", "Auditoría tecnológica y análisis de brechas", "Mapeo de oportunidades de crecimiento", "Hoja de ruta e inversión personalizada"] } },
+      { num: "02", title: { en: "Build & Execute", es: "Construir y Ejecutar" }, desc: { en: "Agile sprints with weekly demos. You see progress every week, not just at the end. We build software, launch campaigns, and integrate AI in parallel.", es: "Sprints ágiles con demos semanales. Ves progreso cada semana, no solo al final. Construimos software, lanzamos campañas e integramos IA en paralelo." }, details: { en: ["Weekly progress demos", "Parallel execution across pillars", "QA & performance testing", "Campaign setup & launch"], es: ["Demos semanales de progreso", "Ejecución paralela entre pilares", "QA y pruebas de rendimiento", "Configuración y lanzamiento de campañas"] } },
+      { num: "03", title: { en: "Optimize & Scale", es: "Optimizar y Escalar" }, desc: { en: "Data drives every decision as we optimize and scale. Monthly strategy reviews ensure we're always moving the needle on what matters.", es: "Los datos guían cada decisión mientras optimizamos y escalamos. Revisiones estratégicas mensuales aseguran que siempre movemos la aguja en lo que importa." }, details: { en: ["Performance monitoring & dashboards", "A/B testing & CRO", "Monthly strategy reviews", "Scaling playbook development"], es: ["Monitoreo y dashboards de rendimiento", "Pruebas A/B y CRO", "Revisiones estratégicas mensuales", "Desarrollo de playbook de escalamiento"] } },
     ],
   },
   team: {
     label: { en: "Our team", es: "Nuestro equipo" },
     title: { en: "People behind<br/>the results", es: "Las personas detrás<br/>de los resultados" },
     founderRole: { en: "Founder & CEO", es: "Fundador y CEO" },
-    founderBio: { en: "Deep roots in US and LATAM markets. Founded Avertris to bridge enterprise-grade technology with mid-market accessibility — one team delivering software, marketing, and AI that drives real outcomes.", es: "Raíces profundas en los mercados de EE.UU. y LATAM. Fundó Avertris para conectar tecnología empresarial con accesibilidad para el mercado medio — un equipo entregando software, marketing e IA con resultados reales." },
+    founderBio: { en: "Deep roots in US and LATAM markets. Founded Avertris because mid-market companies deserve the same technology, marketing, and AI firepower that Fortune 500s have — at a fraction of the cost. Every project starts with a conversation, not a proposal.", es: "Raíces profundas en los mercados de USA y LATAM. Fundó Avertris porque las empresas medianas merecen la misma tecnología, marketing e IA que tienen las Fortune 500 — a una fracción del costo. Cada proyecto empieza con una conversación, no con una propuesta." },
     members: [
-      { ini: "EN", name: { en: "Head of Engineering", es: "Dir. de Ingeniería" }, role: { en: "Software Development Lead", es: "Líder de Desarrollo" }, desc: { en: "Full-stack architect, 10+ years. React, Node.js, Python, cloud.", es: "Arquitecto full-stack, 10+ años. React, Node.js, Python, cloud." } },
-      { ini: "MK", name: { en: "Growth Lead", es: "Líder de Crecimiento" }, role: { en: "Marketing & Revenue", es: "Marketing e Ingresos" }, desc: { en: "B2B lead gen, SEO, CRO. Bilingual US/LATAM campaigns.", es: "Generación de leads B2B, SEO, CRO. Campañas bilingües EE.UU./LATAM." } },
-      { ini: "AI", name: { en: "AI Director", es: "Director de IA" }, role: { en: "AI & Automation", es: "IA y Automatización" }, desc: { en: "LLM integration, process automation, predictive analytics.", es: "Integración de LLMs, automatización de procesos, analítica predictiva." } },
+      { ini: "EN", name: { en: "Head of Engineering", es: "Dir. de Ingeniería" }, role: { en: "Software & AI Development", es: "Desarrollo de Software e IA" }, desc: { en: "Full-stack architect, 10+ years. Specializes in AI integrations, React, Node.js, Python.", es: "Arquitecto full-stack, 10+ años. Especialista en integraciones de IA, React, Node.js, Python." } },
+      { ini: "MK", name: { en: "Growth Lead", es: "Líder de Crecimiento" }, role: { en: "Marketing & Revenue", es: "Marketing e Ingresos" }, desc: { en: "Bilingual performance marketer. Paid ads, SEO, CRO. Managed $2M+ in ad spend across US/LATAM.", es: "Performance marketer bilingüe. Paid ads, SEO, CRO. Ha gestionado $2M+ en inversión publicitaria en US/LATAM." } },
+      { ini: "AI", name: { en: "AI Director", es: "Director de IA" }, role: { en: "AI Strategy & Automation", es: "Estrategia de IA y Automatización" }, desc: { en: "AI agent development, chatbot architecture, voice integration, process automation.", es: "Desarrollo de agentes IA, arquitectura de chatbots, integración de voz, automatización de procesos." } },
     ],
   },
   cta: {
-    title: { en: "Contact us", es: "Contáctanos" },
-    desc: { en: "Schedule an intro call to get to know each other better and understand the way we work", es: "Agenda una llamada introductoria para conocernos mejor y entender cómo trabajamos" },
-    btn: { en: "Let's talk", es: "Hablemos" },
+    title: { en: "Ready to stop<br/>leaving money<br/>on the table?", es: "¿Listo para dejar<br/>de perder dinero<br/>sobre la mesa?" },
+    desc: { en: "Book a free 30-minute strategy call. We'll analyze your current setup and show you exactly where the biggest opportunities are — whether you hire us or not.", es: "Agenda una llamada estratégica gratuita de 30 minutos. Analizaremos tu setup actual y te mostraremos exactamente dónde están las mayores oportunidades — nos contrates o no." },
+    btn: { en: "Book your free call", es: "Agenda tu llamada gratis" },
   },
   footer: {
     servicesTitle: { en: "Services", es: "Servicios" },
+    productsTitle: { en: "Products", es: "Productos" },
     industriesTitle: { en: "Industries", es: "Industrias" },
-    newsletter: { en: "Join our newsletter!", es: "¡Suscríbete a nuestro newsletter!" },
-    newsletterSub: { en: "AI News, Client Stories & Resources Each Month", es: "Noticias de IA, Historias de Clientes y Recursos Cada Mes" },
+    newsletter: { en: "Get the Digital Edge newsletter", es: "Recibe el newsletter Digital Edge" },
+    newsletterSub: { en: "Weekly AI insights, growth tactics & case studies for mid-market leaders", es: "Insights semanales de IA, tácticas de crecimiento y casos de estudio para líderes del mercado medio" },
     subscribe: { en: "Subscribe", es: "Suscribirse" },
     consent: { en: "I agree to receive Newsletter. *", es: "Acepto recibir el Newsletter. *" },
     copy: { en: "© 2026 Avertris. All rights reserved.", es: "© 2026 Avertris. Todos los derechos reservados." },
     privacy: { en: "Privacy Policy", es: "Política de Privacidad" },
     services: {
-      en: ["Custom Software", "Web & Mobile Apps", "Growth Marketing & SEO", "Marketing Automation", "AI Strategy & Integration", "Data Analytics & BI"],
-      es: ["Software a Medida", "Apps Web y Móviles", "Marketing de Crecimiento y SEO", "Automatización de Marketing", "Estrategia e Integración de IA", "Analítica de Datos y BI"],
+      en: ["AI Consulting & Agents", "AI Chatbot Development", "AI Voice Integration", "Custom Web & Mobile Apps", "Growth Marketing & SEO", "Paid Ads & Attribution"],
+      es: ["Consultoría e Agentes de IA", "Desarrollo de Chatbots IA", "Integración de Voz con IA", "Apps Web y Móviles a Medida", "Marketing de Crecimiento y SEO", "Paid Ads y Atribución"],
+    },
+    products: {
+      en: ["Avertris AI CRM", "AI Chatbot SaaS", "Dealer Manager"],
+      es: ["Avertris AI CRM", "Chatbot SaaS con IA", "Dealer Manager"],
     },
     industries: {
-      en: ["Healthcare", "Financial Services", "E-Commerce & Retail", "Logistics & Supply Chain", "SaaS & Technology", "Manufacturing"],
-      es: ["Salud", "Servicios Financieros", "E-Commerce y Retail", "Logística y Cadena de Suministro", "SaaS y Tecnología", "Manufactura"],
+      en: ["Automotive Dealerships", "Professional Services", "E-Commerce & Retail", "Healthcare", "SaaS & Technology", "Financial Services"],
+      es: ["Concesionarios Automotrices", "Servicios Profesionales", "E-Commerce y Retail", "Salud", "SaaS y Tecnología", "Servicios Financieros"],
     },
     links: {
       en: ["About", "Blog", "Case studies", "Careers"],
@@ -143,53 +170,53 @@ const T = {
   servicesPage: {
     label: { en: "What we do", es: "Lo que hacemos" },
     title: { en: "Services", es: "Servicios" },
-    subtitle: { en: "Three pillars of growth — software, marketing, and AI — working together as one integrated strategy.", es: "Tres pilares de crecimiento — software, marketing e IA — trabajando juntos como una estrategia integrada." },
+    subtitle: { en: "Three business units — Technology, Products, and Growth Marketing — working together so you don't have to manage three agencies.", es: "Tres unidades de negocio — Tecnología, Productos y Growth Marketing — trabajando juntas para que no tengas que manejar tres agencias." },
     included: { en: "What's included", es: "Qué incluye" },
-    discuss: { en: "Discuss your project", es: "Hablemos de tu proyecto" },
+    discuss: { en: "Book a consultation", es: "Agenda una consulta" },
     techStack: { en: "TECH STACK", es: "TECNOLOGÍAS" },
     indLabel: { en: "Industries we serve", es: "Industrias que servimos" },
     indTitle: { en: "Industry expertise", es: "Experiencia por industria" },
     indCta: { en: "Your industry isn't here?", es: "¿Tu industria no está aquí?" },
     pillars: [
       {
-        tab: { en: "Custom Software", es: "Software a Medida" }, icon: "</>",
-        title: { en: "Custom Software Development", es: "Desarrollo de Software a Medida" },
-        subtitle: { en: "Scalable applications built with modern architectures, tailored to your business processes and growth goals.", es: "Aplicaciones escalables con arquitecturas modernas, adaptadas a tus procesos de negocio y objetivos de crecimiento." },
-        desc: { en: "We design, build, and maintain custom web applications, mobile apps, and enterprise platforms. From initial architecture through deployment, we focus on clean code, performance, and maintainability.", es: "Diseñamos, construimos y mantenemos aplicaciones web, apps móviles y plataformas empresariales. Desde la arquitectura inicial hasta el despliegue, nos enfocamos en código limpio, rendimiento y mantenibilidad." },
-        features: { en: ["Web & Mobile Applications", "API Design & Integration", "Cloud Infrastructure (AWS / GCP)", "Legacy System Modernization", "DevOps & CI/CD Pipelines", "Database Design & Optimization"], es: ["Aplicaciones Web y Móviles", "Diseño e Integración de APIs", "Infraestructura Cloud (AWS / GCP)", "Modernización de Sistemas Legados", "DevOps y Pipelines CI/CD", "Diseño y Optimización de Bases de Datos"] },
-        tech: "React, Next.js, Node.js, Python, Go, AWS, PostgreSQL, Docker, Kubernetes",
+        tab: { en: "Technology", es: "Tecnología" }, icon: "◇",
+        title: { en: "Avertris Technology", es: "Avertris Technology" },
+        subtitle: { en: "AI consulting, development, and custom software — built to automate operations and unlock competitive advantages.", es: "Consultoría de IA, desarrollo y software a medida — para automatizar operaciones y desbloquear ventajas competitivas." },
+        desc: { en: "From AI agents and chatbots to complete web and mobile applications, we build the technology that powers your business growth. Every solution starts with understanding your operations and finding the highest-impact opportunities for automation and efficiency.", es: "Desde agentes de IA y chatbots hasta aplicaciones web y móviles completas, construimos la tecnología que impulsa el crecimiento de tu negocio. Cada solución comienza entendiendo tus operaciones y encontrando las oportunidades de mayor impacto para automatización y eficiencia." },
+        features: { en: ["AI Consulting & Strategy", "AI Agent Development", "AI Chatbot Development", "AI Voice Integration", "Custom Web Applications", "Mobile App Development", "General AI Integration Services", "AI Advisory Services"], es: ["Consultoría y Estrategia de IA", "Desarrollo de Agentes de IA", "Desarrollo de Chatbots con IA", "Integración de Voz con IA", "Aplicaciones Web a Medida", "Desarrollo de Apps Móviles", "Servicios de Integración General de IA", "Servicios de Asesoría en IA"] },
+        tech: "OpenAI, Anthropic Claude, LangChain, Python, React, Next.js, Node.js, AWS",
       },
       {
-        tab: { en: "Growth Marketing", es: "Marketing de Crecimiento" }, icon: "↗",
-        title: { en: "Growth Marketing & SEO", es: "Marketing de Crecimiento y SEO" },
-        subtitle: { en: "Data-driven marketing strategies designed to generate qualified leads and accelerate revenue growth.", es: "Estrategias de marketing basadas en datos diseñadas para generar leads calificados y acelerar el crecimiento de ingresos." },
-        desc: { en: "We combine analytics, SEO, paid media, and conversion optimization to build sustainable growth engines. Every campaign is measured and refined based on real data. Bilingual execution across US and LATAM.", es: "Combinamos analítica, SEO, medios pagados y optimización de conversiones para construir motores de crecimiento sostenibles. Cada campaña se mide y refina con datos reales. Ejecución bilingüe en EE.UU. y LATAM." },
-        features: { en: ["SEO & Content Strategy", "Paid Media (Google, Meta, LinkedIn)", "Conversion Rate Optimization", "Marketing Automation (HubSpot)", "Analytics & Attribution Modeling", "Email Marketing & Nurture Sequences"], es: ["Estrategia de SEO y Contenidos", "Medios Pagados (Google, Meta, LinkedIn)", "Optimización de Conversiones", "Automatización de Marketing (HubSpot)", "Analítica y Modelos de Atribución", "Email Marketing y Secuencias de Nurture"] },
-        tech: "HubSpot, Google Analytics 4, Semrush, Google Ads, Meta Ads, Zapier, Segment",
+        tab: { en: "Products", es: "Productos" }, icon: "⬡",
+        title: { en: "Avertris Products", es: "Avertris Products" },
+        subtitle: { en: "Ready-to-deploy solutions for businesses that need results today, not six months from now.", es: "Soluciones listas para implementar para negocios que necesitan resultados hoy, no en seis meses." },
+        desc: { en: "Not every business needs a custom build. Our product suite gives you enterprise-grade tools at a fraction of the cost — AI-powered CRM, intelligent chatbots, and Dealer Manager, the complete automotive dealership solution for USA and LATAM markets.", es: "No todo negocio necesita un desarrollo a medida. Nuestra suite de productos te da herramientas de nivel empresarial a una fracción del costo — CRM con IA, chatbots inteligentes, y Dealer Manager, la solución completa para concesionarios automotrices en USA y LATAM." },
+        features: { en: ["Avertris AI CRM — Full CRM with AI automation (from $300/mo)", "AI Chatbot SaaS — Out-of-the-box conversational AI", "Dealer Manager — Complete automotive dealership CRM & operations", "White-label solutions available", "5 users included, $10/extra user", "Bilingual platform (EN/ES)"], es: ["Avertris AI CRM — CRM completo con automatización IA (desde $300/mes)", "Chatbot SaaS con IA — IA conversacional lista para usar", "Dealer Manager — CRM y operaciones completas para concesionarios", "Soluciones white-label disponibles", "5 usuarios incluidos, $10/usuario extra", "Plataforma bilingüe (EN/ES)"] },
+        tech: "Go High Level, Custom AI Models, React, Node.js, PostgreSQL",
       },
       {
-        tab: { en: "AI Enablement", es: "Habilitación de IA" }, icon: "◇",
-        title: { en: "AI Strategy & Enablement", es: "Estrategia y Habilitación de IA" },
-        subtitle: { en: "Practical AI integration that solves real business problems — not hype, not theory.", es: "Integración práctica de IA que resuelve problemas reales de negocio — sin buzzwords, sin teoría." },
-        desc: { en: "We help mid-market companies identify high-impact AI opportunities, build custom solutions, and train teams. From LLM workflows to predictive analytics, we make AI accessible and actionable.", es: "Ayudamos a empresas medianas a identificar oportunidades de IA de alto impacto, construir soluciones y capacitar equipos. Desde flujos con LLMs hasta analítica predictiva, hacemos la IA accesible y accionable." },
-        features: { en: ["AI Strategy & Roadmapping", "Custom LLM Integration", "Intelligent Process Automation", "Predictive Analytics & Forecasting", "AI-Powered Customer Experiences", "Team Training & AI Adoption"], es: ["Estrategia y Hoja de Ruta de IA", "Integración de LLMs Personalizados", "Automatización Inteligente de Procesos", "Analítica Predictiva y Pronósticos", "Experiencias de Cliente con IA", "Capacitación y Adopción de IA"] },
-        tech: "OpenAI, Anthropic Claude, LangChain, Python, TensorFlow, Vector Databases, RAG",
+        tab: { en: "Growth Marketing", es: "Growth Marketing" }, icon: "↗",
+        title: { en: "Avertris Growth Marketing", es: "Avertris Growth Marketing" },
+        subtitle: { en: "Data-driven marketing that turns ad spend into predictable revenue. Every dollar tracked, every result measured.", es: "Marketing basado en datos que convierte inversión publicitaria en ingresos predecibles. Cada dólar rastreado, cada resultado medido." },
+        desc: { en: "We don't just run ads — we build growth engines. From paid acquisition and SEO to email marketing and full-funnel attribution, every campaign is designed to generate qualified leads that convert into customers. Bilingual execution across US and LATAM markets.", es: "No solo corremos ads — construimos motores de crecimiento. Desde adquisición pagada y SEO hasta email marketing y atribución full-funnel, cada campaña está diseñada para generar leads calificados que se conviertan en clientes. Ejecución bilingüe en mercados de USA y LATAM." },
+        features: { en: ["Paid Ads (Google, Meta, LinkedIn)", "SEO & Content Strategy", "Marketing Automations", "Conversion Rate Optimization (CRO)", "Email Marketing & Sequences", "Analytics & Attribution (Hyros)"], es: ["Paid Ads (Google, Meta, LinkedIn)", "SEO y Estrategia de Contenido", "Automatizaciones de Marketing", "Optimización de Tasa de Conversión (CRO)", "Email Marketing y Secuencias", "Analítica y Atribución (Hyros)"] },
+        tech: "Google Ads, Meta Ads, Hyros, Semrush, Google Analytics 4, Zapier, ActiveCampaign",
       },
     ],
   },
   casesPage: {
     label: { en: "Our work", es: "Nuestro trabajo" },
     title: { en: "Case studies", es: "Casos de éxito" },
-    subtitle: { en: "Real results for real businesses. See how we've helped mid-market companies grow.", es: "Resultados reales para negocios reales. Mira cómo hemos ayudado a crecer a empresas medianas." },
-    filters: { en: ["All", "Software", "Marketing", "AI"], es: ["Todos", "Software", "Marketing", "IA"] },
+    subtitle: { en: "Real results for real businesses. Here's how we've helped companies like yours grow.", es: "Resultados reales para negocios reales. Así hemos ayudado a empresas como la tuya a crecer." },
+    filters: { en: ["All", "Technology", "Marketing", "Products"], es: ["Todos", "Tecnología", "Marketing", "Productos"] },
     readMore: { en: "Read full case study →", es: "Leer caso completo →" },
     cases: [
-      { tag: { en: "Software + AI", es: "Software + IA" }, title: { en: "FinScale: Automated Lending Platform", es: "FinScale: Plataforma de Préstamos Automatizada" }, metric: "60%", metricLabel: { en: "faster loan processing", es: "procesamiento de préstamos más rápido" }, desc: { en: "Built a custom lending platform with AI-powered credit scoring, reducing manual review time by 60%.", es: "Plataforma de préstamos con calificación crediticia con IA, reduciendo revisión manual un 60%." }, cat: ["Software", "AI"] },
-      { tag: { en: "Marketing", es: "Marketing" }, title: { en: "MediGroup: Patient Acquisition Engine", es: "MediGroup: Motor de Adquisición de Pacientes" }, metric: "3.2x", metricLabel: { en: "increase in qualified leads", es: "aumento en leads calificados" }, desc: { en: "Full-funnel growth strategy combining SEO, paid media, and marketing automation for healthcare.", es: "Estrategia full-funnel combinando SEO, medios pagados y automatización de marketing para salud." }, cat: ["Marketing"] },
-      { tag: { en: "AI Enablement", es: "Habilitación de IA" }, title: { en: "LogiNet: Supply Chain Intelligence", es: "LogiNet: Inteligencia de Cadena de Suministro" }, metric: "40%", metricLabel: { en: "reduction in logistics costs", es: "reducción en costos logísticos" }, desc: { en: "Predictive analytics and AI-driven route optimization cutting logistics costs across 3 countries.", es: "Analítica predictiva y optimización de rutas con IA reduciendo costos logísticos en 3 países." }, cat: ["AI"] },
-      { tag: { en: "Software + Marketing", es: "Software + Marketing" }, title: { en: "DataBridge: SaaS Growth Acceleration", es: "DataBridge: Aceleración de Crecimiento SaaS" }, metric: "220%", metricLabel: { en: "increase in MRR", es: "aumento en MRR" }, desc: { en: "Product redesign and data-driven acquisition strategy, tripling monthly recurring revenue.", es: "Rediseño de producto y estrategia de adquisición, triplicando ingresos recurrentes mensuales." }, cat: ["Software", "Marketing"] },
-      { tag: { en: "AI + Marketing", es: "IA + Marketing" }, title: { en: "RetailPro: AI-Powered Personalization", es: "RetailPro: Personalización con IA" }, metric: "85%", metricLabel: { en: "increase in email engagement", es: "aumento en engagement de email" }, desc: { en: "AI-powered product recommendations and personalized marketing campaigns.", es: "Recomendaciones de productos con IA y campañas de marketing personalizadas." }, cat: ["AI", "Marketing"] },
-      { tag: { en: "Software", es: "Software" }, title: { en: "CloudHealth: Telemedicine Platform", es: "CloudHealth: Plataforma de Telemedicina" }, metric: "50K+", metricLabel: { en: "monthly active patients", es: "pacientes activos mensuales" }, desc: { en: "HIPAA-compliant telemedicine platform serving patients across US and Latin America.", es: "Plataforma de telemedicina HIPAA sirviendo pacientes en EE.UU. y América Latina." }, cat: ["Software"] },
+      { tag: { en: "Growth Marketing", es: "Growth Marketing" }, title: { en: "Catojisa: From Zero Digital Presence to Lead Machine", es: "Catojisa: De Cero Presencia Digital a Máquina de Leads" }, metric: "340%", metricLabel: { en: "increase in qualified leads", es: "aumento en leads calificados" }, desc: { en: "Complete digital transformation for this accounting firm — website, SEO, paid ads, and automated lead nurturing. Went from zero online presence to their #1 client acquisition channel.", es: "Transformación digital completa para esta firma contable — sitio web, SEO, paid ads y nurturing automatizado. Pasaron de cero presencia online a ser su canal #1 de adquisición de clientes." }, cat: ["Marketing"] },
+      { tag: { en: "Products", es: "Productos" }, title: { en: "AutoPlus: Dealership Operations Unified", es: "AutoPlus: Operaciones de Concesionario Unificadas" }, metric: "50%", metricLabel: { en: "reduction in admin time", es: "reducción en tiempo administrativo" }, desc: { en: "Deployed Dealer Manager across 3 locations, unifying inventory, CRM, and operations. Bilingual platform serving teams in US and Dominican Republic.", es: "Implementamos Dealer Manager en 3 ubicaciones, unificando inventario, CRM y operaciones. Plataforma bilingüe para equipos en US y República Dominicana." }, cat: ["Products"] },
+      { tag: { en: "Technology + AI", es: "Tecnología + IA" }, title: { en: "FinScale: AI-Powered Lending Platform", es: "FinScale: Plataforma de Préstamos con IA" }, metric: "60%", metricLabel: { en: "faster loan processing", es: "procesamiento de préstamos más rápido" }, desc: { en: "Built a custom lending platform with AI credit scoring, reducing manual review time by 60% and improving approval accuracy.", es: "Plataforma de préstamos con calificación crediticia IA, reduciendo revisión manual un 60% y mejorando precisión de aprobaciones." }, cat: ["Technology"] },
+      { tag: { en: "Technology + Marketing", es: "Tecnología + Marketing" }, title: { en: "DataBridge: SaaS Growth Acceleration", es: "DataBridge: Aceleración de Crecimiento SaaS" }, metric: "220%", metricLabel: { en: "increase in MRR", es: "aumento en MRR" }, desc: { en: "Product redesign plus data-driven acquisition strategy, tripling monthly recurring revenue in 8 months.", es: "Rediseño de producto más estrategia de adquisición, triplicando ingresos recurrentes mensuales en 8 meses." }, cat: ["Technology", "Marketing"] },
+      { tag: { en: "AI + Marketing", es: "IA + Marketing" }, title: { en: "RetailPro: AI-Powered Personalization", es: "RetailPro: Personalización con IA" }, metric: "85%", metricLabel: { en: "increase in email engagement", es: "aumento en engagement de email" }, desc: { en: "AI-driven product recommendations and personalized marketing campaigns that transformed email from cost center to revenue driver.", es: "Recomendaciones de productos con IA y campañas personalizadas que transformaron email de centro de costo a generador de ingresos." }, cat: ["Technology", "Marketing"] },
+      { tag: { en: "Products", es: "Productos" }, title: { en: "MediGroup: CRM That Actually Gets Used", es: "MediGroup: Un CRM Que Realmente Se Usa" }, metric: "3.2x", metricLabel: { en: "patient follow-up rate", es: "tasa de seguimiento de pacientes" }, desc: { en: "Deployed Avertris AI CRM for a healthcare group, with AI-powered follow-ups that 3x'd their patient reactivation rate.", es: "Implementamos Avertris AI CRM para un grupo de salud, con seguimientos impulsados por IA que triplicaron su tasa de reactivación de pacientes." }, cat: ["Products"] },
     ],
   },
   aboutPage: {
@@ -235,11 +262,11 @@ const T = {
     ],
   },
   contactPage: {
-    label: { en: "Get in touch", es: "Contáctanos" },
-    title: { en: "Contact us", es: "Contáctanos" },
-    subtitle: { en: "Schedule an intro call to get to know each other better.", es: "Agenda una llamada introductoria para conocernos mejor." },
-    formTitle: { en: "Tell us about your project", es: "Cuéntanos sobre tu proyecto" },
-    formDesc: { en: "We'll get back to you within one business day.", es: "Te responderemos en un día hábil." },
+    label: { en: "Get started", es: "Empecemos" },
+    title: { en: "Let's talk about<br/>your growth", es: "Hablemos de<br/>tu crecimiento" },
+    subtitle: { en: "Fill out the form or book a call directly. Every conversation starts with understanding — we'll never pitch you something you don't need.", es: "Llena el formulario o agenda una llamada directamente. Cada conversación comienza con entendimiento — nunca te venderemos algo que no necesitas." },
+    formTitle: { en: "Tell us about your business", es: "Cuéntanos sobre tu negocio" },
+    formDesc: { en: "We'll respond within one business day with a personalized assessment.", es: "Te responderemos en un día hábil con una evaluación personalizada." },
     name: { en: "Full Name", es: "Nombre Completo" },
     email: { en: "Email", es: "Correo Electrónico" },
     company: { en: "Company", es: "Empresa" },
@@ -256,8 +283,8 @@ const T = {
     responseLabel: { en: "Response time", es: "Tiempo de respuesta" },
     responseValue: { en: "Within 1 business day", es: "En 1 día hábil" },
     presenceTitle: { en: "Our presence", es: "Nuestra presencia" },
-    svcOptions: { en: ["Custom Software", "Growth Marketing", "AI Enablement", "All Services"], es: ["Software a Medida", "Marketing de Crecimiento", "Habilitación de IA", "Todos los Servicios"] },
-    budgetOptions: ["$10K – $25K", "$25K – $50K", "$50K – $100K", "$100K+"],
+    svcOptions: { en: ["AI & Technology Solutions", "Avertris Products (CRM/Dealer Manager)", "Growth Marketing & SEO", "Paid Ads & Attribution", "Strategic Consultation", "Not sure yet — help me decide"], es: ["Soluciones de IA y Tecnología", "Productos Avertris (CRM/Dealer Manager)", "Growth Marketing y SEO", "Paid Ads y Atribución", "Consultoría Estratégica", "Aún no sé — ayúdenme a decidir"] },
+    budgetOptions: ["$500 – $2,500", "$2,500 – $5,000", "$5,000 – $15,000", "$15,000+"],
   },
 };
 
@@ -330,9 +357,9 @@ function Nav({ page, go, lang, setLang }) {
       label: t(T.nav.services, lang), key: "services",
       mega: {
         cols: [
-          { heading: t(T.nav.megaBuild, lang), items: [{ t: lang === "en" ? "Custom Software Development" : "Desarrollo de Software a Medida" }, { t: lang === "en" ? "Web & Mobile Applications" : "Aplicaciones Web y Móviles" }, { t: lang === "en" ? "API Design & Integration" : "Diseño e Integración de APIs" }] },
-          { heading: t(T.nav.megaGrow, lang), items: [{ t: lang === "en" ? "Growth Marketing & SEO" : "Marketing de Crecimiento y SEO" }, { t: lang === "en" ? "Marketing Automation" : "Automatización de Marketing" }, { t: lang === "en" ? "Conversion Rate Optimization" : "Optimización de Conversiones" }] },
-          { heading: t(T.nav.megaTransform, lang), items: [{ t: lang === "en" ? "AI Strategy & Integration" : "Estrategia e Integración de IA" }, { t: lang === "en" ? "Custom LLM Solutions" : "Soluciones LLM Personalizadas" }, { t: lang === "en" ? "Data Analytics & BI" : "Analítica de Datos y BI" }] },
+          { heading: t(T.nav.megaTech, lang), items: [{ t: lang === "en" ? "AI Consulting & Agents" : "Consultoría e Agentes de IA" }, { t: lang === "en" ? "AI Chatbot Development" : "Desarrollo de Chatbots IA" }, { t: lang === "en" ? "AI Voice Integration" : "Integración de Voz con IA" }, { t: lang === "en" ? "Custom Web & Mobile Apps" : "Apps Web y Móviles a Medida" }] },
+          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)" }] },
+          { heading: t(T.nav.megaGrowth, lang), items: [{ t: lang === "en" ? "Paid Ads & Performance" : "Paid Ads y Performance" }, { t: lang === "en" ? "SEO & Content Strategy" : "SEO y Estrategia de Contenido" }, { t: lang === "en" ? "Analytics & Attribution" : "Analítica y Atribución" }, { t: lang === "en" ? "Email Marketing & CRO" : "Email Marketing y CRO" }] },
         ],
       },
     },
@@ -688,10 +715,61 @@ function HomePage({ go, lang }) {
         </Box>
       </section>
 
+      {/* Testimonials */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+        <Box mob={mob}>
+          <div style={{ marginBottom: mob ? 40 : 64, maxWidth: 520 }}>
+            <Lbl mob={mob}>{t(T.testimonials.label, L)}</Lbl>
+            <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 20px", fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(T.testimonials.title, L) }} />
+            <Hr />
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(3, 1fr)", gap: mob ? 20 : 32 }}>
+            {T.testimonials.items.map((item, i) => (
+              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 36, display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: mob ? "auto" : 320 }}>
+                <div>
+                  <div style={{ fontSize: 36, color: V.primary, lineHeight: 1, marginBottom: 16, fontFamily: F }}>"</div>
+                  <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, lineHeight: 1.8, color: V.g600, margin: 0, fontFamily: F, fontStyle: "italic" }}>{t(item.quote, L)}</p>
+                </div>
+                <div style={{ marginTop: 24, paddingTop: 20, borderTop: `1px solid ${V.g200}` }}>
+                  <p style={{ fontSize: mob ? 14 : 15, fontWeight: 600, color: V.g900, margin: "0 0 2px", fontFamily: F }}>{item.name}</p>
+                  <p style={{ fontSize: mob ? 12 : 13, fontWeight: 400, color: V.g400, margin: 0, fontFamily: F }}>{t(item.role, L)}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* Lead Magnet */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g900 }}>
+        <Box mob={mob}>
+          <div style={{ display: mob ? "flex" : "grid", flexDirection: mob ? "column" : "row", gridTemplateColumns: mob ? undefined : "1fr 1fr", gap: mob ? 40 : 80, alignItems: mob ? "stretch" : "center" }}>
+            <div>
+              <Lbl mob={mob}>{t(T.leadMagnet.label, L)}</Lbl>
+              <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.white, margin: "0 0 20px", fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(T.leadMagnet.title, L) }} />
+              <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", margin: "0 0 32px", fontFamily: F }}>{t(T.leadMagnet.desc, L)}</p>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {t(T.leadMagnet.bullets, L).map((b, j) => (
+                  <li key={j} style={{ fontSize: mob ? 13 : 14, fontWeight: 400, color: "rgba(255,255,255,0.8)", padding: "8px 0", display: "flex", alignItems: "center", gap: 10, fontFamily: F }}>
+                    <span style={{ width: 20, height: 20, borderRadius: "50%", background: V.primary, color: V.white, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, flexShrink: 0, fontWeight: 600 }}>✓</span>{b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div style={{ background: "rgba(255,255,255,0.05)", borderRadius: 16, padding: mob ? 28 : 48, border: "1px solid rgba(255,255,255,0.1)" }}>
+              <h3 style={{ fontSize: mob ? 20 : 24, fontWeight: 700, color: V.white, margin: "0 0 8px", fontFamily: F }}>{t(T.leadMagnet.title, L).replace(/<br\/>/g, " ")}</h3>
+              <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: "rgba(255,255,255,0.5)", margin: "0 0 32px", fontFamily: F }}>{t(T.leadMagnet.note, L)}</p>
+              <input type="email" placeholder={t(T.leadMagnet.emailPh, L)} style={{ width: "100%", padding: mob ? "14px 16px" : "16px 20px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.08)", color: V.white, fontSize: 14, fontFamily: F, marginBottom: 16, outline: "none", boxSizing: "border-box" }} />
+              <Btn variant="primary" style={{ width: "100%", justifyContent: "center" }} mob={mob}>{t(T.leadMagnet.btn, L)}</Btn>
+            </div>
+          </div>
+        </Box>
+      </section>
+
       {/* CTA */}
       <section style={{ padding: mob ? "80px 0" : "120px 0", backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80')`, backgroundSize: "cover", backgroundPosition: "center" }}>
         <Box mob={mob}><div style={{ display: mob ? "flex" : "grid", flexDirection: mob ? "column" : "row", gridTemplateColumns: mob ? undefined : "1fr 1fr", gap: mob ? 32 : 60, alignItems: "center" }}>
-          <h2 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, color: V.white, lineHeight: 1.1, letterSpacing: -1.5, margin: 0, fontFamily: F }}>{t(T.cta.title, L)}</h2>
+          <h2 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, color: V.white, lineHeight: 1.1, letterSpacing: -1.5, margin: 0, fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(T.cta.title, L) }} />
           <div>
             <p style={{ fontSize: mob ? 15 : 18, fontWeight: 300, color: "rgba(255,255,255,0.75)", lineHeight: 1.7, margin: "0 0 24px", fontFamily: F }}>{t(T.cta.desc, L)}</p>
             <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{t(T.cta.btn, L)}</Btn>
@@ -1060,7 +1138,9 @@ function FooterSection({ go, lang }) {
 
 export default function App() {
   const [page, setPage] = useState("home");
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState(() => {
+    try { const bl = navigator.language || navigator.userLanguage || "en"; return bl.startsWith("es") ? "es" : "en"; } catch { return "en"; }
+  });
 
   const go = (p) => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); };
 
