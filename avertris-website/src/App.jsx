@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Component as EtheralShadow } from "./components/ui/etheral-shadow";
 import { FallingPattern } from "./components/ui/falling-pattern";
+import { AuroraBackground } from "./components/ui/aurora-background";
 
 /* ════════════════════════════════════════════════════════════
    AVERTRIS — Full Bilingual Website (EN / ES) — Mobile Responsive
@@ -478,9 +479,15 @@ function HomePage({ go, lang }) {
   return (
     <>
       {/* Hero */}
-      <section style={{ minHeight: mob ? "80vh" : "92vh", display: "flex", alignItems: "flex-end", padding: "0 0 " + (mob ? "60px" : "80px"), position: "relative", overflow: "hidden" }}>
-        {/* Ethereal Shadow base layer */}
+      <section className="dark" style={{ minHeight: mob ? "80vh" : "92vh", display: "flex", alignItems: "flex-end", padding: "0 0 " + (mob ? "60px" : "80px"), position: "relative", overflow: "hidden" }}>
+        {/* Aurora Background base layer */}
         <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+          <AuroraBackground className="dark h-full w-full bg-zinc-900" showRadialGradient={true}>
+            <span />
+          </AuroraBackground>
+        </div>
+        {/* Ethereal Shadow layer */}
+        <div style={{ position: "absolute", inset: 0, zIndex: 1, opacity: 0.5 }}>
           <EtheralShadow
             color="rgba(255, 107, 0, 1)"
             animation={{ scale: 80, speed: 70 }}
@@ -489,7 +496,7 @@ function HomePage({ go, lang }) {
           />
         </div>
         {/* Falling Pattern overlay */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 1 }}>
+        <div style={{ position: "absolute", inset: 0, zIndex: 2 }}>
           <FallingPattern
             color="#FF6B00"
             backgroundColor="transparent"
@@ -497,12 +504,12 @@ function HomePage({ go, lang }) {
             blurIntensity="0.8em"
             density={1}
             className="h-full w-full"
-            style={{ opacity: 0.6 }}
+            style={{ opacity: 0.4 }}
           />
         </div>
         {/* Dark gradient for text readability */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 2, background: "linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 55%, transparent 100%)" }} />
-        <Box mob={mob} style={{ position: "relative", zIndex: 3 }}>
+        <div style={{ position: "absolute", inset: 0, zIndex: 3, background: "linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 55%, transparent 100%)" }} />
+        <Box mob={mob} style={{ position: "relative", zIndex: 4 }}>
           <p style={{ fontSize: mob ? 13 : 15, fontWeight: 400, color: "rgba(255,255,255,0.7)", margin: "0 0 24px", fontFamily: F }}>
             <span style={{ color: V.primary, fontWeight: 600 }}>{t(T.hero.label, L)}</span> {t(T.hero.labelSuffix, L)}
           </p>
