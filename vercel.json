@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd avertris-website && npm install && npm run build",
+  "outputDirectory": "avertris-website/dist",
+  "framework": "vite"
+}
