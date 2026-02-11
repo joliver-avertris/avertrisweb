@@ -162,8 +162,8 @@ const T = {
       es: ["Concesionarios Automotrices", "Servicios Profesionales", "E-Commerce y Retail", "Salud", "SaaS y Tecnología", "Servicios Financieros"],
     },
     links: {
-      en: ["About", "Blog", "Case studies", "Careers"],
-      es: ["Nosotros", "Blog", "Casos de éxito", "Carreras"],
+      en: ["About", "Blog", "Case studies", "Products"],
+      es: ["Nosotros", "Blog", "Casos de éxito", "Productos"],
     },
   },
   /* ── Inner Pages ── */
@@ -286,6 +286,94 @@ const T = {
     svcOptions: { en: ["AI & Technology Solutions", "Avertris Products (CRM/Dealer Manager)", "Growth Marketing & SEO", "Paid Ads & Attribution", "Strategic Consultation", "Not sure yet — help me decide"], es: ["Soluciones de IA y Tecnología", "Productos Avertris (CRM/Dealer Manager)", "Growth Marketing y SEO", "Paid Ads y Atribución", "Consultoría Estratégica", "Aún no sé — ayúdenme a decidir"] },
     budgetOptions: ["$500 – $2,500", "$2,500 – $5,000", "$5,000 – $15,000", "$15,000+"],
   },
+  /* ── Products Hub ── */
+  productsPage: {
+    label: { en: "Products", es: "Productos" },
+    title: { en: "Tools that stop<br/>the bleeding", es: "Herramientas que detienen<br/>la hemorragia" },
+    subtitle: { en: "Ready-to-deploy solutions for the problems costing you the most money right now.", es: "Soluciones listas para implementar que atacan los problemas que más dinero te cuestan ahora mismo." },
+    products: [
+      {
+        slug: "ai-crm",
+        icon: "⟳",
+        name: { en: "Avertris AI CRM", es: "Avertris AI CRM" },
+        tagline: { en: "Stop losing clients to slow follow-ups", es: "Deja de perder clientes por seguimientos lentos" },
+        desc: { en: "AI-powered CRM that responds to leads in seconds, automates your entire pipeline, and ensures zero clients fall through the cracks. Built for teams drowning in manual follow-ups.", es: "CRM potenciado con IA que responde leads en segundos, automatiza todo tu pipeline y asegura que ningún cliente se pierda. Hecho para equipos ahogados en seguimientos manuales." },
+        stat: { en: "70% faster lead response", es: "70% más rápido en respuesta a leads" },
+        price: { en: "From $300/mo", es: "Desde $300/mes" },
+      },
+      {
+        slug: "ai-chatbot",
+        icon: "◇",
+        name: { en: "AI Chatbot SaaS", es: "Chatbot SaaS con IA" },
+        tagline: { en: "Never lose another lead to a slow inbox", es: "Nunca pierdas otro lead por una bandeja lenta" },
+        desc: { en: "Deploy an AI agent on your website in minutes. It qualifies leads, answers questions, and books meetings 24/7 — so your team stops hemorrhaging opportunities while they sleep.", es: "Despliega un agente IA en tu web en minutos. Califica leads, responde preguntas y agenda reuniones 24/7 — para que tu equipo deje de perder oportunidades mientras duermen." },
+        stat: { en: "24/7 lead capture", es: "Captura de leads 24/7" },
+        price: { en: "From $150/mo", es: "Desde $150/mes" },
+      },
+      {
+        slug: "dealer-manager",
+        icon: "▤",
+        name: { en: "Dealer Manager", es: "Dealer Manager" },
+        tagline: { en: "Stop running your dealership on 5 broken tools", es: "Deja de operar tu concesionario con 5 herramientas rotas" },
+        desc: { en: "All-in-one platform for automotive dealerships: inventory, CRM, operations, and bilingual support. Replace the patchwork of tools draining 30+ hours/week from your staff.", es: "Plataforma todo-en-uno para concesionarios automotrices: inventario, CRM, operaciones y soporte bilingüe. Reemplaza el parche de herramientas que drenan 30+ horas/semana de tu staff." },
+        stat: { en: "30+ hr/week recovered", es: "30+ hr/semana recuperadas" },
+        price: { en: "Custom pricing", es: "Precio personalizado" },
+      },
+      {
+        slug: "cash-leak-assessment",
+        icon: "◎",
+        name: { en: "Cash Leak Assessment", es: "Assessment de Fugas de Dinero" },
+        tagline: { en: "Find out exactly where you're bleeding money", es: "Descubre exactamente dónde estás perdiendo dinero" },
+        desc: { en: "A 10-minute diagnostic that reveals the hidden cash leaks in your operations, marketing, and tools. Most businesses find $5K-50K in monthly waste they didn't know existed.", es: "Un diagnóstico de 10 minutos que revela las fugas ocultas de dinero en tus operaciones, marketing y herramientas. La mayoría de negocios encuentran $5K-50K en desperdicio mensual que no sabían que existía." },
+        stat: { en: "Free — 10 min", es: "Gratis — 10 min" },
+        price: { en: "Free", es: "Gratis" },
+        featured: true,
+      },
+    ],
+    cta: { en: "See all products", es: "Ver todos los productos" },
+    learnMore: { en: "Learn more", es: "Más información" },
+  },
+  /* ── Cash Leak Assessment Landing Page ── */
+  cashLeakPage: {
+    label: { en: "Free diagnostic", es: "Diagnóstico gratuito" },
+    title: { en: "Your business is leaking<br/>$5K–$50K every month.", es: "Tu negocio está perdiendo<br/>$5K–$50K cada mes." },
+    subtitle: { en: "You just don't know where yet.", es: "Solo que aún no sabes dónde." },
+    heroDesc: { en: "The Cash Leak Assessment is a free 10-minute diagnostic that shows you exactly where your business hemorrhages money through broken processes, wasted ad spend, dead leads, and manual chaos.", es: "El Assessment de Fugas de Dinero es un diagnóstico gratuito de 10 minutos que te muestra exactamente dónde tu negocio pierde dinero por procesos rotos, inversión en ads desperdiciada, leads muertos y caos manual." },
+    heroCta: { en: "Take the free assessment", es: "Tomar el assessment gratis" },
+    /* Pain section */
+    painLabel: { en: "Sound familiar?", es: "¿Te suena familiar?" },
+    painTitle: { en: "These are the silent killers<br/>eating your revenue", es: "Estos son los asesinos silenciosos<br/>que devoran tus ingresos" },
+    pains: [
+      { icon: "💸", title: { en: "Ad spend with zero attribution", es: "Inversión en ads sin atribución" }, desc: { en: "You're spending $5K-$50K/month on ads but can't tell which campaigns actually bring in revenue. You're funding Meta and Google — not your pipeline.", es: "Gastas $5K-$50K/mes en ads pero no puedes decir qué campañas generan ingresos realmente. Estás financiando a Meta y Google — no tu pipeline." } },
+      { icon: "⏰", title: { en: "40+ hours/week in manual tasks", es: "40+ horas/semana en tareas manuales" }, desc: { en: "Your team copy-pastes between tools, manually enters data, and chases leads through WhatsApp. That's $2K-$8K/month in wasted labor — every month.", es: "Tu equipo copia-pega entre herramientas, ingresa datos manualmente y persigue leads por WhatsApp. Son $2K-$8K/mes en mano de obra desperdiciada — cada mes." } },
+      { icon: "🚪", title: { en: "Leads dying in your inbox", es: "Leads muriendo en tu bandeja" }, desc: { en: "The average business loses 78% of leads because they respond too slowly. Each lost lead is $500-$5,000 in lifetime value — gone forever.", es: "El negocio promedio pierde 78% de sus leads porque responde muy lento. Cada lead perdido son $500-$5,000 en valor de vida — perdidos para siempre." } },
+      { icon: "🔧", title: { en: "5+ disconnected tools", es: "5+ herramientas desconectadas" }, desc: { en: "CRM doesn't talk to your email tool, which doesn't talk to your ad platform. Every disconnection is a leak. Every leak is cash in the drain.", es: "El CRM no habla con tu herramienta de email, que no habla con tu plataforma de ads. Cada desconexión es una fuga. Cada fuga es dinero en el desagüe." } },
+    ],
+    /* What you get */
+    getLabel: { en: "What you get", es: "Qué obtienes" },
+    getTitle: { en: "In 10 minutes, you'll know<br/>exactly where the money goes", es: "En 10 minutos, sabrás<br/>exactamente a dónde va el dinero" },
+    gets: [
+      { icon: "📊", title: { en: "Cash Leak Score", es: "Puntaje de Fugas" }, desc: { en: "A 0-100 score showing how much cash your operations, marketing, and tools are leaking — with dollar estimates for each area.", es: "Un puntaje 0-100 que muestra cuánto dinero pierden tus operaciones, marketing y herramientas — con estimaciones en dólares por área." } },
+      { icon: "🗺️", title: { en: "Leak Map", es: "Mapa de Fugas" }, desc: { en: "A visual breakdown of every bleeding point in your business: which tools fail, which processes waste time, which channels waste money.", es: "Un desglose visual de cada punto de sangrado en tu negocio: qué herramientas fallan, qué procesos desperdician tiempo, qué canales desperdician dinero." } },
+      { icon: "🔧", title: { en: "Fix-It Priority Plan", es: "Plan de Reparación Priorizado" }, desc: { en: "A prioritized action plan showing the fastest, highest-ROI fixes first — so you stop the biggest leaks before anything else.", es: "Un plan de acción priorizado mostrando las reparaciones más rápidas y de mayor ROI primero — para que detengas las fugas más grandes antes que nada." } },
+      { icon: "📈", title: { en: "Benchmark Comparison", es: "Comparación con Benchmarks" }, desc: { en: "See how your business compares to 100+ companies we've diagnosed. Know if you're bleeding more or less than your industry peers.", es: "Mira cómo se compara tu negocio con 100+ empresas que hemos diagnosticado. Sabe si estás perdiendo más o menos que tus pares de industria." } },
+    ],
+    /* Social proof */
+    proofTitle: { en: "Companies that took the assessment", es: "Empresas que tomaron el assessment" },
+    proofStats: [
+      { n: "500+", l: { en: "Assessments completed", es: "Assessments completados" } },
+      { n: "$2.3M", l: { en: "Total leaks identified", es: "Total de fugas identificadas" } },
+      { n: "89%", l: { en: "Found leaks they didn't know existed", es: "Encontraron fugas que no sabían que existían" } },
+    ],
+    /* CTA section */
+    ctaTitle: { en: "Stop guessing.<br/>Start diagnosing.", es: "Deja de adivinar.<br/>Empieza a diagnosticar." },
+    ctaDesc: { en: "The assessment is free, takes 10 minutes, and gives you a dollar-amount estimate of how much your business is losing. Even if you never hire us — you keep the diagnosis.", es: "El assessment es gratis, toma 10 minutos y te da una estimación en dólares de cuánto pierde tu negocio. Aunque nunca nos contrates — te quedas con el diagnóstico." },
+    ctaBtn: { en: "Take the Cash Leak Assessment — Free", es: "Tomar el Assessment de Fugas — Gratis" },
+    ctaNote: { en: "No credit card. No spam. Just a diagnosis.", es: "Sin tarjeta de crédito. Sin spam. Solo un diagnóstico." },
+    emailPh: { en: "Your work email", es: "Tu correo corporativo" },
+    namePh: { en: "Your name", es: "Tu nombre" },
+    companyPh: { en: "Company name", es: "Nombre de empresa" },
+  },
 };
 
 /* helper */
@@ -357,12 +445,13 @@ function Nav({ page, go, lang, setLang }) {
       label: t(T.nav.services, lang), key: "services",
       mega: {
         cols: [
-          { heading: t(T.nav.megaTech, lang), items: [{ t: lang === "en" ? "AI Consulting & Agents" : "Consultoría e Agentes de IA" }, { t: lang === "en" ? "AI Chatbot Development" : "Desarrollo de Chatbots IA" }, { t: lang === "en" ? "AI Voice Integration" : "Integración de Voz con IA" }, { t: lang === "en" ? "Custom Web & Mobile Apps" : "Apps Web y Móviles a Medida" }] },
-          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)" }] },
-          { heading: t(T.nav.megaGrowth, lang), items: [{ t: lang === "en" ? "Paid Ads & Performance" : "Paid Ads y Performance" }, { t: lang === "en" ? "SEO & Content Strategy" : "SEO y Estrategia de Contenido" }, { t: lang === "en" ? "Analytics & Attribution" : "Analítica y Atribución" }, { t: lang === "en" ? "Email Marketing & CRO" : "Email Marketing y CRO" }] },
+          { heading: t(T.nav.megaTech, lang), items: [{ t: lang === "en" ? "AI Consulting & Agents" : "Consultoría e Agentes de IA", go: "services" }, { t: lang === "en" ? "AI Chatbot Development" : "Desarrollo de Chatbots IA", go: "services" }, { t: lang === "en" ? "AI Voice Integration" : "Integración de Voz con IA", go: "services" }, { t: lang === "en" ? "Custom Web & Mobile Apps" : "Apps Web y Móviles a Medida", go: "services" }] },
+          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM", go: "product-ai-crm" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA", go: "product-ai-chatbot" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }] },
+          { heading: t(T.nav.megaGrowth, lang), items: [{ t: lang === "en" ? "Paid Ads & Performance" : "Paid Ads y Performance", go: "services" }, { t: lang === "en" ? "SEO & Content Strategy" : "SEO y Estrategia de Contenido", go: "services" }, { t: lang === "en" ? "Analytics & Attribution" : "Analítica y Atribución", go: "services" }, { t: lang === "en" ? "Email Marketing & CRO" : "Email Marketing y CRO", go: "services" }] },
         ],
       },
     },
+    { label: t(T.nav.products, lang), key: "products" },
     { label: t(T.nav.cases, lang), key: "cases" },
     { label: t(T.nav.about, lang), key: "about" },
     { label: t(T.nav.blog, lang), key: "blog" },
@@ -403,7 +492,7 @@ function Nav({ page, go, lang, setLang }) {
                             <div key={ci} style={{ marginBottom: 16 }}>
                               <p style={{ fontSize: 12, fontWeight: 600, color: V.g400, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 8px" }}>{col.heading}</p>
                               {col.items.map((item, ii) => (
-                                <button key={ii} onClick={() => { go("services"); setMobileMenuOpen(false); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "6px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}>{item.t}</button>
+                                <button key={ii} onClick={() => { go(item.go || "services"); setMobileMenuOpen(false); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "6px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}>{item.t}</button>
                               ))}
                             </div>
                           ))}
@@ -459,7 +548,7 @@ function Nav({ page, go, lang, setLang }) {
                       <div key={ci}>
                         <p style={{ fontSize: 12, fontWeight: 600, color: V.g400, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 16px" }}>{col.heading}</p>
                         {col.items.map((item, ii) => (
-                          <button key={ii} onClick={() => { go("services"); setOpenMenu(null); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "8px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}
+                          <button key={ii} onClick={() => { go(item.go || "services"); setOpenMenu(null); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "8px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}
                             onMouseEnter={e => e.target.style.color = V.primary} onMouseLeave={e => e.target.style.color = V.g800}
                           >{item.t}</button>
                         ))}
@@ -1073,6 +1162,156 @@ function ContactPage({ lang }) {
 
 
 /* ═══════════════════════════════════════════════════════════
+   PRODUCTS HUB PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+function ProductsPage({ go, lang }) {
+  const P = T.productsPage;
+  const { mob } = useMedia();
+
+  return (
+    <>
+      <PageHero label={t(P.label, lang)} title={t(P.title, lang)} subtitle={t(P.subtitle, lang)} mob={mob} />
+      <section style={{ padding: mob ? "48px 0 64px" : "80px 0 100px" }}>
+        <Box mob={mob}>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(2, 1fr)", gap: mob ? 20 : 32 }}>
+            {P.products.map((prod, i) => (
+              <div key={i} onClick={() => go(`product-${prod.slug}`)} style={{
+                background: prod.featured ? V.g900 : V.white,
+                borderRadius: 12, overflow: "hidden", border: prod.featured ? "none" : `1px solid ${V.g200}`,
+                cursor: "pointer", transition: "all 0.2s", display: "flex", flexDirection: "column",
+                ...(prod.featured ? { gridColumn: mob ? "auto" : "1 / -1" } : {}),
+              }}
+                onMouseEnter={e => !mob && (e.currentTarget.style.boxShadow = `0 12px 30px ${prod.featured ? "rgba(255,107,0,0.2)" : "rgba(0,0,0,0.08)"}`)}
+                onMouseLeave={e => !mob && (e.currentTarget.style.boxShadow = "none")}
+              >
+                {prod.featured && (
+                  <div style={{ background: V.primary, padding: "8px 24px", textAlign: "center" }}>
+                    <span style={{ fontSize: 12, fontWeight: 700, color: V.white, textTransform: "uppercase", letterSpacing: 1.5, fontFamily: F }}>
+                      {lang === "en" ? "MOST POPULAR — FREE" : "MÁS POPULAR — GRATIS"}
+                    </span>
+                  </div>
+                )}
+                <div style={{ padding: mob ? 24 : 40, flex: 1, display: "flex", flexDirection: prod.featured && !mob ? "row" : "column", gap: prod.featured && !mob ? 40 : 0, alignItems: prod.featured && !mob ? "center" : "stretch" }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+                      <span style={{ fontSize: 28, color: prod.featured ? V.primary : V.primary }}>{prod.icon}</span>
+                      <h3 style={{ fontSize: mob ? 20 : 24, fontWeight: 700, color: prod.featured ? V.white : V.g900, margin: 0, fontFamily: F }}>{t(prod.name, lang)}</h3>
+                    </div>
+                    <p style={{ fontSize: mob ? 15 : 17, fontWeight: 600, color: V.primary, margin: "0 0 12px", lineHeight: 1.4, fontFamily: F }}>{t(prod.tagline, lang)}</p>
+                    <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: prod.featured ? "rgba(255,255,255,0.7)" : V.g600, lineHeight: 1.7, margin: "0 0 20px", fontFamily: F }}>{t(prod.desc, lang)}</p>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
+                    <div>
+                      <span style={{ fontSize: 13, fontWeight: 600, color: prod.featured ? "rgba(255,255,255,0.5)" : V.g400, fontFamily: F }}>{t(prod.stat, lang)}</span>
+                      <p style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: prod.featured ? V.white : V.g900, margin: "4px 0 0", fontFamily: F }}>{t(prod.price, lang)}</p>
+                    </div>
+                    <span style={{ fontSize: 20, fontWeight: 600, color: prod.featured ? V.primary : V.primary, fontFamily: F }}>→</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+    </>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   CASH LEAK ASSESSMENT LANDING PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+function CashLeakPage({ go, lang }) {
+  const C = T.cashLeakPage;
+  const { mob, tab } = useMedia();
+
+  const EmailCapture = ({ dark }) => (
+    <div style={{ display: "flex", flexDirection: mob ? "column" : "row", gap: 12, maxWidth: 560 }}>
+      <input type="email" placeholder={t(C.emailPh, lang)} style={{ fontFamily: F, fontSize: 14, padding: "14px 18px", border: dark ? "1px solid rgba(255,255,255,0.2)" : `1px solid ${V.g200}`, borderRadius: 6, outline: "none", flex: 1, background: dark ? "rgba(255,255,255,0.08)" : V.white, color: dark ? V.white : V.g900, boxSizing: "border-box" }} />
+      <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{t(C.heroCta, lang)}</Btn>
+    </div>
+  );
+
+  return (
+    <>
+      {/* Hero */}
+      <section style={{ background: V.g900, padding: mob ? "120px 0 60px" : "160px 0 80px" }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{t(C.label, lang)}</Lbl>
+          <h1 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, lineHeight: 1.08, letterSpacing: -2, color: V.white, margin: 0, fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(C.title, lang) }} />
+          <p style={{ fontSize: mob ? 18 : 24, fontWeight: 300, color: V.primary, margin: "16px 0 0", fontFamily: F }}>{t(C.subtitle, lang)}</p>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "20px 0 32px", maxWidth: 600, lineHeight: 1.7, fontFamily: F }}>{t(C.heroDesc, lang)}</p>
+          <EmailCapture dark />
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", margin: "12px 0 0", fontFamily: F }}>{t(C.ctaNote, lang)}</p>
+        </Box>
+      </section>
+
+      {/* Pain points */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{t(C.painLabel, lang)}</Lbl>
+          <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 48px", fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(C.painTitle, lang) }} />
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : tab ? "repeat(2, 1fr)" : "repeat(2, 1fr)", gap: mob ? 20 : 32 }}>
+            {C.pains.map((pain, i) => (
+              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 36 }}>
+                <span style={{ fontSize: 32, display: "block", marginBottom: 16 }}>{pain.icon}</span>
+                <h3 style={{ fontSize: mob ? 18 : 20, fontWeight: 700, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{t(pain.title, lang)}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, lineHeight: 1.7, margin: 0, fontFamily: F }}>{t(pain.desc, lang)}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* What you get */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g100 }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{t(C.getLabel, lang)}</Lbl>
+          <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 48px", fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(C.getTitle, lang) }} />
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(2, 1fr)", gap: mob ? 20 : 32 }}>
+            {C.gets.map((item, i) => (
+              <div key={i} style={{ background: V.white, borderRadius: 12, padding: mob ? 24 : 36, border: `1px solid ${V.g200}` }}>
+                <span style={{ fontSize: 32, display: "block", marginBottom: 16 }}>{item.icon}</span>
+                <h3 style={{ fontSize: mob ? 18 : 20, fontWeight: 700, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{t(item.title, lang)}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, lineHeight: 1.7, margin: 0, fontFamily: F }}>{t(item.desc, lang)}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* Social proof stats */}
+      <section style={{ padding: mob ? "48px 0" : "80px 0" }}>
+        <Box mob={mob}>
+          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: V.g900, margin: "0 0 40px", textAlign: "center", fontFamily: F }}>{t(C.proofTitle, lang)}</h2>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(3, 1fr)", gap: mob ? 20 : 32, textAlign: "center" }}>
+            {C.proofStats.map((stat, i) => (
+              <div key={i} style={{ padding: mob ? 20 : 32 }}>
+                <div style={{ fontSize: mob ? 36 : 56, fontWeight: 800, color: V.primary, fontFamily: F, lineHeight: 1 }}>{stat.n}</div>
+                <p style={{ fontSize: mob ? 13 : 15, fontWeight: 400, color: V.g600, margin: "8px 0 0", fontFamily: F }}>{t(stat.l, lang)}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* Final CTA */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g900 }}>
+        <Box mob={mob} style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h2 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, color: V.white, margin: "0 0 20px", fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(C.ctaTitle, lang) }} />
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 32px", maxWidth: 560, lineHeight: 1.7, fontFamily: F }}>{t(C.ctaDesc, lang)}</p>
+          <EmailCapture dark />
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", margin: "12px 0 0", fontFamily: F }}>{t(C.ctaNote, lang)}</p>
+        </Box>
+      </section>
+    </>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════════════════════ */
 
@@ -1083,14 +1322,14 @@ function FooterSection({ go, lang }) {
   return (
     <footer style={{ background: V.white, padding: mob ? "48px 0 0" : "80px 0 0", borderTop: `1px solid ${V.g200}`, fontFamily: F }}>
       <Box mob={mob}>
-        <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "200px 1fr 1fr 1fr 280px", gap: mob ? 32 : 40, paddingBottom: mob ? 40 : 64 }}>
+        <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "180px 1fr 1fr 1fr 280px", gap: mob ? 32 : 32, paddingBottom: mob ? 40 : 64 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }} onClick={() => go("home")}>
               <div style={{ width: 32, height: 32, background: V.g900, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", color: V.primary, fontSize: 14, fontWeight: 800 }}>.a</div>
               <span style={{ fontSize: 18, fontWeight: 700, color: V.g900, letterSpacing: -0.5 }}>Avertris</span>
             </div>
             {t(FT.links, lang).map((l, i) => (
-              <button key={i} onClick={() => go(["about", "blog", "cases", "about"][i])} style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: 400, color: V.g600, textAlign: "left", padding: "2px 0", fontFamily: F }}>{l}</button>
+              <button key={i} onClick={() => go(["about", "blog", "cases", "products"][i])} style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: 400, color: V.g600, textAlign: "left", padding: "2px 0", fontFamily: F }}>{l}</button>
             ))}
             <Btn variant="primary" onClick={() => go("contact")} style={{ marginTop: 8, padding: "10px 24px", fontSize: 13 }} mob={mob}>{t(T.nav.cta, lang)}</Btn>
           </div>
@@ -1102,8 +1341,9 @@ function FooterSection({ go, lang }) {
                 {t(FT.services, lang).map(l => <button key={l} onClick={() => go("services")} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: 400, color: V.g600, marginBottom: 12, padding: 0, fontFamily: F, textAlign: "left" }}>{l}</button>)}
               </div>
               <div>
-                <h4 style={{ fontSize: 13, fontWeight: 600, color: V.g900, textTransform: "uppercase", letterSpacing: 1, margin: "0 0 20px" }}>{t(FT.industriesTitle, lang)}</h4>
-                {t(FT.industries, lang).map(l => <p key={l} style={{ fontSize: 14, fontWeight: 400, color: V.g600, marginBottom: 12, cursor: "pointer" }}>{l}</p>)}
+                <h4 style={{ fontSize: 13, fontWeight: 600, color: V.g900, textTransform: "uppercase", letterSpacing: 1, margin: "0 0 20px" }}>{t(FT.productsTitle, lang)}</h4>
+                {t(FT.products, lang).map((l, i) => <button key={l} onClick={() => go(["product-ai-crm", "product-ai-chatbot", "product-dealer-manager"][i])} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: 400, color: V.g600, marginBottom: 12, padding: 0, fontFamily: F, textAlign: "left" }}>{l}</button>)}
+                <button onClick={() => go("product-cash-leak-assessment")} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: 600, color: V.primary, marginBottom: 12, padding: 0, fontFamily: F, textAlign: "left" }}>{lang === "en" ? "Cash Leak Assessment ★" : "Assessment de Fugas ★"}</button>
               </div>
             </>
           )}
@@ -1148,6 +1388,11 @@ export default function App() {
   const pages = {
     home: <HomePage go={go} lang={lang} />,
     services: <ServicesPage go={go} lang={lang} />,
+    products: <ProductsPage go={go} lang={lang} />,
+    "product-ai-crm": <ProductsPage go={go} lang={lang} />,
+    "product-ai-chatbot": <ProductsPage go={go} lang={lang} />,
+    "product-dealer-manager": <ProductsPage go={go} lang={lang} />,
+    "product-cash-leak-assessment": <CashLeakPage go={go} lang={lang} />,
     cases: <CasesPage go={go} lang={lang} />,
     about: <AboutPage go={go} lang={lang} />,
     blog: <BlogPage lang={lang} />,
