@@ -60,7 +60,7 @@ const T = {
   clients: { label: { en: "Trusted by growing companies", es: "Empresas que confían en nosotros" } },
   results: {
     label: { en: "Cash recovered", es: "Dinero recuperado" },
-    title: { en: "Money our clients<br/>stopped losing", es: "Dinero que nuestros clientes<br/>dejaron de perder" },
+    title: { en: "Money our clientsstopped losing", es: "Dinero que nuestros clientesdejaron de perder" },
     stats: [
       { n: "60", s: "%", l: { en: "Less Wasted Ad Spend", es: "Menos Desperdicio en Ads" }, d: { en: "Clients were burning thousands monthly on ads with zero attribution. We found the leaks in weeks, not months.", es: "Clientes quemaban miles mensuales en ads sin atribución. Encontramos las fugas en semanas, no meses." } },
       { n: "40", s: "hr", l: { en: "Saved Per Week", es: "Ahorradas Por Semana" }, d: { en: "Manual data entry, spreadsheet chaos, copy-pasting between tools — replaced with AI automation that runs 24/7", es: "Ingreso manual de datos, caos de spreadsheets, copy-paste entre herramientas — reemplazado con automatización IA 24/7" } },
@@ -69,7 +69,7 @@ const T = {
     ],
   },
   capabilities: {
-    title: { en: "The bleeding stops<br/>here", es: "Aquí se detiene<br/>la hemorragia" },
+    title: { en: "The bleeding stopshere", es: "Aquí se detienela hemorragia" },
     cta: { en: "Show me where I'm losing money", es: "Muéstrame dónde pierdo dinero" },
     items: [
       { title: { en: "Leads dying\nin your inbox", es: "Leads muriendo\nen tu bandeja" }, icon: "◇", sub: { en: "AI agents that respond in seconds, not hours", es: "Agentes IA que responden en segundos, no horas" } },
@@ -82,7 +82,7 @@ const T = {
   },
   whyUs: {
     label: { en: "Why Avertris", es: "Por qué Avertris" },
-    title: { en: "Every day you wait,<br/>you lose more", es: "Cada día que esperas,<br/>pierdes más" },
+    title: { en: "Every day you wait,you lose more", es: "Cada día que esperas,pierdes más" },
     desc: { en: "Right now, leads are going cold in your inbox. Your team is burning hours on tasks a bot could do in seconds. Your ad budget is feeding Meta and Google instead of your pipeline. And your competitors are getting faster while you coordinate between 3 agencies that don't talk to each other.", es: "Ahora mismo, leads se enfrían en tu bandeja. Tu equipo quema horas en tareas que un bot haría en segundos. Tu presupuesto de ads alimenta a Meta y Google en vez de tu pipeline. Y tus competidores se vuelven más rápidos mientras tú coordinas entre 3 agencias que no se hablan." },
     cta: { en: "Stop the bleeding — talk to us", es: "Detén la hemorragia — habla con nosotros" },
     items: [
@@ -94,7 +94,7 @@ const T = {
   },
   testimonials: {
     label: { en: "The bleeding stopped", es: "La hemorragia se detuvo" },
-    title: { en: "They were losing money.<br/>Then they called us.", es: "Estaban perdiendo dinero.<br/>Entonces nos llamaron." },
+    title: { en: "They were losing money.Then they called us.", es: "Estaban perdiendo dinero.Entonces nos llamaron." },
     items: [
       { name: "Carlos Méndez", role: { en: "CEO, Catojisa", es: "CEO, Catojisa" }, quote: { en: "We were losing clients because our team couldn't keep up — everything ran on spreadsheets and WhatsApp. Avertris built us an AI-powered platform that cut response time by 70%. We stopped bleeding clients within the first month.", es: "Perdíamos clientes porque nuestro equipo no daba abasto — todo corría en hojas de cálculo y WhatsApp. Avertris nos construyó una plataforma con IA que redujo el tiempo de respuesta en 70%. Dejamos de perder clientes en el primer mes." } },
       { name: "María Rodriguez", role: { en: "COO, AutoPlus Dealers", es: "COO, AutoPlus Dealers" }, quote: { en: "Our dealership was hemorrhaging time — staff juggling 5 different tools, leads falling through cracks daily. Dealer Manager consolidated everything. We recovered 30+ hours per week and haven't lost a lead since.", es: "Nuestro concesionario sangraba tiempo — staff haciendo malabares con 5 herramientas, leads perdiéndose diariamente. Dealer Manager lo consolidó todo. Recuperamos 30+ horas semanales y no hemos perdido un lead desde entonces." } },
@@ -103,7 +103,7 @@ const T = {
   },
   leadMagnet: {
     label: { en: "Find the leaks", es: "Encuentra las fugas" },
-    title: { en: "How much money is<br/>your business losing?", es: "¿Cuánto dinero está<br/>perdiendo tu negocio?" },
+    title: { en: "How much money isyour business losing?", es: "¿Cuánto dinero estáperdiendo tu negocio?" },
     desc: { en: "Take our free Cash Leak Assessment — a 10-minute diagnostic that reveals exactly where your business is hemorrhaging money through broken tools, manual processes, wasted ad spend, and lost leads. Most companies find $5K-50K in monthly waste.", es: "Toma nuestro Assessment de Fugas de Dinero gratuito — un diagnóstico de 10 minutos que revela exactamente dónde tu negocio pierde dinero por herramientas rotas, procesos manuales, inversión en ads desperdiciada y leads perdidos. La mayoría de empresas encuentran $5K-50K en desperdicio mensual." },
     bullets: {
       en: ["Find exactly where cash is leaking from your operations", "Get a dollar estimate of your monthly waste", "See how you compare to 100+ businesses we've diagnosed", "Get a prioritized fix-it plan — even if you never hire us"],
@@ -125,7 +125,7 @@ const T = {
   },
   team: {
     label: { en: "Our team", es: "Nuestro equipo" },
-    title: { en: "People behind<br/>the results", es: "Las personas detrás<br/>de los resultados" },
+    title: { en: "People behindthe results", es: "Las personas detrásde los resultados" },
     founderRole: { en: "Founder & CEO", es: "Fundador y CEO" },
     founderBio: { en: "Based in Tampa, Florida, with deep roots in US, the Dominican Republic, and LATAM markets. Founded Avertris because mid-market companies deserve the same technology, marketing, and AI firepower that Fortune 500s have — at a fraction of the cost. Every project starts with a conversation, not a proposal.", es: "Basado en Tampa, Florida, con raíces profundas en los mercados de USA, República Dominicana y LATAM. Fundó Avertris porque las empresas medianas merecen la misma tecnología, marketing e IA que tienen las Fortune 500 — a una fracción del costo. Cada proyecto empieza con una conversación, no con una propuesta." },
     members: [
@@ -136,7 +136,7 @@ const T = {
   },
   faq: {
     label: { en: "Frequently asked questions", es: "Preguntas frecuentes" },
-    title: { en: "Questions we hear<br/>every week", es: "Preguntas que escuchamos<br/>cada semana" },
+    title: { en: "Questions we hearevery week", es: "Preguntas que escuchamoscada semana" },
     items: [
       { q: { en: "What does Avertris do?", es: "¿Qué hace Avertris?" }, a: { en: "Avertris is an AI consulting, custom software development, and growth marketing agency headquartered in Tampa, Florida. We're a remote-first team with members across the USA and Dominican Republic. We help mid-market businesses in the USA, Dominican Republic, and Latin America stop losing money through disconnected tools by building AI-powered software, marketing automation, and data-driven growth systems. Our three pillars are: Technology (AI agents, chatbots, custom apps), Products (AI CRM, Chatbot SaaS, Dealer Manager), and Growth Marketing (paid ads, SEO, email, attribution).", es: "Avertris es una agencia de consultoría de IA, desarrollo de software a medida y marketing de crecimiento con sede en Tampa, Florida. Somos un equipo remoto con miembros en USA y República Dominicana. Ayudamos a empresas medianas en USA, República Dominicana y América Latina a dejar de perder dinero con herramientas desconectadas, construyendo software potenciado con IA, automatización de marketing y sistemas de crecimiento basados en datos." } },
       { q: { en: "Where is Avertris located?", es: "¿Dónde está ubicada Avertris?" }, a: { en: "We're headquartered in Tampa, Florida with a remote-first team across the USA and Dominican Republic. We also have team members in Mexico, Colombia, and Argentina. We serve clients in all 50 US states, the Dominican Republic, and key Latin American markets. Our team is fully bilingual (English and Spanish) and timezone-aligned with US business hours.", es: "Nuestra sede está en Tampa, Florida con un equipo remoto en USA y República Dominicana. También tenemos miembros en México, Colombia y Argentina. Atendemos clientes en los 50 estados de EE.UU., República Dominicana y mercados clave de América Latina. Nuestro equipo es completamente bilingüe (inglés y español) y alineado con horarios de oficina de USA." } },
@@ -147,7 +147,7 @@ const T = {
     ],
   },
   cta: {
-    title: { en: "Every hour you wait,<br/>you lose more<br/>money.", es: "Cada hora que esperas,<br/>pierdes más<br/>dinero." },
+    title: { en: "Every hour you wait,you lose moremoney.", es: "Cada hora que esperas,pierdes másdinero." },
     desc: { en: "Book a free 30-minute triage call. We'll show you exactly where your business is bleeding cash — and the fastest way to stop it. No pitch, no obligation. Just a diagnosis.", es: "Agenda una llamada de triaje gratuita de 30 minutos. Te mostraremos exactamente dónde tu negocio pierde dinero — y la forma más rápida de detenerlo. Sin pitch, sin compromiso. Solo un diagnóstico." },
     btn: { en: "Stop the bleeding now", es: "Detener la hemorragia ahora" },
   },
@@ -285,7 +285,7 @@ const T = {
   },
   contactPage: {
     label: { en: "Get started", es: "Empecemos" },
-    title: { en: "Let's talk about<br/>your growth", es: "Hablemos de<br/>tu crecimiento" },
+    title: { en: "Let's talk aboutyour growth", es: "Hablemos detu crecimiento" },
     subtitle: { en: "Fill out the form or book a call directly. Every conversation starts with understanding — we'll never pitch you something you don't need.", es: "Llena el formulario o agenda una llamada directamente. Cada conversación comienza con entendimiento — nunca te venderemos algo que no necesitas." },
     formTitle: { en: "Tell us about your business", es: "Cuéntanos sobre tu negocio" },
     formDesc: { en: "We'll respond within one business day with a personalized assessment.", es: "Te responderemos en un día hábil con una evaluación personalizada." },
@@ -311,7 +311,7 @@ const T = {
   /* ── Products Hub ── */
   productsPage: {
     label: { en: "Products", es: "Productos" },
-    title: { en: "Tools that stop<br/>the bleeding", es: "Herramientas que detienen<br/>la hemorragia" },
+    title: { en: "Tools that stopthe bleeding", es: "Herramientas que detienenla hemorragia" },
     subtitle: { en: "Ready-to-deploy solutions for the problems costing you the most money right now.", es: "Soluciones listas para implementar que atacan los problemas que más dinero te cuestan ahora mismo." },
     products: [
       {
@@ -358,13 +358,13 @@ const T = {
   /* ── Cash Leak Assessment Landing Page ── */
   cashLeakPage: {
     label: { en: "Free diagnostic", es: "Diagnóstico gratuito" },
-    title: { en: "Your business is leaking<br/>$5K–$50K every month.", es: "Tu negocio está perdiendo<br/>$5K–$50K cada mes." },
+    title: { en: "Your business is leaking$5K–$50K every month.", es: "Tu negocio está perdiendo$5K–$50K cada mes." },
     subtitle: { en: "You just don't know where yet.", es: "Solo que aún no sabes dónde." },
     heroDesc: { en: "The Cash Leak Assessment is a free 10-minute diagnostic that shows you exactly where your business hemorrhages money through broken processes, wasted ad spend, dead leads, and manual chaos.", es: "El Assessment de Fugas de Dinero es un diagnóstico gratuito de 10 minutos que te muestra exactamente dónde tu negocio pierde dinero por procesos rotos, inversión en ads desperdiciada, leads muertos y caos manual." },
     heroCta: { en: "Take the free assessment", es: "Tomar el assessment gratis" },
     /* Pain section */
     painLabel: { en: "Sound familiar?", es: "¿Te suena familiar?" },
-    painTitle: { en: "These are the silent killers<br/>eating your revenue", es: "Estos son los asesinos silenciosos<br/>que devoran tus ingresos" },
+    painTitle: { en: "These are the silent killerseating your revenue", es: "Estos son los asesinos silenciososque devoran tus ingresos" },
     pains: [
       { icon: "💸", title: { en: "Ad spend with zero attribution", es: "Inversión en ads sin atribución" }, desc: { en: "You're spending $5K-$50K/month on ads but can't tell which campaigns actually bring in revenue. You're funding Meta and Google — not your pipeline.", es: "Gastas $5K-$50K/mes en ads pero no puedes decir qué campañas generan ingresos realmente. Estás financiando a Meta y Google — no tu pipeline." } },
       { icon: "⏰", title: { en: "40+ hours/week in manual tasks", es: "40+ horas/semana en tareas manuales" }, desc: { en: "Your team copy-pastes between tools, manually enters data, and chases leads through WhatsApp. That's $2K-$8K/month in wasted labor — every month.", es: "Tu equipo copia-pega entre herramientas, ingresa datos manualmente y persigue leads por WhatsApp. Son $2K-$8K/mes en mano de obra desperdiciada — cada mes." } },
@@ -373,7 +373,7 @@ const T = {
     ],
     /* What you get */
     getLabel: { en: "What you get", es: "Qué obtienes" },
-    getTitle: { en: "In 10 minutes, you'll know<br/>exactly where the money goes", es: "En 10 minutos, sabrás<br/>exactamente a dónde va el dinero" },
+    getTitle: { en: "In 10 minutes, you'll knowexactly where the money goes", es: "En 10 minutos, sabrásexactamente a dónde va el dinero" },
     gets: [
       { icon: "📊", title: { en: "Cash Leak Score", es: "Puntaje de Fugas" }, desc: { en: "A 0-100 score showing how much cash your operations, marketing, and tools are leaking — with dollar estimates for each area.", es: "Un puntaje 0-100 que muestra cuánto dinero pierden tus operaciones, marketing y herramientas — con estimaciones en dólares por área." } },
       { icon: "🗺️", title: { en: "Leak Map", es: "Mapa de Fugas" }, desc: { en: "A visual breakdown of every bleeding point in your business: which tools fail, which processes waste time, which channels waste money.", es: "Un desglose visual de cada punto de sangrado en tu negocio: qué herramientas fallan, qué procesos desperdician tiempo, qué canales desperdician dinero." } },
@@ -388,7 +388,7 @@ const T = {
       { n: "89%", l: { en: "Found leaks they didn't know existed", es: "Encontraron fugas que no sabían que existían" } },
     ],
     /* CTA section */
-    ctaTitle: { en: "Stop guessing.<br/>Start diagnosing.", es: "Deja de adivinar.<br/>Empieza a diagnosticar." },
+    ctaTitle: { en: "Stop guessing.Start diagnosing.", es: "Deja de adivinar.Empieza a diagnosticar." },
     ctaDesc: { en: "The assessment is free, takes 10 minutes, and gives you a dollar-amount estimate of how much your business is losing. Even if you never hire us — you keep the diagnosis.", es: "El assessment es gratis, toma 10 minutos y te da una estimación en dólares de cuánto pierde tu negocio. Aunque nunca nos contrates — te quedas con el diagnóstico." },
     ctaBtn: { en: "Take the Cash Leak Assessment — Free", es: "Tomar el Assessment de Fugas — Gratis" },
     ctaNote: { en: "No credit card. No spam. Just a diagnosis.", es: "Sin tarjeta de crédito. Sin spam. Solo un diagnóstico." },
@@ -400,7 +400,7 @@ const T = {
   detailPages: {
     "svc-ai-consulting": {
       label: { en: "Technology", es: "Tecnología" },
-      title: { en: "AI Consulting &<br/>Agent Development", es: "Consultoría de IA y<br/>Desarrollo de Agentes" },
+      title: { en: "AI Consulting &Agent Development", es: "Consultoría de IA yDesarrollo de Agentes" },
       subtitle: { en: "Stop losing deals to slow, manual operations. We build AI agents that work 24/7 — responding to leads, automating workflows, and eliminating the bottlenecks that cost you money.", es: "Deja de perder negocios por operaciones lentas y manuales. Construimos agentes de IA que trabajan 24/7 — respondiendo leads, automatizando flujos y eliminando los cuellos de botella que te cuestan dinero." },
       problem: { en: "Your team spends 40+ hours per week on tasks a machine could do in seconds. Leads go cold. Data gets lost between tools. Competitors using AI are moving 10x faster. Every week you wait, you fall further behind.", es: "Tu equipo gasta 40+ horas semanales en tareas que una máquina haría en segundos. Los leads se enfrían. Los datos se pierden entre herramientas. Competidores usando IA se mueven 10x más rápido." },
       features: { en: ["AI Strategy & Roadmap Development", "Custom AI Agent Development", "LLM Integration (OpenAI, Claude, Custom Models)", "Process Automation & Workflow AI", "AI-Powered Data Analysis & Insights", "Conversational AI & NLP Solutions", "AI Training & Team Enablement", "Ongoing AI Advisory & Optimization"], es: ["Estrategia y Hoja de Ruta de IA", "Desarrollo de Agentes de IA Personalizados", "Integración de LLMs (OpenAI, Claude, Modelos Custom)", "Automatización de Procesos con IA", "Análisis de Datos e Insights con IA", "IA Conversacional y Soluciones NLP", "Capacitación de IA para Equipos", "Asesoría Continua y Optimización de IA"] },
@@ -411,7 +411,7 @@ const T = {
     },
     "svc-chatbot-dev": {
       label: { en: "Technology", es: "Tecnología" },
-      title: { en: "AI Chatbot<br/>Development", es: "Desarrollo de<br/>Chatbots con IA" },
+      title: { en: "AI ChatbotDevelopment", es: "Desarrollo deChatbots con IA" },
       subtitle: { en: "78% of leads go cold because businesses respond too slowly. Deploy an AI chatbot that qualifies leads, answers questions, and books meetings — in English and Spanish — 24/7.", es: "78% de los leads se enfrían porque los negocios responden muy lento. Despliega un chatbot de IA que califica leads, responde preguntas y agenda reuniones — en inglés y español — 24/7." },
       problem: { en: "Your inbox is where leads go to die. It takes your team 6+ hours to respond, and by then, the prospect already called your competitor. You're paying for traffic that converts into nothing.", es: "Tu bandeja es donde los leads van a morir. Tu equipo tarda 6+ horas en responder, y para entonces el prospecto ya llamó a tu competencia. Estás pagando por tráfico que no convierte." },
       features: { en: ["Website AI Chat Agents", "WhatsApp & Messenger Bot Integration", "Lead Qualification & Scoring Automation", "Meeting Booking & Calendar Sync", "Multi-Language Support (EN/ES)", "CRM Integration (HubSpot, Salesforce, GHL)", "Custom Knowledge Base Training", "Analytics & Conversation Insights"], es: ["Agentes de Chat IA para Sitios Web", "Integración de Bots para WhatsApp y Messenger", "Calificación de Leads y Scoring Automatizado", "Agendamiento y Sincronización de Calendario", "Soporte Multi-Idioma (EN/ES)", "Integración con CRM (HubSpot, Salesforce, GHL)", "Entrenamiento con Base de Conocimiento Custom", "Analítica e Insights de Conversaciones"] },
@@ -422,7 +422,7 @@ const T = {
     },
     "svc-voice": {
       label: { en: "Technology", es: "Tecnología" },
-      title: { en: "AI Voice<br/>Integration", es: "Integración de<br/>Voz con IA" },
+      title: { en: "AI VoiceIntegration", es: "Integración deVoz con IA" },
       subtitle: { en: "Your phone system is losing you money. AI voice agents handle inbound calls, qualify leads by voice, and route high-value prospects to your team — in both English and Spanish.", es: "Tu sistema telefónico te está costando dinero. Agentes de voz con IA manejan llamadas entrantes, califican leads por voz y dirigen prospectos de alto valor a tu equipo — en inglés y español." },
       problem: { en: "Missed calls are missed revenue. Your team can't answer every call instantly, and voicemail is where deals go to die. Meanwhile, competitors with AI voice systems never miss a ring.", es: "Llamadas perdidas son ingresos perdidos. Tu equipo no puede contestar cada llamada al instante, y el buzón de voz es donde los negocios van a morir." },
       features: { en: ["AI-Powered Inbound Call Handling", "Voice-Based Lead Qualification", "IVR Replacement with Conversational AI", "Bilingual Voice Agents (EN/ES)", "Call Transcription & Summarization", "CRM Auto-Logging & Follow-Up Triggers", "Appointment Scheduling by Voice", "Call Analytics & Sentiment Analysis"], es: ["Manejo de Llamadas Entrantes con IA", "Calificación de Leads por Voz", "Reemplazo de IVR con IA Conversacional", "Agentes de Voz Bilingües (EN/ES)", "Transcripción y Resumen de Llamadas", "Auto-Registro en CRM y Triggers de Seguimiento", "Agendamiento por Voz", "Analítica de Llamadas y Análisis de Sentimiento"] },
@@ -433,7 +433,7 @@ const T = {
     },
     "svc-web-mobile": {
       label: { en: "Technology", es: "Tecnología" },
-      title: { en: "Custom Web &<br/>Mobile Apps", es: "Aplicaciones Web<br/>y Móviles a Medida" },
+      title: { en: "Custom Web &Mobile Apps", es: "Aplicaciones Weby Móviles a Medida" },
       subtitle: { en: "Off-the-shelf software forcing you into workarounds? We build exactly what your business needs — web apps, mobile apps, and platforms that fit your operations like a glove.", es: "¿Software genérico obligándote a improvisar? Construimos exactamente lo que tu negocio necesita — apps web, apps móviles y plataformas que se ajustan a tus operaciones." },
       problem: { en: "You're duct-taping 5 different tools together, paying for features you don't use, and still have gaps in your workflow. Your team wastes hours on workarounds that custom software would eliminate overnight.", es: "Estás parcheando 5 herramientas diferentes, pagando por funciones que no usas, y aún tienes vacíos en tu flujo. Tu equipo desperdicia horas en parches que un software a medida eliminaría." },
       features: { en: ["Custom Web Application Development", "Progressive Web Apps (PWA)", "Native & Cross-Platform Mobile Apps", "API Development & Integration", "Database Design & Optimization", "Admin Dashboards & Internal Tools", "E-Commerce & Marketplace Platforms", "Ongoing Maintenance & Support"], es: ["Desarrollo de Aplicaciones Web a Medida", "Progressive Web Apps (PWA)", "Apps Móviles Nativas y Cross-Platform", "Desarrollo e Integración de APIs", "Diseño y Optimización de Bases de Datos", "Dashboards Administrativos y Herramientas Internas", "Plataformas de E-Commerce y Marketplace", "Mantenimiento y Soporte Continuo"] },
@@ -444,7 +444,7 @@ const T = {
     },
     "svc-paid-ads": {
       label: { en: "Growth Marketing", es: "Growth Marketing" },
-      title: { en: "Paid Ads &<br/>Performance Marketing", es: "Paid Ads y<br/>Marketing de Performance" },
+      title: { en: "Paid Ads &Performance Marketing", es: "Paid Ads yMarketing de Performance" },
       subtitle: { en: "Stop feeding Meta and Google with zero ROI. We build paid ad campaigns where every dollar is tracked from click to closed deal — in English and Spanish markets.", es: "Deja de alimentar a Meta y Google sin ROI. Construimos campañas de ads donde cada dólar se rastrea desde el clic hasta el cierre — en mercados en inglés y español." },
       problem: { en: "You're spending $5K-$50K/month on ads but can't tell which campaigns actually bring in revenue. Your agency sends vanity metrics — impressions, clicks, CPM — while your pipeline stays empty.", es: "Gastas $5K-$50K/mes en ads pero no puedes decir qué campañas generan ingresos. Tu agencia envía métricas de vanidad — impresiones, clics, CPM — mientras tu pipeline sigue vacío." },
       features: { en: ["Google Ads (Search, Display, YouTube)", "Meta Ads (Facebook & Instagram)", "LinkedIn Ads for B2B", "Retargeting & Lookalike Audiences", "Landing Page Design & Optimization", "A/B Testing & Creative Optimization", "Revenue Attribution Setup", "Bilingual Campaign Management (EN/ES)"], es: ["Google Ads (Búsqueda, Display, YouTube)", "Meta Ads (Facebook e Instagram)", "LinkedIn Ads para B2B", "Retargeting y Audiencias Similares", "Diseño y Optimización de Landing Pages", "Pruebas A/B y Optimización Creativa", "Configuración de Atribución de Ingresos", "Gestión Bilingüe de Campañas (EN/ES)"] },
@@ -455,7 +455,7 @@ const T = {
     },
     "svc-seo": {
       label: { en: "Growth Marketing", es: "Growth Marketing" },
-      title: { en: "SEO & Content<br/>Strategy", es: "SEO y Estrategia<br/>de Contenido" },
+      title: { en: "SEO & ContentStrategy", es: "SEO y Estrategiade Contenido" },
       subtitle: { en: "Your competitors rank above you because they invested in SEO while you relied on ads. We build bilingual SEO engines that generate organic traffic in English and Spanish — traffic you don't have to pay for every month.", es: "Tu competencia se posiciona arriba porque invirtieron en SEO mientras tú dependías de ads. Construimos motores de SEO bilingüe que generan tráfico orgánico en inglés y español — tráfico que no tienes que pagar cada mes." },
       problem: { en: "You're invisible on Google. Your competitors own page 1 for every keyword that matters. And you're 100% dependent on paid ads — the moment you stop paying, your leads disappear overnight.", es: "Eres invisible en Google. Tu competencia domina la página 1 para cada keyword que importa. Y dependes 100% de ads pagados — el momento que dejas de pagar, tus leads desaparecen." },
       features: { en: ["Technical SEO Audit & Fixes", "Keyword Research & Strategy", "On-Page SEO Optimization", "Content Creation & Blog Strategy", "Bilingual SEO (English & Spanish)", "Local SEO (Google Business, Maps)", "Link Building & Authority", "Monthly Reporting & Rankings"], es: ["Auditoría y Correcciones de SEO Técnico", "Investigación de Keywords y Estrategia", "Optimización de SEO On-Page", "Creación de Contenido y Estrategia de Blog", "SEO Bilingüe (Inglés y Español)", "SEO Local (Google Business, Maps)", "Link Building y Autoridad", "Reportes Mensuales y Rankings"] },
@@ -466,7 +466,7 @@ const T = {
     },
     "svc-analytics": {
       label: { en: "Growth Marketing", es: "Growth Marketing" },
-      title: { en: "Analytics &<br/>Revenue Attribution", es: "Analítica y<br/>Atribución de Ingresos" },
+      title: { en: "Analytics &Revenue Attribution", es: "Analítica yAtribución de Ingresos" },
       subtitle: { en: "You're making marketing decisions in the dark. We build dashboards that show exactly which channels, campaigns, and touchpoints generate revenue — not just clicks.", es: "Estás tomando decisiones de marketing a ciegas. Construimos dashboards que muestran exactamente qué canales, campañas y touchpoints generan ingresos — no solo clics." },
       problem: { en: "The average mid-market company wastes 40-60% of ad spend on channels that produce zero revenue. You have data in 10 tools but no single source of truth. You literally cannot tell which marketing dollar made money.", es: "La empresa mediana promedio desperdicia 40-60% de su inversión en ads en canales con cero ingresos. Tienes datos en 10 herramientas pero ninguna fuente única de verdad. Literalmente no puedes decir qué dólar de marketing generó dinero." },
       features: { en: ["Revenue Attribution Setup (First/Last/Multi-Touch)", "Custom Analytics Dashboards", "GA4 Setup & Configuration", "Marketing Data Warehouse", "Cross-Channel Performance Tracking", "ROI Reporting by Campaign", "Conversion Path Analysis", "Real-Time Revenue Dashboards"], es: ["Configuración de Atribución (First/Last/Multi-Touch)", "Dashboards de Analítica Personalizados", "Configuración de GA4", "Data Warehouse de Marketing", "Tracking de Rendimiento Cross-Channel", "Reportes de ROI por Campaña", "Análisis de Rutas de Conversión", "Dashboards de Ingresos en Tiempo Real"] },
@@ -477,7 +477,7 @@ const T = {
     },
     "svc-email-cro": {
       label: { en: "Growth Marketing", es: "Growth Marketing" },
-      title: { en: "Email Marketing<br/>& CRO", es: "Email Marketing<br/>y CRO" },
+      title: { en: "Email Marketing& CRO", es: "Email Marketingy CRO" },
       subtitle: { en: "Your email list is a goldmine you're not mining. We build automated email sequences that nurture leads, recover abandoned carts, and reactivate dormant customers — while optimizing every page for conversions.", es: "Tu lista de email es una mina de oro que no estás explotando. Construimos secuencias automatizadas que nutren leads, recuperan carritos abandonados y reactivan clientes dormidos — mientras optimizamos cada página para conversiones." },
       problem: { en: "You have thousands of email subscribers and do nothing with them. Your landing pages convert at 1-2% when they should convert at 5-10%. Every visitor that leaves without converting is money you already paid to acquire.", es: "Tienes miles de suscriptores y no haces nada con ellos. Tus landing pages convierten al 1-2% cuando deberían convertir al 5-10%. Cada visitante que se va sin convertir es dinero que ya pagaste por adquirir." },
       features: { en: ["Email Sequence Automation", "Welcome & Onboarding Flows", "Abandoned Cart Recovery", "Customer Reactivation Campaigns", "A/B Testing & Subject Line Optimization", "Landing Page Design & Optimization", "Conversion Rate Optimization (CRO)", "Bilingual Email Campaigns (EN/ES)"], es: ["Automatización de Secuencias de Email", "Flujos de Bienvenida y Onboarding", "Recuperación de Carritos Abandonados", "Campañas de Reactivación de Clientes", "Pruebas A/B y Optimización de Asuntos", "Diseño y Optimización de Landing Pages", "Optimización de Tasa de Conversión (CRO)", "Campañas de Email Bilingües (EN/ES)"] },
@@ -488,7 +488,7 @@ const T = {
     },
     "product-ai-crm": {
       label: { en: "Products", es: "Productos" },
-      title: { en: "Avertris<br/>AI CRM", es: "Avertris<br/>AI CRM" },
+      title: { en: "AvertrisAI CRM", es: "AvertrisAI CRM" },
       subtitle: { en: "Stop losing clients to slow follow-ups. AI-powered CRM that responds to leads in seconds, automates your entire pipeline, and ensures zero clients fall through the cracks.", es: "Deja de perder clientes por seguimientos lentos. CRM potenciado con IA que responde leads en segundos, automatiza todo tu pipeline y asegura que ningún cliente se pierda." },
       problem: { en: "Your CRM is a glorified spreadsheet. Leads sit for hours without follow-up. Your team forgets to update it. And you have zero visibility into which deals are actually moving. Every day, clients slip through the cracks because nobody followed up.", es: "Tu CRM es una hoja de cálculo glorificada. Los leads esperan horas sin seguimiento. Tu equipo olvida actualizarlo. Y no tienes visibilidad sobre qué negocios avanzan realmente." },
       features: { en: ["AI-Powered Lead Response (under 60 seconds)", "Automated Follow-Up Sequences", "Pipeline & Deal Management", "Contact & Company Management", "Email & SMS Marketing Built-In", "Appointment Scheduling", "Reporting & Revenue Dashboards", "Bilingual Platform (EN/ES)"], es: ["Respuesta a Leads con IA (menos de 60 segundos)", "Secuencias de Seguimiento Automatizadas", "Gestión de Pipeline y Negocios", "Gestión de Contactos y Empresas", "Email & SMS Marketing Integrado", "Agendamiento de Citas", "Reportes y Dashboards de Ingresos", "Plataforma Bilingüe (EN/ES)"] },
@@ -499,7 +499,7 @@ const T = {
     },
     "product-ai-chatbot": {
       label: { en: "Products", es: "Productos" },
-      title: { en: "AI Chatbot<br/>SaaS", es: "Chatbot SaaS<br/>con IA" },
+      title: { en: "AI ChatbotSaaS", es: "Chatbot SaaScon IA" },
       subtitle: { en: "Deploy an AI agent on your website in minutes — not months. It qualifies leads, answers questions, and books meetings 24/7 so your team stops losing opportunities while they sleep.", es: "Despliega un agente IA en tu web en minutos — no meses. Califica leads, responde preguntas y agenda reuniones 24/7 para que tu equipo deje de perder oportunidades mientras duermen." },
       problem: { en: "Your website gets hundreds of visitors but most leave without talking to anyone. When they do reach out, your team responds hours later — and by then, they've moved on. You're paying for traffic and converting almost none of it.", es: "Tu web recibe cientos de visitantes pero la mayoría se va sin hablar con nadie. Cuando contactan, tu equipo responde horas después — y para entonces, ya se fueron." },
       features: { en: ["Plug-and-Play Website Chat Widget", "AI-Powered Lead Qualification", "Automatic Meeting Booking", "Custom Knowledge Base Training", "Multi-Language Support (EN/ES)", "CRM Integration", "Analytics & Chat Transcripts", "No Code Required — Deploy in Minutes"], es: ["Widget de Chat Plug-and-Play", "Calificación de Leads con IA", "Agendamiento Automático de Reuniones", "Entrenamiento con Base de Conocimiento Custom", "Soporte Multi-Idioma (EN/ES)", "Integración con CRM", "Analítica y Transcripciones de Chat", "Sin Código — Despliega en Minutos"] },
@@ -510,7 +510,7 @@ const T = {
     },
     "product-dealer-manager": {
       label: { en: "Products", es: "Productos" },
-      title: { en: "Dealer<br/>Manager", es: "Dealer<br/>Manager" },
+      title: { en: "DealerManager", es: "DealerManager" },
       subtitle: { en: "Stop running your dealership on 5 broken tools. One platform for inventory, CRM, operations, and reporting — built specifically for automotive dealerships in the USA and Dominican Republic.", es: "Deja de operar tu concesionario con 5 herramientas rotas. Una plataforma para inventario, CRM, operaciones y reportes — construida específicamente para concesionarios automotrices en USA y República Dominicana." },
       problem: { en: "Your dealership staff juggles inventory spreadsheets, a separate CRM, WhatsApp for leads, and paper for service orders. Nothing talks to anything. You lose 30+ hours per week to this chaos — and leads fall through the cracks daily.", es: "Tu staff hace malabares con hojas de inventario, un CRM separado, WhatsApp para leads y papel para órdenes de servicio. Nada se comunica. Pierdes 30+ horas semanales en este caos — y leads se pierden diariamente." },
       features: { en: ["Vehicle Inventory Management", "Built-In CRM & Lead Tracking", "Service Order Management", "Financial Reporting & Analytics", "Multi-Location Support", "Bilingual Platform (EN/ES)", "Staff Performance Tracking", "Customer Communication Hub (SMS, Email, WhatsApp)"], es: ["Gestión de Inventario de Vehículos", "CRM Integrado y Seguimiento de Leads", "Gestión de Órdenes de Servicio", "Reportes Financieros y Analítica", "Soporte Multi-Ubicación", "Plataforma Bilingüe (EN/ES)", "Seguimiento de Rendimiento de Staff", "Hub de Comunicación con Clientes (SMS, Email, WhatsApp)"] },
