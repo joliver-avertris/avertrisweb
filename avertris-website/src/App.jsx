@@ -396,6 +396,130 @@ const T = {
     namePh: { en: "Your name", es: "Tu nombre" },
     companyPh: { en: "Company name", es: "Nombre de empresa" },
   },
+  /* ── Dedicated Service & Product Pages ── */
+  detailPages: {
+    "svc-ai-consulting": {
+      label: { en: "Technology", es: "Tecnología" },
+      title: { en: "AI Consulting &<br/>Agent Development", es: "Consultoría de IA y<br/>Desarrollo de Agentes" },
+      subtitle: { en: "Stop losing deals to slow, manual operations. We build AI agents that work 24/7 — responding to leads, automating workflows, and eliminating the bottlenecks that cost you money.", es: "Deja de perder negocios por operaciones lentas y manuales. Construimos agentes de IA que trabajan 24/7 — respondiendo leads, automatizando flujos y eliminando los cuellos de botella que te cuestan dinero." },
+      problem: { en: "Your team spends 40+ hours per week on tasks a machine could do in seconds. Leads go cold. Data gets lost between tools. Competitors using AI are moving 10x faster. Every week you wait, you fall further behind.", es: "Tu equipo gasta 40+ horas semanales en tareas que una máquina haría en segundos. Los leads se enfrían. Los datos se pierden entre herramientas. Competidores usando IA se mueven 10x más rápido." },
+      features: { en: ["AI Strategy & Roadmap Development", "Custom AI Agent Development", "LLM Integration (OpenAI, Claude, Custom Models)", "Process Automation & Workflow AI", "AI-Powered Data Analysis & Insights", "Conversational AI & NLP Solutions", "AI Training & Team Enablement", "Ongoing AI Advisory & Optimization"], es: ["Estrategia y Hoja de Ruta de IA", "Desarrollo de Agentes de IA Personalizados", "Integración de LLMs (OpenAI, Claude, Modelos Custom)", "Automatización de Procesos con IA", "Análisis de Datos e Insights con IA", "IA Conversacional y Soluciones NLP", "Capacitación de IA para Equipos", "Asesoría Continua y Optimización de IA"] },
+      results: [{ n: "40", s: "hr", l: { en: "Saved weekly per client", es: "Ahorradas semanalmente por cliente" } }, { n: "70", s: "%", l: { en: "Faster lead response", es: "Respuesta a leads más rápida" } }, { n: "3.2", s: "x", l: { en: "Average ROI in 12 months", es: "ROI promedio en 12 meses" } }],
+      tech: "OpenAI, Anthropic Claude, LangChain, Python, AWS, Azure AI, Google Vertex AI",
+      price: { en: "Consulting from $500 | Custom projects from $2,500", es: "Consultoría desde $500 | Proyectos custom desde $2,500" },
+      cta: { en: "Get an AI strategy session", es: "Agenda una sesión de estrategia de IA" },
+    },
+    "svc-chatbot-dev": {
+      label: { en: "Technology", es: "Tecnología" },
+      title: { en: "AI Chatbot<br/>Development", es: "Desarrollo de<br/>Chatbots con IA" },
+      subtitle: { en: "78% of leads go cold because businesses respond too slowly. Deploy an AI chatbot that qualifies leads, answers questions, and books meetings — in English and Spanish — 24/7.", es: "78% de los leads se enfrían porque los negocios responden muy lento. Despliega un chatbot de IA que califica leads, responde preguntas y agenda reuniones — en inglés y español — 24/7." },
+      problem: { en: "Your inbox is where leads go to die. It takes your team 6+ hours to respond, and by then, the prospect already called your competitor. You're paying for traffic that converts into nothing.", es: "Tu bandeja es donde los leads van a morir. Tu equipo tarda 6+ horas en responder, y para entonces el prospecto ya llamó a tu competencia. Estás pagando por tráfico que no convierte." },
+      features: { en: ["Website AI Chat Agents", "WhatsApp & Messenger Bot Integration", "Lead Qualification & Scoring Automation", "Meeting Booking & Calendar Sync", "Multi-Language Support (EN/ES)", "CRM Integration (HubSpot, Salesforce, GHL)", "Custom Knowledge Base Training", "Analytics & Conversation Insights"], es: ["Agentes de Chat IA para Sitios Web", "Integración de Bots para WhatsApp y Messenger", "Calificación de Leads y Scoring Automatizado", "Agendamiento y Sincronización de Calendario", "Soporte Multi-Idioma (EN/ES)", "Integración con CRM (HubSpot, Salesforce, GHL)", "Entrenamiento con Base de Conocimiento Custom", "Analítica e Insights de Conversaciones"] },
+      results: [{ n: "78", s: "%", l: { en: "Of leads captured after-hours", es: "De leads capturados fuera de horario" } }, { n: "3", s: "sec", l: { en: "Average response time", es: "Tiempo promedio de respuesta" } }, { n: "45", s: "%", l: { en: "Increase in qualified meetings", es: "Aumento en reuniones calificadas" } }],
+      tech: "OpenAI, Claude, Voiceflow, Botpress, Twilio, WhatsApp Business API",
+      price: { en: "Starting at $2,500 for custom builds | SaaS from $150/mo", es: "Desde $2,500 para builds custom | SaaS desde $150/mes" },
+      cta: { en: "Build my chatbot", es: "Construir mi chatbot" },
+    },
+    "svc-voice": {
+      label: { en: "Technology", es: "Tecnología" },
+      title: { en: "AI Voice<br/>Integration", es: "Integración de<br/>Voz con IA" },
+      subtitle: { en: "Your phone system is losing you money. AI voice agents handle inbound calls, qualify leads by voice, and route high-value prospects to your team — in both English and Spanish.", es: "Tu sistema telefónico te está costando dinero. Agentes de voz con IA manejan llamadas entrantes, califican leads por voz y dirigen prospectos de alto valor a tu equipo — en inglés y español." },
+      problem: { en: "Missed calls are missed revenue. Your team can't answer every call instantly, and voicemail is where deals go to die. Meanwhile, competitors with AI voice systems never miss a ring.", es: "Llamadas perdidas son ingresos perdidos. Tu equipo no puede contestar cada llamada al instante, y el buzón de voz es donde los negocios van a morir." },
+      features: { en: ["AI-Powered Inbound Call Handling", "Voice-Based Lead Qualification", "IVR Replacement with Conversational AI", "Bilingual Voice Agents (EN/ES)", "Call Transcription & Summarization", "CRM Auto-Logging & Follow-Up Triggers", "Appointment Scheduling by Voice", "Call Analytics & Sentiment Analysis"], es: ["Manejo de Llamadas Entrantes con IA", "Calificación de Leads por Voz", "Reemplazo de IVR con IA Conversacional", "Agentes de Voz Bilingües (EN/ES)", "Transcripción y Resumen de Llamadas", "Auto-Registro en CRM y Triggers de Seguimiento", "Agendamiento por Voz", "Analítica de Llamadas y Análisis de Sentimiento"] },
+      results: [{ n: "0", s: "", l: { en: "Missed inbound calls", es: "Llamadas entrantes perdidas" } }, { n: "60", s: "%", l: { en: "Reduction in call handling costs", es: "Reducción en costos de manejo de llamadas" } }, { n: "24", s: "/7", l: { en: "Voice coverage without staff", es: "Cobertura de voz sin personal" } }],
+      tech: "Twilio, ElevenLabs, OpenAI Whisper, Deepgram, Vapi, Make.com",
+      price: { en: "Custom projects from $3,000", es: "Proyectos custom desde $3,000" },
+      cta: { en: "Deploy AI voice for my business", es: "Implementar voz IA para mi negocio" },
+    },
+    "svc-web-mobile": {
+      label: { en: "Technology", es: "Tecnología" },
+      title: { en: "Custom Web &<br/>Mobile Apps", es: "Aplicaciones Web<br/>y Móviles a Medida" },
+      subtitle: { en: "Off-the-shelf software forcing you into workarounds? We build exactly what your business needs — web apps, mobile apps, and platforms that fit your operations like a glove.", es: "¿Software genérico obligándote a improvisar? Construimos exactamente lo que tu negocio necesita — apps web, apps móviles y plataformas que se ajustan a tus operaciones." },
+      problem: { en: "You're duct-taping 5 different tools together, paying for features you don't use, and still have gaps in your workflow. Your team wastes hours on workarounds that custom software would eliminate overnight.", es: "Estás parcheando 5 herramientas diferentes, pagando por funciones que no usas, y aún tienes vacíos en tu flujo. Tu equipo desperdicia horas en parches que un software a medida eliminaría." },
+      features: { en: ["Custom Web Application Development", "Progressive Web Apps (PWA)", "Native & Cross-Platform Mobile Apps", "API Development & Integration", "Database Design & Optimization", "Admin Dashboards & Internal Tools", "E-Commerce & Marketplace Platforms", "Ongoing Maintenance & Support"], es: ["Desarrollo de Aplicaciones Web a Medida", "Progressive Web Apps (PWA)", "Apps Móviles Nativas y Cross-Platform", "Desarrollo e Integración de APIs", "Diseño y Optimización de Bases de Datos", "Dashboards Administrativos y Herramientas Internas", "Plataformas de E-Commerce y Marketplace", "Mantenimiento y Soporte Continuo"] },
+      results: [{ n: "6", s: "mo", l: { en: "Avg. dev time saved vs agencies", es: "Tiempo de desarrollo ahorrado vs agencias" } }, { n: "50", s: "%", l: { en: "Lower cost than US-only teams", es: "Menor costo que equipos solo US" } }, { n: "100", s: "%", l: { en: "Custom-fit to your operations", es: "Ajustado 100% a tus operaciones" } }],
+      tech: "React, Next.js, React Native, Node.js, Python, PostgreSQL, AWS, Vercel",
+      price: { en: "Websites from $600 | Custom apps from $5,000", es: "Sitios web desde $600 | Apps custom desde $5,000" },
+      cta: { en: "Scope my project", es: "Cotizar mi proyecto" },
+    },
+    "svc-paid-ads": {
+      label: { en: "Growth Marketing", es: "Growth Marketing" },
+      title: { en: "Paid Ads &<br/>Performance Marketing", es: "Paid Ads y<br/>Marketing de Performance" },
+      subtitle: { en: "Stop feeding Meta and Google with zero ROI. We build paid ad campaigns where every dollar is tracked from click to closed deal — in English and Spanish markets.", es: "Deja de alimentar a Meta y Google sin ROI. Construimos campañas de ads donde cada dólar se rastrea desde el clic hasta el cierre — en mercados en inglés y español." },
+      problem: { en: "You're spending $5K-$50K/month on ads but can't tell which campaigns actually bring in revenue. Your agency sends vanity metrics — impressions, clicks, CPM — while your pipeline stays empty.", es: "Gastas $5K-$50K/mes en ads pero no puedes decir qué campañas generan ingresos. Tu agencia envía métricas de vanidad — impresiones, clics, CPM — mientras tu pipeline sigue vacío." },
+      features: { en: ["Google Ads (Search, Display, YouTube)", "Meta Ads (Facebook & Instagram)", "LinkedIn Ads for B2B", "Retargeting & Lookalike Audiences", "Landing Page Design & Optimization", "A/B Testing & Creative Optimization", "Revenue Attribution Setup", "Bilingual Campaign Management (EN/ES)"], es: ["Google Ads (Búsqueda, Display, YouTube)", "Meta Ads (Facebook e Instagram)", "LinkedIn Ads para B2B", "Retargeting y Audiencias Similares", "Diseño y Optimización de Landing Pages", "Pruebas A/B y Optimización Creativa", "Configuración de Atribución de Ingresos", "Gestión Bilingüe de Campañas (EN/ES)"] },
+      results: [{ n: "60", s: "%", l: { en: "Less wasted ad spend", es: "Menos desperdicio en ads" } }, { n: "3.2", s: "x", l: { en: "Average ROAS improvement", es: "Mejora promedio en ROAS" } }, { n: "45", s: "%", l: { en: "Lower cost per acquisition", es: "Menor costo por adquisición" } }],
+      tech: "Google Ads, Meta Business Suite, LinkedIn Campaign Manager, Hyros, GA4, GTM",
+      price: { en: "Management from $2,500/mo + ad spend", es: "Gestión desde $2,500/mes + inversión en ads" },
+      cta: { en: "Audit my ad spend — free", es: "Auditar mi inversión en ads — gratis" },
+    },
+    "svc-seo": {
+      label: { en: "Growth Marketing", es: "Growth Marketing" },
+      title: { en: "SEO & Content<br/>Strategy", es: "SEO y Estrategia<br/>de Contenido" },
+      subtitle: { en: "Your competitors rank above you because they invested in SEO while you relied on ads. We build bilingual SEO engines that generate organic traffic in English and Spanish — traffic you don't have to pay for every month.", es: "Tu competencia se posiciona arriba porque invirtieron en SEO mientras tú dependías de ads. Construimos motores de SEO bilingüe que generan tráfico orgánico en inglés y español — tráfico que no tienes que pagar cada mes." },
+      problem: { en: "You're invisible on Google. Your competitors own page 1 for every keyword that matters. And you're 100% dependent on paid ads — the moment you stop paying, your leads disappear overnight.", es: "Eres invisible en Google. Tu competencia domina la página 1 para cada keyword que importa. Y dependes 100% de ads pagados — el momento que dejas de pagar, tus leads desaparecen." },
+      features: { en: ["Technical SEO Audit & Fixes", "Keyword Research & Strategy", "On-Page SEO Optimization", "Content Creation & Blog Strategy", "Bilingual SEO (English & Spanish)", "Local SEO (Google Business, Maps)", "Link Building & Authority", "Monthly Reporting & Rankings"], es: ["Auditoría y Correcciones de SEO Técnico", "Investigación de Keywords y Estrategia", "Optimización de SEO On-Page", "Creación de Contenido y Estrategia de Blog", "SEO Bilingüe (Inglés y Español)", "SEO Local (Google Business, Maps)", "Link Building y Autoridad", "Reportes Mensuales y Rankings"] },
+      results: [{ n: "340", s: "%", l: { en: "Avg. organic traffic increase", es: "Aumento promedio de tráfico orgánico" } }, { n: "0", s: "", l: { en: "Dependency on paid ads for leads", es: "Dependencia de ads pagados para leads" } }, { n: "12", s: "mo", l: { en: "To dominate your niche keywords", es: "Para dominar tus keywords de nicho" } }],
+      tech: "Semrush, Ahrefs, Screaming Frog, Google Search Console, Surfer SEO, Clearscope",
+      price: { en: "SEO packages from $1,500/mo", es: "Paquetes de SEO desde $1,500/mes" },
+      cta: { en: "Get my free SEO audit", es: "Obtener mi auditoría SEO gratis" },
+    },
+    "svc-analytics": {
+      label: { en: "Growth Marketing", es: "Growth Marketing" },
+      title: { en: "Analytics &<br/>Revenue Attribution", es: "Analítica y<br/>Atribución de Ingresos" },
+      subtitle: { en: "You're making marketing decisions in the dark. We build dashboards that show exactly which channels, campaigns, and touchpoints generate revenue — not just clicks.", es: "Estás tomando decisiones de marketing a ciegas. Construimos dashboards que muestran exactamente qué canales, campañas y touchpoints generan ingresos — no solo clics." },
+      problem: { en: "The average mid-market company wastes 40-60% of ad spend on channels that produce zero revenue. You have data in 10 tools but no single source of truth. You literally cannot tell which marketing dollar made money.", es: "La empresa mediana promedio desperdicia 40-60% de su inversión en ads en canales con cero ingresos. Tienes datos en 10 herramientas pero ninguna fuente única de verdad. Literalmente no puedes decir qué dólar de marketing generó dinero." },
+      features: { en: ["Revenue Attribution Setup (First/Last/Multi-Touch)", "Custom Analytics Dashboards", "GA4 Setup & Configuration", "Marketing Data Warehouse", "Cross-Channel Performance Tracking", "ROI Reporting by Campaign", "Conversion Path Analysis", "Real-Time Revenue Dashboards"], es: ["Configuración de Atribución (First/Last/Multi-Touch)", "Dashboards de Analítica Personalizados", "Configuración de GA4", "Data Warehouse de Marketing", "Tracking de Rendimiento Cross-Channel", "Reportes de ROI por Campaña", "Análisis de Rutas de Conversión", "Dashboards de Ingresos en Tiempo Real"] },
+      results: [{ n: "60", s: "%", l: { en: "Ad waste identified & eliminated", es: "Desperdicio en ads identificado y eliminado" } }, { n: "1", s: "", l: { en: "Single source of truth for revenue", es: "Una sola fuente de verdad para ingresos" } }, { n: "2", s: "wk", l: { en: "To full attribution setup", es: "Para configuración completa de atribución" } }],
+      tech: "Hyros, Google Analytics 4, Looker Studio, BigQuery, Segment, GTM",
+      price: { en: "Attribution setup from $2,000 | Ongoing from $1,500/mo", es: "Setup de atribución desde $2,000 | Continuo desde $1,500/mes" },
+      cta: { en: "Show me where my money goes", es: "Muéstrame a dónde va mi dinero" },
+    },
+    "svc-email-cro": {
+      label: { en: "Growth Marketing", es: "Growth Marketing" },
+      title: { en: "Email Marketing<br/>& CRO", es: "Email Marketing<br/>y CRO" },
+      subtitle: { en: "Your email list is a goldmine you're not mining. We build automated email sequences that nurture leads, recover abandoned carts, and reactivate dormant customers — while optimizing every page for conversions.", es: "Tu lista de email es una mina de oro que no estás explotando. Construimos secuencias automatizadas que nutren leads, recuperan carritos abandonados y reactivan clientes dormidos — mientras optimizamos cada página para conversiones." },
+      problem: { en: "You have thousands of email subscribers and do nothing with them. Your landing pages convert at 1-2% when they should convert at 5-10%. Every visitor that leaves without converting is money you already paid to acquire.", es: "Tienes miles de suscriptores y no haces nada con ellos. Tus landing pages convierten al 1-2% cuando deberían convertir al 5-10%. Cada visitante que se va sin convertir es dinero que ya pagaste por adquirir." },
+      features: { en: ["Email Sequence Automation", "Welcome & Onboarding Flows", "Abandoned Cart Recovery", "Customer Reactivation Campaigns", "A/B Testing & Subject Line Optimization", "Landing Page Design & Optimization", "Conversion Rate Optimization (CRO)", "Bilingual Email Campaigns (EN/ES)"], es: ["Automatización de Secuencias de Email", "Flujos de Bienvenida y Onboarding", "Recuperación de Carritos Abandonados", "Campañas de Reactivación de Clientes", "Pruebas A/B y Optimización de Asuntos", "Diseño y Optimización de Landing Pages", "Optimización de Tasa de Conversión (CRO)", "Campañas de Email Bilingües (EN/ES)"] },
+      results: [{ n: "85", s: "%", l: { en: "Increase in email engagement", es: "Aumento en engagement de email" } }, { n: "3", s: "x", l: { en: "Landing page conversion lift", es: "Mejora en conversión de landing pages" } }, { n: "25", s: "%", l: { en: "Revenue from email alone", es: "Ingresos solo por email" } }],
+      tech: "ActiveCampaign, Klaviyo, Mailchimp, Unbounce, Hotjar, Google Optimize",
+      price: { en: "Email marketing from $1,500/mo | CRO from $2,000/mo", es: "Email marketing desde $1,500/mes | CRO desde $2,000/mes" },
+      cta: { en: "Optimize my conversions", es: "Optimizar mis conversiones" },
+    },
+    "product-ai-crm": {
+      label: { en: "Products", es: "Productos" },
+      title: { en: "Avertris<br/>AI CRM", es: "Avertris<br/>AI CRM" },
+      subtitle: { en: "Stop losing clients to slow follow-ups. AI-powered CRM that responds to leads in seconds, automates your entire pipeline, and ensures zero clients fall through the cracks.", es: "Deja de perder clientes por seguimientos lentos. CRM potenciado con IA que responde leads en segundos, automatiza todo tu pipeline y asegura que ningún cliente se pierda." },
+      problem: { en: "Your CRM is a glorified spreadsheet. Leads sit for hours without follow-up. Your team forgets to update it. And you have zero visibility into which deals are actually moving. Every day, clients slip through the cracks because nobody followed up.", es: "Tu CRM es una hoja de cálculo glorificada. Los leads esperan horas sin seguimiento. Tu equipo olvida actualizarlo. Y no tienes visibilidad sobre qué negocios avanzan realmente." },
+      features: { en: ["AI-Powered Lead Response (under 60 seconds)", "Automated Follow-Up Sequences", "Pipeline & Deal Management", "Contact & Company Management", "Email & SMS Marketing Built-In", "Appointment Scheduling", "Reporting & Revenue Dashboards", "Bilingual Platform (EN/ES)"], es: ["Respuesta a Leads con IA (menos de 60 segundos)", "Secuencias de Seguimiento Automatizadas", "Gestión de Pipeline y Negocios", "Gestión de Contactos y Empresas", "Email & SMS Marketing Integrado", "Agendamiento de Citas", "Reportes y Dashboards de Ingresos", "Plataforma Bilingüe (EN/ES)"] },
+      results: [{ n: "70", s: "%", l: { en: "Faster lead response", es: "Respuesta a leads más rápida" } }, { n: "0", s: "", l: { en: "Leads lost to missed follow-ups", es: "Leads perdidos por seguimientos perdidos" } }, { n: "3.2", s: "x", l: { en: "Revenue from existing pipeline", es: "Ingresos del pipeline existente" } }],
+      tech: "Go High Level, Custom AI Models, Twilio, Stripe, Zapier",
+      price: { en: "From $300/mo (5 users included, $10/extra)", es: "Desde $300/mes (5 usuarios incluidos, $10/extra)" },
+      cta: { en: "Start my AI CRM trial", es: "Iniciar mi prueba de AI CRM" },
+    },
+    "product-ai-chatbot": {
+      label: { en: "Products", es: "Productos" },
+      title: { en: "AI Chatbot<br/>SaaS", es: "Chatbot SaaS<br/>con IA" },
+      subtitle: { en: "Deploy an AI agent on your website in minutes — not months. It qualifies leads, answers questions, and books meetings 24/7 so your team stops losing opportunities while they sleep.", es: "Despliega un agente IA en tu web en minutos — no meses. Califica leads, responde preguntas y agenda reuniones 24/7 para que tu equipo deje de perder oportunidades mientras duermen." },
+      problem: { en: "Your website gets hundreds of visitors but most leave without talking to anyone. When they do reach out, your team responds hours later — and by then, they've moved on. You're paying for traffic and converting almost none of it.", es: "Tu web recibe cientos de visitantes pero la mayoría se va sin hablar con nadie. Cuando contactan, tu equipo responde horas después — y para entonces, ya se fueron." },
+      features: { en: ["Plug-and-Play Website Chat Widget", "AI-Powered Lead Qualification", "Automatic Meeting Booking", "Custom Knowledge Base Training", "Multi-Language Support (EN/ES)", "CRM Integration", "Analytics & Chat Transcripts", "No Code Required — Deploy in Minutes"], es: ["Widget de Chat Plug-and-Play", "Calificación de Leads con IA", "Agendamiento Automático de Reuniones", "Entrenamiento con Base de Conocimiento Custom", "Soporte Multi-Idioma (EN/ES)", "Integración con CRM", "Analítica y Transcripciones de Chat", "Sin Código — Despliega en Minutos"] },
+      results: [{ n: "24", s: "/7", l: { en: "Lead capture — never miss a visitor", es: "Captura de leads — nunca pierdas un visitante" } }, { n: "3", s: "sec", l: { en: "Average response time", es: "Tiempo promedio de respuesta" } }, { n: "35", s: "%", l: { en: "More qualified meetings booked", es: "Más reuniones calificadas agendadas" } }],
+      tech: "OpenAI, Custom NLP, React Widget, REST API, Webhooks",
+      price: { en: "From $150/mo | 14-day free trial", es: "Desde $150/mes | Prueba gratis de 14 días" },
+      cta: { en: "Try it free for 14 days", es: "Pruébalo gratis 14 días" },
+    },
+    "product-dealer-manager": {
+      label: { en: "Products", es: "Productos" },
+      title: { en: "Dealer<br/>Manager", es: "Dealer<br/>Manager" },
+      subtitle: { en: "Stop running your dealership on 5 broken tools. One platform for inventory, CRM, operations, and reporting — built specifically for automotive dealerships in the USA and Dominican Republic.", es: "Deja de operar tu concesionario con 5 herramientas rotas. Una plataforma para inventario, CRM, operaciones y reportes — construida específicamente para concesionarios automotrices en USA y República Dominicana." },
+      problem: { en: "Your dealership staff juggles inventory spreadsheets, a separate CRM, WhatsApp for leads, and paper for service orders. Nothing talks to anything. You lose 30+ hours per week to this chaos — and leads fall through the cracks daily.", es: "Tu staff hace malabares con hojas de inventario, un CRM separado, WhatsApp para leads y papel para órdenes de servicio. Nada se comunica. Pierdes 30+ horas semanales en este caos — y leads se pierden diariamente." },
+      features: { en: ["Vehicle Inventory Management", "Built-In CRM & Lead Tracking", "Service Order Management", "Financial Reporting & Analytics", "Multi-Location Support", "Bilingual Platform (EN/ES)", "Staff Performance Tracking", "Customer Communication Hub (SMS, Email, WhatsApp)"], es: ["Gestión de Inventario de Vehículos", "CRM Integrado y Seguimiento de Leads", "Gestión de Órdenes de Servicio", "Reportes Financieros y Analítica", "Soporte Multi-Ubicación", "Plataforma Bilingüe (EN/ES)", "Seguimiento de Rendimiento de Staff", "Hub de Comunicación con Clientes (SMS, Email, WhatsApp)"] },
+      results: [{ n: "30", s: "hr", l: { en: "Saved per week per location", es: "Ahorradas por semana por ubicación" } }, { n: "50", s: "%", l: { en: "Reduction in admin overhead", es: "Reducción en overhead administrativo" } }, { n: "0", s: "", l: { en: "Leads lost to disconnected tools", es: "Leads perdidos por herramientas desconectadas" } }],
+      tech: "React, Node.js, PostgreSQL, WhatsApp Business API, Twilio",
+      price: { en: "Custom pricing — schedule a demo", es: "Precio personalizado — agenda un demo" },
+      cta: { en: "Schedule a Dealer Manager demo", es: "Agendar un demo de Dealer Manager" },
+    },
+  },
 };
 
 /* helper */
@@ -467,9 +591,9 @@ function Nav({ page, go, lang, setLang }) {
       label: t(T.nav.services, lang), key: "services",
       mega: {
         cols: [
-          { heading: t(T.nav.megaTech, lang), items: [{ t: lang === "en" ? "AI Consulting & Agents" : "Consultoría e Agentes de IA", go: "services" }, { t: lang === "en" ? "AI Chatbot Development" : "Desarrollo de Chatbots IA", go: "services" }, { t: lang === "en" ? "AI Voice Integration" : "Integración de Voz con IA", go: "services" }, { t: lang === "en" ? "Custom Web & Mobile Apps" : "Apps Web y Móviles a Medida", go: "services" }] },
+          { heading: t(T.nav.megaTech, lang), items: [{ t: lang === "en" ? "AI Consulting & Agents" : "Consultoría e Agentes de IA", go: "svc-ai-consulting" }, { t: lang === "en" ? "AI Chatbot Development" : "Desarrollo de Chatbots IA", go: "svc-chatbot-dev" }, { t: lang === "en" ? "AI Voice Integration" : "Integración de Voz con IA", go: "svc-voice" }, { t: lang === "en" ? "Custom Web & Mobile Apps" : "Apps Web y Móviles a Medida", go: "svc-web-mobile" }] },
           { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM", go: "product-ai-crm" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA", go: "product-ai-chatbot" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }] },
-          { heading: t(T.nav.megaGrowth, lang), items: [{ t: lang === "en" ? "Paid Ads & Performance" : "Paid Ads y Performance", go: "services" }, { t: lang === "en" ? "SEO & Content Strategy" : "SEO y Estrategia de Contenido", go: "services" }, { t: lang === "en" ? "Analytics & Attribution" : "Analítica y Atribución", go: "services" }, { t: lang === "en" ? "Email Marketing & CRO" : "Email Marketing y CRO", go: "services" }] },
+          { heading: t(T.nav.megaGrowth, lang), items: [{ t: lang === "en" ? "Paid Ads & Performance" : "Paid Ads y Performance", go: "svc-paid-ads" }, { t: lang === "en" ? "SEO & Content Strategy" : "SEO y Estrategia de Contenido", go: "svc-seo" }, { t: lang === "en" ? "Analytics & Attribution" : "Analítica y Atribución", go: "svc-analytics" }, { t: lang === "en" ? "Email Marketing & CRO" : "Email Marketing y CRO", go: "svc-email-cro" }] },
         ],
       },
     },
@@ -925,6 +1049,33 @@ function ServicesPage({ go, lang }) {
   const inds = lang === "en" ? ["Healthcare", "Financial Services", "E-Commerce", "Logistics", "SaaS", "Manufacturing"] : ["Salud", "Servicios Financieros", "E-Commerce", "Logística", "SaaS", "Manufactura"];
   const { mob, tab: tabSize } = useMedia();
 
+  const featureLinks = [
+    { 0: "svc-ai-consulting", 1: "svc-ai-consulting", 2: "svc-chatbot-dev", 3: "svc-voice", 4: "svc-web-mobile", 5: "svc-web-mobile" },
+    { 0: "product-ai-crm", 1: "product-ai-chatbot", 2: "product-dealer-manager" },
+    { 0: "svc-paid-ads", 1: "svc-seo", 3: "svc-email-cro", 4: "svc-email-cro", 5: "svc-analytics" },
+  ];
+
+  const serviceCards = [
+    [
+      { key: "svc-ai-consulting", icon: "◇", label: { en: "AI Consulting & Agents", es: "Consultoría IA y Agentes" } },
+      { key: "svc-chatbot-dev", icon: "💬", label: { en: "AI Chatbot Development", es: "Desarrollo de Chatbots IA" } },
+      { key: "svc-voice", icon: "🎙", label: { en: "AI Voice Integration", es: "Integración de Voz IA" } },
+      { key: "svc-web-mobile", icon: "📱", label: { en: "Custom Web & Mobile Apps", es: "Apps Web y Móviles" } },
+    ],
+    [
+      { key: "product-ai-crm", icon: "⬡", label: { en: "Avertris AI CRM", es: "Avertris AI CRM" } },
+      { key: "product-ai-chatbot", icon: "🤖", label: { en: "AI Chatbot SaaS", es: "Chatbot SaaS con IA" } },
+      { key: "product-dealer-manager", icon: "🚗", label: { en: "Dealer Manager", es: "Dealer Manager" } },
+      { key: "product-cash-leak-assessment", icon: "💰", label: { en: "Cash Leak Assessment", es: "Evaluación de Fugas de Efectivo" } },
+    ],
+    [
+      { key: "svc-paid-ads", icon: "📊", label: { en: "Paid Ads & Performance", es: "Ads Pagados y Performance" } },
+      { key: "svc-seo", icon: "🔍", label: { en: "SEO & Content Strategy", es: "SEO y Estrategia de Contenido" } },
+      { key: "svc-analytics", icon: "📈", label: { en: "Analytics & Attribution", es: "Analítica y Atribución" } },
+      { key: "svc-email-cro", icon: "✉️", label: { en: "Email Marketing & CRO", es: "Email Marketing y CRO" } },
+    ],
+  ];
+
   return (
     <>
       <PageHero label={t(S.label, lang)} title={t(S.title, lang)} subtitle={t(S.subtitle, lang)} mob={mob} />
@@ -950,14 +1101,39 @@ function ServicesPage({ go, lang }) {
           </div>
           <div style={{ background: V.g100, borderRadius: 16, padding: mob ? 24 : 40 }}>
             <h3 style={{ fontSize: mob ? 14 : 16, fontWeight: 700, color: V.g900, margin: "0 0 24px", fontFamily: F }}>{t(S.included, lang)}</h3>
-            {t(p.features, lang).map((f, j) => (
-              <div key={j} style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 0", borderBottom: j < t(p.features, lang).length - 1 ? `1px solid ${V.g200}` : "none" }}>
-                <div style={{ width: 28, height: 28, borderRadius: "50%", background: V.p200, color: V.primary, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0, fontWeight: 600 }}>✓</div>
-                <span style={{ fontSize: mob ? 13 : 15, color: V.g900, fontFamily: F }}>{f}</span>
+            {t(p.features, lang).map((f, j) => {
+              const link = featureLinks[tab][j];
+              return (
+                <div key={j} onClick={link ? () => go(link) : undefined} style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 0", borderBottom: j < t(p.features, lang).length - 1 ? `1px solid ${V.g200}` : "none", cursor: link ? "pointer" : "default", transition: "all 0.15s" }}
+                  onMouseEnter={link ? e => { e.currentTarget.style.background = V.p200; e.currentTarget.style.paddingLeft = "12px"; e.currentTarget.style.borderRadius = "8px"; } : undefined}
+                  onMouseLeave={link ? e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.paddingLeft = "0"; } : undefined}
+                >
+                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: V.p200, color: V.primary, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0, fontWeight: 600 }}>✓</div>
+                  <span style={{ fontSize: mob ? 13 : 15, color: V.g900, fontFamily: F, flex: 1 }}>{f}</span>
+                  {link && <span style={{ fontSize: 14, color: V.primary, flexShrink: 0 }}>→</span>}
+                </div>
+              );
+            })}
+          </div>
+        </div></Box>
+      </section>
+      <section style={{ padding: mob ? "48px 0" : "80px 0", background: V.white }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{lang === "en" ? "Explore" : "Explorar"}</Lbl>
+          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, lineHeight: 1.15, color: V.g900, margin: "0 0 32px", fontFamily: F }}>{lang === "en" ? "Dedicated service pages" : "Páginas de servicios dedicadas"}</h2>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(4, 1fr)", gap: 16 }}>
+            {serviceCards[tab].map((card, i) => (
+              <div key={i} onClick={() => go(card.key)} style={{ background: V.g100, borderRadius: 12, padding: mob ? "20px" : "28px 24px", cursor: "pointer", border: `1px solid ${V.g200}`, transition: "all 0.2s", display: "flex", flexDirection: "column", gap: 12 }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = V.primary; e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(255,107,0,0.12)"; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = V.g200; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
+              >
+                <span style={{ fontSize: 24 }}>{card.icon}</span>
+                <span style={{ fontSize: mob ? 14 : 15, fontWeight: 600, color: V.g900, fontFamily: F }}>{t(card.label, lang)}</span>
+                <span style={{ fontSize: 13, color: V.primary, fontWeight: 500, fontFamily: F }}>{lang === "en" ? "Learn more →" : "Ver más →"}</span>
               </div>
             ))}
           </div>
-        </div></Box>
+        </Box>
       </section>
       <section style={{ padding: mob ? "48px 0" : "80px 0", background: V.g100 }}>
         <Box mob={mob}>
@@ -1263,6 +1439,84 @@ function ProductsPage({ go, lang }) {
 
 
 /* ═══════════════════════════════════════════════════════════
+   SERVICE / PRODUCT DETAIL PAGE (Reusable)
+   ═══════════════════════════════════════════════════════════ */
+
+function ServiceDetailPage({ pageKey, go, lang }) {
+  const D = T.detailPages[pageKey];
+  if (!D) return <div style={{ padding: "200px 40px", textAlign: "center", fontFamily: F }}><h2>Page not found</h2></div>;
+  const { mob, tab } = useMedia();
+
+  return (
+    <>
+      {/* Hero */}
+      <section style={{ background: V.g900, padding: mob ? "120px 0 60px" : "160px 0 80px" }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{t(D.label, lang)}</Lbl>
+          <h1 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, lineHeight: 1.08, letterSpacing: -2, color: V.white, margin: 0, fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(D.title, lang) }} />
+          <p style={{ fontSize: mob ? 15 : 18, fontWeight: 300, color: "rgba(255,255,255,0.65)", margin: "20px 0 32px", maxWidth: 640, lineHeight: 1.7, fontFamily: F }}>{t(D.subtitle, lang)}</p>
+          <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{t(D.cta, lang)}</Btn>
+        </Box>
+      </section>
+
+      {/* Problem */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+        <Box mob={mob}>
+          <div style={{ display: mob ? "flex" : "grid", flexDirection: mob ? "column" : "row", gridTemplateColumns: mob ? undefined : "1fr 1fr", gap: mob ? 32 : 80, alignItems: "start" }}>
+            <div>
+              <Lbl mob={mob}>{lang === "en" ? "The problem" : "El problema"}</Lbl>
+              <h2 style={{ fontSize: mob ? 28 : 40, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 20px", fontFamily: F }}>{lang === "en" ? "Why this matters" : "Por qué esto importa"}</h2>
+              <Hr />
+              <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, lineHeight: 1.8, color: V.g600, margin: "24px 0 32px", fontFamily: F }}>{t(D.problem, lang)}</p>
+              <p style={{ fontSize: mob ? 12 : 13, fontWeight: 600, color: V.g400, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 8px", fontFamily: F }}>{lang === "en" ? "TECH STACK" : "TECNOLOGÍAS"}</p>
+              <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, margin: "0 0 24px", lineHeight: 1.6, fontFamily: F }}>{D.tech}</p>
+              <p style={{ fontSize: mob ? 14 : 16, fontWeight: 600, color: V.primary, margin: 0, fontFamily: F }}>{t(D.price, lang)}</p>
+            </div>
+            <div style={{ background: V.g100, borderRadius: 16, padding: mob ? 24 : 40 }}>
+              <h3 style={{ fontSize: mob ? 14 : 16, fontWeight: 700, color: V.g900, margin: "0 0 24px", fontFamily: F }}>{lang === "en" ? "What's included" : "Qué incluye"}</h3>
+              {t(D.features, lang).map((f, j) => (
+                <div key={j} style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 0", borderBottom: j < t(D.features, lang).length - 1 ? `1px solid ${V.g200}` : "none" }}>
+                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: V.p200, color: V.primary, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0, fontWeight: 600 }}>✓</div>
+                  <span style={{ fontSize: mob ? 13 : 15, color: V.g900, fontFamily: F }}>{f}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Box>
+      </section>
+
+      {/* Results */}
+      <section style={{ padding: mob ? "48px 0" : "80px 0", background: V.g100 }}>
+        <Box mob={mob}>
+          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: V.g900, margin: "0 0 40px", textAlign: "center", fontFamily: F }}>{lang === "en" ? "Results our clients see" : "Resultados que ven nuestros clientes"}</h2>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : `repeat(${D.results.length}, 1fr)`, gap: mob ? 20 : 32, textAlign: "center" }}>
+            {D.results.map((stat, i) => (
+              <div key={i} style={{ background: V.white, borderRadius: 12, padding: mob ? 24 : 40, border: `1px solid ${V.g200}` }}>
+                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 4 }}>
+                  <span style={{ fontSize: mob ? 40 : 56, fontWeight: 800, color: V.primary, fontFamily: F, lineHeight: 1 }}>{stat.n}</span>
+                  <span style={{ fontSize: mob ? 20 : 28, fontWeight: 600, color: V.primary, fontFamily: F }}>{stat.s}</span>
+                </div>
+                <p style={{ fontSize: mob ? 13 : 15, fontWeight: 400, color: V.g600, margin: "8px 0 0", fontFamily: F }}>{t(stat.l, lang)}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* CTA */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g900 }}>
+        <Box mob={mob} style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h2 style={{ fontSize: mob ? 32 : 48, fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, color: V.white, margin: "0 0 20px", fontFamily: F }}>{lang === "en" ? "Ready to stop losing money?" : "¿Listo para dejar de perder dinero?"}</h2>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 32px", maxWidth: 500, lineHeight: 1.7, fontFamily: F }}>{lang === "en" ? "Book a free 30-minute call. We'll diagnose your biggest leaks and show you the fastest path to results." : "Agenda una llamada gratuita de 30 minutos. Diagnosticaremos tus mayores fugas y te mostraremos el camino más rápido a resultados."}</p>
+          <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{t(D.cta, lang)}</Btn>
+        </Box>
+      </section>
+    </>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════
    CASH LEAK ASSESSMENT LANDING PAGE
    ═══════════════════════════════════════════════════════════ */
 
@@ -1428,18 +1682,22 @@ export default function App() {
 
   const go = (p) => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); };
 
+  /* Build detail pages dynamically from T.detailPages */
+  const detailRoutes = {};
+  Object.keys(T.detailPages).forEach(k => {
+    detailRoutes[k] = <ServiceDetailPage pageKey={k} go={go} lang={lang} />;
+  });
+
   const pages = {
     home: <HomePage go={go} lang={lang} />,
     services: <ServicesPage go={go} lang={lang} />,
     products: <ProductsPage go={go} lang={lang} />,
-    "product-ai-crm": <ProductsPage go={go} lang={lang} />,
-    "product-ai-chatbot": <ProductsPage go={go} lang={lang} />,
-    "product-dealer-manager": <ProductsPage go={go} lang={lang} />,
     "product-cash-leak-assessment": <CashLeakPage go={go} lang={lang} />,
     cases: <CasesPage go={go} lang={lang} />,
     about: <AboutPage go={go} lang={lang} />,
     blog: <BlogPage lang={lang} />,
     contact: <ContactPage lang={lang} />,
+    ...detailRoutes,
   };
 
   return (
