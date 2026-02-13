@@ -5,91 +5,193 @@
   <!-- Homepage -->
   <url>
     <loc>https://avertris.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/"/>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Services -->
+  <!-- Core Pages -->
   <url>
-    <loc>https://avertris.com/#services</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://avertris.com/services</loc>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Products Hub -->
   <url>
-    <loc>https://avertris.com/#products</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://avertris.com/products</loc>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- AI CRM Product -->
   <url>
-    <loc>https://avertris.com/#product-ai-crm</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://avertris.com/cases</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/about</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/blog</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/contact</loc>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- AI Chatbot SaaS Product -->
+  <!-- Technology Services -->
   <url>
-    <loc>https://avertris.com/#product-ai-chatbot</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://avertris.com/svc-ai-consulting</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/svc-chatbot-dev</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/svc-voice</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/svc-web-mobile</loc>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Dealer Manager Product -->
+  <!-- Growth Marketing Services -->
   <url>
-    <loc>https://avertris.com/#product-dealer-manager</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://avertris.com/svc-paid-ads</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/svc-seo</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/svc-analytics</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/svc-email-cro</loc>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Cash Leak Assessment -->
+  <!-- Products -->
   <url>
-    <loc>https://avertris.com/#product-cash-leak-assessment</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://avertris.com/product-ai-crm</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/product-ai-chatbot</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/product-dealer-manager</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/product-cash-leak-assessment</loc>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Case Studies -->
+  <!-- Blog Posts -->
   <url>
-    <loc>https://avertris.com/#cases</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://avertris.com/blog-ai-dominican-republic-businesses-2026</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- About -->
   <url>
-    <loc>https://avertris.com/#about</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://avertris.com/blog-digital-marketing-dominican-republic-2026</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Blog -->
   <url>
-    <loc>https://avertris.com/#blog</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Contact -->
-  <url>
-    <loc>https://avertris.com/#contact</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://avertris.com/blog-ai-strategy-mid-market-business</loc>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/blog-ai-chatbots-business-response-time</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/blog-llm-integration-proof-concept-production</loc>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/blog-seo-bilingual-businesses-english-spanish</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/blog-stop-wasting-ad-spend-revenue-attribution</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/blog-growth-marketing-playbook-latam-expansion</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/blog-build-vs-buy-custom-software-decision</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/blog-crm-implementation-failure-fix</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/blog-api-first-architecture-growing-businesses</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
