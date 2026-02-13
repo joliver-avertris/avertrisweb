@@ -1501,7 +1501,7 @@ function Box({ children, style, mob }) {
 function Btn({ children, variant = "primary", onClick, style = {}, mob }) {
   const base = { display: "inline-flex", alignItems: "center", gap: 8, fontFamily: F, fontSize: mob ? 13 : 14, fontWeight: 600, padding: mob ? "12px 24px" : "14px 32px", borderRadius: 6, border: "none", cursor: "pointer", textDecoration: "none", transition: "all 0.2s", whiteSpace: "nowrap" };
   const vars = {
-    primary: { ...base, background: V.primary, color: V.white, border: `1.5px solid ${V.primary}` },
+    primary: { ...base, background: V.primary, color: "#1a1a1a", border: `1.5px solid ${V.primary}` },
     dark: { ...base, background: V.g900, color: V.white, border: `1.5px solid ${V.g900}` },
     outline: { ...base, background: "transparent", color: V.g900, border: `1.5px solid ${V.g200}` },
     ghost: { ...base, background: "transparent", color: V.primary, border: "none", padding: "8px 0" },
@@ -1759,7 +1759,7 @@ function HomePage({ go, lang }) {
           {!mob && <span style={{ fontSize: 14, fontWeight: 500, color: V.g900, whiteSpace: "nowrap", fontFamily: F }}>{t(T.clients.label, L)}</span>}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flex: 1, gap: mob ? 20 : 40, flexWrap: "wrap" }}>
             {["TechCorp", "MediGroup", "FinScale", "LogiNet", "DataBridge", "Nextera", "CloudVault"].map(n => (
-              <span key={n} style={{ fontSize: mob ? 14 : 18, fontWeight: 700, color: V.g800, opacity: 0.4, letterSpacing: -0.5, fontFamily: F }}>{n}</span>
+              <span key={n} style={{ fontSize: mob ? 14 : 18, fontWeight: 700, color: V.g800, opacity: 0.55, letterSpacing: -0.5, fontFamily: F }}>{n}</span>
             ))}
           </div>
         </div></Box>
@@ -2437,7 +2437,7 @@ function ContactPage({ lang }) {
             </div>
             <div style={{ marginBottom: 16 }}><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.budget, lang)}</label><select style={{ ...inputStyle, background: V.white, color: V.g600 }}>{C.budgetOptions.map(o => <option key={o}>{o}</option>)}</select></div>
             <div style={{ marginBottom: 24 }}><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.message, lang)}</label><textarea placeholder={t(C.messagePh, lang)} style={{ ...inputStyle, height: 120, resize: "vertical" }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
-            <button style={{ width: "100%", padding: 16, background: V.primary, color: V.white, border: "none", borderRadius: 8, fontSize: 16, fontWeight: 600, cursor: "pointer", fontFamily: F }}>{t(C.submit, lang)}</button>
+            <button style={{ width: "100%", padding: 16, background: V.primary, color: "#1a1a1a", border: "none", borderRadius: 8, fontSize: 16, fontWeight: 600, cursor: "pointer", fontFamily: F }}>{t(C.submit, lang)}</button>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             <div style={{ background: V.g100, borderRadius: 16, padding: mob ? 24 : 40, textAlign: "center" }}>
@@ -2740,8 +2740,8 @@ function FooterSection({ go, lang }) {
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               <input type="email" placeholder="Email *" style={{ fontFamily: F, fontSize: 14, padding: "12px 16px", border: `1px solid ${V.g200}`, borderRadius: 6, outline: "none", width: "100%", boxSizing: "border-box" }} />
               <div style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
-                <input type="checkbox" style={{ marginTop: 3, accentColor: V.primary }} />
-                <span style={{ fontSize: 12, color: V.g400, lineHeight: 1.5 }}>{t(FT.consent, lang)}</span>
+                <input type="checkbox" id="consent-check" style={{ marginTop: 3, accentColor: V.primary }} />
+                <label htmlFor="consent-check" style={{ fontSize: 12, color: V.g400, lineHeight: 1.5 }}>{t(FT.consent, lang)}</label>
               </div>
               <button style={{ fontFamily: F, fontSize: 14, fontWeight: 600, padding: "12px 32px", background: V.g900, color: V.white, border: "none", borderRadius: 6, cursor: "pointer", width: "100%", transition: "background 0.2s" }}
                 onMouseEnter={e => e.target.style.background = V.primary} onMouseLeave={e => e.target.style.background = V.g900}
