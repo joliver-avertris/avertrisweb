@@ -1,27 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Lightweight hero background — replaces WavyBackground + Aurora + EtheralShadow */
-@keyframes hero-shift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.hero-bg-anim {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a1a0a 20%, #1a1a1a 40%, #331a00 60%, #1a1a1a 80%, #2a1500 100%);
-  background-size: 400% 400%;
-  animation: hero-shift 20s ease infinite;
-}
-.hero-bg-anim::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(255,107,0,0.18) 0%, transparent 70%),
-              radial-gradient(ellipse 60% 80% at 30% 60%, rgba(204,85,0,0.12) 0%, transparent 60%);
-  animation: hero-shift 15s ease-in-out infinite reverse;
-  background-size: 300% 300%;
-}
-
 :root {
   --background: #242424;
   --primary: #FF6B00;

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { WavyBackground } from "./components/ui/wavy-background";
 
 /* ════════════════════════════════════════════════════════════
    AVERTRIS — Full Bilingual Website (EN / ES) — Mobile Responsive
@@ -1708,8 +1709,18 @@ function HomePage({ go, lang }) {
     <>
       {/* Hero */}
       <section className="dark" style={{ minHeight: mob ? "80vh" : "92vh", display: "flex", alignItems: "flex-end", padding: "0 0 " + (mob ? "60px" : "80px"), position: "relative", overflow: "hidden" }}>
-        {/* CSS-only animated background — lightweight replacement */}
-        <div className="hero-bg-anim" style={{ position: "absolute", inset: 0, zIndex: 0 }} />
+        {/* Wavy Background — single layer, optimized (30fps, 3 waves, 15px step) */}
+        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+          <WavyBackground
+            colors={["#FF6B00", "#FF8533", "#CC5500"]}
+            backgroundFill="#1a1a1a"
+            blur={12}
+            speed="slow"
+            waveOpacity={0.4}
+            waveWidth={60}
+            containerClassName="h-full"
+          />
+        </div>
         {/* Dark gradient for text readability */}
         <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)" }} />
         <Box mob={mob} style={{ position: "relative", zIndex: 2 }}>
