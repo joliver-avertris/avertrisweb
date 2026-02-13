@@ -2777,13 +2777,39 @@ function FooterSection({ go, lang }) {
    APP
    ═══════════════════════════════════════════════════════════ */
 
+/* Convert page key to URL path */
+function pageToPath(page) {
+  if (page === "home") return "/";
+  return "/" + page;
+}
+
+/* Convert URL path to page key */
+function pathToPage(path) {
+  const clean = path.replace(/^\/+|\/+$/g, "");
+  return clean === "" ? "home" : clean;
+}
+
 export default function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState(() => pathToPage(window.location.pathname));
   const [lang, setLang] = useState(() => {
     try { const bl = navigator.language || navigator.userLanguage || "en"; return bl.startsWith("es") ? "es" : "en"; } catch { return "en"; }
   });
 
-  const go = (p) => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const go = (p) => {
+    setPage(p);
+    window.history.pushState({ page: p }, "", pageToPath(p));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const onPop = (e) => {
+      const p = e.state?.page || pathToPage(window.location.pathname);
+      setPage(p);
+      window.scrollTo({ top: 0 });
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   /* Build detail pages dynamically from T.detailPages */
   const detailRoutes = {};
