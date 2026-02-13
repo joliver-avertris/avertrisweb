@@ -1,8 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { Component as EtheralShadow } from "./components/ui/etheral-shadow";
-import { FallingPattern } from "./components/ui/falling-pattern";
-import { AuroraBackground } from "./components/ui/aurora-background";
-import { WavyBackground } from "./components/ui/wavy-background";
 
 /* ════════════════════════════════════════════════════════════
    AVERTRIS — Full Bilingual Website (EN / ES) — Mobile Responsive
@@ -1712,36 +1708,11 @@ function HomePage({ go, lang }) {
     <>
       {/* Hero */}
       <section className="dark" style={{ minHeight: mob ? "80vh" : "92vh", display: "flex", alignItems: "flex-end", padding: "0 0 " + (mob ? "60px" : "80px"), position: "relative", overflow: "hidden" }}>
-        {/* Wavy Background base layer */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-          <WavyBackground
-            colors={["#FF6B00", "#FF8533", "#CC5500", "#FFB366", "#FF6B00"]}
-            backgroundFill="#1a1a1a"
-            blur={12}
-            speed="slow"
-            waveOpacity={0.4}
-            waveWidth={60}
-            containerClassName="h-full"
-          />
-        </div>
-        {/* Aurora Background layer */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 1, opacity: 0.4 }}>
-          <AuroraBackground className="dark h-full w-full bg-transparent" showRadialGradient={true}>
-            <span />
-          </AuroraBackground>
-        </div>
-        {/* Ethereal Shadow layer */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 2, opacity: 0.35 }}>
-          <EtheralShadow
-            color="rgba(255, 107, 0, 1)"
-            animation={{ scale: 80, speed: 70 }}
-            noise={{ opacity: 1, scale: 1.2 }}
-            sizing="fill"
-          />
-        </div>
+        {/* CSS-only animated background — lightweight replacement */}
+        <div className="hero-bg-anim" style={{ position: "absolute", inset: 0, zIndex: 0 }} />
         {/* Dark gradient for text readability */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 3, background: "linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)" }} />
-        <Box mob={mob} style={{ position: "relative", zIndex: 4 }}>
+        <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)" }} />
+        <Box mob={mob} style={{ position: "relative", zIndex: 2 }}>
           <p style={{ fontSize: mob ? 13 : 15, fontWeight: 400, color: "rgba(255,255,255,0.7)", margin: "0 0 24px", fontFamily: F }}>
             <span style={{ color: V.primary, fontWeight: 600 }}>{t(T.hero.label, L)}</span> {t(T.hero.labelSuffix, L)}
           </p>
