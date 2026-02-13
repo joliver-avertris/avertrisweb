@@ -1708,7 +1708,7 @@ function HomePage({ go, lang }) {
   return (
     <>
       {/* Hero */}
-      <section className="dark" style={{ minHeight: mob ? "80vh" : "92vh", display: "flex", alignItems: "flex-end", padding: "0 0 " + (mob ? "60px" : "80px"), position: "relative", overflow: "hidden" }}>
+      <section className="dark" style={{ minHeight: mob ? "80vh" : "92vh", display: "flex", alignItems: "flex-end", padding: (mob ? "80px" : "100px") + " 0 " + (mob ? "60px" : "80px"), position: "relative", overflow: "hidden" }}>
         {/* Wavy Background — single layer, optimized (30fps, 3 waves, 15px step) */}
         <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
           <WavyBackground
