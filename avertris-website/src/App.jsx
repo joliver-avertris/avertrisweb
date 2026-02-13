@@ -2764,33 +2764,64 @@ function FooterSection({ go, lang }) {
    ═══════════════════════════════════════════════════════════ */
 
 /* Convert page key to URL path */
-function pageToPath(page) {
-  if (page === "home") return "/";
-  return "/" + page;
+/* Convert page key + lang to URL path: e.g. ("services", "es") → "/es/services" */
+function pageToPath(page, lang) {
+  const prefix = "/" + (lang || "en");
+  if (page === "home") return prefix;
+  return prefix + "/" + page;
 }
 
-/* Convert URL path to page key */
-function pathToPage(path) {
+/* Parse URL path into { lang, page }. Examples: "/es/services" → { lang:"es", page:"services" }, "/en" → { lang:"en", page:"home" } */
+function parsePath(path) {
   const clean = path.replace(/^\/+|\/+$/g, "");
-  return clean === "" ? "home" : clean;
+  const parts = clean.split("/");
+  const first = parts[0];
+  if (first === "en" || first === "es") {
+    const rest = parts.slice(1).join("/");
+    return { lang: first, page: rest === "" ? "home" : rest };
+  }
+  // No lang prefix — will be redirected
+  return { lang: null, page: clean === "" ? "home" : clean };
 }
 
 export default function App() {
-  const [page, setPage] = useState(() => pathToPage(window.location.pathname));
-  const [lang, setLang] = useState(() => {
-    try { const bl = navigator.language || navigator.userLanguage || "en"; return bl.startsWith("es") ? "es" : "en"; } catch { return "en"; }
-  });
+  const parsed = parsePath(window.location.pathname);
+  const browserLang = (() => { try { const bl = navigator.language || navigator.userLanguage || "en"; return bl.startsWith("es") ? "es" : "en"; } catch { return "en"; } })();
 
-  const go = (p) => {
+  // If no lang prefix in URL (e.g. "/" or "/services"), redirect to /{lang}/...
+  if (!parsed.lang) {
+    const target = pageToPath(parsed.page, browserLang);
+    window.history.replaceState(null, "", target);
+    parsed.lang = browserLang;
+  }
+
+  const [page, setPage] = useState(parsed.page);
+  const [lang, setLangState] = useState(parsed.lang);
+
+  const go = (p, newLang) => {
+    const l = newLang || lang;
     setPage(p);
-    window.history.pushState({ page: p }, "", pageToPath(p));
+    if (newLang) setLangState(l);
+    window.history.pushState({ page: p, lang: l }, "", pageToPath(p, l));
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // When language is switched, update URL to reflect new lang prefix
+  const setLang = (l) => {
+    setLangState(l);
+    window.history.replaceState({ page, lang: l }, "", pageToPath(page, l));
   };
 
   useEffect(() => {
     const onPop = (e) => {
-      const p = e.state?.page || pathToPage(window.location.pathname);
-      setPage(p);
+      if (e.state?.page) {
+        setPage(e.state.page);
+        if (e.state.lang) setLangState(e.state.lang);
+      } else {
+        const p = parsePath(window.location.pathname);
+        setPage(p.page);
+        if (p.lang) setLangState(p.lang);
+      }
       window.scrollTo({ top: 0 });
     };
     window.addEventListener("popstate", onPop);

@@ -1,197 +1,520 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://avertris.com/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avertris.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es" />
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Core Pages -->
   <url>
-    <loc>https://avertris.com/services</loc>
+    <loc>https://avertris.com/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/services" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://avertris.com/products</loc>
+    <loc>https://avertris.com/es/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/services" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/products" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/products" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://avertris.com/cases</loc>
+    <loc>https://avertris.com/es/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/products" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/products" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/cases" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/cases" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/about</loc>
+    <loc>https://avertris.com/es/cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/cases" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/cases" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/about" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog</loc>
+    <loc>https://avertris.com/es/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/about" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avertris.com/contact</loc>
+    <loc>https://avertris.com/es/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/contact" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/contact" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Technology Services -->
   <url>
-    <loc>https://avertris.com/svc-ai-consulting</loc>
+    <loc>https://avertris.com/en/svc-ai-consulting</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-ai-consulting" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-ai-consulting" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avertris.com/svc-chatbot-dev</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://avertris.com/svc-voice</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://avertris.com/svc-web-mobile</loc>
+    <loc>https://avertris.com/es/svc-ai-consulting</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-ai-consulting" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-ai-consulting" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Growth Marketing Services -->
   <url>
-    <loc>https://avertris.com/svc-paid-ads</loc>
+    <loc>https://avertris.com/en/svc-chatbot-dev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-chatbot-dev" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-chatbot-dev" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avertris.com/svc-seo</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://avertris.com/svc-analytics</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://avertris.com/svc-email-cro</loc>
+    <loc>https://avertris.com/es/svc-chatbot-dev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-chatbot-dev" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-chatbot-dev" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Products -->
   <url>
-    <loc>https://avertris.com/product-ai-crm</loc>
+    <loc>https://avertris.com/en/svc-voice</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-voice" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-voice" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avertris.com/product-ai-chatbot</loc>
+    <loc>https://avertris.com/es/svc-voice</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-voice" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-voice" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/svc-web-mobile</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-web-mobile" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-web-mobile" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avertris.com/product-dealer-manager</loc>
+    <loc>https://avertris.com/es/svc-web-mobile</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-web-mobile" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-web-mobile" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/svc-paid-ads</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-paid-ads" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-paid-ads" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avertris.com/product-cash-leak-assessment</loc>
+    <loc>https://avertris.com/es/svc-paid-ads</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-paid-ads" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-paid-ads" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/svc-seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-seo" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-seo" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/svc-seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-seo" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-seo" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/svc-analytics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-analytics" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-analytics" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/svc-analytics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-analytics" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-analytics" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/svc-email-cro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-email-cro" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-email-cro" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/svc-email-cro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/svc-email-cro" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/svc-email-cro" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/product-ai-crm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-ai-crm" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-ai-crm" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/product-ai-crm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-ai-crm" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-ai-crm" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/product-ai-chatbot</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-ai-chatbot" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-ai-chatbot" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/product-ai-chatbot</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-ai-chatbot" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-ai-chatbot" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/product-dealer-manager</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-dealer-manager" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-dealer-manager" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/product-dealer-manager</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-dealer-manager" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-dealer-manager" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/product-cash-leak-assessment</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-cash-leak-assessment" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-cash-leak-assessment" />
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/product-cash-leak-assessment</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-cash-leak-assessment" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-cash-leak-assessment" />
     <lastmod>2026-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Blog Posts -->
   <url>
-    <loc>https://avertris.com/blog-ai-dominican-republic-businesses-2026</loc>
+    <loc>https://avertris.com/en/blog-ai-dominican-republic-businesses-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-ai-dominican-republic-businesses-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-ai-dominican-republic-businesses-2026" />
     <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-digital-marketing-dominican-republic-2026</loc>
+    <loc>https://avertris.com/es/blog-ai-dominican-republic-businesses-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-ai-dominican-republic-businesses-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-ai-dominican-republic-businesses-2026" />
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog-digital-marketing-dominican-republic-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-digital-marketing-dominican-republic-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-digital-marketing-dominican-republic-2026" />
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-ai-strategy-mid-market-business</loc>
+    <loc>https://avertris.com/es/blog-digital-marketing-dominican-republic-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-digital-marketing-dominican-republic-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-digital-marketing-dominican-republic-2026" />
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog-ai-strategy-mid-market-business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-ai-strategy-mid-market-business" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-ai-strategy-mid-market-business" />
     <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-ai-chatbots-business-response-time</loc>
+    <loc>https://avertris.com/es/blog-ai-strategy-mid-market-business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-ai-strategy-mid-market-business" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-ai-strategy-mid-market-business" />
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog-ai-chatbots-business-response-time</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-ai-chatbots-business-response-time" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-ai-chatbots-business-response-time" />
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-llm-integration-proof-concept-production</loc>
+    <loc>https://avertris.com/es/blog-ai-chatbots-business-response-time</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-ai-chatbots-business-response-time" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-ai-chatbots-business-response-time" />
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog-llm-integration-proof-concept-production</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-llm-integration-proof-concept-production" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-llm-integration-proof-concept-production" />
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-seo-bilingual-businesses-english-spanish</loc>
+    <loc>https://avertris.com/es/blog-llm-integration-proof-concept-production</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-llm-integration-proof-concept-production" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-llm-integration-proof-concept-production" />
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog-seo-bilingual-businesses-english-spanish</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-seo-bilingual-businesses-english-spanish" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-seo-bilingual-businesses-english-spanish" />
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-stop-wasting-ad-spend-revenue-attribution</loc>
+    <loc>https://avertris.com/es/blog-seo-bilingual-businesses-english-spanish</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-seo-bilingual-businesses-english-spanish" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-seo-bilingual-businesses-english-spanish" />
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog-stop-wasting-ad-spend-revenue-attribution</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-stop-wasting-ad-spend-revenue-attribution" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-stop-wasting-ad-spend-revenue-attribution" />
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-growth-marketing-playbook-latam-expansion</loc>
+    <loc>https://avertris.com/es/blog-stop-wasting-ad-spend-revenue-attribution</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-stop-wasting-ad-spend-revenue-attribution" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-stop-wasting-ad-spend-revenue-attribution" />
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog-growth-marketing-playbook-latam-expansion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-growth-marketing-playbook-latam-expansion" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-growth-marketing-playbook-latam-expansion" />
     <lastmod>2025-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-build-vs-buy-custom-software-decision</loc>
+    <loc>https://avertris.com/es/blog-growth-marketing-playbook-latam-expansion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-growth-marketing-playbook-latam-expansion" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-growth-marketing-playbook-latam-expansion" />
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog-build-vs-buy-custom-software-decision</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-build-vs-buy-custom-software-decision" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-build-vs-buy-custom-software-decision" />
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-crm-implementation-failure-fix</loc>
+    <loc>https://avertris.com/es/blog-build-vs-buy-custom-software-decision</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-build-vs-buy-custom-software-decision" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-build-vs-buy-custom-software-decision" />
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avertris.com/en/blog-crm-implementation-failure-fix</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-crm-implementation-failure-fix" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-crm-implementation-failure-fix" />
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://avertris.com/blog-api-first-architecture-growing-businesses</loc>
-    <lastmod>2025-12-12</lastmod>
+    <loc>https://avertris.com/es/blog-crm-implementation-failure-fix</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-crm-implementation-failure-fix" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-crm-implementation-failure-fix" />
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://avertris.com/en/blog-api-first-architecture-growing-businesses</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-api-first-architecture-growing-businesses" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-api-first-architecture-growing-businesses" />
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/blog-api-first-architecture-growing-businesses</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/blog-api-first-architecture-growing-businesses" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/blog-api-first-architecture-growing-businesses" />
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
