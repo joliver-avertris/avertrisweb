@@ -49,6 +49,7 @@ const T = {
     h1a: { en: "Your business is", es: "Tu negocio está" },
     h1b: { en: "bleeding cash.", es: "perdiendo dinero." },
     h1c: { en: "We stop it.", es: "Nosotros lo paramos." },
+    sub: { en: "Avertris is an AI, software, and growth marketing agency. We find where mid-market companies lose money — slow follow-ups, wasted ad spend, broken tools — and fix it.", es: "Avertris es una agencia de IA, software y growth marketing. Encontramos dónde las empresas medianas pierden dinero — seguimientos lentos, ads desperdiciados, herramientas rotas — y lo arreglamos." },
     ctaCases: { en: "See how we fixed it for others", es: "Mira cómo lo resolvimos para otros" },
     ctaTalk: { en: "Find my cash leaks", es: "Encontrar mis fugas de dinero" },
     svc: [
@@ -1744,9 +1745,12 @@ function HomePage({ go, lang }) {
           <p style={{ fontSize: mob ? 13 : 15, fontWeight: 400, color: "rgba(255,255,255,0.7)", margin: "0 0 24px", fontFamily: F }}>
             <span style={{ color: V.primary, fontWeight: 600 }}>{t(T.hero.label, L)}</span> {t(T.hero.labelSuffix, L)}
           </p>
-          <h1 style={{ fontSize: mob ? 38 : 82, fontWeight: 800, lineHeight: 1.02, letterSpacing: -3, color: V.white, margin: "0 0 40px", maxWidth: 800, fontFamily: F }}>
+          <h1 style={{ fontSize: mob ? 38 : 82, fontWeight: 800, lineHeight: 1.02, letterSpacing: -3, color: V.white, margin: "0 0 20px", maxWidth: 800, fontFamily: F }}>
             {t(T.hero.h1a, L)}<br />{t(T.hero.h1b, L)}<br />{t(T.hero.h1c, L)}
           </h1>
+          <p style={{ fontSize: mob ? 15 : 18, fontWeight: 300, lineHeight: 1.6, color: "rgba(255,255,255,0.7)", margin: "0 0 36px", maxWidth: 600, fontFamily: F }}>
+            {t(T.hero.sub, L)}
+          </p>
           <div style={{ display: mob ? "flex" : "flex", flexDirection: mob ? "column" : "row", gap: 16 }}>
             <Btn variant="dark" onClick={() => go("cases")} mob={mob}>{t(T.hero.ctaCases, L)}</Btn>
             <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{t(T.hero.ctaTalk, L)}</Btn>
