@@ -2417,6 +2417,40 @@ function ContactPage({ lang }) {
   const { mob } = useMedia();
   const inputStyle = { width: "100%", padding: "14px 16px", border: `1px solid ${V.g200}`, borderRadius: 8, fontSize: 14, fontFamily: F, outline: "none", boxSizing: "border-box", transition: "border-color 0.2s" };
 
+  const [form, setForm] = useState({ name: "", email: "", company: "", service: "", budget: "", message: "" });
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const upd = (k, v) => setForm(prev => ({ ...prev, [k]: v }));
+
+  const handleSubmit = async () => {
+    if (!form.name || !form.email) return;
+    setStatus("sending");
+    try {
+      await fetch("https://services.leadconnectorhq.com/hooks/6sH0vMFyMEooGtwfucvQ/webhook-trigger/4d3c4b8a-2de0-4d7b-896e-b558f1cee83d", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          service: form.service,
+          budget: form.budget,
+          message: form.message,
+          source: "avertris.com/contact",
+          language: lang,
+        }),
+      });
+      setStatus("sent");
+      setForm({ name: "", email: "", company: "", service: "", budget: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  const successMsg = { en: "Message sent! We'll get back to you within 24 hours.", es: "¡Mensaje enviado! Te responderemos en menos de 24 horas." };
+  const errorMsg = { en: "Something went wrong. Please try again or email hello@avertris.com", es: "Algo salió mal. Intenta de nuevo o escríbenos a hello@avertris.com" };
+  const sendingLabel = { en: "Sending...", es: "Enviando..." };
+
   return (
     <>
       <PageHero label={t(C.label, lang)} title={t(C.title, lang)} subtitle={t(C.subtitle, lang)} mob={mob} />
@@ -2425,19 +2459,28 @@ function ContactPage({ lang }) {
           <div>
             <h2 style={{ fontSize: mob ? 24 : 32, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{t(C.formTitle, lang)}</h2>
             <p style={{ fontSize: mob ? 14 : 15, fontWeight: 300, color: V.g600, margin: "0 0 32px", fontFamily: F }}>{t(C.formDesc, lang)}</p>
+            {status === "sent" ? (
+              <div style={{ padding: 32, background: "#f0fdf4", borderRadius: 12, textAlign: "center" }}>
+                <p style={{ fontSize: 18, fontWeight: 600, color: "#166534", margin: 0, fontFamily: F }}>✓ {t(successMsg, lang)}</p>
+              </div>
+            ) : (
+            <>
             <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: 16, marginBottom: 16 }}>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.name, lang)}</label><input style={inputStyle} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.email, lang)}</label><input style={inputStyle} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
+              <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.name, lang)}</label><input value={form.name} onChange={e => upd("name", e.target.value)} style={inputStyle} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
+              <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.email, lang)}</label><input value={form.email} onChange={e => upd("email", e.target.value)} type="email" style={inputStyle} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: 16, marginBottom: 16 }}>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.company, lang)}</label><input style={inputStyle} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
+              <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.company, lang)}</label><input value={form.company} onChange={e => upd("company", e.target.value)} style={inputStyle} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
               <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.service, lang)}</label>
-                <select style={{ ...inputStyle, background: V.white, color: V.g600 }}>{t(C.svcOptions, lang).map(o => <option key={o}>{o}</option>)}</select>
+                <select value={form.service} onChange={e => upd("service", e.target.value)} style={{ ...inputStyle, background: V.white, color: V.g600 }}>{t(C.svcOptions, lang).map(o => <option key={o}>{o}</option>)}</select>
               </div>
             </div>
-            <div style={{ marginBottom: 16 }}><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.budget, lang)}</label><select style={{ ...inputStyle, background: V.white, color: V.g600 }}>{C.budgetOptions.map(o => <option key={o}>{o}</option>)}</select></div>
-            <div style={{ marginBottom: 24 }}><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.message, lang)}</label><textarea placeholder={t(C.messagePh, lang)} style={{ ...inputStyle, height: 120, resize: "vertical" }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
-            <button style={{ width: "100%", padding: 16, background: V.primary, color: "#1a1a1a", border: "none", borderRadius: 8, fontSize: 16, fontWeight: 600, cursor: "pointer", fontFamily: F }}>{t(C.submit, lang)}</button>
+            <div style={{ marginBottom: 16 }}><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.budget, lang)}</label><select value={form.budget} onChange={e => upd("budget", e.target.value)} style={{ ...inputStyle, background: V.white, color: V.g600 }}>{C.budgetOptions.map(o => <option key={o}>{o}</option>)}</select></div>
+            <div style={{ marginBottom: 24 }}><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.message, lang)}</label><textarea value={form.message} onChange={e => upd("message", e.target.value)} placeholder={t(C.messagePh, lang)} style={{ ...inputStyle, height: 120, resize: "vertical" }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
+            {status === "error" && <p style={{ fontSize: 13, color: "#dc2626", margin: "0 0 12px", fontFamily: F }}>{t(errorMsg, lang)}</p>}
+            <button onClick={handleSubmit} disabled={status === "sending"} style={{ width: "100%", padding: 16, background: status === "sending" ? V.g400 : V.primary, color: "#1a1a1a", border: "none", borderRadius: 8, fontSize: 16, fontWeight: 600, cursor: status === "sending" ? "wait" : "pointer", fontFamily: F }}>{status === "sending" ? t(sendingLabel, lang) : t(C.submit, lang)}</button>
+            </>
+            )}
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             <div style={{ background: V.g100, borderRadius: 16, padding: mob ? 24 : 40, textAlign: "center" }}>
