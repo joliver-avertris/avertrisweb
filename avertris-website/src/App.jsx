@@ -1272,7 +1272,7 @@ Avertris construye arquitecturas API-first para empresas medianas. Ya sea empeza
     responseValue: { en: "Within 1 business day", es: "En 1 día hábil" },
     presenceTitle: { en: "Our presence", es: "Nuestra presencia" },
     svcOptions: { en: ["AI & Technology Solutions", "Avertris Products (CRM/Dealer Manager)", "Growth Marketing & SEO", "Paid Ads & Attribution", "Strategic Consultation", "Not sure yet — help me decide"], es: ["Soluciones de IA y Tecnología", "Productos Avertris (CRM/Dealer Manager)", "Growth Marketing y SEO", "Paid Ads y Atribución", "Consultoría Estratégica", "Aún no sé — ayúdenme a decidir"] },
-    budgetOptions: ["$500 – $2,500", "$2,500 – $5,000", "$5,000 – $15,000", "$15,000+"],
+    budgetOptions: ["Under $750", "$750 to $1,500", "$1,500 to $5,000", "$5,000 to $10,000", "$10,000 to $25,000", "$25,000 to $50,000", "$50,000 to $100,000", "Above $100,000"],
   },
   /* ── Products Hub ── */
   productsPage: {
@@ -2417,7 +2417,7 @@ function ContactPage({ lang }) {
   const { mob } = useMedia();
   const inputStyle = { width: "100%", padding: "14px 16px", border: `1px solid ${V.g200}`, borderRadius: 8, fontSize: 14, fontFamily: F, outline: "none", boxSizing: "border-box", transition: "border-color 0.2s" };
 
-  const [form, setForm] = useState({ name: "", email: "", company: "", service: "", budget: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", website: "", company: "", service: "", budget: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
   const upd = (k, v) => setForm(prev => ({ ...prev, [k]: v }));
 
@@ -2432,6 +2432,7 @@ function ContactPage({ lang }) {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          website: form.website,
           company: form.company,
           service: form.service,
           budget: form.budget,
@@ -2441,7 +2442,7 @@ function ContactPage({ lang }) {
         }),
       });
       setStatus("sent");
-      setForm({ name: "", email: "", company: "", service: "", budget: "", message: "" });
+      setForm({ name: "", email: "", website: "", company: "", service: "", budget: "", message: "" });
     } catch {
       setStatus("error");
     }
@@ -2471,11 +2472,14 @@ function ContactPage({ lang }) {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: 16, marginBottom: 16 }}>
               <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.company, lang)}</label><input value={form.company} onChange={e => upd("company", e.target.value)} style={inputStyle} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
+              <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>Website URL</label><input value={form.website} onChange={e => upd("website", e.target.value)} placeholder="https://" style={inputStyle} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: 16, marginBottom: 16 }}>
               <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.service, lang)}</label>
                 <select value={form.service} onChange={e => upd("service", e.target.value)} style={{ ...inputStyle, background: V.white, color: V.g600 }}>{t(C.svcOptions, lang).map(o => <option key={o}>{o}</option>)}</select>
               </div>
+              <div><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.budget, lang)}</label><select value={form.budget} onChange={e => upd("budget", e.target.value)} style={{ ...inputStyle, background: V.white, color: V.g600 }}>{C.budgetOptions.map(o => <option key={o}>{o}</option>)}</select></div>
             </div>
-            <div style={{ marginBottom: 16 }}><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.budget, lang)}</label><select value={form.budget} onChange={e => upd("budget", e.target.value)} style={{ ...inputStyle, background: V.white, color: V.g600 }}>{C.budgetOptions.map(o => <option key={o}>{o}</option>)}</select></div>
             <div style={{ marginBottom: 24 }}><label style={{ fontSize: 13, fontWeight: 500, color: V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.message, lang)}</label><textarea value={form.message} onChange={e => upd("message", e.target.value)} placeholder={t(C.messagePh, lang)} style={{ ...inputStyle, height: 120, resize: "vertical" }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => e.target.style.borderColor = V.g200} /></div>
             {status === "error" && <p style={{ fontSize: 13, color: "#dc2626", margin: "0 0 12px", fontFamily: F }}>{t(errorMsg, lang)}</p>}
             <button onClick={handleSubmit} disabled={status === "sending"} style={{ width: "100%", padding: 16, background: status === "sending" ? V.g400 : V.primary, color: "#1a1a1a", border: "none", borderRadius: 8, fontSize: 16, fontWeight: 600, cursor: status === "sending" ? "wait" : "pointer", fontFamily: F }}>{status === "sending" ? t(sendingLabel, lang) : t(C.submit, lang)}</button>
