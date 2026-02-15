@@ -1257,6 +1257,7 @@ Avertris construye arquitecturas API-first para empresas medianas. Ya sea empeza
     formDesc: { en: "We'll respond within one business day with a personalized assessment.", es: "Te responderemos en un día hábil con una evaluación personalizada." },
     name: { en: "Full Name", es: "Nombre Completo" },
     email: { en: "Email", es: "Correo Electrónico" },
+    phone: { en: "Phone", es: "Teléfono" },
     company: { en: "Company", es: "Empresa" },
     service: { en: "Service interest", es: "Servicio de interés" },
     budget: { en: "Budget range", es: "Rango de presupuesto" },
@@ -2417,7 +2418,7 @@ function ContactPage({ lang }) {
   const { mob } = useMedia();
   const inputStyle = { width: "100%", padding: "14px 16px", border: `1px solid ${V.g200}`, borderRadius: 8, fontSize: 14, fontFamily: F, outline: "none", boxSizing: "border-box", transition: "border-color 0.2s" };
 
-  const [form, setForm] = useState({ name: "", email: "", website: "", company: "", service: "", budget: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", website: "", company: "", service: "", budget: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
   const [showCalendar, setShowCalendar] = useState(false);
   const [tried, setTried] = useState(false);
@@ -2429,7 +2430,7 @@ function ContactPage({ lang }) {
     ? "https://api.leadconnectorhq.com/widget/booking/eG5E8UGMopsaePPVEh0z"
     : "https://api.leadconnectorhq.com/widget/booking/fYKM0aPR3zV1rUrrPImG";
 
-  const allFields = ["name", "email", "website", "company", "service", "budget", "message"];
+  const allFields = ["name", "email", "phone", "website", "company", "service", "budget", "message"];
   const handleSubmit = async (e) => {
     if (e) e.preventDefault();
     setTried(true);
@@ -2443,6 +2444,7 @@ function ContactPage({ lang }) {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          phone: form.phone,
           website: form.website,
           company: form.company,
           service: form.service,
@@ -2483,6 +2485,7 @@ function ContactPage({ lang }) {
               <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("email") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.email, lang)} *</label><input name="email" value={form.email} onChange={e => upd("email", e.target.value)} type="email" style={{ ...inputStyle, border: errBorder("email") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.email.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: 16, marginBottom: 16 }}>
+              <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("phone") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.phone, lang)} *</label><input name="phone" value={form.phone} onChange={e => upd("phone", e.target.value)} type="tel" style={{ ...inputStyle, border: errBorder("phone") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.phone.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
               <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("company") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.company, lang)} *</label><input name="company" value={form.company} onChange={e => upd("company", e.target.value)} style={{ ...inputStyle, border: errBorder("company") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.company.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
               <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("website") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>Website URL *</label><input name="website" value={form.website} onChange={e => upd("website", e.target.value)} placeholder="https://" style={{ ...inputStyle, border: errBorder("website") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.website.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
             </div>
