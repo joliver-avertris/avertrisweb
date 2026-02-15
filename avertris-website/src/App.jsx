@@ -1262,7 +1262,7 @@ Avertris construye arquitecturas API-first para empresas medianas. Ya sea empeza
     budget: { en: "Budget range", es: "Rango de presupuesto" },
     message: { en: "Tell us about your project", es: "Cuéntanos sobre tu proyecto" },
     messagePh: { en: "What are you looking to build or improve?", es: "¿Qué buscas construir o mejorar?" },
-    submit: { en: "Send message", es: "Enviar mensaje" },
+    submit: { en: "Book a call", es: "Agendar una llamada" },
     bookTitle: { en: "Prefer to book directly?", es: "¿Prefieres agendar directamente?" },
     bookDesc: { en: "Pick a time that works — 30 min intro call.", es: "Elige un horario — llamada introductoria de 30 min." },
     bookBtn: { en: "Schedule on Calendly", es: "Agendar en Calendly" },
@@ -2419,7 +2419,12 @@ function ContactPage({ lang }) {
 
   const [form, setForm] = useState({ name: "", email: "", website: "", company: "", service: "", budget: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const [showCalendar, setShowCalendar] = useState(false);
   const upd = (k, v) => setForm(prev => ({ ...prev, [k]: v }));
+
+  const calendarUrl = lang === "es"
+    ? "https://api.leadconnectorhq.com/widget/booking/eG5E8UGMopsaePPVEh0z"
+    : "https://api.leadconnectorhq.com/widget/booking/fYKM0aPR3zV1rUrrPImG";
 
   const handleSubmit = async () => {
     if (!form.name || !form.email) return;
@@ -2442,13 +2447,12 @@ function ContactPage({ lang }) {
         }),
       });
       setStatus("sent");
-      setForm({ name: "", email: "", website: "", company: "", service: "", budget: "", message: "" });
+      setShowCalendar(true);
     } catch {
       setStatus("error");
     }
   };
 
-  const successMsg = { en: "Message sent! We'll get back to you within 24 hours.", es: "¡Mensaje enviado! Te responderemos en menos de 24 horas." };
   const errorMsg = { en: "Something went wrong. Please try again or email hello@avertris.com", es: "Algo salió mal. Intenta de nuevo o escríbenos a hello@avertris.com" };
   const sendingLabel = { en: "Sending...", es: "Enviando..." };
 
@@ -2462,7 +2466,8 @@ function ContactPage({ lang }) {
             <p style={{ fontSize: mob ? 14 : 15, fontWeight: 300, color: V.g600, margin: "0 0 32px", fontFamily: F }}>{t(C.formDesc, lang)}</p>
             {status === "sent" ? (
               <div style={{ padding: 32, background: "#f0fdf4", borderRadius: 12, textAlign: "center" }}>
-                <p style={{ fontSize: 18, fontWeight: 600, color: "#166534", margin: 0, fontFamily: F }}>✓ {t(successMsg, lang)}</p>
+                <p style={{ fontSize: 18, fontWeight: 600, color: "#166534", margin: "0 0 16px", fontFamily: F }}>✓ {t({ en: "Info received! Now pick a time.", es: "¡Info recibida! Ahora elige un horario." }, lang)}</p>
+                <button onClick={() => setShowCalendar(true)} style={{ padding: "14px 32px", background: V.primary, color: "#1a1a1a", border: "none", borderRadius: 8, fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: F }}>{t({ en: "Open calendar", es: "Abrir calendario" }, lang)}</button>
               </div>
             ) : (
             <>
@@ -2490,7 +2495,7 @@ function ContactPage({ lang }) {
             <div style={{ background: V.g100, borderRadius: 16, padding: mob ? 24 : 40, textAlign: "center" }}>
               <h3 style={{ fontSize: mob ? 18 : 20, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{t(C.bookTitle, lang)}</h3>
               <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, margin: "0 0 24px", fontFamily: F }}>{t(C.bookDesc, lang)}</p>
-              <Btn variant="dark" mob={mob}>{t(C.bookBtn, lang)}</Btn>
+              <Btn variant="dark" mob={mob} onClick={() => setShowCalendar(true)}>{t(C.bookBtn, lang)}</Btn>
             </div>
             <div style={{ background: V.g100, borderRadius: 16, padding: mob ? 24 : 40 }}>
               <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: V.g900, margin: "0 0 24px", fontFamily: F }}>{t(C.otherTitle, lang)}</h3>
@@ -2511,6 +2516,16 @@ function ContactPage({ lang }) {
           </div>
         </div></Box>
       </section>
+
+      {/* Calendar popup modal */}
+      {showCalendar && (
+        <div onClick={() => setShowCalendar(false)} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.6)", display: "flex", alignItems: "center", justifyContent: "center", padding: mob ? 16 : 40 }}>
+          <div onClick={e => e.stopPropagation()} style={{ position: "relative", width: "100%", maxWidth: 660, height: mob ? "85vh" : "80vh", borderRadius: 16, overflow: "hidden", background: "transparent" }}>
+            <button onClick={() => setShowCalendar(false)} style={{ position: "absolute", top: 8, right: 8, zIndex: 10, width: 36, height: 36, borderRadius: "50%", border: "none", background: "rgba(0,0,0,0.5)", color: "#fff", fontSize: 20, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F }}>✕</button>
+            <iframe src={calendarUrl} style={{ width: "100%", height: "100%", border: "none", borderRadius: 16 }} title="Book a call" />
+          </div>
+        </div>
+      )}
     </>
   );
 }
