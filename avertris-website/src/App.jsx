@@ -2498,11 +2498,6 @@ function ContactPage({ lang }) {
             )}
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-            <div style={{ background: V.g100, borderRadius: 16, padding: mob ? 24 : 40, textAlign: "center" }}>
-              <h3 style={{ fontSize: mob ? 18 : 20, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{t(C.bookTitle, lang)}</h3>
-              <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, margin: "0 0 24px", fontFamily: F }}>{t(C.bookDesc, lang)}</p>
-              <Btn variant="dark" mob={mob} onClick={() => setShowCalendar(true)}>{t(C.bookBtn, lang)}</Btn>
-            </div>
             <div style={{ background: V.g100, borderRadius: 16, padding: mob ? 24 : 40 }}>
               <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: V.g900, margin: "0 0 24px", fontFamily: F }}>{t(C.otherTitle, lang)}</h3>
               <p style={{ fontSize: mob ? 11 : 12, fontWeight: 600, color: V.g400, letterSpacing: 1, textTransform: "uppercase", margin: "0 0 4px", fontFamily: F }}>{t(C.emailLabel, lang)}</p>
