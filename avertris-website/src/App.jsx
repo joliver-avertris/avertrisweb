@@ -2429,7 +2429,6 @@ function ContactPage({ lang }) {
 
   const [form, setForm] = useState({ name: "", email: "", phone: "", website: "", company: "", service: "", budget: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
-  const [showCalendar, setShowCalendar] = useState(false);
   const [tried, setTried] = useState(false);
   const upd = (k, v) => setForm(prev => ({ ...prev, [k]: v }));
   const missing = (k) => tried && !form[k].trim();
@@ -2464,7 +2463,6 @@ function ContactPage({ lang }) {
         }),
       });
       setStatus("sent");
-      setShowCalendar(true);
     } catch {
       setStatus("error");
     }
@@ -2482,9 +2480,13 @@ function ContactPage({ lang }) {
             <h2 style={{ fontSize: mob ? 24 : 32, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{t(C.formTitle, lang)}</h2>
             <p style={{ fontSize: mob ? 14 : 15, fontWeight: 300, color: V.g600, margin: "0 0 32px", fontFamily: F }}>{t(C.formDesc, lang)}</p>
             {status === "sent" ? (
-              <div style={{ padding: 32, background: "#f0fdf4", borderRadius: 12, textAlign: "center" }}>
-                <p style={{ fontSize: 18, fontWeight: 600, color: "#166534", margin: "0 0 16px", fontFamily: F }}>✓ {t({ en: "Info received! Now pick a time.", es: "¡Info recibida! Ahora elige un horario." }, lang)}</p>
-                <button onClick={() => setShowCalendar(true)} style={{ padding: "14px 32px", background: V.primary, color: "#1a1a1a", border: "none", borderRadius: 8, fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: F }}>{t({ en: "Open calendar", es: "Abrir calendario" }, lang)}</button>
+              <div>
+                <div style={{ padding: 24, background: "#f0fdf4", borderRadius: 12, textAlign: "center", marginBottom: 24 }}>
+                  <p style={{ fontSize: 18, fontWeight: 600, color: "#166534", margin: 0, fontFamily: F }}>✓ {t({ en: "Info received! Now pick a time.", es: "¡Info recibida! Ahora elige un horario." }, lang)}</p>
+                </div>
+                <div style={{ borderRadius: 12, overflow: "hidden", border: `1px solid ${V.g200}` }}>
+                  <iframe src={calendarUrl} style={{ width: "100%", height: mob ? 600 : 700, border: "none", display: "block" }} title="Book a call" />
+                </div>
               </div>
             ) : (
             <form onSubmit={handleSubmit}>
@@ -2532,14 +2534,6 @@ function ContactPage({ lang }) {
       </section>
 
       {/* Calendar popup modal */}
-      {showCalendar && (
-        <div onClick={() => setShowCalendar(false)} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.6)", display: "flex", alignItems: "center", justifyContent: "center", padding: mob ? 16 : 40 }}>
-          <div onClick={e => e.stopPropagation()} style={{ position: "relative", width: "100%", maxWidth: 660, height: mob ? "85vh" : "80vh", borderRadius: 16, overflow: "hidden", background: "transparent" }}>
-            <button onClick={() => setShowCalendar(false)} style={{ position: "absolute", top: 8, right: 8, zIndex: 10, width: 36, height: 36, borderRadius: "50%", border: "none", background: "rgba(0,0,0,0.5)", color: "#fff", fontSize: 20, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F }}>✕</button>
-            <iframe src={calendarUrl} style={{ width: "100%", height: "100%", border: "none", borderRadius: 16 }} title="Book a call" />
-          </div>
-        </div>
-      )}
     </>
   );
 }
