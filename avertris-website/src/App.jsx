@@ -34,6 +34,8 @@ const T = {
     about: { en: "About", es: "Nosotros" },
     blog: { en: "Blog", es: "Blog" },
     cta: { en: "Let's talk", es: "Hablemos" },
+    products: { en: "Products", es: "Productos" },
+    megaProducts: { en: "OUR PRODUCTS", es: "NUESTROS PRODUCTOS" },
     megaBuild: { en: "BUILD", es: "CONSTRUIR" },
     megaGrow: { en: "GROW", es: "CRECER" },
     megaTransform: { en: "TRANSFORM", es: "TRANSFORMAR" },
@@ -255,6 +257,89 @@ const T = {
     svcOptions: { en: ["Custom Software", "Growth Marketing", "AI Enablement", "All Services"], es: ["Software a Medida", "Marketing de Crecimiento", "Habilitación de IA", "Todos los Servicios"] },
     budgetOptions: ["$10K – $25K", "$25K – $50K", "$50K – $100K", "$100K+"],
   },
+  omnichannelPage: {
+    label: { en: "Product", es: "Producto" },
+    title: { en: "Omnichannel Communication", es: "Comunicación Omnicanal" },
+    subtitle: { en: "One platform to unify every conversation. WhatsApp, email, calls, social DMs, SMS — all in one place, fully auditable and connected to your contacts.", es: "Una plataforma para unificar cada conversación. WhatsApp, email, llamadas, DMs sociales, SMS — todo en un solo lugar, completamente auditable y conectado a tus contactos." },
+    heroCtaDemo: { en: "Request a demo", es: "Solicitar demo" },
+    heroCtaPricing: { en: "See pricing", es: "Ver precios" },
+    problemLabel: { en: "Sound familiar?", es: "¿Te suena familiar?" },
+    problemTitle: { en: "Your team's communication<br/>is scattered everywhere", es: "La comunicación de tu equipo<br/>está dispersa por todos lados" },
+    problems: [
+      { icon: "📱", title: { en: "Personal WhatsApp for sales", es: "WhatsApp personal para ventas" }, desc: { en: "Sales reps use their own phones. When they leave, so do the conversations and client history.", es: "Los vendedores usan sus teléfonos personales. Cuando se van, se llevan las conversaciones y el historial del cliente." } },
+      { icon: "🔍", title: { en: "Zero audit trail", es: "Cero rastreo de auditoría" }, desc: { en: "No visibility into what's being said to clients. Compliance risks and no quality control.", es: "Sin visibilidad de lo que se dice a los clientes. Riesgos de cumplimiento y sin control de calidad." } },
+      { icon: "💬", title: { en: "Fragmented conversations", es: "Conversaciones fragmentadas" }, desc: { en: "A client starts on WhatsApp, follows up by email, then calls. Nobody has the full picture.", es: "Un cliente empieza por WhatsApp, sigue por email, luego llama. Nadie tiene la imagen completa." } },
+      { icon: "📄", title: { en: "Documents lost in chats", es: "Documentos perdidos en chats" }, desc: { en: "Contracts, proposals, and files scattered across personal chats with no way to find them.", es: "Contratos, propuestas y archivos dispersos en chats personales sin forma de encontrarlos." } },
+      { icon: "🤯", title: { en: "Internal headaches", es: "Dolores de cabeza internos" }, desc: { en: "Missed follow-ups, duplicated efforts, and zero coordination between teams.", es: "Seguimientos perdidos, esfuerzos duplicados y cero coordinación entre equipos." } },
+      { icon: "📉", title: { en: "Revenue leaking", es: "Ingresos que se escapan" }, desc: { en: "Leads fall through the cracks. Slow responses lose deals. No data to optimize the process.", es: "Los leads se pierden. Las respuestas lentas pierden negocios. Sin datos para optimizar el proceso." } },
+    ],
+    channelsLabel: { en: "All your channels", es: "Todos tus canales" },
+    channelsTitle: { en: "Every channel, one inbox", es: "Cada canal, una bandeja" },
+    channelsDesc: { en: "Connect all the ways your team communicates — with clients, prospects, and each other — into a single unified platform.", es: "Conecta todas las formas en que tu equipo se comunica — con clientes, prospectos y entre sí — en una sola plataforma unificada." },
+    channels: [
+      { icon: "💬", name: "WhatsApp", desc: { en: "Business API integration with shared inboxes, templates, and full message history", es: "Integración con API Business con bandejas compartidas, plantillas e historial completo" } },
+      { icon: "📘", name: "Facebook", desc: { en: "Manage Messenger conversations and page messages from your unified dashboard", es: "Gestiona conversaciones de Messenger y mensajes de página desde tu dashboard unificado" } },
+      { icon: "📸", name: "Instagram", desc: { en: "Reply to DMs, story mentions, and comments without switching apps", es: "Responde DMs, menciones en historias y comentarios sin cambiar de app" } },
+      { icon: "✉️", name: "Email", desc: { en: "Full email integration — send, receive, and thread conversations linked to contacts", es: "Integración completa de email — envía, recibe y organiza conversaciones vinculadas a contactos" } },
+      { icon: "📲", name: "SMS", desc: { en: "Two-way SMS messaging with automation capabilities and delivery tracking", es: "Mensajería SMS bidireccional con automatización y seguimiento de entrega" } },
+      { icon: "📞", name: { en: "Calls", es: "Llamadas" }, desc: { en: "VoIP calling with recording, transcription, and automatic logging to contacts", es: "Llamadas VoIP con grabación, transcripción y registro automático en contactos" } },
+      { icon: "🔗", name: "Slack", desc: { en: "Internal team coordination with notifications, escalations, and cross-channel context", es: "Coordinación interna del equipo con notificaciones, escalamientos y contexto multi-canal" } },
+    ],
+    featuresLabel: { en: "Platform capabilities", es: "Capacidades de la plataforma" },
+    featuresTitle: { en: "Built for teams<br/>that mean business", es: "Hecho para equipos<br/>que van en serio" },
+    features: [
+      { icon: "👤", title: { en: "Unified contact profiles", es: "Perfiles de contacto unificados" }, desc: { en: "Every interaction, document, and note in one timeline — across all channels.", es: "Cada interacción, documento y nota en una línea de tiempo — a través de todos los canales." } },
+      { icon: "🔒", title: { en: "Full audit trail", es: "Auditoría completa" }, desc: { en: "Every message is logged, searchable, and exportable. Full compliance and quality control.", es: "Cada mensaje registrado, buscable y exportable. Cumplimiento total y control de calidad." } },
+      { icon: "📎", title: { en: "Document management", es: "Gestión de documentos" }, desc: { en: "Files automatically linked to contacts and conversations. Never lose a document again.", es: "Archivos automáticamente vinculados a contactos y conversaciones. Nunca pierdas un documento." } },
+      { icon: "🤖", title: { en: "AI assistant", es: "Asistente de IA" }, desc: { en: "Train an AI on your business to auto-respond, qualify leads, and book appointments 24/7.", es: "Entrena una IA con tu negocio para auto-responder, calificar leads y agendar citas 24/7." } },
+      { icon: "⚡", title: { en: "Automations", es: "Automatizaciones" }, desc: { en: "Auto-assign conversations, trigger follow-ups, and route messages based on custom rules.", es: "Asigna conversaciones automáticamente, dispara seguimientos y enruta mensajes con reglas personalizadas." } },
+      { icon: "📊", title: { en: "Analytics & reports", es: "Analítica y reportes" }, desc: { en: "Response times, conversation volumes, team performance, and conversion tracking.", es: "Tiempos de respuesta, volúmenes de conversación, rendimiento del equipo y seguimiento de conversiones." } },
+    ],
+    pricingLabel: { en: "Pricing", es: "Precios" },
+    pricingTitle: { en: "Simple, transparent pricing", es: "Precios simples y transparentes" },
+    pricingSubtitle: { en: "Start small, scale as you grow. No hidden fees, no long-term contracts.", es: "Empieza pequeño, escala a medida que creces. Sin costos ocultos, sin contratos a largo plazo." },
+    pricingMonth: { en: "/month", es: "/mes" },
+    pricingStarting: { en: "Starting at", es: "Desde" },
+    pricingCta: { en: "Get started", es: "Comenzar" },
+    pricingCtaEnterprise: { en: "Contact sales", es: "Contactar ventas" },
+    pricingPopular: { en: "Most popular", es: "Más popular" },
+    plans: [
+      {
+        name: { en: "Starter", es: "Starter" },
+        price: "99",
+        users: { en: "Up to 5 users", es: "Hasta 5 usuarios" },
+        desc: { en: "Perfect for solo operators and startups that need to professionalize their client communication.", es: "Perfecto para operadores independientes y startups que necesitan profesionalizar su comunicación con clientes." },
+        features: {
+          en: ["Unified inbox (all channels)", "WhatsApp Business API", "Facebook & Instagram DMs", "Email integration", "SMS messaging", "VoIP calls with recording", "Contact management", "Document linking", "Basic analytics", "Mobile app"],
+          es: ["Bandeja unificada (todos los canales)", "API de WhatsApp Business", "DMs de Facebook e Instagram", "Integración de email", "Mensajería SMS", "Llamadas VoIP con grabación", "Gestión de contactos", "Vinculación de documentos", "Analítica básica", "App móvil"],
+        },
+      },
+      {
+        name: { en: "Growth", es: "Growth" },
+        price: "299",
+        users: { en: "Up to 30 users", es: "Hasta 30 usuarios" },
+        popular: true,
+        desc: { en: "For growing teams that need CRM, automations, and AI to scale without scaling headcount.", es: "Para equipos en crecimiento que necesitan CRM, automatizaciones e IA para escalar sin aumentar personal." },
+        features: {
+          en: ["Everything in Starter", "Built-in CRM", "Workflow automations", "Shared calendar & scheduling", "AI text assistant (trainable)", "Auto-lead qualification", "Automatic appointment booking", "Slack integration", "Team performance dashboards", "Priority support"],
+          es: ["Todo lo del plan Starter", "CRM integrado", "Automatizaciones de flujos", "Calendario compartido y agenda", "Asistente IA de texto (entrenable)", "Calificación automática de leads", "Agendamiento automático de citas", "Integración con Slack", "Dashboards de rendimiento", "Soporte prioritario"],
+        },
+      },
+      {
+        name: { en: "Enterprise", es: "Enterprise" },
+        price: "999",
+        users: { en: "Unlimited users", es: "Usuarios ilimitados" },
+        desc: { en: "For large organizations that need full API access, advanced reporting, and white-glove support.", es: "Para organizaciones grandes que necesitan acceso completo a API, reportes avanzados y soporte premium." },
+        features: {
+          en: ["Everything in Growth", "Unlimited users", "Full API access", "Advanced custom reports", "Voice AI assistant", "Premium onboarding", "Team training sessions", "Dedicated account manager", "Custom integrations", "99.9% SLA guarantee"],
+          es: ["Todo lo del plan Growth", "Usuarios ilimitados", "Acceso completo a API", "Reportes personalizados avanzados", "Asistente de voz con IA", "Onboarding premium", "Sesiones de capacitación", "Account manager dedicado", "Integraciones personalizadas", "Garantía SLA 99.9%"],
+        },
+      },
+    ],
+    ctaTitle: { en: "Ready to unify your communications?", es: "¿Listo para unificar tus comunicaciones?" },
+    ctaDesc: { en: "Join hundreds of companies that stopped losing clients to scattered conversations. Get started in minutes.", es: "Únete a cientos de empresas que dejaron de perder clientes por conversaciones dispersas. Empieza en minutos." },
+    ctaBtn: { en: "Request a demo", es: "Solicitar demo" },
+  },
 };
 
 /* helper */
@@ -323,6 +408,14 @@ function Nav({ page, go, lang, setLang }) {
 
   const links = [
     {
+      label: t(T.nav.products, lang), key: "omnichannel",
+      mega: {
+        cols: [
+          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Omnichannel Communication" : "Comunicación Omnicanal", key: "omnichannel" }] },
+        ],
+      },
+    },
+    {
       label: t(T.nav.services, lang), key: "services",
       mega: {
         cols: [
@@ -372,7 +465,7 @@ function Nav({ page, go, lang, setLang }) {
                             <div key={ci} style={{ marginBottom: 16 }}>
                               <p style={{ fontSize: 12, fontWeight: 600, color: V.g400, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 8px" }}>{col.heading}</p>
                               {col.items.map((item, ii) => (
-                                <button key={ii} onClick={() => { go("services"); setMobileMenuOpen(false); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "6px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}>{item.t}</button>
+                                <button key={ii} onClick={() => { go(item.key || link.key); setMobileMenuOpen(false); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "6px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}>{item.t}</button>
                               ))}
                             </div>
                           ))}
@@ -422,13 +515,13 @@ function Nav({ page, go, lang, setLang }) {
                 {link.mega && <span style={{ fontSize: 10, opacity: 0.5 }}>▼</span>}
               </button>
               {link.mega && openMenu === link.key && (
-                <div style={{ position: "absolute", top: "100%", left: -120, paddingTop: 12, zIndex: 200 }}>
-                  <div style={{ background: V.white, borderRadius: 12, padding: "40px 48px", boxShadow: "0 20px 60px rgba(0,0,0,0.12)", display: "grid", gridTemplateColumns: "repeat(3, 220px)", gap: 40, border: `1px solid ${V.g200}` }}>
+                <div style={{ position: "absolute", top: "100%", left: link.mega.cols.length === 1 ? -20 : -120, paddingTop: 12, zIndex: 200 }}>
+                  <div style={{ background: V.white, borderRadius: 12, padding: "40px 48px", boxShadow: "0 20px 60px rgba(0,0,0,0.12)", display: "grid", gridTemplateColumns: `repeat(${link.mega.cols.length}, 220px)`, gap: 40, border: `1px solid ${V.g200}` }}>
                     {link.mega.cols.map((col, ci) => (
                       <div key={ci}>
                         <p style={{ fontSize: 12, fontWeight: 600, color: V.g400, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 16px" }}>{col.heading}</p>
                         {col.items.map((item, ii) => (
-                          <button key={ii} onClick={() => { go("services"); setOpenMenu(null); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "8px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}
+                          <button key={ii} onClick={() => { go(item.key || link.key); setOpenMenu(null); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "8px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}
                             onMouseEnter={e => e.target.style.color = V.primary} onMouseLeave={e => e.target.style.color = V.g800}
                           >{item.t}</button>
                         ))}
@@ -900,6 +993,200 @@ function BlogPage({ lang }) {
 
 
 /* ═══════════════════════════════════════════════════════════
+   OMNICHANNEL COMMUNICATION PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+function OmnichannelPage({ go, lang }) {
+  const O = T.omnichannelPage;
+  const { mob, tab } = useMedia();
+  const [hPrb, sHPrb] = useState(null);
+  const [hCh, sHCh] = useState(null);
+  const [hFt, sHFt] = useState(null);
+  const L = lang;
+
+  return (
+    <>
+      {/* Hero */}
+      <section style={{ background: `linear-gradient(135deg, ${V.g900} 0%, #1a1a2e 50%, #16213e 100%)`, padding: mob ? "120px 0 60px" : "160px 0 100px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: "50%", background: "radial-gradient(ellipse at 70% 50%, rgba(255,107,0,0.08) 0%, transparent 70%)" }} />
+        <Box mob={mob}>
+          <div style={{ display: mob ? "block" : "grid", gridTemplateColumns: mob ? undefined : "1fr 1fr", gap: 60, alignItems: "center" }}>
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <Lbl mob={mob}>{t(O.label, L)}</Lbl>
+              <h1 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, lineHeight: 1.08, letterSpacing: -2, color: V.white, margin: "0 0 24px", fontFamily: F }}>{t(O.title, L)}</h1>
+              <p style={{ fontSize: mob ? 15 : 18, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 40px", maxWidth: 520, lineHeight: 1.7, fontFamily: F }}>{t(O.subtitle, L)}</p>
+              <div style={{ display: "flex", flexDirection: mob ? "column" : "row", gap: 16 }}>
+                <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{t(O.heroCtaDemo, L)}</Btn>
+                <Btn variant="outline" onClick={() => {}} style={{ color: V.white, borderColor: "rgba(255,255,255,0.3)" }} mob={mob}>{t(O.heroCtaPricing, L)}</Btn>
+              </div>
+            </div>
+            {!mob && (
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, position: "relative", zIndex: 1 }}>
+                {O.channels.slice(0, 6).map((ch, i) => (
+                  <div key={i} style={{ background: "rgba(255,255,255,0.06)", backdropFilter: "blur(8px)", borderRadius: 12, padding: "20px 16px", textAlign: "center", border: "1px solid rgba(255,255,255,0.08)", transition: "all 0.3s" }}
+                    onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,107,0,0.12)"; e.currentTarget.style.borderColor = "rgba(255,107,0,0.3)"; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.06)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; }}
+                  >
+                    <span style={{ fontSize: 28, display: "block", marginBottom: 8 }}>{ch.icon}</span>
+                    <span style={{ fontSize: 13, fontWeight: 600, color: V.white, fontFamily: F }}>{typeof ch.name === "string" ? ch.name : t(ch.name, L)}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </Box>
+      </section>
+
+      {/* Problem / Pain Points */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+        <Box mob={mob}>
+          <div style={{ textAlign: "center", maxWidth: 680, margin: `0 auto ${mob ? 40 : 64}px` }}>
+            <Lbl mob={mob}>{t(O.problemLabel, L)}</Lbl>
+            <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 20px", fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(O.problemTitle, L) }} />
+            <Hr style={{ margin: "0 auto" }} />
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : tab ? "repeat(2, 1fr)" : "repeat(3, 1fr)", gap: mob ? 16 : 24 }}>
+            {O.problems.map((p, i) => (
+              <div key={i}
+                onMouseEnter={() => !mob && sHPrb(i)} onMouseLeave={() => !mob && sHPrb(null)}
+                style={{ background: hPrb === i ? V.g900 : V.g100, borderRadius: 12, padding: mob ? "24px 20px" : "32px 28px", transition: "all 0.2s", cursor: "default" }}
+              >
+                <span style={{ fontSize: 32, display: "block", marginBottom: 16 }}>{p.icon}</span>
+                <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 600, color: hPrb === i ? V.white : V.g900, margin: "0 0 10px", fontFamily: F, transition: "color 0.2s" }}>{t(p.title, L)}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, lineHeight: 1.7, color: hPrb === i ? "rgba(255,255,255,0.6)" : V.g600, margin: 0, fontFamily: F, transition: "color 0.2s" }}>{t(p.desc, L)}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* Channels */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g100 }}>
+        <Box mob={mob}>
+          <div style={{ display: mob ? "block" : "grid", gridTemplateColumns: mob ? undefined : "1fr 1fr", gap: 80, alignItems: "start" }}>
+            <div style={{ marginBottom: mob ? 40 : 0 }}>
+              <Lbl mob={mob}>{t(O.channelsLabel, L)}</Lbl>
+              <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 20px", fontFamily: F }}>{t(O.channelsTitle, L)}</h2>
+              <Hr />
+              <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, lineHeight: 1.8, color: V.g600, margin: "24px 0 0", fontFamily: F }}>{t(O.channelsDesc, L)}</p>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {O.channels.map((ch, i) => (
+                <div key={i}
+                  onMouseEnter={() => !mob && sHCh(i)} onMouseLeave={() => !mob && sHCh(null)}
+                  style={{ background: V.white, borderRadius: 12, padding: mob ? "16px 16px" : "20px 24px", display: "grid", gridTemplateColumns: "48px 1fr", gap: 16, alignItems: "center", transition: "all 0.2s", boxShadow: hCh === i ? "0 8px 24px rgba(255,107,0,0.1)" : "none", border: `1px solid ${hCh === i ? V.primary : V.g200}` }}
+                >
+                  <div style={{ width: 48, height: 48, borderRadius: 10, background: hCh === i ? V.primary : V.p200, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, transition: "background 0.2s" }}>{ch.icon}</div>
+                  <div>
+                    <h4 style={{ fontSize: mob ? 15 : 16, fontWeight: 600, color: V.g900, margin: "0 0 4px", fontFamily: F }}>{typeof ch.name === "string" ? ch.name : t(ch.name, L)}</h4>
+                    <p style={{ fontSize: mob ? 12 : 13, fontWeight: 300, lineHeight: 1.6, color: V.g600, margin: 0, fontFamily: F }}>{t(ch.desc, L)}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Box>
+      </section>
+
+      {/* Features */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+        <Box mob={mob}>
+          <div style={{ textAlign: "center", maxWidth: 600, margin: `0 auto ${mob ? 40 : 64}px` }}>
+            <Lbl mob={mob}>{t(O.featuresLabel, L)}</Lbl>
+            <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 20px", fontFamily: F }} dangerouslySetInnerHTML={{ __html: t(O.featuresTitle, L) }} />
+            <Hr style={{ margin: "0 auto" }} />
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : tab ? "repeat(2, 1fr)" : "repeat(3, 1fr)", gap: mob ? 16 : 24 }}>
+            {O.features.map((f, i) => {
+              const isAlt = [1, 3, 5].includes(i);
+              return (
+                <div key={i}
+                  onMouseEnter={() => !mob && sHFt(i)} onMouseLeave={() => !mob && sHFt(null)}
+                  style={{ padding: mob ? "28px 20px" : "40px 32px", background: hFt === i ? V.primary : isAlt ? V.g200 : V.g100, borderRadius: 12, transition: "all 0.2s", cursor: "default" }}
+                >
+                  <span style={{ fontSize: 32, display: "block", marginBottom: 20 }}>{f.icon}</span>
+                  <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 600, color: hFt === i ? V.white : V.g900, margin: "0 0 10px", fontFamily: F, transition: "color 0.2s" }}>{t(f.title, L)}</h3>
+                  <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, lineHeight: 1.7, color: hFt === i ? "rgba(255,255,255,0.7)" : V.g600, margin: 0, fontFamily: F, transition: "color 0.2s" }}>{t(f.desc, L)}</p>
+                </div>
+              );
+            })}
+          </div>
+        </Box>
+      </section>
+
+      {/* Pricing */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g100 }}>
+        <Box mob={mob}>
+          <div style={{ textAlign: "center", maxWidth: 600, margin: `0 auto ${mob ? 40 : 64}px` }}>
+            <Lbl mob={mob}>{t(O.pricingLabel, L)}</Lbl>
+            <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 16px", fontFamily: F }}>{t(O.pricingTitle, L)}</h2>
+            <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, lineHeight: 1.7, color: V.g600, margin: 0, fontFamily: F }}>{t(O.pricingSubtitle, L)}</p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(3, 1fr)", gap: mob ? 24 : 0, alignItems: "start" }}>
+            {O.plans.map((plan, i) => {
+              const isPopular = plan.popular;
+              return (
+                <div key={i} style={{
+                  background: V.white,
+                  borderRadius: mob ? 16 : i === 0 ? "16px 0 0 16px" : i === 2 ? "0 16px 16px 0" : 0,
+                  padding: mob ? "32px 24px" : isPopular ? "48px 36px" : "40px 32px",
+                  border: `${isPopular ? 2 : 1}px solid ${isPopular ? V.primary : V.g200}`,
+                  position: "relative",
+                  transform: !mob && isPopular ? "scale(1.04)" : "none",
+                  zIndex: isPopular ? 2 : 1,
+                  boxShadow: isPopular ? "0 20px 50px rgba(255,107,0,0.12)" : "none",
+                }}>
+                  {isPopular && (
+                    <div style={{ position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)", background: V.primary, color: V.white, fontSize: 12, fontWeight: 700, padding: "5px 20px", borderRadius: 20, fontFamily: F, whiteSpace: "nowrap" }}>{t(O.pricingPopular, L)}</div>
+                  )}
+                  <h3 style={{ fontSize: mob ? 20 : 24, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{t(plan.name, L)}</h3>
+                  <p style={{ fontSize: mob ? 12 : 13, fontWeight: 500, color: V.primary, margin: "0 0 20px", fontFamily: F }}>{t(plan.users, L)}</p>
+                  <div style={{ marginBottom: 20 }}>
+                    {i === 2 && <span style={{ fontSize: mob ? 12 : 13, fontWeight: 400, color: V.g400, fontFamily: F }}>{t(O.pricingStarting, L)} </span>}
+                    <span style={{ fontSize: mob ? 40 : 48, fontWeight: 800, color: V.g900, letterSpacing: -2, fontFamily: F }}>${plan.price}</span>
+                    <span style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g400, fontFamily: F }}>{t(O.pricingMonth, L)}</span>
+                  </div>
+                  <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, lineHeight: 1.7, color: V.g600, margin: "0 0 28px", fontFamily: F }}>{t(plan.desc, L)}</p>
+                  <Btn
+                    variant={isPopular ? "primary" : "outline"}
+                    onClick={() => go("contact")}
+                    style={{ width: "100%", justifyContent: "center", marginBottom: 28 }}
+                    mob={mob}
+                  >
+                    {i === 2 ? t(O.pricingCtaEnterprise, L) : t(O.pricingCta, L)}
+                  </Btn>
+                  <div style={{ borderTop: `1px solid ${V.g200}`, paddingTop: 24 }}>
+                    {t(plan.features, L).map((f, j) => (
+                      <div key={j} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 0" }}>
+                        <div style={{ width: 20, height: 20, borderRadius: "50%", background: V.p200, color: V.primary, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, flexShrink: 0, fontWeight: 700 }}>✓</div>
+                        <span style={{ fontSize: mob ? 13 : 14, color: V.g800, fontFamily: F, fontWeight: j === 0 && i > 0 ? 600 : 400 }}>{f}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </Box>
+      </section>
+
+      {/* CTA */}
+      <section style={{ padding: mob ? "80px 0" : "120px 0", background: V.g900, textAlign: "center" }}>
+        <Box mob={mob}>
+          <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 800, color: V.white, lineHeight: 1.15, letterSpacing: -1, margin: "0 0 16px", fontFamily: F }}>{t(O.ctaTitle, L)}</h2>
+          <p style={{ fontSize: mob ? 14 : 18, fontWeight: 300, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, margin: "0 auto 40px", maxWidth: 560, fontFamily: F }}>{t(O.ctaDesc, L)}</p>
+          <div style={{ display: "flex", flexDirection: mob ? "column" : "row", gap: 16, justifyContent: "center", alignItems: "center" }}>
+            <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{t(O.ctaBtn, L)}</Btn>
+            <Btn variant="outline" onClick={() => go("contact")} style={{ color: V.white, borderColor: "rgba(255,255,255,0.3)" }} mob={mob}>{t(T.nav.cta, L)}</Btn>
+          </div>
+        </Box>
+      </section>
+    </>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════
    CONTACT PAGE
    ═══════════════════════════════════════════════════════════ */
 
@@ -1033,6 +1320,7 @@ export default function App() {
 
   const pages = {
     home: <HomePage go={go} lang={lang} />,
+    omnichannel: <OmnichannelPage go={go} lang={lang} />,
     services: <ServicesPage go={go} lang={lang} />,
     cases: <CasesPage go={go} lang={lang} />,
     about: <AboutPage go={go} lang={lang} />,
