@@ -315,6 +315,23 @@
   </url>
 
   <url>
+    <loc>https://avertris.com/en/product-omnichannel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-omnichannel" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-omnichannel" />
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avertris.com/es/product-omnichannel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-omnichannel" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-omnichannel" />
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://avertris.com/en/product-cash-leak-assessment</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://avertris.com/en/product-cash-leak-assessment" />
     <xhtml:link rel="alternate" hreflang="es" href="https://avertris.com/es/product-cash-leak-assessment" />

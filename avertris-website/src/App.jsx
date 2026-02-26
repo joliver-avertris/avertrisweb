@@ -1309,6 +1309,15 @@ Avertris construye arquitecturas API-first para empresas medianas. Ya sea empeza
         price: { en: "Custom pricing", es: "Precio personalizado" },
       },
       {
+        slug: "omnichannel",
+        icon: "⬡",
+        name: { en: "Omnichannel Communication", es: "Comunicación Omnicanal" },
+        tagline: { en: "Every conversation, one platform. Zero lost messages.", es: "Todas las conversaciones, una plataforma. Cero mensajes perdidos." },
+        desc: { en: "Centralize WhatsApp, Instagram, Facebook, SMS, email, and calls in one inbox. Stop losing clients to scattered conversations and rogue personal phones.", es: "Centraliza WhatsApp, Instagram, Facebook, SMS, email y llamadas en una bandeja. Deja de perder clientes por conversaciones dispersas y teléfonos personales sin control." },
+        stat: { en: "100% message visibility", es: "100% visibilidad de mensajes" },
+        price: { en: "From $99/mo", es: "Desde $99/mes" },
+      },
+      {
         slug: "cash-leak-assessment",
         icon: "◎",
         name: { en: "Cash Leak Assessment", es: "Assessment de Fugas de Dinero" },
@@ -1559,7 +1568,7 @@ function Nav({ page, go, lang, setLang }) {
       mega: {
         cols: [
           { heading: t(T.nav.megaTech, lang), items: [{ t: lang === "en" ? "AI Consulting & Agents" : "Consultoría e Agentes de IA", go: "svc-ai-consulting" }, { t: lang === "en" ? "AI Chatbot Development" : "Desarrollo de Chatbots IA", go: "svc-chatbot-dev" }, { t: lang === "en" ? "AI Voice Integration" : "Integración de Voz con IA", go: "svc-voice" }, { t: lang === "en" ? "Custom Web & Mobile Apps" : "Apps Web y Móviles a Medida", go: "svc-web-mobile" }] },
-          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM", go: "product-ai-crm" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA", go: "product-ai-chatbot" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }] },
+          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM", go: "product-ai-crm" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA", go: "product-ai-chatbot" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }, { t: lang === "en" ? "Omnichannel Communication" : "Comunicación Omnicanal", go: "product-omnichannel" }] },
           { heading: t(T.nav.megaGrowth, lang), items: [{ t: lang === "en" ? "Paid Ads & Performance" : "Paid Ads y Performance", go: "svc-paid-ads" }, { t: lang === "en" ? "SEO & Content Strategy" : "SEO y Estrategia de Contenido", go: "svc-seo" }, { t: lang === "en" ? "Analytics & Attribution" : "Analítica y Atribución", go: "svc-analytics" }, { t: lang === "en" ? "Email Marketing & CRO" : "Email Marketing y CRO", go: "svc-email-cro" }] },
         ],
       },
@@ -2673,6 +2682,197 @@ function ServiceDetailPage({ pageKey, go, lang }) {
 
 
 /* ═══════════════════════════════════════════════════════════
+   OMNICHANNEL COMMUNICATION LANDING PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+function OmnichannelPage({ go, lang }) {
+  const { mob } = useMedia();
+  const en = lang === "en";
+
+  const painPoints = en ? [
+    { icon: "📱", title: "Sales reps use personal WhatsApp", desc: "Client conversations vanish when someone quits. Zero audit trail, zero company ownership." },
+    { icon: "🔀", title: "Conversations scattered across 6+ channels", desc: "A client emails, then DMs on Instagram, then calls. Your team has no idea what was already said." },
+    { icon: "🕳️", title: "Messages fall through the cracks", desc: "No one knows who replied, who's waiting, or which deal just died in someone's unread inbox." },
+    { icon: "📎", title: "Documents lost in chat threads", desc: "Contracts, invoices, and proposals buried in personal phones — impossible to find when you need them." },
+  ] : [
+    { icon: "📱", title: "Vendedores usan WhatsApp personal", desc: "Las conversaciones desaparecen cuando alguien renuncia. Cero trazabilidad, cero control de la empresa." },
+    { icon: "🔀", title: "Conversaciones dispersas en 6+ canales", desc: "Un cliente envía email, luego DM en Instagram, luego llama. Tu equipo no sabe qué se dijo antes." },
+    { icon: "🕳️", title: "Mensajes se pierden en el camino", desc: "Nadie sabe quién respondió, quién espera respuesta, o qué negocio acaba de morir en una bandeja sin leer." },
+    { icon: "📎", title: "Documentos perdidos en chats", desc: "Contratos, facturas y propuestas enterrados en teléfonos personales — imposibles de encontrar cuando los necesitas." },
+  ];
+
+  const channels = ["WhatsApp", "Facebook Messenger", "Instagram DM", "SMS", "Email", en ? "Voice Calls" : "Llamadas de Voz", "Slack"];
+
+  const plans = en ? [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "/mo",
+      audience: "Solo operators & startups",
+      users: "Up to 5 users",
+      highlight: false,
+      features: ["Unified inbox (all channels)", "WhatsApp Business integration", "Facebook & Instagram DM", "SMS & email", "Voice calls", "Contact management", "Conversation history & audit trail", "Document attachment to contacts", "Mobile & desktop apps", "Basic reporting"],
+    },
+    {
+      name: "Growth",
+      price: "$299",
+      period: "/mo",
+      audience: "Small & growing teams",
+      users: "Up to 30 users",
+      highlight: true,
+      features: ["Everything in Starter, plus:", "Built-in CRM & pipeline", "Workflow automations", "Shared calendar & scheduling", "AI text assistant (trainable)", "Auto-respond to clients 24/7", "AI lead qualification", "AI appointment booking", "Team performance analytics", "Slack integration"],
+    },
+    {
+      name: "Enterprise",
+      price: "$999",
+      period: "/mo",
+      audience: "Large organizations",
+      users: "Unlimited users",
+      highlight: false,
+      features: ["Everything in Growth, plus:", "Full API access", "Advanced custom reports", "Voice AI assistant", "Premium onboarding & training", "Dedicated account manager", "Priority support (SLA)", "Custom integrations", "Multi-location management", "SSO & advanced security"],
+    },
+  ] : [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "/mes",
+      audience: "Operadores independientes y startups",
+      users: "Hasta 5 usuarios",
+      highlight: false,
+      features: ["Bandeja unificada (todos los canales)", "Integración WhatsApp Business", "Facebook & Instagram DM", "SMS & email", "Llamadas de voz", "Gestión de contactos", "Historial de conversaciones y auditoría", "Documentos asociados a contactos", "Apps móvil y escritorio", "Reportes básicos"],
+    },
+    {
+      name: "Growth",
+      price: "$299",
+      period: "/mes",
+      audience: "Equipos pequeños y en crecimiento",
+      users: "Hasta 30 usuarios",
+      highlight: true,
+      features: ["Todo lo de Starter, más:", "CRM y pipeline integrado", "Automatizaciones de flujos", "Calendario compartido y agendamiento", "Asistente IA de texto (entrenable)", "Auto-respuesta a clientes 24/7", "Calificación de leads con IA", "Agendamiento automático con IA", "Analítica de rendimiento del equipo", "Integración con Slack"],
+    },
+    {
+      name: "Enterprise",
+      price: "$999",
+      period: "/mes",
+      audience: "Organizaciones grandes",
+      users: "Usuarios ilimitados",
+      highlight: false,
+      features: ["Todo lo de Growth, más:", "Acceso completo a API", "Reportes personalizados avanzados", "Asistente de voz con IA", "Onboarding y capacitación premium", "Account manager dedicado", "Soporte prioritario (SLA)", "Integraciones a medida", "Gestión multi-ubicación", "SSO y seguridad avanzada"],
+    },
+  ];
+
+  const results = [
+    { n: "100", s: "%", l: en ? "Message visibility across all channels" : "Visibilidad de mensajes en todos los canales" },
+    { n: "0", s: "", l: en ? "Conversations lost to personal phones" : "Conversaciones perdidas en teléfonos personales" },
+    { n: "3", s: "x", l: en ? "Faster response time to clients" : "Tiempo de respuesta más rápido a clientes" },
+  ];
+
+  return (
+    <>
+      {/* Hero */}
+      <section style={{ background: V.g900, padding: mob ? "120px 0 60px" : "160px 0 80px" }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{en ? "Products" : "Productos"}</Lbl>
+          <h1 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, lineHeight: 1.08, letterSpacing: -2, color: V.white, margin: 0, fontFamily: F }}>{en ? "Your conversations are costing you clients." : "Tus conversaciones te están costando clientes."}</h1>
+          <p style={{ fontSize: mob ? 15 : 18, fontWeight: 300, color: "rgba(255,255,255,0.65)", margin: "20px 0 32px", maxWidth: 640, lineHeight: 1.7, fontFamily: F }}>{en ? "Sales on personal WhatsApp. DMs nobody checks. Emails lost in spam. One platform to centralize every channel, audit every message, and never lose a client conversation again." : "Ventas por WhatsApp personal. DMs que nadie revisa. Emails perdidos en spam. Una plataforma para centralizar cada canal, auditar cada mensaje y nunca perder una conversación con un cliente."}</p>
+          <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{en ? "Book a demo" : "Agendar un demo"}</Btn>
+        </Box>
+      </section>
+
+      {/* Pain Points */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{en ? "The problem" : "El problema"}</Lbl>
+          <h2 style={{ fontSize: mob ? 28 : 40, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 16px", fontFamily: F }}>{en ? "Sound familiar?" : "¿Te suena familiar?"}</h2>
+          <Hr />
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: mob ? 20 : 32, marginTop: 40 }}>
+            {painPoints.map((p, i) => (
+              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 32 }}>
+                <span style={{ fontSize: 28, display: "block", marginBottom: 12 }}>{p.icon}</span>
+                <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{p.title}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, margin: 0, lineHeight: 1.7, fontFamily: F }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* Channels */}
+      <section style={{ padding: mob ? "48px 0" : "80px 0", background: V.g100 }}>
+        <Box mob={mob} style={{ textAlign: "center" }}>
+          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{en ? "All your channels. One inbox." : "Todos tus canales. Una bandeja."}</h2>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: "0 0 40px", fontFamily: F }}>{en ? "Connect everything your team uses to communicate — internally and with clients." : "Conecta todo lo que tu equipo usa para comunicarse — interna y externamente."}</p>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: mob ? 12 : 16 }}>
+            {channels.map((ch, i) => (
+              <div key={i} style={{ background: V.white, border: `1px solid ${V.g200}`, borderRadius: 8, padding: mob ? "12px 20px" : "16px 28px", fontSize: mob ? 14 : 16, fontWeight: 600, color: V.g900, fontFamily: F }}>{ch}</div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* Results */}
+      <section style={{ padding: mob ? "48px 0" : "80px 0" }}>
+        <Box mob={mob}>
+          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: V.g900, margin: "0 0 40px", textAlign: "center", fontFamily: F }}>{en ? "Results our clients see" : "Resultados que ven nuestros clientes"}</h2>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(3, 1fr)", gap: mob ? 20 : 32, textAlign: "center" }}>
+            {results.map((stat, i) => (
+              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 40, border: `1px solid ${V.g200}` }}>
+                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 4 }}>
+                  <span style={{ fontSize: mob ? 40 : 56, fontWeight: 800, color: V.primary, fontFamily: F, lineHeight: 1 }}>{stat.n}</span>
+                  <span style={{ fontSize: mob ? 20 : 28, fontWeight: 600, color: V.primary, fontFamily: F }}>{stat.s}</span>
+                </div>
+                <p style={{ fontSize: mob ? 13 : 15, fontWeight: 400, color: V.g600, margin: "8px 0 0", fontFamily: F }}>{stat.l}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* Pricing */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g900 }}>
+        <Box mob={mob}>
+          <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, letterSpacing: -1, color: V.white, margin: "0 0 12px", textAlign: "center", fontFamily: F }}>{en ? "Simple pricing. Real ROI." : "Precios simples. ROI real."}</h2>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 48px", textAlign: "center", fontFamily: F }}>{en ? "Every plan includes all communication channels. Pick the tier that fits your team." : "Todos los planes incluyen todos los canales. Elige el nivel que se adapte a tu equipo."}</p>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(3, 1fr)", gap: mob ? 20 : 24, alignItems: "stretch" }}>
+            {plans.map((plan, i) => (
+              <div key={i} style={{ background: plan.highlight ? V.white : "rgba(255,255,255,0.05)", border: plan.highlight ? `2px solid ${V.primary}` : "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: mob ? 28 : 36, display: "flex", flexDirection: "column", position: "relative" }}>
+                {plan.highlight && <div style={{ position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)", background: V.primary, color: "#1a1a1a", fontSize: 11, fontWeight: 700, padding: "4px 16px", borderRadius: 20, textTransform: "uppercase", letterSpacing: 1, fontFamily: F }}>{en ? "Most Popular" : "Más Popular"}</div>}
+                <h3 style={{ fontSize: mob ? 20 : 24, fontWeight: 700, color: plan.highlight ? V.g900 : V.white, margin: "0 0 4px", fontFamily: F }}>{plan.name}</h3>
+                <p style={{ fontSize: mob ? 12 : 13, fontWeight: 400, color: plan.highlight ? V.g600 : "rgba(255,255,255,0.5)", margin: "0 0 16px", fontFamily: F }}>{plan.audience}</p>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 2, marginBottom: 4 }}>
+                  <span style={{ fontSize: mob ? 36 : 44, fontWeight: 800, color: V.primary, fontFamily: F, lineHeight: 1 }}>{plan.price}</span>
+                  <span style={{ fontSize: mob ? 14 : 16, fontWeight: 400, color: plan.highlight ? V.g600 : "rgba(255,255,255,0.5)", fontFamily: F }}>{plan.period}</span>
+                </div>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 600, color: plan.highlight ? V.g900 : "rgba(255,255,255,0.8)", margin: "0 0 24px", fontFamily: F }}>{plan.users}</p>
+                <div style={{ flex: 1, marginBottom: 24 }}>
+                  {plan.features.map((f, j) => (
+                    <div key={j} style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "6px 0" }}>
+                      <span style={{ color: V.primary, fontSize: 14, fontWeight: 700, marginTop: 2, flexShrink: 0 }}>✓</span>
+                      <span style={{ fontSize: mob ? 12 : 13, color: plan.highlight ? V.g600 : "rgba(255,255,255,0.65)", fontFamily: F, lineHeight: 1.5 }}>{f}</span>
+                    </div>
+                  ))}
+                </div>
+                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => go("contact")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Get started" : "Comenzar"}</Btn>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* Final CTA */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+        <Box mob={mob} style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, color: V.g900, margin: "0 0 16px", fontFamily: F }}>{en ? "Stop losing clients to scattered messages." : "Deja de perder clientes por mensajes dispersos."}</h2>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: "0 0 32px", maxWidth: 520, lineHeight: 1.7, fontFamily: F }}>{en ? "Book a free 30-minute demo. We'll show you how to centralize every conversation and take control of your client communications." : "Agenda un demo gratuito de 30 minutos. Te mostraremos cómo centralizar cada conversación y tomar control de tus comunicaciones con clientes."}</p>
+          <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{en ? "Book a demo" : "Agendar un demo"}</Btn>
+        </Box>
+      </section>
+    </>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════
    CASH LEAK ASSESSMENT LANDING PAGE
    ═══════════════════════════════════════════════════════════ */
 
@@ -2911,6 +3111,7 @@ export default function App() {
     home: <HomePage go={go} lang={lang} />,
     services: <ServicesPage go={go} lang={lang} />,
     products: <ProductsPage go={go} lang={lang} />,
+    "product-omnichannel": <OmnichannelPage go={go} lang={lang} />,
     "product-cash-leak-assessment": <CashLeakPage go={go} lang={lang} />,
     cases: <CasesPage go={go} lang={lang} />,
     about: <AboutPage go={go} lang={lang} />,
