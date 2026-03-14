@@ -1311,10 +1311,10 @@ Avertris construye arquitecturas API-first para empresas medianas. Ya sea empeza
       {
         slug: "omnichannel",
         icon: "⬡",
-        name: { en: "Omnichannel Communication", es: "Comunicación Omnicanal" },
-        tagline: { en: "Every conversation, one platform. Zero lost messages.", es: "Todas las conversaciones, una plataforma. Cero mensajes perdidos." },
-        desc: { en: "Centralize WhatsApp, Instagram, Facebook, SMS, email, and calls in one inbox. Stop losing clients to scattered conversations and rogue personal phones.", es: "Centraliza WhatsApp, Instagram, Facebook, SMS, email y llamadas en una bandeja. Deja de perder clientes por conversaciones dispersas y teléfonos personales sin control." },
-        stat: { en: "100% message visibility", es: "100% visibilidad de mensajes" },
+        name: { en: "Nexus", es: "Nexus" },
+        tagline: { en: "One inbox. Every channel. Total control.", es: "Una bandeja. Todos los canales. Control total." },
+        desc: { en: "Merge WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS, and live chat into one platform. Audit every conversation, measure team performance, and deploy an AI employee that qualifies leads 24/7.", es: "Une WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS y chat en vivo en una plataforma. Audita cada conversación, mide rendimiento del equipo y despliega un empleado IA que califica leads 24/7." },
+        stat: { en: "8 channels, 1 inbox", es: "8 canales, 1 bandeja" },
         price: { en: "From $99/mo", es: "Desde $99/mes" },
       },
       {
@@ -1568,7 +1568,7 @@ function Nav({ page, go, lang, setLang }) {
       mega: {
         cols: [
           { heading: t(T.nav.megaTech, lang), items: [{ t: lang === "en" ? "AI Consulting & Agents" : "Consultoría e Agentes de IA", go: "svc-ai-consulting" }, { t: lang === "en" ? "AI Chatbot Development" : "Desarrollo de Chatbots IA", go: "svc-chatbot-dev" }, { t: lang === "en" ? "AI Voice Integration" : "Integración de Voz con IA", go: "svc-voice" }, { t: lang === "en" ? "Custom Web & Mobile Apps" : "Apps Web y Móviles a Medida", go: "svc-web-mobile" }] },
-          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM", go: "product-ai-crm" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA", go: "product-ai-chatbot" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }, { t: lang === "en" ? "Omnichannel Communication" : "Comunicación Omnicanal", go: "product-omnichannel" }] },
+          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM", go: "product-ai-crm" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA", go: "product-ai-chatbot" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }, { t: "Nexus", go: "product-omnichannel" }] },
           { heading: t(T.nav.megaGrowth, lang), items: [{ t: lang === "en" ? "Paid Ads & Performance" : "Paid Ads y Performance", go: "svc-paid-ads" }, { t: lang === "en" ? "SEO & Content Strategy" : "SEO y Estrategia de Contenido", go: "svc-seo" }, { t: lang === "en" ? "Analytics & Attribution" : "Analítica y Atribución", go: "svc-analytics" }, { t: lang === "en" ? "Email Marketing & CRO" : "Email Marketing y CRO", go: "svc-email-cro" }] },
         ],
       },
@@ -2676,7 +2676,7 @@ function ServiceDetailPage({ pageKey, go, lang }) {
 
 
 /* ═══════════════════════════════════════════════════════════
-   OMNICHANNEL COMMUNICATION LANDING PAGE
+   NEXUS — AD LANDING PAGE
    ═══════════════════════════════════════════════════════════ */
 
 function OmnichannelPage({ go, lang }) {
@@ -2684,18 +2684,34 @@ function OmnichannelPage({ go, lang }) {
   const en = lang === "en";
 
   const painPoints = en ? [
-    { icon: "📱", title: "Sales reps use personal WhatsApp", desc: "Client conversations vanish when someone quits. Zero audit trail, zero company ownership." },
-    { icon: "🔀", title: "Conversations scattered across 6+ channels", desc: "A client emails, then DMs on Instagram, then calls. Your team has no idea what was already said." },
-    { icon: "🕳️", title: "Messages fall through the cracks", desc: "No one knows who replied, who's waiting, or which deal just died in someone's unread inbox." },
-    { icon: "📎", title: "Documents lost in chat threads", desc: "Contracts, invoices, and proposals buried in personal phones — impossible to find when you need them." },
+    { icon: "📱", title: "Your sales team texts clients from personal phones", desc: "When a rep leaves, every client conversation walks out the door with them. No history. No handoff. No way to recover." },
+    { icon: "🔀", title: "Same client, six different threads", desc: "They emailed Monday. DM'd on Instagram Tuesday. WhatsApp'd Wednesday. Your team has zero context — and the client notices." },
+    { icon: "👻", title: "You can't see what your team is saying", desc: "Are they following up? What did they promise? Are they quoting the right price? You have no way to know — until a client complains." },
+    { icon: "📊", title: "You're managing sales with zero data", desc: "Who's your top closer? What's your average response time? Which channel converts best? Right now, you're guessing." },
   ] : [
-    { icon: "📱", title: "Vendedores usan WhatsApp personal", desc: "Las conversaciones desaparecen cuando alguien renuncia. Cero trazabilidad, cero control de la empresa." },
-    { icon: "🔀", title: "Conversaciones dispersas en 6+ canales", desc: "Un cliente envía email, luego DM en Instagram, luego llama. Tu equipo no sabe qué se dijo antes." },
-    { icon: "🕳️", title: "Mensajes se pierden en el camino", desc: "Nadie sabe quién respondió, quién espera respuesta, o qué negocio acaba de morir en una bandeja sin leer." },
-    { icon: "📎", title: "Documentos perdidos en chats", desc: "Contratos, facturas y propuestas enterrados en teléfonos personales — imposibles de encontrar cuando los necesitas." },
+    { icon: "📱", title: "Tu equipo de ventas escribe a clientes desde sus teléfonos personales", desc: "Cuando un vendedor se va, cada conversación con clientes se va con él. Sin historial. Sin traspaso. Sin forma de recuperarlo." },
+    { icon: "🔀", title: "Mismo cliente, seis conversaciones distintas", desc: "Envió email el lunes. DM en Instagram el martes. WhatsApp el miércoles. Tu equipo no tiene contexto — y el cliente lo nota." },
+    { icon: "👻", title: "No puedes ver qué dice tu equipo", desc: "¿Están dando seguimiento? ¿Qué prometieron? ¿Están cotizando bien? No tienes forma de saberlo — hasta que un cliente se queja." },
+    { icon: "📊", title: "Gestionas ventas sin datos", desc: "¿Quién es tu mejor cerrador? ¿Cuál es tu tiempo promedio de respuesta? ¿Qué canal convierte mejor? Ahora mismo, estás adivinando." },
   ];
 
-  const channels = ["WhatsApp", "Facebook Messenger", "Instagram DM", "SMS", "Email", en ? "Voice Calls" : "Llamadas de Voz", "Slack"];
+  const channels = ["WhatsApp", "Facebook Messenger", "Instagram DM", "TikTok", "LinkedIn DM", "Email", "SMS", en ? "Live Chat Widget" : "Chat en Vivo"];
+
+  const features = en ? [
+    { title: "One inbox for every channel", desc: "WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS, and live chat — all in one screen. Every message, every channel, one view.", icon: "◇" },
+    { title: "Full conversation audit trail", desc: "See every message your team sends and receives. Review sales conversations, ensure quality, and know exactly what was promised to every client.", icon: "◎" },
+    { title: "Team performance dashboards", desc: "Response times, conversation volume, close rates, rep leaderboards — the data you need to manage a sales team, not guess at one.", icon: "↗" },
+    { title: "AI employee that works 24/7", desc: "Train an AI assistant on your business. It responds to clients, qualifies leads, books appointments, and follows up — automatically, across every channel.", icon: "◉" },
+    { title: "CRM you can talk to", desc: "Ask your CRM questions in plain language: \"What's our conversion rate this month?\" \"Show me John's pipeline.\" \"Which rep has the slowest response time?\" It answers instantly.", icon: "◈" },
+    { title: "Automations that replace busywork", desc: "Auto-assign conversations, trigger follow-up sequences, route leads by channel or language, send reminders — without your team lifting a finger.", icon: "</>", },
+  ] : [
+    { title: "Una bandeja para todos los canales", desc: "WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS y chat en vivo — todo en una pantalla. Cada mensaje, cada canal, una sola vista.", icon: "◇" },
+    { title: "Auditoría completa de conversaciones", desc: "Ve cada mensaje que tu equipo envía y recibe. Revisa comunicaciones de venta, asegura calidad y sabe exactamente qué se prometió a cada cliente.", icon: "◎" },
+    { title: "Dashboards de rendimiento del equipo", desc: "Tiempos de respuesta, volumen de conversaciones, tasas de cierre, rankings de vendedores — los datos que necesitas para gestionar un equipo de ventas, no adivinarlo.", icon: "↗" },
+    { title: "Empleado IA que trabaja 24/7", desc: "Entrena un asistente IA con tu negocio. Responde clientes, califica leads, agenda citas y da seguimiento — automáticamente, en todos los canales.", icon: "◉" },
+    { title: "CRM con el que puedes hablar", desc: "Hazle preguntas a tu CRM en lenguaje natural: \"¿Cuál es nuestra tasa de conversión?\" \"Muéstrame el pipeline de Juan.\" \"¿Qué vendedor responde más lento?\" Responde al instante.", icon: "◈" },
+    { title: "Automatizaciones que eliminan tareas repetitivas", desc: "Auto-asigna conversaciones, dispara secuencias de seguimiento, rutea leads por canal o idioma, envía recordatorios — sin que tu equipo mueva un dedo.", icon: "</>" },
+  ];
 
   const plans = en ? [
     {
@@ -2705,7 +2721,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Solo operators & startups",
       users: "Up to 5 users",
       highlight: false,
-      features: ["Unified inbox (all channels)", "WhatsApp Business integration", "Facebook & Instagram DM", "SMS & email", "Voice calls", "Contact management", "Conversation history & audit trail", "Document attachment to contacts", "Mobile & desktop apps", "Basic reporting"],
+      features: ["Unified inbox (all 8 channels)", "WhatsApp Business integration", "Facebook, Instagram & TikTok DM", "LinkedIn DM, Email & SMS", "Live chat widget for your website", "Contact management", "Full conversation history & audit trail", "Documents attached to contacts", "Mobile & desktop apps", "Basic reporting"],
     },
     {
       name: "Growth",
@@ -2714,7 +2730,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Small & growing teams",
       users: "Up to 30 users",
       highlight: true,
-      features: ["Everything in Starter, plus:", "Built-in CRM & pipeline", "Workflow automations", "Shared calendar & scheduling", "AI text assistant (trainable)", "Auto-respond to clients 24/7", "AI lead qualification", "AI appointment booking", "Team performance analytics", "Slack integration"],
+      features: ["Everything in Starter, plus:", "Built-in CRM & pipeline", "Conversational AI CRM (chat with your data)", "Workflow automations", "Shared calendar & scheduling", "AI text assistant (trainable on your business)", "Auto-respond to clients 24/7", "AI lead qualification & routing", "AI appointment booking", "Team performance leaderboards"],
     },
     {
       name: "Enterprise",
@@ -2723,7 +2739,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Large organizations",
       users: "Unlimited users",
       highlight: false,
-      features: ["Everything in Growth, plus:", "Full API access", "Advanced custom reports", "Voice AI assistant", "Premium onboarding & training", "Dedicated account manager", "Priority support (SLA)", "Custom integrations", "Multi-location management", "SSO & advanced security"],
+      features: ["Everything in Growth, plus:", "Full API access", "Advanced custom reports", "Voice AI assistant", "Premium onboarding & team training", "Dedicated account manager", "Priority support (SLA)", "Custom integrations", "Multi-location management", "SSO & advanced security"],
     },
   ] : [
     {
@@ -2733,7 +2749,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Operadores independientes y startups",
       users: "Hasta 5 usuarios",
       highlight: false,
-      features: ["Bandeja unificada (todos los canales)", "Integración WhatsApp Business", "Facebook & Instagram DM", "SMS & email", "Llamadas de voz", "Gestión de contactos", "Historial de conversaciones y auditoría", "Documentos asociados a contactos", "Apps móvil y escritorio", "Reportes básicos"],
+      features: ["Bandeja unificada (los 8 canales)", "Integración WhatsApp Business", "Facebook, Instagram & TikTok DM", "LinkedIn DM, Email & SMS", "Widget de chat en vivo para tu web", "Gestión de contactos", "Historial completo y auditoría de conversaciones", "Documentos asociados a contactos", "Apps móvil y escritorio", "Reportes básicos"],
     },
     {
       name: "Growth",
@@ -2742,7 +2758,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Equipos pequeños y en crecimiento",
       users: "Hasta 30 usuarios",
       highlight: true,
-      features: ["Todo lo de Starter, más:", "CRM y pipeline integrado", "Automatizaciones de flujos", "Calendario compartido y agendamiento", "Asistente IA de texto (entrenable)", "Auto-respuesta a clientes 24/7", "Calificación de leads con IA", "Agendamiento automático con IA", "Analítica de rendimiento del equipo", "Integración con Slack"],
+      features: ["Todo lo de Starter, más:", "CRM y pipeline integrado", "CRM conversacional con IA (chatea con tus datos)", "Automatizaciones de flujos", "Calendario compartido y agendamiento", "Asistente IA de texto (entrenable con tu negocio)", "Auto-respuesta a clientes 24/7", "Calificación y ruteo de leads con IA", "Agendamiento automático con IA", "Leaderboards de rendimiento del equipo"],
     },
     {
       name: "Enterprise",
@@ -2751,37 +2767,56 @@ function OmnichannelPage({ go, lang }) {
       audience: "Organizaciones grandes",
       users: "Usuarios ilimitados",
       highlight: false,
-      features: ["Todo lo de Growth, más:", "Acceso completo a API", "Reportes personalizados avanzados", "Asistente de voz con IA", "Onboarding y capacitación premium", "Account manager dedicado", "Soporte prioritario (SLA)", "Integraciones a medida", "Gestión multi-ubicación", "SSO y seguridad avanzada"],
+      features: ["Todo lo de Growth, más:", "Acceso completo a API", "Reportes personalizados avanzados", "Asistente de voz con IA", "Onboarding y capacitación premium para equipos", "Account manager dedicado", "Soporte prioritario (SLA)", "Integraciones a medida", "Gestión multi-ubicación", "SSO y seguridad avanzada"],
     },
   ];
 
   const results = [
-    { n: "100", s: "%", l: en ? "Message visibility across all channels" : "Visibilidad de mensajes en todos los canales" },
-    { n: "0", s: "", l: en ? "Conversations lost to personal phones" : "Conversaciones perdidas en teléfonos personales" },
-    { n: "3", s: "x", l: en ? "Faster response time to clients" : "Tiempo de respuesta más rápido a clientes" },
+    { n: "8", s: "", l: en ? "Channels in one inbox" : "Canales en una bandeja" },
+    { n: "100", s: "%", l: en ? "Conversation visibility & audit" : "Visibilidad y auditoría de conversaciones" },
+    { n: "24", s: "/7", l: en ? "AI employee — never misses a lead" : "Empleado IA — nunca pierde un lead" },
+    { n: "0", s: "", l: en ? "Messages lost to personal phones" : "Mensajes perdidos en teléfonos personales" },
   ];
 
   return (
     <>
-      {/* Hero */}
+      {/* Hero — conversion-focused */}
       <section style={{ background: V.g900, padding: mob ? "120px 0 60px" : "160px 0 80px" }}>
         <Box mob={mob}>
-          <Lbl mob={mob}>{en ? "Products" : "Productos"}</Lbl>
-          <h1 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, lineHeight: 1.08, letterSpacing: -2, color: V.white, margin: 0, fontFamily: F }}>{en ? "Your conversations are costing you clients." : "Tus conversaciones te están costando clientes."}</h1>
-          <p style={{ fontSize: mob ? 15 : 18, fontWeight: 300, color: "rgba(255,255,255,0.65)", margin: "20px 0 32px", maxWidth: 640, lineHeight: 1.7, fontFamily: F }}>{en ? "Sales on personal WhatsApp. DMs nobody checks. Emails lost in spam. One platform to centralize every channel, audit every message, and never lose a client conversation again." : "Ventas por WhatsApp personal. DMs que nadie revisa. Emails perdidos en spam. Una plataforma para centralizar cada canal, auditar cada mensaje y nunca perder una conversación con un cliente."}</p>
-          <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{en ? "Book a demo" : "Agendar un demo"}</Btn>
+          <div style={{ display: "inline-block", background: "rgba(255,107,0,0.15)", borderRadius: 20, padding: "6px 16px", marginBottom: 20 }}>
+            <span style={{ fontSize: mob ? 12 : 13, fontWeight: 600, color: V.primary, fontFamily: F, letterSpacing: 0.5 }}>NEXUS by Avertris</span>
+          </div>
+          <h1 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, lineHeight: 1.08, letterSpacing: -2, color: V.white, margin: "0 0 20px", fontFamily: F }}>{en ? "One inbox. Every channel. Total control over your team's conversations." : "Una bandeja. Todos los canales. Control total de las conversaciones de tu equipo."}</h1>
+          <p style={{ fontSize: mob ? 15 : 18, fontWeight: 300, color: "rgba(255,255,255,0.65)", margin: "0 0 32px", maxWidth: 640, lineHeight: 1.7, fontFamily: F }}>{en ? "Nexus merges WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS, and live chat into one platform — with full audit trails, team performance data, and an AI employee that qualifies leads and books meetings while you sleep." : "Nexus une WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS y chat en vivo en una sola plataforma — con auditoría completa, datos de rendimiento del equipo y un empleado IA que califica leads y agenda reuniones mientras duermes."}</p>
+          <div style={{ display: "flex", flexDirection: mob ? "column" : "row", gap: 12, alignItems: mob ? "stretch" : "center" }}>
+            <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{en ? "Book a free demo" : "Agendar demo gratis"}</Btn>
+            <span style={{ fontSize: mob ? 12 : 13, color: "rgba(255,255,255,0.4)", fontFamily: F }}>{en ? "No credit card required. Live in 48 hours." : "Sin tarjeta de crédito. En vivo en 48 horas."}</span>
+          </div>
         </Box>
       </section>
 
-      {/* Pain Points */}
+      {/* Social proof bar */}
+      <section style={{ padding: mob ? "20px 0" : "24px 0", background: V.g100, borderBottom: `1px solid ${V.g200}` }}>
+        <Box mob={mob} style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: mob ? 16 : 40 }}>
+          {(en ? ["8 channels, 1 inbox", "Full conversation audit", "AI that sells for you", "Setup in 48 hours"] : ["8 canales, 1 bandeja", "Auditoría de conversaciones", "IA que vende por ti", "En vivo en 48 horas"]).map((item, i) => (
+            <div key={i} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ color: V.primary, fontSize: 16, fontWeight: 700 }}>✓</span>
+              <span style={{ fontSize: mob ? 12 : 13, fontWeight: 600, color: V.g600, fontFamily: F }}>{item}</span>
+            </div>
+          ))}
+        </Box>
+      </section>
+
+      {/* Pain Points — agitate */}
       <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
         <Box mob={mob}>
-          <Lbl mob={mob}>{en ? "The problem" : "El problema"}</Lbl>
-          <h2 style={{ fontSize: mob ? 28 : 40, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 16px", fontFamily: F }}>{en ? "Sound familiar?" : "¿Te suena familiar?"}</h2>
-          <Hr />
-          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: mob ? 20 : 32, marginTop: 40 }}>
+          <div style={{ textAlign: "center", marginBottom: mob ? 32 : 48 }}>
+            <h2 style={{ fontSize: mob ? 28 : 40, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{en ? "This is costing you clients right now" : "Esto te está costando clientes ahora mismo"}</h2>
+            <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: 0, fontFamily: F }}>{en ? "If any of these sound familiar, you're losing deals you don't even know about." : "Si algo de esto te suena, estás perdiendo negocios que ni siquiera sabes."}</p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: mob ? 20 : 24 }}>
             {painPoints.map((p, i) => (
-              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 32 }}>
+              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 32, borderLeft: `4px solid ${V.primary}` }}>
                 <span style={{ fontSize: 28, display: "block", marginBottom: 12 }}>{p.icon}</span>
                 <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{p.title}</h3>
                 <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, margin: 0, lineHeight: 1.7, fontFamily: F }}>{p.desc}</p>
@@ -2791,31 +2826,53 @@ function OmnichannelPage({ go, lang }) {
         </Box>
       </section>
 
-      {/* Channels */}
-      <section style={{ padding: mob ? "48px 0" : "80px 0", background: V.g100 }}>
+      {/* Solution intro + Channels */}
+      <section style={{ padding: mob ? "48px 0" : "80px 0", background: V.g900 }}>
         <Box mob={mob} style={{ textAlign: "center" }}>
-          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{en ? "All your channels. One inbox." : "Todos tus canales. Una bandeja."}</h2>
-          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: "0 0 40px", fontFamily: F }}>{en ? "Connect everything your team uses to communicate — internally and with clients." : "Conecta todo lo que tu equipo usa para comunicarse — interna y externamente."}</p>
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: mob ? 12 : 16 }}>
+          <div style={{ display: "inline-block", background: "rgba(255,107,0,0.15)", borderRadius: 20, padding: "6px 16px", marginBottom: 20 }}>
+            <span style={{ fontSize: mob ? 12 : 13, fontWeight: 600, color: V.primary, fontFamily: F }}>NEXUS</span>
+          </div>
+          <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, letterSpacing: -1, color: V.white, margin: "0 0 12px", fontFamily: F }}>{en ? "Every channel your clients use. One screen." : "Todos los canales que usan tus clientes. Una pantalla."}</h2>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 40px", maxWidth: 560, marginLeft: "auto", marginRight: "auto", fontFamily: F }}>{en ? "Stop switching between apps. Every message from every platform arrives in one unified inbox — with the full client history attached." : "Deja de saltar entre apps. Cada mensaje de cada plataforma llega a una bandeja unificada — con el historial completo del cliente adjunto."}</p>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: mob ? 10 : 14 }}>
             {channels.map((ch, i) => (
-              <div key={i} style={{ background: V.white, border: `1px solid ${V.g200}`, borderRadius: 8, padding: mob ? "12px 20px" : "16px 28px", fontSize: mob ? 14 : 16, fontWeight: 600, color: V.g900, fontFamily: F }}>{ch}</div>
+              <div key={i} style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, padding: mob ? "10px 18px" : "14px 24px", fontSize: mob ? 13 : 15, fontWeight: 600, color: V.white, fontFamily: F }}>{ch}</div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* Features — 6 cards */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+        <Box mob={mob}>
+          <div style={{ textAlign: "center", marginBottom: mob ? 32 : 48 }}>
+            <h2 style={{ fontSize: mob ? 28 : 40, fontWeight: 700, letterSpacing: -1, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{en ? "Not just an inbox. A command center." : "No es solo una bandeja. Es un centro de comando."}</h2>
+            <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: 0, fontFamily: F }}>{en ? "Nexus gives you the visibility, automation, and AI to run your sales communication like a real operation." : "Nexus te da la visibilidad, automatización e IA para manejar tu comunicación de ventas como una operación real."}</p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr 1fr", gap: mob ? 20 : 24 }}>
+            {features.map((f, i) => (
+              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 32, display: "flex", flexDirection: "column" }}>
+                <span style={{ fontSize: 24, color: V.primary, marginBottom: 16, fontFamily: F }}>{f.icon}</span>
+                <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{f.title}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, margin: 0, lineHeight: 1.7, fontFamily: F, flex: 1 }}>{f.desc}</p>
+              </div>
             ))}
           </div>
         </Box>
       </section>
 
       {/* Results */}
-      <section style={{ padding: mob ? "48px 0" : "80px 0" }}>
+      <section style={{ padding: mob ? "48px 0" : "80px 0", background: V.g100 }}>
         <Box mob={mob}>
-          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: V.g900, margin: "0 0 40px", textAlign: "center", fontFamily: F }}>{en ? "Results our clients see" : "Resultados que ven nuestros clientes"}</h2>
-          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(3, 1fr)", gap: mob ? 20 : 32, textAlign: "center" }}>
+          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: V.g900, margin: "0 0 40px", textAlign: "center", fontFamily: F }}>{en ? "What changes on day one" : "Qué cambia desde el día uno"}</h2>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr 1fr" : "repeat(4, 1fr)", gap: mob ? 16 : 24, textAlign: "center" }}>
             {results.map((stat, i) => (
-              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 40, border: `1px solid ${V.g200}` }}>
-                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 4 }}>
-                  <span style={{ fontSize: mob ? 40 : 56, fontWeight: 800, color: V.primary, fontFamily: F, lineHeight: 1 }}>{stat.n}</span>
-                  <span style={{ fontSize: mob ? 20 : 28, fontWeight: 600, color: V.primary, fontFamily: F }}>{stat.s}</span>
+              <div key={i} style={{ background: V.white, borderRadius: 12, padding: mob ? 20 : 32, border: `1px solid ${V.g200}` }}>
+                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 2 }}>
+                  <span style={{ fontSize: mob ? 36 : 48, fontWeight: 800, color: V.primary, fontFamily: F, lineHeight: 1 }}>{stat.n}</span>
+                  <span style={{ fontSize: mob ? 16 : 22, fontWeight: 600, color: V.primary, fontFamily: F }}>{stat.s}</span>
                 </div>
-                <p style={{ fontSize: mob ? 13 : 15, fontWeight: 400, color: V.g600, margin: "8px 0 0", fontFamily: F }}>{stat.l}</p>
+                <p style={{ fontSize: mob ? 11 : 13, fontWeight: 400, color: V.g600, margin: "8px 0 0", fontFamily: F }}>{stat.l}</p>
               </div>
             ))}
           </div>
@@ -2825,8 +2882,8 @@ function OmnichannelPage({ go, lang }) {
       {/* Pricing */}
       <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g900 }}>
         <Box mob={mob}>
-          <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, letterSpacing: -1, color: V.white, margin: "0 0 12px", textAlign: "center", fontFamily: F }}>{en ? "Simple pricing. Real ROI." : "Precios simples. ROI real."}</h2>
-          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 48px", textAlign: "center", fontFamily: F }}>{en ? "Every plan includes all communication channels. Pick the tier that fits your team." : "Todos los planes incluyen todos los canales. Elige el nivel que se adapte a tu equipo."}</p>
+          <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, letterSpacing: -1, color: V.white, margin: "0 0 12px", textAlign: "center", fontFamily: F }}>{en ? "Pick the plan that fits your team" : "Elige el plan que se adapte a tu equipo"}</h2>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 48px", textAlign: "center", fontFamily: F }}>{en ? "All plans include all 8 communication channels. No hidden fees. Cancel anytime." : "Todos los planes incluyen los 8 canales. Sin cargos ocultos. Cancela cuando quieras."}</p>
           <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(3, 1fr)", gap: mob ? 20 : 24, alignItems: "stretch" }}>
             {plans.map((plan, i) => (
               <div key={i} style={{ background: plan.highlight ? V.white : "rgba(255,255,255,0.05)", border: plan.highlight ? `2px solid ${V.primary}` : "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: mob ? 28 : 36, display: "flex", flexDirection: "column", position: "relative" }}>
@@ -2846,19 +2903,20 @@ function OmnichannelPage({ go, lang }) {
                     </div>
                   ))}
                 </div>
-                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => go("contact")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Get started" : "Comenzar"}</Btn>
+                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => go("contact")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Book a demo" : "Agendar demo"}</Btn>
               </div>
             ))}
           </div>
         </Box>
       </section>
 
-      {/* Final CTA */}
+      {/* Final CTA — urgency */}
       <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
         <Box mob={mob} style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, color: V.g900, margin: "0 0 16px", fontFamily: F }}>{en ? "Stop losing clients to scattered messages." : "Deja de perder clientes por mensajes dispersos."}</h2>
-          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: "0 0 32px", maxWidth: 520, lineHeight: 1.7, fontFamily: F }}>{en ? "Book a free 30-minute demo. We'll show you how to centralize every conversation and take control of your client communications." : "Agenda un demo gratuito de 30 minutos. Te mostraremos cómo centralizar cada conversación y tomar control de tus comunicaciones con clientes."}</p>
-          <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{en ? "Book a demo" : "Agendar un demo"}</Btn>
+          <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, color: V.g900, margin: "0 0 16px", fontFamily: F }}>{en ? "Every message your team sends without Nexus is one you can't see, measure, or improve." : "Cada mensaje que tu equipo envía sin Nexus es uno que no puedes ver, medir ni mejorar."}</h2>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: "0 0 32px", maxWidth: 520, lineHeight: 1.7, fontFamily: F }}>{en ? "Book a free demo. We'll show you your entire communication stack in one screen — live, in 30 minutes." : "Agenda un demo gratis. Te mostraremos toda tu comunicación en una sola pantalla — en vivo, en 30 minutos."}</p>
+          <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{en ? "Book my free demo" : "Agendar mi demo gratis"}</Btn>
+          <p style={{ fontSize: 12, color: V.g400, marginTop: 12, fontFamily: F }}>{en ? "No credit card required. Live in 48 hours." : "Sin tarjeta de crédito. En vivo en 48 horas."}</p>
         </Box>
       </section>
     </>
