@@ -2797,68 +2797,73 @@ function OmnichannelPage({ go, lang }) {
               </div>
             </div>
             {/* Right — visual */}
-            <div style={{ position: "relative", width: "100%", maxWidth: mob ? 360 : 480, aspectRatio: "560/570", margin: mob ? "0 auto" : undefined }}>
-              {/* Background */}
-              <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "linear-gradient(145deg, #1a0800 0%, #3d1200 25%, #7a2800 50%, #c44800 75%, #fe6a03 100%)", overflow: "hidden" }}>
-                <div style={{ position: "absolute", width: 360, height: 360, borderRadius: "50%", background: "radial-gradient(circle, rgba(254,106,3,0.45) 0%, transparent 68%)", top: -80, right: -80 }} />
-                <div style={{ position: "absolute", width: 260, height: 260, borderRadius: "50%", background: "radial-gradient(circle, rgba(254,140,60,0.25) 0%, transparent 68%)", bottom: 20, left: -40 }} />
-              </div>
-              {/* Brand */}
-              <div style={{ position: "absolute", top: 18, left: 22, display: "flex", alignItems: "center", gap: 7, zIndex: 10 }}>
-                <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#fe6a03", boxShadow: "0 0 8px rgba(254,106,3,0.9)" }} />
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.78)" }}>Nexus by Avertris</span>
-              </div>
-              {/* Chat card */}
-              <div style={{ position: "absolute", top: "9%", left: "4%", width: "57%", background: "rgba(255,255,255,0.12)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderRadius: 20, border: "1px solid rgba(255,255,255,0.22)", padding: 18, boxShadow: "0 8px 32px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.25)" }}>
-                {/* Msg 1 — client via Messenger */}
-                <div style={{ display: "flex", alignItems: "flex-end", gap: 8, marginBottom: 11 }}>
-                  <div style={{ width: 28, height: 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", border: "1.5px solid rgba(255,255,255,0.32)", background: "linear-gradient(135deg,#00b0f4,#0078ff)" }}>
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="white"><path d="M12 2C6.48 2 2 6.18 2 11.33c0 2.74 1.22 5.19 3.17 6.93V22l3.57-1.96c.95.26 1.96.4 3 .4 5.52 0 10-4.18 10-9.33S17.52 2 12 2zm1.05 12.55-2.54-2.71-4.96 2.71 5.47-5.8 2.6 2.71 4.9-2.71-5.47 5.8z"/></svg>
-                    <div style={{ position: "absolute", bottom: -2, right: -2, width: 10, height: 10, borderRadius: "50%", border: "1.5px solid rgba(255,255,255,0.9)", background: "#0078ff" }} />
+            <div style={{ position: "relative", width: "100%", maxWidth: mob ? "100%" : 480, margin: mob ? "0 auto" : undefined }}>
+              {/* Scaled container — everything inside scales proportionally */}
+              <div style={{ position: "relative", width: "100%", paddingBottom: "101.8%", overflow: "hidden" }}>
+                <div style={{ position: "absolute", inset: 0 }}>
+                  {/* Background */}
+                  <div style={{ position: "absolute", inset: 0, borderRadius: mob ? 20 : 32, background: "linear-gradient(145deg, #1a0800 0%, #3d1200 25%, #7a2800 50%, #c44800 75%, #fe6a03 100%)", overflow: "hidden" }}>
+                    <div style={{ position: "absolute", width: "64%", paddingBottom: "64%", borderRadius: "50%", background: "radial-gradient(circle, rgba(254,106,3,0.45) 0%, transparent 68%)", top: "-14%", right: "-14%" }} />
+                    <div style={{ position: "absolute", width: "46%", paddingBottom: "46%", borderRadius: "50%", background: "radial-gradient(circle, rgba(254,140,60,0.25) 0%, transparent 68%)", bottom: "3.5%", left: "-7%" }} />
                   </div>
-                  <div style={{ maxWidth: 207, padding: "9px 13px", fontSize: 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 14px 4px", background: "rgba(255,255,255,0.18)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.28)" }}>{en ? "Do you have any plans available for sales teams?" : "¿Tienen algún plan disponible para equipos de ventas?"}</div>
-                </div>
-                {/* Msg 2 — agent A */}
-                <div style={{ display: "flex", alignItems: "flex-end", gap: 8, marginBottom: 11, flexDirection: "row-reverse" }}>
-                  <div style={{ width: 28, height: 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", border: "1.5px solid rgba(255,255,255,0.32)", background: "linear-gradient(135deg,#fe6a03,#ff8c3a)", fontSize: 11, fontWeight: 700, color: "#fff" }}>A</div>
-                  <div style={{ maxWidth: 207, padding: "9px 13px", fontSize: 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 4px 14px", background: "linear-gradient(135deg, rgba(254,106,3,0.88), rgba(200,72,0,0.88))", backdropFilter: "blur(12px)", border: "1px solid rgba(254,160,80,0.4)" }}>{en ? "Hi! Of course. Our Business plan includes up to 20 users and priority support." : "¡Hola! Claro que sí. Nuestro plan Empresas incluye hasta 20 usuarios y soporte prioritario."}</div>
-                </div>
-                {/* Msg 3 — client via WhatsApp */}
-                <div style={{ display: "flex", alignItems: "flex-end", gap: 8, marginBottom: 11 }}>
-                  <div style={{ width: 28, height: 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", border: "1.5px solid rgba(255,255,255,0.32)", background: "#25d366" }}>
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2C6.495 2 1.98 6.515 1.98 12.072c0 1.79.467 3.553 1.354 5.1L2 22l4.923-1.292a10.05 10.05 0 0 0 5.122 1.39c5.555 0 10.07-4.515 10.07-10.072C22.115 6.47 17.6 2 12.05 2z"/></svg>
-                    <div style={{ position: "absolute", bottom: -2, right: -2, width: 10, height: 10, borderRadius: "50%", border: "1.5px solid rgba(255,255,255,0.9)", background: "#25d366" }} />
+                  {/* Brand */}
+                  <div style={{ position: "absolute", top: "3.2%", left: "4%", display: "flex", alignItems: "center", gap: 7, zIndex: 10 }}>
+                    <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#fe6a03", boxShadow: "0 0 8px rgba(254,106,3,0.9)" }} />
+                    <span style={{ fontSize: mob ? 9 : 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.78)" }}>Nexus by Avertris</span>
                   </div>
-                  <div style={{ maxWidth: 207, padding: "9px 13px", fontSize: 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 14px 4px", background: "rgba(255,255,255,0.18)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.28)" }}>{en ? "I'm interested, can we schedule a call for a demo?" : "Me interesa, ¿podemos agendar una llamada para ver la demo?"}</div>
-                </div>
-                {/* Msg 4 — agent B */}
-                <div style={{ display: "flex", alignItems: "flex-end", gap: 8, flexDirection: "row-reverse" }}>
-                  <div style={{ width: 28, height: 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", border: "1.5px solid rgba(255,255,255,0.32)", background: "linear-gradient(135deg,#ff8c3a,#fe6a03)", fontSize: 11, fontWeight: 700, color: "#fff" }}>B</div>
-                  <div style={{ maxWidth: 207, padding: "9px 13px", fontSize: 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 4px 14px", background: "linear-gradient(135deg, rgba(254,106,3,0.88), rgba(200,72,0,0.88))", backdropFilter: "blur(12px)", border: "1px solid rgba(254,160,80,0.4)" }}>{en ? "Of course! I'll connect you right now with our team. Does now work for you?" : "¡Por supuesto! Te conecto ahora mismo con nuestro equipo. ¿Te viene bien en este momento?"}</div>
-                </div>
-              </div>
-              {/* Call card */}
-              <div style={{ position: "absolute", bottom: "5.6%", right: "2.8%", width: "41%", background: "rgba(255,255,255,0.13)", backdropFilter: "blur(24px)", WebkitBackdropFilter: "blur(24px)", borderRadius: 22, border: "1px solid rgba(255,255,255,0.26)", padding: "16px 16px 0 16px", boxShadow: "0 12px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.28)", overflow: "hidden" }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
-                  <span style={{ fontSize: 15, fontWeight: 500, color: "rgba(255,255,255,0.65)", fontVariantNumeric: "tabular-nums" }}>01:24</span>
-                  <span style={{ background: "rgba(37,211,102,0.22)", border: "1px solid rgba(37,211,102,0.5)", color: "#7fffa8", fontSize: 10, fontWeight: 700, padding: "4px 10px", borderRadius: 20, letterSpacing: "0.04em" }}>{en ? "WhatsApp Call" : "Llamada WhatsApp"}</span>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 11, marginBottom: 14 }}>
-                  <div style={{ width: 36, height: 36, borderRadius: "50%", background: "rgba(37,211,102,0.18)", border: "1px solid rgba(37,211,102,0.4)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#25d366" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.72 19.79 19.79 0 0 1 0 1.07 2 2 0 0 1 1.99 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.15 6.15l1.28-1.28a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  {/* Chat card */}
+                  <div style={{ position: "absolute", top: "9%", left: "4%", width: mob ? "62%" : "57%", background: "rgba(255,255,255,0.12)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderRadius: mob ? 14 : 20, border: "1px solid rgba(255,255,255,0.22)", padding: mob ? 10 : 18, boxShadow: "0 8px 32px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.25)" }}>
+                    {/* Msg 1 — client via Messenger */}
+                    <div style={{ display: "flex", alignItems: "flex-end", gap: mob ? 5 : 8, marginBottom: mob ? 7 : 11 }}>
+                      <div style={{ width: mob ? 22 : 28, height: mob ? 22 : 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", border: "1.5px solid rgba(255,255,255,0.32)", background: "linear-gradient(135deg,#00b0f4,#0078ff)" }}>
+                        <svg viewBox="0 0 24 24" width={mob ? 10 : 14} height={mob ? 10 : 14} fill="white"><path d="M12 2C6.48 2 2 6.18 2 11.33c0 2.74 1.22 5.19 3.17 6.93V22l3.57-1.96c.95.26 1.96.4 3 .4 5.52 0 10-4.18 10-9.33S17.52 2 12 2zm1.05 12.55-2.54-2.71-4.96 2.71 5.47-5.8 2.6 2.71 4.9-2.71-5.47 5.8z"/></svg>
+                        <div style={{ position: "absolute", bottom: -2, right: -2, width: mob ? 8 : 10, height: mob ? 8 : 10, borderRadius: "50%", border: "1.5px solid rgba(255,255,255,0.9)", background: "#0078ff" }} />
+                      </div>
+                      <div style={{ padding: mob ? "6px 9px" : "9px 13px", fontSize: mob ? 10 : 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 14px 4px", background: "rgba(255,255,255,0.18)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.28)" }}>{en ? "Do you have any plans for sales teams?" : "¿Tienen algún plan para equipos de ventas?"}</div>
+                    </div>
+                    {/* Msg 2 — agent A */}
+                    <div style={{ display: "flex", alignItems: "flex-end", gap: mob ? 5 : 8, marginBottom: mob ? 7 : 11, flexDirection: "row-reverse" }}>
+                      <div style={{ width: mob ? 22 : 28, height: mob ? 22 : 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", border: "1.5px solid rgba(255,255,255,0.32)", background: "linear-gradient(135deg,#fe6a03,#ff8c3a)", fontSize: mob ? 9 : 11, fontWeight: 700, color: "#fff" }}>A</div>
+                      <div style={{ padding: mob ? "6px 9px" : "9px 13px", fontSize: mob ? 10 : 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 4px 14px", background: "linear-gradient(135deg, rgba(254,106,3,0.88), rgba(200,72,0,0.88))", backdropFilter: "blur(12px)", border: "1px solid rgba(254,160,80,0.4)" }}>{en ? "Of course! Our Business plan has up to 20 users." : "¡Claro! Nuestro plan Empresas incluye hasta 20 usuarios."}</div>
+                    </div>
+                    {/* Msg 3 — client via WhatsApp */}
+                    <div style={{ display: "flex", alignItems: "flex-end", gap: mob ? 5 : 8, marginBottom: mob ? 7 : 11 }}>
+                      <div style={{ width: mob ? 22 : 28, height: mob ? 22 : 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", border: "1.5px solid rgba(255,255,255,0.32)", background: "#25d366" }}>
+                        <svg viewBox="0 0 24 24" width={mob ? 10 : 14} height={mob ? 10 : 14} fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2C6.495 2 1.98 6.515 1.98 12.072c0 1.79.467 3.553 1.354 5.1L2 22l4.923-1.292a10.05 10.05 0 0 0 5.122 1.39c5.555 0 10.07-4.515 10.07-10.072C22.115 6.47 17.6 2 12.05 2z"/></svg>
+                        <div style={{ position: "absolute", bottom: -2, right: -2, width: mob ? 8 : 10, height: mob ? 8 : 10, borderRadius: "50%", border: "1.5px solid rgba(255,255,255,0.9)", background: "#25d366" }} />
+                      </div>
+                      <div style={{ padding: mob ? "6px 9px" : "9px 13px", fontSize: mob ? 10 : 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 14px 4px", background: "rgba(255,255,255,0.18)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.28)" }}>{en ? "Can we schedule a demo call?" : "¿Podemos agendar una llamada para la demo?"}</div>
+                    </div>
+                    {/* Msg 4 — agent B */}
+                    <div style={{ display: "flex", alignItems: "flex-end", gap: mob ? 5 : 8, flexDirection: "row-reverse" }}>
+                      <div style={{ width: mob ? 22 : 28, height: mob ? 22 : 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", border: "1.5px solid rgba(255,255,255,0.32)", background: "linear-gradient(135deg,#ff8c3a,#fe6a03)", fontSize: mob ? 9 : 11, fontWeight: 700, color: "#fff" }}>B</div>
+                      <div style={{ padding: mob ? "6px 9px" : "9px 13px", fontSize: mob ? 10 : 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 4px 14px", background: "linear-gradient(135deg, rgba(254,106,3,0.88), rgba(200,72,0,0.88))", backdropFilter: "blur(12px)", border: "1px solid rgba(254,160,80,0.4)" }}>{en ? "I'll connect you now! Does this time work?" : "¡Te conecto ahora! ¿Te viene bien este momento?"}</div>
+                    </div>
                   </div>
-                  <div>
-                    <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 2, textShadow: "0 1px 4px rgba(0,0,0,0.2)" }}>Valentina Herrera</div>
-                    <div style={{ fontSize: 12, color: "rgba(255,255,255,0.52)" }}>+1 (809) 472-3810</div>
+                  {/* Call card */}
+                  <div style={{ position: "absolute", bottom: "5.6%", right: "2.8%", width: mob ? "52%" : "41%", background: "rgba(255,255,255,0.13)", backdropFilter: "blur(24px)", WebkitBackdropFilter: "blur(24px)", borderRadius: mob ? 14 : 22, border: "1px solid rgba(255,255,255,0.26)", padding: mob ? "10px 10px 0 10px" : "16px 16px 0 16px", boxShadow: "0 12px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.28)", overflow: "hidden" }}>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: mob ? 8 : 14 }}>
+                      <span style={{ fontSize: mob ? 12 : 15, fontWeight: 500, color: "rgba(255,255,255,0.65)", fontVariantNumeric: "tabular-nums" }}>01:24</span>
+                      <span style={{ background: "rgba(37,211,102,0.22)", border: "1px solid rgba(37,211,102,0.5)", color: "#7fffa8", fontSize: mob ? 8 : 10, fontWeight: 700, padding: mob ? "3px 6px" : "4px 10px", borderRadius: 20, letterSpacing: "0.04em" }}>{en ? "WhatsApp" : "WhatsApp"}</span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: mob ? 7 : 11, marginBottom: mob ? 8 : 14 }}>
+                      <div style={{ width: mob ? 28 : 36, height: mob ? 28 : 36, borderRadius: "50%", background: "rgba(37,211,102,0.18)", border: "1px solid rgba(37,211,102,0.4)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                        <svg viewBox="0 0 24 24" width={mob ? 14 : 18} height={mob ? 14 : 18} fill="none" stroke="#25d366" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.72 19.79 19.79 0 0 1 0 1.07 2 2 0 0 1 1.99 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.15 6.15l1.28-1.28a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                      </div>
+                      <div style={{ minWidth: 0 }}>
+                        <div style={{ fontSize: mob ? 12 : 15, fontWeight: 700, color: "#fff", marginBottom: 2, textShadow: "0 1px 4px rgba(0,0,0,0.2)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>Valentina Herrera</div>
+                        <div style={{ fontSize: mob ? 10 : 12, color: "rgba(255,255,255,0.52)" }}>+1 (809) 472-3810</div>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: mob ? 8 : 14 }}>
+                      <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#25d366" }} />
+                      <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#25d366", opacity: 0.6 }} />
+                      <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#25d366", opacity: 0.3 }} />
+                      <span style={{ fontSize: mob ? 9 : 11, color: "rgba(255,255,255,0.42)", marginLeft: 4 }}>{en ? "In progress..." : "En curso..."}</span>
+                    </div>
+                    <div style={{ margin: mob ? "0 -10px" : "0 -16px", padding: mob ? 10 : 14, background: "linear-gradient(135deg, rgba(220,38,38,0.88), rgba(180,20,20,0.92))", backdropFilter: "blur(8px)", color: "#fff", fontSize: mob ? 11 : 14, fontWeight: 700, textAlign: "center", letterSpacing: "0.06em", borderTop: "1px solid rgba(255,120,120,0.2)", textShadow: "0 1px 3px rgba(0,0,0,0.2)" }}>{en ? "End Call" : "Finalizar"}</div>
                   </div>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 14 }}>
-                  <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#25d366" }} />
-                  <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#25d366", opacity: 0.6 }} />
-                  <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#25d366", opacity: 0.3 }} />
-                  <span style={{ fontSize: 11, color: "rgba(255,255,255,0.42)", marginLeft: 4 }}>{en ? "In progress..." : "En curso..."}</span>
-                </div>
-                <div style={{ margin: "0 -16px", padding: 14, background: "linear-gradient(135deg, rgba(220,38,38,0.88), rgba(180,20,20,0.92))", backdropFilter: "blur(8px)", color: "#fff", fontSize: 14, fontWeight: 700, textAlign: "center", letterSpacing: "0.06em", borderTop: "1px solid rgba(255,120,120,0.2)", textShadow: "0 1px 3px rgba(0,0,0,0.2)" }}>{en ? "End Call" : "Finalizar"}</div>
               </div>
             </div>
           </div>
