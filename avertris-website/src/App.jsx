@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { WavyBackground } from "./components/ui/wavy-background";
 
 /* ════════════════════════════════════════════════════════════
@@ -3250,6 +3251,7 @@ export default function App() {
 
   return (
     <div style={{ fontFamily: F, fontSize: 14, fontWeight: 300, margin: 0, color: V.g900, overflowX: "hidden" }}>
+      <Analytics />
       <Nav page={page} go={go} lang={lang} setLang={setLang} />
       <main>{pages[page]}</main>
       <FooterSection go={go} lang={lang} />
