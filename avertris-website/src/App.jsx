@@ -3452,7 +3452,7 @@ function OmnichannelPage({ go, lang }) {
                     </div>
                   ))}
                 </div>
-                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => window.open(plan.link, "_blank")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Book a demo" : "Agendar demo"}</Btn>
+                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => window.open(plan.link, "_blank")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Start Free Trial" : "Iniciar Prueba Gratis"}</Btn>
               </div>
             ))}
           </div>
