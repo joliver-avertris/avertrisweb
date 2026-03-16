@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { WavyBackground } from "./components/ui/wavy-background";
+import { TextShimmer } from "./components/ui/text-shimmer";
 
 /* ════════════════════════════════════════════════════════════
    AVERTRIS — Full Bilingual Website (EN / ES) — Mobile Responsive
@@ -2926,13 +2927,13 @@ function OmnichannelPage({ go, lang }) {
 
           {/* All your channels in one place */}
           <div style={{ marginTop: mob ? 24 : 32, display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
-            <div style={{
-              fontSize: mob ? 14 : 16, fontWeight: 600, lineHeight: 1.27,
-              color: "rgba(255,255,255,0.5)", textAlign: "center",
-              fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-            }}>
+            <TextShimmer
+              as="div"
+              duration={1.5}
+              className={`${mob ? "text-sm" : "text-base"} font-semibold text-center font-[Inter,-apple-system,BlinkMacSystemFont,sans-serif] [--base-color:rgba(255,255,255,0.4)] [--base-gradient-color:#FF6B00] dark:[--base-color:rgba(255,255,255,0.4)] dark:[--base-gradient-color:#FF6B00]`}
+            >
               {en ? "All your channels. One inbox." : "Todos tus canales. Una bandeja."}
-            </div>
+            </TextShimmer>
 
             {/* Channel logos row */}
             <div style={{
