@@ -1670,7 +1670,7 @@ function Nav({ page, go, lang, setLang }) {
               background: V.primary, border: "none", cursor: "pointer", color: "#fff",
               fontSize: 14, fontWeight: 500, height: 32, borderRadius: 8, padding: "0 14px",
               fontFamily: "'Inter', sans-serif", whiteSpace: "nowrap",
-            }}>{en ? "Free Consultation" : "Consulta Gratis"}</button>
+            }}>{en ? "Talk to Sales" : "Contactar Ventas"}</button>
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Menu" style={{
               background: "none", border: "none", cursor: "pointer", color: "#fff",
               width: 32, height: 32, display: "flex", alignItems: "center", justifyContent: "center",
@@ -1792,30 +1792,21 @@ function Nav({ page, go, lang, setLang }) {
           <LangPopover />
 
           {/* Login */}
-          <button onClick={() => go("contact")} style={{
-            ...navLinkBase, padding: "0 12px",
+          <a href="https://app.avertris.com" target="_blank" rel="noopener noreferrer" style={{
+            ...navLinkBase, padding: "0 12px", textDecoration: "none",
           }}
             onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.16)"}
             onMouseLeave={e => e.currentTarget.style.background = "none"}
-          >Login</button>
+          >Login</a>
 
-          {/* Talk to Sales — outlined */}
-          <button onClick={() => go("contact")} style={{
-            ...navLinkBase, padding: "0 12px",
-            border: "1px solid rgba(255,255,255,0.15)",
-          }}
-            onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.16)"}
-            onMouseLeave={e => e.currentTarget.style.background = "none"}
-          >{en ? "Talk to Sales" : "Contactar Ventas"}</button>
-
-          {/* Primary CTA — blue/orange filled */}
+          {/* Talk to Sales — orange filled */}
           <button onClick={() => go("contact")} style={{
             ...navLinkBase,
             background: V.primary, padding: "0 12px",
           }}
             onMouseEnter={e => e.currentTarget.style.background = V.p800}
             onMouseLeave={e => e.currentTarget.style.background = V.primary}
-          >{en ? "Free Consultation" : "Consulta Gratis"}</button>
+          >{en ? "Talk to Sales" : "Contactar Ventas"}</button>
         </div>
       </div>
     </nav>
@@ -3242,6 +3233,17 @@ function OmnichannelPage({ go, lang }) {
               <p style={{ fontSize: mob ? 15 : 17, fontWeight: 300, color: "rgba(255,255,255,0.65)", margin: "0 0 32px", lineHeight: 1.7, fontFamily: F }}>{en ? "Nexus merges WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS, and live chat into one platform — with full audit trails, team performance data, and an AI employee that qualifies leads and books meetings while you sleep." : "Nexus une WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS y chat en vivo en una sola plataforma — con auditoría completa, datos de rendimiento del equipo y un empleado IA que califica leads y agenda reuniones mientras duermes."}</p>
               <div style={{ display: "flex", flexDirection: mob ? "column" : "row", gap: 12, alignItems: mob ? "stretch" : "center" }}>
                 <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{en ? "Book a free demo" : "Agendar demo gratis"}</Btn>
+                <button onClick={() => { const el = document.getElementById("nexus-pricing"); if (el) el.scrollIntoView({ behavior: "smooth" }); }} style={{
+                  display: "inline-flex", alignItems: "center", justifyContent: "center",
+                  fontWeight: 500, borderRadius: 8, height: mob ? 44 : 40, padding: "0 20px",
+                  fontSize: mob ? 15 : 14, whiteSpace: "nowrap", cursor: "pointer",
+                  background: "transparent", color: "#fff",
+                  border: "1px solid rgba(255,255,255,0.25)", outline: "none",
+                  transition: "all 0.2s", fontFamily: F,
+                }}
+                  onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,0.1)"}
+                  onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+                >{en ? "See Pricing" : "Ver Precios"}</button>
                 <span style={{ fontSize: mob ? 12 : 13, color: "rgba(255,255,255,0.4)", fontFamily: F }}>{en ? "No credit card required. Live in 48 hours." : "Sin tarjeta de crédito. En vivo en 48 horas."}</span>
               </div>
             </div>
@@ -3405,7 +3407,7 @@ function OmnichannelPage({ go, lang }) {
       </section>
 
       {/* Pricing */}
-      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g900 }}>
+      <section id="nexus-pricing" style={{ padding: mob ? "64px 0" : "100px 0", background: V.g900 }}>
         <Box mob={mob}>
           <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, letterSpacing: -1, color: V.white, margin: "0 0 12px", textAlign: "center", fontFamily: F }}>{en ? "Pick the plan that fits your team" : "Elige el plan que se adapte a tu equipo"}</h2>
           <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 48px", textAlign: "center", fontFamily: F }}>{en ? "All plans include all 8 communication channels. No hidden fees. Cancel anytime." : "Todos los planes incluyen los 8 canales. Sin cargos ocultos. Cancela cuando quieras."}</p>
