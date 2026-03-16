@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 import { WavyBackground } from "./components/ui/wavy-background";
 
 /* ════════════════════════════════════════════════════════════
