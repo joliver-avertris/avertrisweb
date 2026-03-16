@@ -3084,7 +3084,7 @@ function OmnichannelPage({ go, lang }) {
             width: mob ? "100%" : "auto",
           }}>
             <button
-              onClick={() => go("contact")}
+              onClick={() => window.open(en ? "https://api.leadconnectorhq.com/widget/booking/Mn2aZsx0s7okSMweJEwR" : "https://api.leadconnectorhq.com/widget/booking/a9c9ddHOChloAo21t9dk", "_blank")}
               style={{
                 display: "inline-flex", alignItems: "center", justifyContent: "center",
                 gap: 8, fontWeight: 600, borderRadius: 8, height: 44, padding: "0 24px",
@@ -3246,7 +3246,7 @@ function OmnichannelPage({ go, lang }) {
               <h1 style={{ fontSize: mob ? 32 : 48, fontWeight: 800, lineHeight: 1.08, letterSpacing: -2, color: V.white, margin: "0 0 20px", fontFamily: F }}>{en ? "One inbox. Every channel. Total control over your team's conversations." : "Una bandeja. Todos los canales. Control total de las conversaciones de tu equipo."}</h1>
               <p style={{ fontSize: mob ? 15 : 17, fontWeight: 300, color: "rgba(255,255,255,0.65)", margin: "0 0 32px", lineHeight: 1.7, fontFamily: F }}>{en ? "Nexus merges WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS, and live chat into one platform — with full audit trails, team performance data, and an AI employee that qualifies leads and books meetings while you sleep." : "Nexus une WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS y chat en vivo en una sola plataforma — con auditoría completa, datos de rendimiento del equipo y un empleado IA que califica leads y agenda reuniones mientras duermes."}</p>
               <div style={{ display: "flex", flexDirection: mob ? "column" : "row", gap: 12, alignItems: mob ? "stretch" : "center" }}>
-                <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{en ? "Book a free demo" : "Agendar demo gratis"}</Btn>
+                <Btn variant="primary" onClick={() => window.open(en ? "https://api.leadconnectorhq.com/widget/booking/Mn2aZsx0s7okSMweJEwR" : "https://api.leadconnectorhq.com/widget/booking/a9c9ddHOChloAo21t9dk", "_blank")} mob={mob}>{en ? "Book a free demo" : "Agendar demo gratis"}</Btn>
                 <button onClick={() => { const el = document.getElementById("nexus-pricing"); if (el) el.scrollIntoView({ behavior: "smooth" }); }} style={{
                   display: "inline-flex", alignItems: "center", justifyContent: "center",
                   fontWeight: 500, borderRadius: 8, height: mob ? 44 : 40, padding: "0 20px",
@@ -3444,7 +3444,7 @@ function OmnichannelPage({ go, lang }) {
                     </div>
                   ))}
                 </div>
-                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => go("contact")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Book a demo" : "Agendar demo"}</Btn>
+                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => window.open(en ? "https://api.leadconnectorhq.com/widget/booking/Mn2aZsx0s7okSMweJEwR" : "https://api.leadconnectorhq.com/widget/booking/a9c9ddHOChloAo21t9dk", "_blank")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Book a demo" : "Agendar demo"}</Btn>
               </div>
             ))}
           </div>
@@ -3456,7 +3456,7 @@ function OmnichannelPage({ go, lang }) {
         <Box mob={mob} style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, color: V.g900, margin: "0 0 16px", fontFamily: F }}>{en ? "Every message your team sends without Nexus is one you can't see, measure, or improve." : "Cada mensaje que tu equipo envía sin Nexus es uno que no puedes ver, medir ni mejorar."}</h2>
           <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: "0 0 32px", maxWidth: 520, lineHeight: 1.7, fontFamily: F }}>{en ? "Book a free demo. We'll show you your entire communication stack in one screen — live, in 30 minutes." : "Agenda un demo gratis. Te mostraremos toda tu comunicación en una sola pantalla — en vivo, en 30 minutos."}</p>
-          <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{en ? "Book my free demo" : "Agendar mi demo gratis"}</Btn>
+          <Btn variant="primary" onClick={() => window.open(en ? "https://api.leadconnectorhq.com/widget/booking/Mn2aZsx0s7okSMweJEwR" : "https://api.leadconnectorhq.com/widget/booking/a9c9ddHOChloAo21t9dk", "_blank")} mob={mob}>{en ? "Book my free demo" : "Agendar mi demo gratis"}</Btn>
           <p style={{ fontSize: 12, color: V.g400, marginTop: 12, fontFamily: F }}>{en ? "No credit card required. Live in 48 hours." : "Sin tarjeta de crédito. En vivo en 48 horas."}</p>
         </Box>
       </section>
