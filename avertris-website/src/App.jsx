@@ -3098,6 +3098,20 @@ function OmnichannelPage({ go, lang }) {
             >
               {en ? "Talk to Sales" : "Hablar con Ventas"}
             </button>
+            <button onClick={() => { const el = document.getElementById("nexus-pricing"); if (el) el.scrollIntoView({ behavior: "smooth" }); }} style={{
+              display: "inline-flex", alignItems: "center", justifyContent: "center",
+              gap: 8, fontWeight: 600, borderRadius: 8, height: 44, padding: "0 24px",
+              fontSize: 16, whiteSpace: "nowrap", cursor: "pointer",
+              background: "transparent", color: "#fff",
+              border: "1px solid rgba(255,255,255,0.25)", outline: "none",
+              transition: "all 0.2s",
+              fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,0.1)"}
+              onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+            >
+              {en ? "See Pricing" : "Ver Precios"}
+            </button>
           </div>
 
           {/* G2 / Social proof line */}
