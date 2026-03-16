@@ -3032,7 +3032,7 @@ function OmnichannelPage({ go, lang }) {
             fontSize: mob ? 36 : 60, fontWeight: 500, lineHeight: mob ? 1.11 : 1,
             letterSpacing: mob ? -1 : -2, color: "#fff",
             fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-            textAlign: mob ? "left" : "center", maxWidth: 900,
+            textAlign: "center", maxWidth: 900,
           }}>
             {en
               ? "One inbox. Every channel. Total control over conversations."
@@ -3044,7 +3044,7 @@ function OmnichannelPage({ go, lang }) {
             marginTop: 20, marginBottom: 0,
             fontSize: mob ? 16 : 18, lineHeight: mob ? 1.5 : 1.56,
             color: "#CDCDCF", maxWidth: 788,
-            textAlign: mob ? "left" : "center",
+            textAlign: "center",
             fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
           }}>
             {en
@@ -3080,7 +3080,7 @@ function OmnichannelPage({ go, lang }) {
           <div style={{
             display: "flex", marginTop: 32, gap: 12,
             flexDirection: "row", flexWrap: "wrap",
-            justifyContent: mob ? "flex-start" : "center",
+            justifyContent: "center",
             width: mob ? "100%" : "auto",
           }}>
             <button
