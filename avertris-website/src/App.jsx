@@ -2876,15 +2876,14 @@ function OmnichannelPage({ go, lang }) {
         overflow: "hidden",
         position: "relative",
       }}>
-        {/* Soft Yellow Glow Background */}
+        {/* Soft Orange Glow Background */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             zIndex: 0,
-            backgroundImage: "radial-gradient(circle at center, #FFF991 0%, transparent 70%)",
-            opacity: 0.6,
-            mixBlendMode: "multiply",
+            backgroundImage: "radial-gradient(circle at center, #FF6B00 0%, transparent 70%)",
+            opacity: 0.15,
           }}
         />
         <div style={{ maxWidth: 1194, margin: "0 auto", padding: mob ? "0 20px" : "0 40px", display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 1 }}>
