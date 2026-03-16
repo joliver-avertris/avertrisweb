@@ -3334,30 +3334,30 @@ function OmnichannelPage({ go, lang }) {
       </section>
 
       {/* Social proof bar */}
-      <section style={{ padding: mob ? "20px 0" : "24px 0", background: V.g100, borderBottom: `1px solid ${V.g200}` }}>
+      <section style={{ padding: mob ? "20px 0" : "24px 0", background: "#0a0a0a", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
         <Box mob={mob} style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: mob ? 16 : 40 }}>
           {(en ? ["8 channels, 1 inbox", "Full conversation audit", "AI that sells for you", "Setup in 48 hours"] : ["8 canales, 1 bandeja", "Auditoría de conversaciones", "IA que vende por ti", "En vivo en 48 horas"]).map((item, i) => (
             <div key={i} style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <span style={{ color: V.primary, fontSize: 16, fontWeight: 700 }}>✓</span>
-              <span style={{ fontSize: mob ? 12 : 13, fontWeight: 600, color: V.g600, fontFamily: F }}>{item}</span>
+              <span style={{ fontSize: mob ? 12 : 13, fontWeight: 600, color: "rgba(255,255,255,0.6)", fontFamily: F }}>{item}</span>
             </div>
           ))}
         </Box>
       </section>
 
       {/* Pain Points — agitate */}
-      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: "linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%)" }}>
         <Box mob={mob}>
           <div style={{ textAlign: "center", marginBottom: mob ? 32 : 48 }}>
-            <h2 style={{ fontSize: mob ? 28 : 40, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{en ? "This is costing you clients right now" : "Esto te está costando clientes ahora mismo"}</h2>
-            <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: 0, fontFamily: F }}>{en ? "If any of these sound familiar, you're losing deals you don't even know about." : "Si algo de esto te suena, estás perdiendo negocios que ni siquiera sabes."}</p>
+            <h2 style={{ fontSize: mob ? 28 : 40, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: "#fff", margin: "0 0 12px", fontFamily: F }}>{en ? "This is costing you clients right now" : "Esto te está costando clientes ahora mismo"}</h2>
+            <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.55)", margin: 0, fontFamily: F }}>{en ? "If any of these sound familiar, you're losing deals you don't even know about." : "Si algo de esto te suena, estás perdiendo negocios que ni siquiera sabes."}</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: mob ? 20 : 24 }}>
             {painPoints.map((p, i) => (
-              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 32, borderLeft: `4px solid ${V.primary}` }}>
+              <div key={i} style={{ background: "rgba(255,255,255,0.04)", borderRadius: 12, padding: mob ? 24 : 32, borderLeft: `4px solid ${V.primary}`, border: "1px solid rgba(255,255,255,0.08)", borderLeftWidth: 4, borderLeftColor: V.primary }}>
                 <span style={{ fontSize: 28, display: "block", marginBottom: 12 }}>{p.icon}</span>
-                <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{p.title}</h3>
-                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, margin: 0, lineHeight: 1.7, fontFamily: F }}>{p.desc}</p>
+                <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: "#fff", margin: "0 0 8px", fontFamily: F }}>{p.title}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: "rgba(255,255,255,0.55)", margin: 0, lineHeight: 1.7, fontFamily: F }}>{p.desc}</p>
               </div>
             ))}
           </div>
@@ -3384,18 +3384,20 @@ function OmnichannelPage({ go, lang }) {
       </section>
 
       {/* Features — 6 cards */}
-      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
-        <Box mob={mob}>
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: "linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%)", position: "relative" }}>
+        {/* Subtle orange glow */}
+        <div style={{ position: "absolute", inset: 0, zIndex: 0, backgroundImage: "radial-gradient(ellipse at 50% 0%, rgba(255,107,0,0.06) 0%, transparent 60%)", pointerEvents: "none" }} />
+        <Box mob={mob} style={{ position: "relative", zIndex: 1 }}>
           <div style={{ textAlign: "center", marginBottom: mob ? 32 : 48 }}>
-            <h2 style={{ fontSize: mob ? 28 : 40, fontWeight: 700, letterSpacing: -1, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{en ? "Not just an inbox. A command center." : "No es solo una bandeja. Es un centro de comando."}</h2>
-            <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: 0, fontFamily: F }}>{en ? "Nexus gives you the visibility, automation, and AI to run your sales communication like a real operation." : "Nexus te da la visibilidad, automatización e IA para manejar tu comunicación de ventas como una operación real."}</p>
+            <h2 style={{ fontSize: mob ? 28 : 40, fontWeight: 700, letterSpacing: -1, color: "#fff", margin: "0 0 12px", fontFamily: F }}>{en ? "Not just an inbox. A command center." : "No es solo una bandeja. Es un centro de comando."}</h2>
+            <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.55)", margin: 0, fontFamily: F }}>{en ? "Nexus gives you the visibility, automation, and AI to run your sales communication like a real operation." : "Nexus te da la visibilidad, automatización e IA para manejar tu comunicación de ventas como una operación real."}</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr 1fr", gap: mob ? 20 : 24 }}>
             {features.map((f, i) => (
-              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 32, display: "flex", flexDirection: "column" }}>
+              <div key={i} style={{ background: "rgba(255,255,255,0.04)", borderRadius: 12, padding: mob ? 24 : 32, display: "flex", flexDirection: "column", border: "1px solid rgba(255,255,255,0.08)", transition: "border-color 0.2s" }}>
                 <span style={{ fontSize: 24, color: V.primary, marginBottom: 16, fontFamily: F }}>{f.icon}</span>
-                <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{f.title}</h3>
-                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, margin: 0, lineHeight: 1.7, fontFamily: F, flex: 1 }}>{f.desc}</p>
+                <h3 style={{ fontSize: mob ? 16 : 18, fontWeight: 700, color: "#fff", margin: "0 0 8px", fontFamily: F }}>{f.title}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: "rgba(255,255,255,0.55)", margin: 0, lineHeight: 1.7, fontFamily: F, flex: 1 }}>{f.desc}</p>
               </div>
             ))}
           </div>
@@ -3403,17 +3405,17 @@ function OmnichannelPage({ go, lang }) {
       </section>
 
       {/* Results */}
-      <section style={{ padding: mob ? "48px 0" : "80px 0", background: V.g100 }}>
+      <section style={{ padding: mob ? "48px 0" : "80px 0", background: "#0a0a0a", borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <Box mob={mob}>
-          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: V.g900, margin: "0 0 40px", textAlign: "center", fontFamily: F }}>{en ? "What changes on day one" : "Qué cambia desde el día uno"}</h2>
+          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: "#fff", margin: "0 0 40px", textAlign: "center", fontFamily: F }}>{en ? "What changes on day one" : "Qué cambia desde el día uno"}</h2>
           <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr 1fr" : "repeat(4, 1fr)", gap: mob ? 16 : 24, textAlign: "center" }}>
             {results.map((stat, i) => (
-              <div key={i} style={{ background: V.white, borderRadius: 12, padding: mob ? 20 : 32, border: `1px solid ${V.g200}` }}>
+              <div key={i} style={{ background: "rgba(255,255,255,0.04)", borderRadius: 12, padding: mob ? 20 : 32, border: "1px solid rgba(255,255,255,0.08)" }}>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 2 }}>
                   <span style={{ fontSize: mob ? 36 : 48, fontWeight: 800, color: V.primary, fontFamily: F, lineHeight: 1 }}>{stat.n}</span>
                   <span style={{ fontSize: mob ? 16 : 22, fontWeight: 600, color: V.primary, fontFamily: F }}>{stat.s}</span>
                 </div>
-                <p style={{ fontSize: mob ? 11 : 13, fontWeight: 400, color: V.g600, margin: "8px 0 0", fontFamily: F }}>{stat.l}</p>
+                <p style={{ fontSize: mob ? 11 : 13, fontWeight: 400, color: "rgba(255,255,255,0.55)", margin: "8px 0 0", fontFamily: F }}>{stat.l}</p>
               </div>
             ))}
           </div>
@@ -3452,12 +3454,14 @@ function OmnichannelPage({ go, lang }) {
       </section>
 
       {/* Final CTA — urgency */}
-      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
-        <Box mob={mob} style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, color: V.g900, margin: "0 0 16px", fontFamily: F }}>{en ? "Every message your team sends without Nexus is one you can't see, measure, or improve." : "Cada mensaje que tu equipo envía sin Nexus es uno que no puedes ver, medir ni mejorar."}</h2>
-          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: V.g600, margin: "0 0 32px", maxWidth: 520, lineHeight: 1.7, fontFamily: F }}>{en ? "Book a free demo. We'll show you your entire communication stack in one screen — live, in 30 minutes." : "Agenda un demo gratis. Te mostraremos toda tu comunicación en una sola pantalla — en vivo, en 30 minutos."}</p>
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: "linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%)", position: "relative" }}>
+        {/* Soft orange glow */}
+        <div style={{ position: "absolute", inset: 0, zIndex: 0, backgroundImage: "radial-gradient(circle at 50% 50%, rgba(255,107,0,0.1) 0%, transparent 60%)", pointerEvents: "none" }} />
+        <Box mob={mob} style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 1 }}>
+          <h2 style={{ fontSize: mob ? 28 : 44, fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, color: "#fff", margin: "0 0 16px", fontFamily: F }}>{en ? "Every message your team sends without Nexus is one you can't see, measure, or improve." : "Cada mensaje que tu equipo envía sin Nexus es uno que no puedes ver, medir ni mejorar."}</h2>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.55)", margin: "0 0 32px", maxWidth: 520, lineHeight: 1.7, fontFamily: F }}>{en ? "Book a free demo. We'll show you your entire communication stack in one screen — live, in 30 minutes." : "Agenda un demo gratis. Te mostraremos toda tu comunicación en una sola pantalla — en vivo, en 30 minutos."}</p>
           <Btn variant="primary" onClick={() => window.open(en ? "https://api.leadconnectorhq.com/widget/booking/Mn2aZsx0s7okSMweJEwR" : "https://api.leadconnectorhq.com/widget/booking/a9c9ddHOChloAo21t9dk", "_blank")} mob={mob}>{en ? "Book my free demo" : "Agendar mi demo gratis"}</Btn>
-          <p style={{ fontSize: 12, color: V.g400, marginTop: 12, fontFamily: F }}>{en ? "No credit card required. Live in 48 hours." : "Sin tarjeta de crédito. En vivo en 48 horas."}</p>
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", marginTop: 12, fontFamily: F }}>{en ? "No credit card required. Live in 48 hours." : "Sin tarjeta de crédito. En vivo en 48 horas."}</p>
         </Box>
       </section>
     </>
