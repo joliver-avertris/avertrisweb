@@ -1553,13 +1553,23 @@ function Nav({ page, go, lang, setLang }) {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileAccordion, setMobileAccordion] = useState(null);
+  const [langPopover, setLangPopover] = useState(false);
   const to = useRef(null);
+  const langRef = useRef(null);
   const { mob } = useMedia();
+  const en = lang === "en";
 
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", h);
     return () => window.removeEventListener("scroll", h);
+  }, []);
+
+  // Close language popover on outside click
+  useEffect(() => {
+    const h = (e) => { if (langRef.current && !langRef.current.contains(e.target)) setLangPopover(false); };
+    document.addEventListener("mousedown", h);
+    return () => document.removeEventListener("mousedown", h);
   }, []);
 
   const enter = (k) => { clearTimeout(to.current); setOpenMenu(k); };
@@ -1582,99 +1592,190 @@ function Nav({ page, go, lang, setLang }) {
     { label: t(T.nav.blog, lang), key: "blog" },
   ];
 
-  const isHome = page === "home";
-  const bg = scrolled || !isHome ? V.white : "transparent";
-  const tc = scrolled || !isHome ? V.g900 : V.white;
-  const border = scrolled ? `1px solid ${V.g200}` : "1px solid transparent";
+  /* ── Shared styles ── */
+  const navPill = {
+    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+    background: V.g900,
+    borderRadius: 10,
+    border: "1px solid rgba(255,255,255,0.08)",
+  };
+  const navLinkBase = {
+    background: "none", border: "none", cursor: "pointer",
+    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+    fontSize: 14, fontWeight: 500, color: "#fff",
+    display: "flex", alignItems: "center", gap: 4,
+    height: 32, borderRadius: 8, padding: "0 12px",
+    transition: "background 0.15s",
+    whiteSpace: "nowrap",
+  };
+  const chevronDown = (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.7 }}><path d="M6 9l6 6 6-6"/></svg>
+  );
+  const globeIcon = (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg>
+  );
+  const hamburgerIcon = (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  );
+  const closeIcon = (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  );
 
+  /* ── Language popover (shared) ── */
+  const LangPopover = () => (
+    <div ref={langRef} style={{ position: "relative" }}>
+      <button onClick={() => setLangPopover(!langPopover)} aria-label="Language" style={{
+        ...navLinkBase, padding: 0, width: 32, height: 32, justifyContent: "center", color: "#fff",
+      }}
+        onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.08)"}
+        onMouseLeave={e => e.currentTarget.style.background = "none"}
+      >{globeIcon}</button>
+      {langPopover && (
+        <div style={{
+          position: "absolute", top: "calc(100% + 8px)", right: 0, zIndex: 300,
+          background: V.g900, borderRadius: 8, padding: 8, minWidth: 140,
+          boxShadow: "0 8px 30px rgba(0,0,0,0.4)", border: "1px solid rgba(255,255,255,0.08)",
+        }}>
+          {[{ l: "en", label: "English" }, { l: "es", label: "Español" }].map(({ l, label }) => (
+            <button key={l} onClick={() => { setLang(l); setLangPopover(false); }} style={{
+              display: "block", width: "100%", background: lang === l ? "rgba(100,100,106,0.2)" : "transparent",
+              border: "none", cursor: "pointer", color: "#fff", fontSize: 14, fontWeight: 400,
+              fontFamily: "'Inter', sans-serif", padding: "7px 10px", borderRadius: 4,
+              textAlign: "left", transition: "background 0.15s",
+            }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.2)"}
+              onMouseLeave={e => { if (lang !== l) e.currentTarget.style.background = "transparent"; }}
+            >{label}</button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+
+  /* ════════════════════ MOBILE ════════════════════ */
   if (mob) {
     return (
-      <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, background: bg, borderBottom: border, transition: "all 0.3s", fontFamily: F }}>
-        <Box mob={mob} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }} onClick={() => go("home")}>
-            <div style={{ width: 32, height: 32, background: V.g900, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", color: V.primary, fontSize: 14, fontWeight: 800 }}>.a</div>
-            <span style={{ fontSize: 18, fontWeight: 700, color: tc, letterSpacing: -0.5, transition: "color 0.3s" }}>avertris</span>
+      <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: "12px 12px 0", fontFamily: "'Inter', sans-serif" }}>
+        <div style={{ ...navPill, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 12px" }}>
+          {/* Logo */}
+          <div style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", paddingLeft: 4 }} onClick={() => go("home")}>
+            <div style={{ width: 28, height: 28, background: V.primary, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 12, fontWeight: 800, fontFamily: "'Inter', sans-serif" }}>.a</div>
+            <span style={{ fontSize: 17, fontWeight: 700, color: "#fff", letterSpacing: -0.5 }}>avertris</span>
           </div>
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: 24, color: tc, transition: "color 0.3s" }}>
-            {mobileMenuOpen ? "✕" : "☰"}
-          </button>
-        </Box>
 
+          {/* Right actions */}
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <LangPopover />
+            <button onClick={() => go("contact")} style={{
+              background: V.primary, border: "none", cursor: "pointer", color: "#fff",
+              fontSize: 14, fontWeight: 500, height: 32, borderRadius: 8, padding: "0 14px",
+              fontFamily: "'Inter', sans-serif", whiteSpace: "nowrap",
+            }}>{en ? "Free Consultation" : "Consulta Gratis"}</button>
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Menu" style={{
+              background: "none", border: "none", cursor: "pointer", color: "#fff",
+              width: 32, height: 32, display: "flex", alignItems: "center", justifyContent: "center",
+              borderRadius: 6, transition: "background 0.15s",
+            }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(81,81,85,0.16)"}
+              onMouseLeave={e => e.currentTarget.style.background = "none"}
+            >{mobileMenuOpen ? closeIcon : hamburgerIcon}</button>
+          </div>
+        </div>
+
+        {/* Mobile menu dropdown */}
         {mobileMenuOpen && (
-          <div style={{ position: "fixed", top: 64, left: 0, right: 0, bottom: 0, background: V.white, overflow: "auto", animation: "slideIn 0.3s ease" }}>
-            <Box mob={mob} style={{ padding: "32px 0" }}>
-              {links.map((link) => (
-                <div key={link.key}>
-                  {link.mega ? (
-                    <>
-                      <button onClick={() => setMobileAccordion(mobileAccordion === link.key ? null : link.key)} style={{ width: "100%", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 15, fontWeight: 600, color: V.g900, padding: "16px 0", textAlign: "left", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                        {link.label}
-                        <span style={{ transform: mobileAccordion === link.key ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▼</span>
-                      </button>
-                      {mobileAccordion === link.key && (
-                        <div style={{ background: V.g100, padding: "16px 0", borderRadius: 8, marginBottom: 12 }}>
-                          {link.mega.cols.map((col, ci) => (
-                            <div key={ci} style={{ marginBottom: 16 }}>
-                              <p style={{ fontSize: 12, fontWeight: 600, color: V.g400, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 8px" }}>{col.heading}</p>
-                              {col.items.map((item, ii) => (
-                                <button key={ii} onClick={() => { go(item.go || "services"); setMobileMenuOpen(false); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "6px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}>{item.t}</button>
-                              ))}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <button onClick={() => { go(link.key); setMobileMenuOpen(false); }} style={{ width: "100%", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 15, fontWeight: 600, color: V.g900, padding: "16px 0", textAlign: "left" }}>
+          <div style={{
+            position: "fixed", top: 68, left: 12, right: 12, bottom: 12,
+            background: V.g900, borderRadius: 10, border: "1px solid rgba(255,255,255,0.08)",
+            overflow: "auto", animation: "slideIn 0.25s ease", padding: "16px 20px",
+          }}>
+            {links.map((link) => (
+              <div key={link.key}>
+                {link.mega ? (
+                  <>
+                    <button onClick={() => setMobileAccordion(mobileAccordion === link.key ? null : link.key)} style={{
+                      ...navLinkBase, width: "100%", padding: "0 4px", height: 44, justifyContent: "space-between",
+                      fontSize: 15,
+                    }}>
                       {link.label}
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transition: "transform 0.2s", transform: mobileAccordion === link.key ? "rotate(180deg)" : "rotate(0deg)" }}><path d="M6 9l6 6 6-6"/></svg>
                     </button>
-                  )}
-                  <hr style={{ margin: "12px 0", border: "none", borderTop: `1px solid ${V.g200}` }} />
-                </div>
-              ))}
-
-              <div style={{ display: "flex", gap: 8, margin: "24px 0" }}>
-                {["en", "es"].map(l => (
-                  <button key={l} onClick={() => setLang(l)} style={{ flex: 1, background: lang === l ? V.g900 : V.g100, color: lang === l ? V.white : V.g600, border: `1.5px solid ${lang === l ? V.g900 : V.g200}`, borderRadius: 4, padding: "8px 12px", cursor: "pointer", fontSize: 12, fontWeight: 600, fontFamily: F, transition: "all 0.2s", textTransform: "uppercase" }}>{l}</button>
-                ))}
+                    {mobileAccordion === link.key && (
+                      <div style={{ background: "rgba(100,100,106,0.1)", padding: "12px 16px", borderRadius: 8, marginBottom: 4 }}>
+                        {link.mega.cols.map((col, ci) => (
+                          <div key={ci} style={{ marginBottom: 12 }}>
+                            <p style={{ fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.4)", letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 6px" }}>{col.heading}</p>
+                            {col.items.map((item, ii) => (
+                              <button key={ii} onClick={() => { go(item.go || "services"); setMobileMenuOpen(false); }} style={{
+                                display: "block", background: "none", border: "none", cursor: "pointer",
+                                fontFamily: "'Inter', sans-serif", fontSize: 14, fontWeight: 400,
+                                color: "rgba(255,255,255,0.7)", padding: "6px 0", textAlign: "left", width: "100%",
+                              }}>{item.t}</button>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <button onClick={() => { go(link.key); setMobileMenuOpen(false); }} style={{
+                    ...navLinkBase, width: "100%", padding: "0 4px", height: 44, fontSize: 15,
+                  }}>
+                    {link.label}
+                  </button>
+                )}
               </div>
+            ))}
 
-              <Btn variant="primary" onClick={() => { go("contact"); setMobileMenuOpen(false); }} style={{ width: "100%", marginTop: 16 }} mob>{t(T.nav.cta, lang)}</Btn>
-            </Box>
+            <hr style={{ margin: "16px 0", border: "none", borderTop: "1px solid rgba(255,255,255,0.08)" }} />
+            <button onClick={() => { go("contact"); setMobileMenuOpen(false); }} style={{
+              ...navLinkBase, width: "100%", height: 44, padding: "0 4px", fontSize: 15,
+            }}>{en ? "Talk to Sales" : "Hablar con Ventas"}</button>
           </div>
         )}
       </nav>
     );
   }
 
+  /* ════════════════════ DESKTOP ════════════════════ */
   return (
-    <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, background: bg, borderBottom: border, transition: "all 0.3s", fontFamily: F }}>
-      <Box mob={false} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }} onClick={() => go("home")}>
-          <div style={{ width: 32, height: 32, background: V.g900, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", color: V.primary, fontSize: 14, fontWeight: 800 }}>.a</div>
-          <span style={{ fontSize: 20, fontWeight: 700, color: tc, letterSpacing: -0.5, transition: "color 0.3s" }}>avertris</span>
+    <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: "12px 12px 0", fontFamily: "'Inter', sans-serif" }}>
+      <div style={{ ...navPill, display: "flex", alignItems: "center", padding: "8px 12px", maxWidth: 1440, margin: "0 auto" }}>
+        {/* Logo */}
+        <div style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", paddingLeft: 8 }} onClick={() => go("home")}>
+          <div style={{ width: 28, height: 28, background: V.primary, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 12, fontWeight: 800, fontFamily: "'Inter', sans-serif" }}>.a</div>
+          <span style={{ fontSize: 17, fontWeight: 700, color: "#fff", letterSpacing: -0.5 }}>avertris</span>
         </div>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
+        {/* Nav links */}
+        <div style={{ display: "inline-flex", alignItems: "center", gap: 2, marginLeft: 20 }}>
           {links.map(link => (
             <div key={link.key} style={{ position: "relative" }} onMouseEnter={() => link.mega && enter(link.key)} onMouseLeave={leave}>
               <button onClick={() => { go(link.key); setOpenMenu(null); }} style={{
-                background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14,
-                fontWeight: page === link.key ? 600 : 400, color: page === link.key ? V.primary : tc,
-                padding: "8px 0", transition: "color 0.2s", display: "flex", alignItems: "center", gap: 4,
-              }}>
-                {link.label}
-                {link.mega && <span style={{ fontSize: 10, opacity: 0.5 }}>▼</span>}
+                ...navLinkBase,
+                padding: link.mega ? "0 8px 0 14px" : "0 12px",
+              }}
+                onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.16)"}
+                onMouseLeave={e => e.currentTarget.style.background = "none"}
+              >
+                <span>{link.label}</span>
+                {link.mega && chevronDown}
               </button>
               {link.mega && openMenu === link.key && (
-                <div style={{ position: "absolute", top: "100%", left: -120, paddingTop: 12, zIndex: 200 }}>
-                  <div style={{ background: V.white, borderRadius: 12, padding: "40px 48px", boxShadow: "0 20px 60px rgba(0,0,0,0.12)", display: "grid", gridTemplateColumns: "repeat(3, 220px)", gap: 40, border: `1px solid ${V.g200}` }}>
+                <div style={{ position: "absolute", top: "100%", left: -120, paddingTop: 12, zIndex: 200 }} onMouseEnter={() => enter(link.key)} onMouseLeave={leave}>
+                  <div style={{ background: V.g900, borderRadius: 12, padding: "32px 40px", boxShadow: "0 20px 60px rgba(0,0,0,0.4)", display: "grid", gridTemplateColumns: "repeat(3, 220px)", gap: 40, border: "1px solid rgba(255,255,255,0.08)" }}>
                     {link.mega.cols.map((col, ci) => (
                       <div key={ci}>
-                        <p style={{ fontSize: 12, fontWeight: 600, color: V.g400, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 16px" }}>{col.heading}</p>
+                        <p style={{ fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.4)", letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 16px" }}>{col.heading}</p>
                         {col.items.map((item, ii) => (
-                          <button key={ii} onClick={() => { go(item.go || "services"); setOpenMenu(null); }} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontFamily: F, fontSize: 14, fontWeight: 400, color: V.g800, padding: "8px 0", textAlign: "left", width: "100%", transition: "color 0.15s" }}
-                            onMouseEnter={e => e.target.style.color = V.primary} onMouseLeave={e => e.target.style.color = V.g800}
+                          <button key={ii} onClick={() => { go(item.go || "services"); setOpenMenu(null); }} style={{
+                            display: "block", background: "none", border: "none", cursor: "pointer",
+                            fontFamily: "'Inter', sans-serif", fontSize: 14, fontWeight: 400,
+                            color: "rgba(255,255,255,0.7)", padding: "8px 0", textAlign: "left", width: "100%",
+                            transition: "color 0.15s",
+                          }}
+                            onMouseEnter={e => e.target.style.color = V.primary}
+                            onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.7)"}
                           >{item.t}</button>
                         ))}
                       </div>
@@ -1684,22 +1785,39 @@ function Nav({ page, go, lang, setLang }) {
               )}
             </div>
           ))}
-
-          {/* Language Switcher */}
-          <div style={{ display: "flex", alignItems: "center", gap: 4, marginLeft: 8 }}>
-            {["en", "es"].map(l => (
-              <button key={l} onClick={() => setLang(l)} style={{
-                background: lang === l ? V.g900 : "transparent", color: lang === l ? V.white : tc,
-                border: `1.5px solid ${lang === l ? V.g900 : (scrolled || !isHome ? V.g200 : "rgba(255,255,255,0.3)")}`,
-                borderRadius: 4, padding: "4px 10px", cursor: "pointer", fontSize: 12, fontWeight: 600,
-                fontFamily: F, transition: "all 0.2s", textTransform: "uppercase",
-              }}>{l}</button>
-            ))}
-          </div>
         </div>
 
-        <Btn variant="primary" onClick={() => go("contact")} style={{ padding: "10px 24px", fontSize: 13 }}>{t(T.nav.cta, lang)}</Btn>
-      </Box>
+        {/* Right side: grow spacer + actions */}
+        <div style={{ flexGrow: 1, display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 8 }}>
+          <LangPopover />
+
+          {/* Login */}
+          <button onClick={() => go("contact")} style={{
+            ...navLinkBase, padding: "0 12px",
+          }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.16)"}
+            onMouseLeave={e => e.currentTarget.style.background = "none"}
+          >Login</button>
+
+          {/* Talk to Sales — outlined */}
+          <button onClick={() => go("contact")} style={{
+            ...navLinkBase, padding: "0 12px",
+            border: "1px solid rgba(255,255,255,0.15)",
+          }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.16)"}
+            onMouseLeave={e => e.currentTarget.style.background = "none"}
+          >{en ? "Talk to Sales" : "Contactar Ventas"}</button>
+
+          {/* Primary CTA — blue/orange filled */}
+          <button onClick={() => go("contact")} style={{
+            ...navLinkBase,
+            background: V.primary, padding: "0 12px",
+          }}
+            onMouseEnter={e => e.currentTarget.style.background = V.p800}
+            onMouseLeave={e => e.currentTarget.style.background = V.primary}
+          >{en ? "Free Consultation" : "Consulta Gratis"}</button>
+        </div>
+      </div>
     </nav>
   );
 }
