@@ -2923,6 +2923,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Solo operators & startups",
       users: "Up to 5 users",
       highlight: false,
+      link: "https://buy.stripe.com/4gM9AT0U3cmr4x1bG718c03",
       features: ["Unified inbox (all 8 channels)", "WhatsApp Business integration", "Facebook, Instagram & TikTok DM", "LinkedIn DM, Email & SMS", "Live chat widget for your website", "Contact management", "Full conversation history & audit trail", "Documents attached to contacts", "Mobile & desktop apps", "Basic reporting"],
     },
     {
@@ -2932,6 +2933,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Small & growing teams",
       users: "Up to 30 users",
       highlight: true,
+      link: "https://buy.stripe.com/9B65kDcCL0DJgfJh0r18c02",
       features: ["Everything in Starter, plus:", "Built-in CRM & pipeline", "Conversational AI CRM (chat with your data)", "Workflow automations", "Shared calendar & scheduling", "AI text assistant (trainable on your business)", "Auto-respond to clients 24/7", "AI lead qualification & routing", "AI appointment booking", "Team performance leaderboards"],
     },
     {
@@ -2941,6 +2943,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Large organizations",
       users: "Unlimited users",
       highlight: false,
+      link: "https://buy.stripe.com/8x228rfOXcmr5B511t18c04",
       features: ["Everything in Growth, plus:", "Full API access", "Advanced custom reports", "Voice AI assistant", "Premium onboarding & team training", "Dedicated account manager", "Priority support (SLA)", "Custom integrations", "Multi-location management", "SSO & advanced security"],
     },
   ] : [
@@ -2951,6 +2954,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Operadores independientes y startups",
       users: "Hasta 5 usuarios",
       highlight: false,
+      link: "https://buy.stripe.com/4gM9AT0U3cmr4x1bG718c03",
       features: ["Bandeja unificada (los 8 canales)", "Integración WhatsApp Business", "Facebook, Instagram & TikTok DM", "LinkedIn DM, Email & SMS", "Widget de chat en vivo para tu web", "Gestión de contactos", "Historial completo y auditoría de conversaciones", "Documentos asociados a contactos", "Apps móvil y escritorio", "Reportes básicos"],
     },
     {
@@ -2960,6 +2964,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Equipos pequeños y en crecimiento",
       users: "Hasta 30 usuarios",
       highlight: true,
+      link: "https://buy.stripe.com/9B65kDcCL0DJgfJh0r18c02",
       features: ["Todo lo de Starter, más:", "CRM y pipeline integrado", "CRM conversacional con IA (chatea con tus datos)", "Automatizaciones de flujos", "Calendario compartido y agendamiento", "Asistente IA de texto (entrenable con tu negocio)", "Auto-respuesta a clientes 24/7", "Calificación y ruteo de leads con IA", "Agendamiento automático con IA", "Leaderboards de rendimiento del equipo"],
     },
     {
@@ -2969,6 +2974,7 @@ function OmnichannelPage({ go, lang }) {
       audience: "Organizaciones grandes",
       users: "Usuarios ilimitados",
       highlight: false,
+      link: "https://buy.stripe.com/8x228rfOXcmr5B511t18c04",
       features: ["Todo lo de Growth, más:", "Acceso completo a API", "Reportes personalizados avanzados", "Asistente de voz con IA", "Onboarding y capacitación premium para equipos", "Account manager dedicado", "Soporte prioritario (SLA)", "Integraciones a medida", "Gestión multi-ubicación", "SSO y seguridad avanzada"],
     },
   ];
@@ -3446,7 +3452,7 @@ function OmnichannelPage({ go, lang }) {
                     </div>
                   ))}
                 </div>
-                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => window.open(en ? "https://api.leadconnectorhq.com/widget/booking/Mn2aZsx0s7okSMweJEwR" : "https://api.leadconnectorhq.com/widget/booking/a9c9ddHOChloAo21t9dk", "_blank")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Book a demo" : "Agendar demo"}</Btn>
+                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => window.open(plan.link, "_blank")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Book a demo" : "Agendar demo"}</Btn>
               </div>
             ))}
           </div>
