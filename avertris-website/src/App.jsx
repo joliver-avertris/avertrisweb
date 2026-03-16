@@ -3452,7 +3452,23 @@ function OmnichannelPage({ go, lang }) {
                     </div>
                   ))}
                 </div>
-                <Btn variant={plan.highlight ? "primary" : "outline"} onClick={() => window.open(plan.link, "_blank")} mob={mob} style={plan.highlight ? {} : { color: V.white, borderColor: "rgba(255,255,255,0.3)" }}>{en ? "Start Free Trial" : "Iniciar Prueba Gratis"}</Btn>
+                <button
+                  onClick={() => window.open(plan.link, "_blank")}
+                  style={{
+                    display: "inline-flex", alignItems: "center", justifyContent: "center",
+                    gap: 8, fontWeight: 600, borderRadius: 8, height: 44, padding: "0 24px",
+                    fontSize: 16, whiteSpace: "nowrap", cursor: "pointer", width: "100%",
+                    background: plan.highlight ? V.primary : "transparent",
+                    color: "#fff",
+                    border: plan.highlight ? "none" : "1px solid rgba(255,255,255,0.25)",
+                    outline: "none", transition: "all 0.2s",
+                    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.background = plan.highlight ? V.p800 : "rgba(255,255,255,0.1)"}
+                  onMouseLeave={e => e.currentTarget.style.background = plan.highlight ? V.primary : "transparent"}
+                >
+                  {en ? "Start Free Trial" : "Iniciar Prueba Gratis"}
+                </button>
               </div>
             ))}
           </div>
