@@ -135,6 +135,24 @@ const T = {
       es: ["Nosotros", "Blog", "Casos de éxito", "Carreras"],
     },
   },
+  /* ── Nexus Product Page ── */
+  nexusPage: {
+    badge: { en: "New", es: "Nuevo" },
+    badgeText: { en: "Nexus AI-powered inbox is now available! Unify all your customer conversations today. Learn more", es: "Nexus inbox con IA ya está disponible! Unifica todas tus conversaciones hoy. Más información" },
+    h1: { en: "Customers ask on chat. Call for details. Confirm by email. Can you keep up?", es: "Clientes preguntan por chat. Llaman por detalles. Confirman por email. ¿Puedes seguir el ritmo?" },
+    subtitle: { en: "Most platforms can't. Nexus by Avertris unifies all customer touchpoints and CRMs in a team inbox with AI Agents and native lead management so your conversations never break — even when customers switch channels.", es: "La mayoría no puede. Nexus de Avertris unifica todos los puntos de contacto y CRMs en un inbox de equipo con Agentes IA y gestión nativa de leads para que tus conversaciones nunca se rompan — incluso cuando los clientes cambian de canal." },
+    ctaTalk: { en: "Talk to Sales", es: "Hablar con Ventas" },
+    ctaTrial: { en: "Start Free Trial", es: "Prueba Gratis" },
+    g2Text: { en: "Top-rated on G2 for highest ROI", es: "Mejor calificado en G2 por mayor ROI" },
+    trustedTitle: { en: "500+ brands trust Nexus", es: "500+ marcas confían en Nexus" },
+    trustedBrands: ["TechCorp", "MediGroup", "FinScale", "LogiNet", "DataBridge", "Nextera", "CloudVault", "RetailPro"],
+    explore: { en: "Explore success stories", es: "Explorar historias de éxito" },
+    heroLabel: { en: "NEXUS PRODUCT", es: "PRODUCTO NEXUS" },
+    heroTitle: { en: "The AI-Powered\nUnified Inbox", es: "El Inbox Unificado\ncon IA" },
+    heroSubtitle: { en: "Capture every lead, automate every response, close every deal — all from one powerful platform.", es: "Captura cada lead, automatiza cada respuesta, cierra cada negocio — todo desde una plataforma poderosa." },
+    heroCtaCases: { en: "See how it works", es: "Ver cómo funciona" },
+    heroCtaTalk: { en: "Get a demo", es: "Solicitar demo" },
+  },
   /* ── Inner Pages ── */
   servicesPage: {
     label: { en: "What we do", es: "Lo que hacemos" },
@@ -332,12 +350,13 @@ function Nav({ page, go, lang, setLang }) {
         ],
       },
     },
+    { label: "Nexus", key: "nexus" },
     { label: t(T.nav.cases, lang), key: "cases" },
     { label: t(T.nav.about, lang), key: "about" },
     { label: t(T.nav.blog, lang), key: "blog" },
   ];
 
-  const isHome = page === "home";
+  const isHome = page === "home" || page === "nexus";
   const bg = scrolled || !isHome ? V.white : "transparent";
   const tc = scrolled || !isHome ? V.g900 : V.white;
   const border = scrolled ? `1px solid ${V.g200}` : "1px solid transparent";
@@ -961,6 +980,355 @@ function ContactPage({ lang }) {
 
 
 /* ═══════════════════════════════════════════════════════════
+   NEXUS PRODUCT PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+function NexusPage({ go, lang }) {
+  const NX = T.nexusPage;
+  const { mob, tab } = useMedia();
+  const L = lang;
+
+  return (
+    <>
+      {/* ── Respond.io-style Hero Banner (added on top) ── */}
+      <section style={{
+        background: "linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 60%, #0f0f0f 100%)",
+        padding: mob ? "100px 0 0" : "120px 0 0",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        fontFamily: "'Inter', -apple-system, Roboto, Helvetica, sans-serif",
+        color: "#fff",
+        fontWeight: 500,
+        overflow: "hidden",
+        position: "relative",
+      }}>
+        {/* Subtle gradient orb behind content */}
+        <div style={{
+          position: "absolute",
+          top: mob ? "10%" : "15%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: mob ? "600px" : "900px",
+          height: mob ? "400px" : "600px",
+          background: "radial-gradient(ellipse, rgba(255,107,0,0.08) 0%, transparent 70%)",
+          pointerEvents: "none",
+          zIndex: 0,
+        }} />
+
+        <div style={{ width: "100%", maxWidth: 1194, padding: mob ? "0 20px" : "0 40px", boxSizing: "border-box", position: "relative", zIndex: 1 }}>
+
+          {/* Announcement pill */}
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 20 }}>
+            <a href="#" onClick={(e) => { e.preventDefault(); }} style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 2,
+              padding: "4px 4px 4px 4px",
+              paddingRight: 12,
+              borderRadius: 9999,
+              border: "1px solid rgba(255,255,255,0.15)",
+              background: "transparent",
+              textDecoration: "none",
+              color: "#fff",
+              cursor: "pointer",
+              transition: "background 0.3s",
+              maxWidth: "100%",
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,0.06)"}
+            onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+            >
+              <span style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "2px 10px",
+                fontSize: 12,
+                borderRadius: 9999,
+                color: "#fff",
+                background: V.primary,
+                fontWeight: 600,
+              }}>{t(NX.badge, L)}</span>
+              <span style={{
+                fontSize: mob ? 12 : 14,
+                marginLeft: 8,
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: mob ? "normal" : "nowrap",
+                lineHeight: 1.4,
+              }}>{t(NX.badgeText, L)}</span>
+              <span style={{ marginLeft: 4, fontSize: 14 }}>→</span>
+            </a>
+          </div>
+
+          {/* Main heading */}
+          <h1 style={{
+            fontSize: mob ? "2.25rem" : tab ? "3rem" : "3.75rem",
+            lineHeight: mob ? "2.5rem" : tab ? "3.75rem" : 1,
+            fontWeight: mob ? 600 : 500,
+            textAlign: mob ? "left" : "center",
+            margin: "20px 0 0",
+            fontFamily: "'Inter', -apple-system, Roboto, Helvetica, sans-serif",
+            letterSpacing: "-0.02em",
+          }}>{t(NX.h1, L)}</h1>
+
+          {/* Subtitle */}
+          <div style={{
+            fontSize: mob ? "1rem" : "1.125rem",
+            lineHeight: mob ? "1.5rem" : "1.75rem",
+            color: "#CDCDCF",
+            maxWidth: 788,
+            textAlign: mob ? "left" : "center",
+            margin: "20px auto 0",
+            fontWeight: 400,
+          }}>{t(NX.subtitle, L)}</div>
+
+          {/* CTA Buttons */}
+          <div style={{
+            display: "flex",
+            marginTop: 32,
+            gap: 12,
+            fontSize: 16,
+            justifyContent: mob ? "flex-start" : "center",
+            flexDirection: "row",
+            flexWrap: "wrap",
+          }}>
+            <button onClick={() => go("contact")} style={{
+              display: "inline-flex",
+              whiteSpace: "nowrap",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 8,
+              fontWeight: 500,
+              transition: "all 0.2s",
+              borderRadius: 8,
+              height: 40,
+              padding: "0 16px",
+              fontSize: 16,
+              outline: "1px solid rgba(255,255,255,0.2)",
+              color: "#fff",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              fontFamily: "'Inter', -apple-system, Roboto, Helvetica, sans-serif",
+            }}
+            onMouseEnter={e => e.target.style.background = "rgba(255,255,255,0.08)"}
+            onMouseLeave={e => e.target.style.background = "transparent"}
+            >{t(NX.ctaTalk, L)}</button>
+            <button onClick={() => go("contact")} style={{
+              display: "inline-flex",
+              whiteSpace: "nowrap",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 8,
+              fontWeight: 500,
+              transition: "all 0.2s",
+              borderRadius: 8,
+              height: 40,
+              padding: "0 16px",
+              fontSize: 16,
+              background: V.primary,
+              color: "#fff",
+              border: "none",
+              cursor: "pointer",
+              fontFamily: "'Inter', -apple-system, Roboto, Helvetica, sans-serif",
+            }}
+            onMouseEnter={e => e.target.style.background = V.p800}
+            onMouseLeave={e => e.target.style.background = V.primary}
+            >{t(NX.ctaTrial, L)}</button>
+          </div>
+
+          {/* G2 Rating row */}
+          <div style={{
+            display: "flex",
+            marginTop: 24,
+            alignItems: "center",
+            gap: 8,
+            fontSize: 14,
+            textAlign: "center",
+            lineHeight: 1.43,
+            justifyContent: mob ? "flex-start" : "center",
+            flexWrap: "wrap",
+            cursor: "pointer",
+          }}>
+            {/* G2 logo placeholder */}
+            <div style={{
+              width: 28,
+              height: 28,
+              borderRadius: "50%",
+              background: "linear-gradient(135deg, #FF492C 0%, #FF6B4A 100%)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: 12,
+              fontWeight: 800,
+              color: "#fff",
+              flexShrink: 0,
+            }}>G2</div>
+            {/* Stars */}
+            <div style={{ display: "flex", gap: 1 }}>
+              {[1, 2, 3, 4, 5].map(i => (
+                <span key={i} style={{ color: V.primary, fontSize: 16 }}>★</span>
+              ))}
+            </div>
+            <span style={{ color: "#fff", fontSize: 14, fontWeight: 400 }}>{t(NX.g2Text, L)}</span>
+          </div>
+
+          {/* Product screenshot / demo preview */}
+          <div style={{
+            marginTop: mob ? 48 : 80,
+            width: "100%",
+            maxWidth: 1100,
+            marginLeft: "auto",
+            marginRight: "auto",
+            background: "rgba(101, 101, 106, 0.16)",
+            borderRadius: 12,
+            overflow: "hidden",
+            border: "1px solid rgba(255,255,255,0.08)",
+            transition: "transform 1s, box-shadow 1s",
+          }}>
+            <div style={{
+              borderRadius: 12,
+              overflow: "hidden",
+              position: "relative",
+            }}>
+              {/* Simulated inbox UI */}
+              <div style={{
+                background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+                padding: mob ? "24px 16px" : "40px 32px",
+                minHeight: mob ? 200 : 340,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+                gap: 16,
+              }}>
+                <div style={{
+                  fontSize: mob ? 18 : 24,
+                  fontWeight: 600,
+                  color: "#fff",
+                  lineHeight: 1.4,
+                  fontFamily: "'Inter', -apple-system, Roboto, Helvetica, sans-serif",
+                }}>Explore the Power of Nexus</div>
+                <p style={{
+                  fontSize: mob ? 13 : 15,
+                  color: "rgba(255,255,255,0.7)",
+                  maxWidth: 500,
+                  margin: 0,
+                  lineHeight: 1.6,
+                }}>Sell smarter, strengthen relationships, and respond faster. All from one inbox. Experience it instantly, no sign-up needed.</p>
+                <button onClick={() => go("contact")} style={{
+                  marginTop: 8,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "10px 24px",
+                  borderRadius: 8,
+                  background: V.primary,
+                  color: "#fff",
+                  border: "none",
+                  fontSize: 14,
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  fontFamily: "'Inter', -apple-system, Roboto, Helvetica, sans-serif",
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={e => e.target.style.background = V.p800}
+                onMouseLeave={e => e.target.style.background = V.primary}
+                >Start interactive tour</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Trusted brands section */}
+        <div style={{
+          alignSelf: "center",
+          display: "flex",
+          marginTop: mob ? 48 : 80,
+          width: "100%",
+          maxWidth: 1216,
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          zIndex: 1,
+          padding: mob ? "0 20px" : "0 40px",
+          boxSizing: "border-box",
+        }}>
+          <div style={{
+            color: "#fff",
+            textAlign: "center",
+            fontSize: mob ? "1.25rem" : "1.875rem",
+            fontWeight: 600,
+            lineHeight: 1.27,
+          }}>{t(NX.trustedTitle, L)}</div>
+
+          <div style={{
+            display: "flex",
+            marginTop: 24,
+            alignItems: "center",
+            gap: mob ? 16 : 32,
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}>
+            {NX.trustedBrands.map(brand => (
+              <span key={brand} style={{
+                fontSize: mob ? 13 : 18,
+                fontWeight: 700,
+                color: "rgba(255,255,255,0.35)",
+                letterSpacing: -0.5,
+                fontFamily: F,
+              }}>{brand}</span>
+            ))}
+          </div>
+
+          {/* Explore success stories link */}
+          <div style={{
+            display: "flex",
+            marginTop: 24,
+            alignItems: "center",
+            gap: 4,
+            fontSize: 16,
+            justifyContent: "center",
+            cursor: "pointer",
+            marginBottom: mob ? 48 : 80,
+          }}
+          onClick={() => go("cases")}
+          >
+            <span style={{
+              color: "#fff",
+              fontSize: 16,
+              fontWeight: 500,
+              transition: "color 0.3s",
+            }}>{t(NX.explore, L)}</span>
+            <span style={{ color: "#fff", fontSize: 14 }}>→</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Original Product Hero Banner ── */}
+      <section style={{ minHeight: mob ? "80vh" : "92vh", display: "flex", alignItems: "flex-end", padding: "0 0 " + (mob ? "60px" : "80px"), backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%), url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80')`, backgroundSize: "cover", backgroundPosition: "center" }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{t(NX.heroLabel, L)}</Lbl>
+          <h1 style={{ fontSize: mob ? 38 : 82, fontWeight: 800, lineHeight: 1.02, letterSpacing: -3, color: V.white, margin: "0 0 20px", maxWidth: 800, fontFamily: F, whiteSpace: "pre-line" }}>
+            {t(NX.heroTitle, L)}
+          </h1>
+          <p style={{ fontSize: mob ? 15 : 18, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 40px", maxWidth: 560, lineHeight: 1.7, fontFamily: F }}>
+            {t(NX.heroSubtitle, L)}
+          </p>
+          <div style={{ display: "flex", flexDirection: mob ? "column" : "row", gap: 16 }}>
+            <Btn variant="dark" onClick={() => go("services")} mob={mob}>{t(NX.heroCtaCases, L)}</Btn>
+            <Btn variant="primary" onClick={() => go("contact")} mob={mob}>{t(NX.heroCtaTalk, L)}</Btn>
+          </div>
+        </Box>
+      </section>
+    </>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════════════════════ */
 
@@ -1038,6 +1406,7 @@ export default function App() {
     about: <AboutPage go={go} lang={lang} />,
     blog: <BlogPage lang={lang} />,
     contact: <ContactPage lang={lang} />,
+    nexus: <NexusPage go={go} lang={lang} />,
   };
 
   return (
