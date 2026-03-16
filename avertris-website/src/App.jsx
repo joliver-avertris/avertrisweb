@@ -2874,8 +2874,20 @@ function OmnichannelPage({ go, lang }) {
         color: "#fff",
         textAlign: "center",
         overflow: "hidden",
+        position: "relative",
       }}>
-        <div style={{ maxWidth: 1194, margin: "0 auto", padding: mob ? "0 20px" : "0 40px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        {/* Soft Yellow Glow Background */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 0,
+            backgroundImage: "radial-gradient(circle at center, #FFF991 0%, transparent 70%)",
+            opacity: 0.6,
+            mixBlendMode: "multiply",
+          }}
+        />
+        <div style={{ maxWidth: 1194, margin: "0 auto", padding: mob ? "0 20px" : "0 40px", display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 1 }}>
 
           {/* Announcement pill */}
           <a href="#nexus-features" onClick={e => { e.preventDefault(); document.getElementById("nexus-hero-original")?.scrollIntoView({ behavior: "smooth" }); }} style={{ textDecoration: "none", cursor: "pointer" }}>
