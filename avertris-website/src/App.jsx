@@ -2862,6 +2862,13 @@ function ChannelIcon({ name, size = 24 }) {
         <ellipse cx="18" cy="24" rx="5.5" ry="6" fill="none" stroke="#fff" strokeWidth="2.5"/>
       </svg>
     ),
+    email: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <rect width="48" height="48" rx="12" fill="#6366F1"/>
+        <path d="M12 16a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V16z" fill="none" stroke="#fff" strokeWidth="2.2"/>
+        <path d="M12 16l12 9 12-9" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     sms: (
       <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
         <rect width="48" height="48" rx="12" fill="#6B7280"/>
@@ -2879,7 +2886,7 @@ function ChannelIcon({ name, size = 24 }) {
       </svg>
     ),
   };
-  const key = name.toLowerCase().replace(/\s+/g, "").replace("facebookmessenger", "messenger").replace("instagramdm", "instagram").replace("linkedindm", "linkedin").replace("livechatwidget", "livechat").replace("chatenvivo", "livechat").replace("email", "gmail");
+  const key = name.toLowerCase().replace(/\s+/g, "").replace("facebookmessenger", "messenger").replace("instagramdm", "instagram").replace("linkedindm", "linkedin").replace("livechatwidget", "livechat").replace("chatenvivo", "livechat");
   return icons[key] || icons.sms;
 }
 
@@ -3069,7 +3076,7 @@ function OmnichannelPage({ go, lang }) {
               display: "flex", marginTop: 16, alignItems: "center", gap: mob ? 12 : 24,
               justifyContent: "center", flexWrap: "wrap",
             }}>
-              {["WhatsApp", "Instagram", "Messenger", "TikTok", "LinkedIn", "Gmail", "Outlook", "SMS"].map((ch, i) => (
+              {["WhatsApp", "Instagram", "Messenger", "TikTok", "LinkedIn", "Email", "SMS"].map((ch, i) => (
                 <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
                   <ChannelIcon name={ch} size={mob ? 28 : 36} />
                   <span style={{ fontSize: mob ? 9 : 11, fontWeight: 500, color: "rgba(255,255,255,0.4)" }}>{ch}</span>
@@ -3099,21 +3106,6 @@ function OmnichannelPage({ go, lang }) {
               onMouseLeave={e => e.currentTarget.style.background = "transparent"}
             >
               {en ? "Talk to Sales" : "Hablar con Ventas"}
-            </button>
-            <button
-              onClick={() => go("contact")}
-              style={{
-                display: "inline-flex", alignItems: "center", justifyContent: "center",
-                gap: 8, fontWeight: 500, borderRadius: 8, height: 40, padding: "0 16px",
-                fontSize: 16, whiteSpace: "nowrap", cursor: "pointer",
-                background: V.primary, color: "#fff", border: "none",
-                transition: "all 0.2s",
-                fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = V.p800}
-              onMouseLeave={e => e.currentTarget.style.background = V.primary}
-            >
-              {en ? "Start Free Trial" : "Prueba Gratuita"}
             </button>
           </div>
 
