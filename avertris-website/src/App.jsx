@@ -2681,6 +2681,89 @@ function ServiceDetailPage({ pageKey, go, lang }) {
    NEXUS — AD LANDING PAGE
    ═══════════════════════════════════════════════════════════ */
 
+/* Channel icon SVGs for Nexus */
+function ChannelIcon({ name, size = 24 }) {
+  const s = size;
+  const icons = {
+    whatsapp: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <circle cx="24" cy="24" r="24" fill="#25D366"/>
+        <path d="M34.6 13.4C32.2 11 29 9.6 25.6 9.6c-7 0-12.7 5.7-12.7 12.7 0 2.2.6 4.4 1.7 6.3L13 35l6.6-1.7c1.8.99 3.9 1.5 6 1.5 7 0 12.7-5.7 12.7-12.7 0-3.4-1.3-6.6-3.7-9zM25.6 31.3c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.9 1 1-3.7-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.8 4.7-10.5 10.5-10.5 2.8 0 5.4 1.1 7.4 3.1s3.1 4.6 3.1 7.4c0 5.8-4.7 10.4-10.5 10.4zm5.7-7.9c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6l.5-.5.3-.5.1-.4c0-.1 0-.3-.1-.5-.1-.1-.7-1.7-1-2.4-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.3-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.8.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z" fill="#fff"/>
+      </svg>
+    ),
+    instagram: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <defs><linearGradient id="ig-grad" x1="0" y1="48" x2="48" y2="0"><stop offset="0%" stopColor="#feda75"/><stop offset="20%" stopColor="#fa7e1e"/><stop offset="40%" stopColor="#d62976"/><stop offset="60%" stopColor="#962fbf"/><stop offset="80%" stopColor="#4f5bd5"/></linearGradient></defs>
+        <rect width="48" height="48" rx="12" fill="url(#ig-grad)"/>
+        <rect x="12" y="12" width="24" height="24" rx="6" stroke="#fff" strokeWidth="2.5" fill="none"/>
+        <circle cx="24" cy="24" r="6" stroke="#fff" strokeWidth="2.5" fill="none"/>
+        <circle cx="32" cy="16" r="1.8" fill="#fff"/>
+      </svg>
+    ),
+    messenger: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <defs><linearGradient id="msn-grad" x1="6" y1="42" x2="42" y2="6"><stop offset="0%" stopColor="#0695FF"/><stop offset="50%" stopColor="#A334FA"/><stop offset="100%" stopColor="#FF6968"/></linearGradient></defs>
+        <circle cx="24" cy="24" r="22" fill="url(#msn-grad)"/>
+        <path d="M24 11c-7.7 0-13 5.5-13 12.6 0 3.7 1.5 6.9 4 9.1.3.2.4.6.3.9l-.1 2.8c0 .5.5.9 1 .6l3.1-1.7c.3-.1.6-.2.9-.1 1.2.3 2.5.5 3.8.5 7.7 0 13-5.5 13-12.6S31.7 11 24 11zm1.3 16.2-3.3-3.5-6.4 3.5 7-7.5 3.4 3.5 6.3-3.5-7 7.5z" fill="#fff"/>
+      </svg>
+    ),
+    tiktok: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <rect width="48" height="48" rx="12" fill="#010101"/>
+        <path d="M33.2 18.5c-1.8 0-3.4-.7-4.6-1.8-.9-1-1.5-2.3-1.6-3.7h-3.8v17.2c0 2.1-1.7 3.8-3.8 3.8s-3.8-1.7-3.8-3.8 1.7-3.8 3.8-3.8c.4 0 .8.1 1.2.2v-3.9c-.4-.1-.8-.1-1.2-.1-4.2 0-7.6 3.4-7.6 7.6s3.4 7.6 7.6 7.6 7.6-3.4 7.6-7.6V22.3c1.7 1.2 3.8 1.9 6.1 1.9v-3.8c-.6 0-1.3-.1-1.9-.3v2.4z" fill="#fff"/>
+        <path d="M33.2 16.7c1.3 1.2 3 1.8 4.8 1.8v-3.3c-1-.2-1.9-.7-2.6-1.4-.9-.8-1.5-1.9-1.7-3.2h-3.1v.1c.2 1.4.8 2.7 1.6 3.7 1.2 1.1 2.8 1.8 4.6 1.8v1.8c-1.8 0-3.4-.7-4.8-1.8.2.6.8 1.2 1.2 1.5z" fill="#25F4EE" opacity="0.7"/>
+        <path d="M19.4 26.6c-2.1 0-3.8 1.7-3.8 3.8s1.7 3.8 3.8 3.8 3.8-1.7 3.8-3.8V13h3.8c-.1-.3-.1-.7-.1-1h-5.6v17.2c0 2.1-1.7 3.8-3.8 3.8-1.2 0-2.3-.6-3-1.5.9 1.3 2.4 2.1 4 2.1 2.1 0 3.8-1.7 3.8-3.8V13h-1.8v13.6c0 .1 0 0-.1 0z" fill="#FE2C55" opacity="0.7"/>
+      </svg>
+    ),
+    linkedin: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <rect width="48" height="48" rx="10" fill="#0A66C2"/>
+        <path d="M16.5 19.5h-3.8v12.7h3.8V19.5zM14.6 17.8c1.2 0 2.2-1 2.2-2.2s-1-2.2-2.2-2.2-2.2 1-2.2 2.2 1 2.2 2.2 2.2zM35.3 32.2h-3.8v-6.2c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3v6.3h-3.8V19.5H27v1.7c.5-1 1.8-2.1 3.7-2.1 3.9 0 4.6 2.6 4.6 5.9v7.2z" fill="#fff"/>
+      </svg>
+    ),
+    gmail: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <rect width="48" height="48" rx="10" fill="#fff"/>
+        <path d="M10 14l14 10 14-10v20H10V14z" fill="#F2F2F2"/>
+        <path d="M10 14l14 10 14-10" fill="none" stroke="#EA4335" strokeWidth="2"/>
+        <path d="M10 14v20h6V20l8 6 8-6v14h6V14l-14 10L10 14z" fill="none"/>
+        <rect x="10" y="14" width="6" height="20" rx="0" fill="#4285F4"/>
+        <rect x="32" y="14" width="6" height="20" rx="0" fill="#34A853"/>
+        <path d="M10 34h6V20l8 6 8-6v14h6" fill="none" stroke="none"/>
+        <path d="M24 24l-14-10v2l14 10 14-10v-2L24 24z" fill="#FBBC04" opacity="0.6"/>
+        <path d="M10 14l14 10 14-10" fill="none" stroke="#EA4335" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    outlook: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <rect width="48" height="48" rx="10" fill="#0078D4"/>
+        <path d="M28 14v20l10-3V17l-10-3z" fill="#0D5FB8" opacity="0.8"/>
+        <path d="M38 17L28 20v10l10 3V17z" fill="#28A8EA" opacity="0.9"/>
+        <rect x="8" y="14" width="20" height="20" rx="2" fill="#0364B8"/>
+        <ellipse cx="18" cy="24" rx="5.5" ry="6" fill="none" stroke="#fff" strokeWidth="2.5"/>
+      </svg>
+    ),
+    sms: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <rect width="48" height="48" rx="12" fill="#6B7280"/>
+        <path d="M12 16a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H19l-5 4v-4h-2a2 2 0 0 1-2-2V16z" fill="none" stroke="#fff" strokeWidth="2.5"/>
+        <circle cx="19" cy="22" r="1.5" fill="#fff"/>
+        <circle cx="24" cy="22" r="1.5" fill="#fff"/>
+        <circle cx="29" cy="22" r="1.5" fill="#fff"/>
+      </svg>
+    ),
+    livechat: (
+      <svg viewBox="0 0 48 48" width={s} height={s} fill="none">
+        <rect width="48" height="48" rx="12" fill={V.primary}/>
+        <path d="M12 16a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H19l-5 4v-4h-2a2 2 0 0 1-2-2V16z" fill="none" stroke="#fff" strokeWidth="2.5"/>
+        <path d="M18 20h12M18 24h8" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+  };
+  const key = name.toLowerCase().replace(/\s+/g, "").replace("facebookmessenger", "messenger").replace("instagramdm", "instagram").replace("linkedindm", "linkedin").replace("livechatwidget", "livechat").replace("chatenvivo", "livechat").replace("email", "gmail");
+  return icons[key] || icons.sms;
+}
+
 function OmnichannelPage({ go, lang }) {
   const { mob } = useMedia();
   const en = lang === "en";
@@ -2933,9 +3016,9 @@ function OmnichannelPage({ go, lang }) {
                       </div>
                       {/* Conversation items */}
                       {[
-                        { name: "Maria Lopez", ch: "WhatsApp", color: "#25d366", msg: en ? "Can we schedule a demo?" : "¿Podemos agendar una demo?" },
-                        { name: "John Smith", ch: "Messenger", color: "#0078ff", msg: en ? "I need pricing info" : "Necesito información de precios" },
-                        { name: "Ana Garcia", ch: "Instagram", color: "#E1306C", msg: en ? "Interested in Growth plan" : "Interesada en el plan Growth" },
+                        { name: "Maria Lopez", ch: "WhatsApp", msg: en ? "Can we schedule a demo?" : "¿Podemos agendar una demo?" },
+                        { name: "John Smith", ch: "Messenger", msg: en ? "I need pricing info" : "Necesito información de precios" },
+                        { name: "Ana Garcia", ch: "Instagram", msg: en ? "Interested in Growth plan" : "Interesada en el plan Growth" },
                       ].map((c, i) => (
                         <div key={i} style={{
                           padding: mob ? "6px 4px" : "8px 6px", borderRadius: 6, marginBottom: 4,
@@ -2944,8 +3027,8 @@ function OmnichannelPage({ go, lang }) {
                           cursor: "pointer",
                         }}>
                           <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                            <div style={{ width: mob ? 20 : 26, height: mob ? 20 : 26, borderRadius: "50%", background: c.color, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                              <span style={{ fontSize: mob ? 8 : 10, fontWeight: 700, color: "#fff" }}>{c.name[0]}</span>
+                            <div style={{ flexShrink: 0 }}>
+                              <ChannelIcon name={c.ch} size={mob ? 20 : 26} />
                             </div>
                             <div style={{ minWidth: 0 }}>
                               <div style={{ fontSize: mob ? 9 : 12, fontWeight: 600, color: "#fff", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.name}</div>
@@ -2960,9 +3043,7 @@ function OmnichannelPage({ go, lang }) {
                       {/* Chat header */}
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: mob ? 8 : 16, paddingBottom: mob ? 6 : 10, borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                          <div style={{ width: mob ? 24 : 30, height: mob ? 24 : 30, borderRadius: "50%", background: "#25d366", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                            <span style={{ fontSize: mob ? 10 : 12, fontWeight: 700, color: "#fff" }}>M</span>
-                          </div>
+                          <ChannelIcon name="WhatsApp" size={mob ? 24 : 30} />
                           <div>
                             <span style={{ fontSize: mob ? 11 : 14, fontWeight: 600, color: "#fff" }}>Maria Lopez</span>
                             <span style={{ fontSize: mob ? 9 : 11, color: V.primary, marginLeft: 8, fontWeight: 500 }}>{en ? "Hot Lead" : "Lead Caliente"}</span>
@@ -2999,33 +3080,25 @@ function OmnichannelPage({ go, lang }) {
             </div>
           </div>
 
-          {/* Trusted brands */}
+          {/* All your channels in one place */}
           <div style={{ marginTop: mob ? 40 : 80, display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
             <div style={{
               fontSize: mob ? 20 : 30, fontWeight: 600, lineHeight: 1.27,
               color: "#fff", textAlign: "center",
               fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
             }}>
-              {en ? "Trusted by growing businesses worldwide" : "La confianza de empresas en crecimiento en todo el mundo"}
+              {en ? "All your channels. One inbox." : "Todos tus canales. Una bandeja."}
             </div>
 
-            {/* Brand logos — using text as placeholders matching the layout */}
+            {/* Channel logos row */}
             <div style={{
               display: "flex", marginTop: 24, alignItems: "center", gap: mob ? 16 : 32,
               justifyContent: "center", flexWrap: "wrap",
             }}>
-              {(en
-                ? ["Retail", "Hospitality", "Real Estate", "Healthcare", "Finance", "Education", "Automotive", "SaaS"]
-                : ["Retail", "Hotelería", "Inmobiliaria", "Salud", "Finanzas", "Educación", "Automotriz", "SaaS"]
-              ).map((brand, i) => (
-                <div key={i} style={{
-                  padding: mob ? "6px 12px" : "8px 18px",
-                  border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8,
-                  fontSize: mob ? 11 : 14, fontWeight: 500,
-                  color: "rgba(255,255,255,0.4)",
-                  background: "rgba(255,255,255,0.03)",
-                }}>
-                  {brand}
+              {["WhatsApp", "Instagram", "Messenger", "TikTok", "LinkedIn", "Gmail", "Outlook", "SMS"].map((ch, i) => (
+                <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+                  <ChannelIcon name={ch} size={mob ? 36 : 44} />
+                  <span style={{ fontSize: mob ? 10 : 12, fontWeight: 500, color: "rgba(255,255,255,0.5)" }}>{ch}</span>
                 </div>
               ))}
             </div>
@@ -3086,9 +3159,8 @@ function OmnichannelPage({ go, lang }) {
                   <div style={{ position: "absolute", top: "9%", left: "4%", width: mob ? "62%" : "57%", background: "rgba(255,255,255,0.12)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderRadius: mob ? 14 : 20, border: "1px solid rgba(255,255,255,0.22)", padding: mob ? 10 : 18, boxShadow: "0 8px 32px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.25)" }}>
                     {/* Msg 1 — client via Messenger */}
                     <div style={{ display: "flex", alignItems: "flex-end", gap: mob ? 5 : 8, marginBottom: mob ? 7 : 11 }}>
-                      <div style={{ width: mob ? 22 : 28, height: mob ? 22 : 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", border: "1.5px solid rgba(255,255,255,0.32)", background: "linear-gradient(135deg,#00b0f4,#0078ff)" }}>
-                        <svg viewBox="0 0 24 24" width={mob ? 10 : 14} height={mob ? 10 : 14} fill="white"><path d="M12 2C6.48 2 2 6.18 2 11.33c0 2.74 1.22 5.19 3.17 6.93V22l3.57-1.96c.95.26 1.96.4 3 .4 5.52 0 10-4.18 10-9.33S17.52 2 12 2zm1.05 12.55-2.54-2.71-4.96 2.71 5.47-5.8 2.6 2.71 4.9-2.71-5.47 5.8z"/></svg>
-                        <div style={{ position: "absolute", bottom: -2, right: -2, width: mob ? 8 : 10, height: mob ? 8 : 10, borderRadius: "50%", border: "1.5px solid rgba(255,255,255,0.9)", background: "#0078ff" }} />
+                      <div style={{ flexShrink: 0 }}>
+                        <ChannelIcon name="Messenger" size={mob ? 22 : 28} />
                       </div>
                       <div style={{ padding: mob ? "6px 9px" : "9px 13px", fontSize: mob ? 10 : 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 14px 4px", background: "rgba(255,255,255,0.18)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.28)" }}>{en ? "Do you have any plans for sales teams?" : "¿Tienen algún plan para equipos de ventas?"}</div>
                     </div>
@@ -3099,9 +3171,8 @@ function OmnichannelPage({ go, lang }) {
                     </div>
                     {/* Msg 3 — client via WhatsApp */}
                     <div style={{ display: "flex", alignItems: "flex-end", gap: mob ? 5 : 8, marginBottom: mob ? 7 : 11 }}>
-                      <div style={{ width: mob ? 22 : 28, height: mob ? 22 : 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", border: "1.5px solid rgba(255,255,255,0.32)", background: "#25d366" }}>
-                        <svg viewBox="0 0 24 24" width={mob ? 10 : 14} height={mob ? 10 : 14} fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2C6.495 2 1.98 6.515 1.98 12.072c0 1.79.467 3.553 1.354 5.1L2 22l4.923-1.292a10.05 10.05 0 0 0 5.122 1.39c5.555 0 10.07-4.515 10.07-10.072C22.115 6.47 17.6 2 12.05 2z"/></svg>
-                        <div style={{ position: "absolute", bottom: -2, right: -2, width: mob ? 8 : 10, height: mob ? 8 : 10, borderRadius: "50%", border: "1.5px solid rgba(255,255,255,0.9)", background: "#25d366" }} />
+                      <div style={{ flexShrink: 0 }}>
+                        <ChannelIcon name="WhatsApp" size={mob ? 22 : 28} />
                       </div>
                       <div style={{ padding: mob ? "6px 9px" : "9px 13px", fontSize: mob ? 10 : 13, lineHeight: 1.52, color: "#fff", borderRadius: "14px 14px 14px 4px", background: "rgba(255,255,255,0.18)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.28)" }}>{en ? "Can we schedule a demo call?" : "¿Podemos agendar una llamada para la demo?"}</div>
                     </div>
@@ -3182,7 +3253,10 @@ function OmnichannelPage({ go, lang }) {
           <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 40px", maxWidth: 560, marginLeft: "auto", marginRight: "auto", fontFamily: F }}>{en ? "Stop switching between apps. Every message from every platform arrives in one unified inbox — with the full client history attached." : "Deja de saltar entre apps. Cada mensaje de cada plataforma llega a una bandeja unificada — con el historial completo del cliente adjunto."}</p>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: mob ? 10 : 14 }}>
             {channels.map((ch, i) => (
-              <div key={i} style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, padding: mob ? "10px 18px" : "14px 24px", fontSize: mob ? 13 : 15, fontWeight: 600, color: V.white, fontFamily: F }}>{ch}</div>
+              <div key={i} style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, padding: mob ? "10px 18px" : "14px 24px", fontSize: mob ? 13 : 15, fontWeight: 600, color: V.white, fontFamily: F, display: "flex", alignItems: "center", gap: mob ? 8 : 10 }}>
+                <ChannelIcon name={ch} size={mob ? 22 : 26} />
+                {ch}
+              </div>
             ))}
           </div>
         </Box>
