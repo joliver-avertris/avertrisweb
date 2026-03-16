@@ -3096,14 +3096,14 @@ function OmnichannelPage({ go, lang }) {
               onClick={() => go("contact")}
               style={{
                 display: "inline-flex", alignItems: "center", justifyContent: "center",
-                gap: 8, fontWeight: 500, borderRadius: 8, height: 40, padding: "0 16px",
+                gap: 8, fontWeight: 600, borderRadius: 8, height: 44, padding: "0 24px",
                 fontSize: 16, whiteSpace: "nowrap", cursor: "pointer",
-                outline: "1px solid " + V.g800, background: "transparent", color: "#fff",
-                border: "none", transition: "all 0.2s",
+                background: V.primary, color: "#fff",
+                border: "none", outline: "none", transition: "all 0.2s",
                 fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
               }}
-              onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.16)"}
-              onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+              onMouseEnter={e => e.currentTarget.style.background = V.p800}
+              onMouseLeave={e => e.currentTarget.style.background = V.primary}
             >
               {en ? "Talk to Sales" : "Hablar con Ventas"}
             </button>
