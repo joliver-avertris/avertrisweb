@@ -2782,8 +2782,277 @@ function OmnichannelPage({ go, lang }) {
 
   return (
     <>
+      {/* ─── Respond.io-style Hero Banner ─── */}
+      <section style={{
+        background: "linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 60%, #242424 100%)",
+        padding: mob ? "120px 0 40px" : "140px 0 60px",
+        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+        color: "#fff",
+        textAlign: "center",
+        overflow: "hidden",
+      }}>
+        <div style={{ maxWidth: 1194, margin: "0 auto", padding: mob ? "0 20px" : "0 40px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+
+          {/* Announcement pill */}
+          <a href="#nexus-features" onClick={e => { e.preventDefault(); document.getElementById("nexus-hero-original")?.scrollIntoView({ behavior: "smooth" }); }} style={{ textDecoration: "none", cursor: "pointer" }}>
+            <div style={{
+              display: "flex", alignItems: "center", gap: 2, padding: 4, paddingRight: 12,
+              border: "1px solid rgba(255,255,255,0.15)", borderRadius: 999,
+              background: "transparent", transition: "background 0.2s",
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.16)"}
+            onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+            >
+              <span style={{
+                display: "inline-flex", alignItems: "center", justifyContent: "center",
+                padding: "3px 12px", fontSize: 12, fontWeight: 600, borderRadius: 999,
+                background: V.g800, color: "#fff",
+              }}>New</span>
+              <span style={{ fontSize: 14, color: "#fff", marginLeft: 8, lineHeight: 1.43 }}>
+                {en ? "Nexus AI Employee is here — automate conversations across every channel" : "El Empleado IA de Nexus ya está aquí — automatiza conversaciones en todos los canales"}
+              </span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 6, flexShrink: 0 }}><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          {/* Main heading */}
+          <h1 style={{
+            marginTop: 20, marginBottom: 0,
+            fontSize: mob ? 36 : 60, fontWeight: 500, lineHeight: mob ? 1.11 : 1,
+            letterSpacing: mob ? -1 : -2, color: "#fff",
+            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            textAlign: mob ? "left" : "center", maxWidth: 900,
+          }}>
+            {en
+              ? "One inbox. Every channel. Total control over conversations."
+              : "Una bandeja. Todos los canales. Control total de las conversaciones."}
+          </h1>
+
+          {/* Subtitle */}
+          <p style={{
+            marginTop: 20, marginBottom: 0,
+            fontSize: mob ? 16 : 18, lineHeight: mob ? 1.5 : 1.56,
+            color: "#CDCDCF", maxWidth: 788,
+            textAlign: mob ? "left" : "center",
+            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+          }}>
+            {en
+              ? "Most platforms can't keep up. Nexus unifies WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS, and live chat in one team inbox with AI Agents and native CRM — so your conversations never break, even when customers switch channels."
+              : "La mayoría de plataformas no pueden seguir el ritmo. Nexus unifica WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS y chat en vivo en una bandeja con Agentes IA y CRM nativo — para que tus conversaciones nunca se rompan, incluso cuando los clientes cambian de canal."}
+          </p>
+
+          {/* CTA buttons */}
+          <div style={{
+            display: "flex", marginTop: 32, gap: 12,
+            flexDirection: "row", flexWrap: "wrap",
+            justifyContent: mob ? "flex-start" : "center",
+            width: mob ? "100%" : "auto",
+          }}>
+            <button
+              onClick={() => go("contact")}
+              style={{
+                display: "inline-flex", alignItems: "center", justifyContent: "center",
+                gap: 8, fontWeight: 500, borderRadius: 8, height: 40, padding: "0 16px",
+                fontSize: 16, whiteSpace: "nowrap", cursor: "pointer",
+                outline: "1px solid " + V.g800, background: "transparent", color: "#fff",
+                border: "none", transition: "all 0.2s",
+                fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(100,100,106,0.16)"}
+              onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+            >
+              {en ? "Talk to Sales" : "Hablar con Ventas"}
+            </button>
+            <button
+              onClick={() => go("contact")}
+              style={{
+                display: "inline-flex", alignItems: "center", justifyContent: "center",
+                gap: 8, fontWeight: 500, borderRadius: 8, height: 40, padding: "0 16px",
+                fontSize: 16, whiteSpace: "nowrap", cursor: "pointer",
+                background: V.primary, color: "#fff", border: "none",
+                transition: "all 0.2s",
+                fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = V.p800}
+              onMouseLeave={e => e.currentTarget.style.background = V.primary}
+            >
+              {en ? "Start Free Trial" : "Prueba Gratuita"}
+            </button>
+          </div>
+
+          {/* G2 / Social proof line */}
+          <div style={{
+            display: "flex", alignItems: "center", gap: 4, marginTop: 24,
+            fontSize: 14, lineHeight: 1.43, justifyContent: mob ? "flex-start" : "center",
+            width: mob ? "100%" : "auto", flexWrap: "wrap",
+          }}>
+            {/* Stars */}
+            <div style={{ display: "flex", alignItems: "center", gap: 1 }}>
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill={V.primary} stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+            </div>
+            <span style={{ color: "#fff", marginLeft: 4 }}>
+              {en ? "Top-rated omnichannel platform" : "Plataforma omnicanal mejor valorada"}
+            </span>
+          </div>
+
+          {/* Product preview — screenshot area */}
+          <div style={{
+            marginTop: mob ? 48 : 80, width: "100%", maxWidth: 1100,
+            background: "rgba(101,101,106,0.16)", borderRadius: 12,
+            overflow: "hidden", transition: "all 1s",
+            border: "1px solid rgba(255,255,255,0.08)",
+          }}>
+            <div style={{ position: "relative", borderRadius: 12, overflow: "hidden" }}>
+              {/* Product mock-up — simplified Nexus inbox preview */}
+              <div style={{
+                background: "linear-gradient(135deg, #1a1a1a 0%, #242424 100%)",
+                padding: mob ? 16 : 32, minHeight: mob ? 200 : 350,
+                display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+              }}>
+                <div style={{ width: "100%", maxWidth: 900, borderRadius: 10, overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)", boxShadow: "0 0 18px rgba(0,0,0,0.15)" }}>
+                  {/* Top bar */}
+                  <div style={{ background: "#2a2a2a", padding: mob ? "8px 12px" : "10px 16px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                      <div style={{ width: 8, height: 8, borderRadius: "50%", background: V.primary }} />
+                      <span style={{ fontSize: mob ? 11 : 14, fontWeight: 600, color: "#fff", letterSpacing: "0.05em" }}>Nexus Inbox</span>
+                    </div>
+                    <div style={{ display: "flex", gap: mob ? 12 : 20 }}>
+                      <span style={{ fontSize: mob ? 11 : 13, color: "rgba(255,255,255,0.5)", fontWeight: 500 }}>Chats</span>
+                      <span style={{ fontSize: mob ? 11 : 13, color: "rgba(255,255,255,0.5)", fontWeight: 500 }}>Calls</span>
+                    </div>
+                  </div>
+                  {/* Main area — 2 columns */}
+                  <div style={{ display: "flex", minHeight: mob ? 140 : 260, background: "#1e1e1e" }}>
+                    {/* Left sidebar — conversation list */}
+                    <div style={{ width: mob ? "40%" : "35%", borderRight: "1px solid rgba(255,255,255,0.06)", padding: mob ? 8 : 12 }}>
+                      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: mob ? 8 : 12 }}>
+                        <span style={{ fontSize: mob ? 10 : 12, color: "rgba(255,255,255,0.4)" }}>{en ? "All" : "Todos"} <span style={{ background: "rgba(255,107,0,0.2)", color: V.primary, borderRadius: 10, padding: "1px 6px", fontSize: mob ? 9 : 11, fontWeight: 600 }}>12</span></span>
+                        <span style={{ fontSize: mob ? 9 : 11, color: "rgba(255,255,255,0.3)" }}>{en ? "Newest" : "Recientes"}</span>
+                      </div>
+                      {/* Conversation items */}
+                      {[
+                        { name: "Maria Lopez", ch: "WhatsApp", color: "#25d366", msg: en ? "Can we schedule a demo?" : "¿Podemos agendar una demo?" },
+                        { name: "John Smith", ch: "Messenger", color: "#0078ff", msg: en ? "I need pricing info" : "Necesito información de precios" },
+                        { name: "Ana Garcia", ch: "Instagram", color: "#E1306C", msg: en ? "Interested in Growth plan" : "Interesada en el plan Growth" },
+                      ].map((c, i) => (
+                        <div key={i} style={{
+                          padding: mob ? "6px 4px" : "8px 6px", borderRadius: 6, marginBottom: 4,
+                          background: i === 0 ? "rgba(255,107,0,0.08)" : "transparent",
+                          borderLeft: i === 0 ? `2px solid ${V.primary}` : "2px solid transparent",
+                          cursor: "pointer",
+                        }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                            <div style={{ width: mob ? 20 : 26, height: mob ? 20 : 26, borderRadius: "50%", background: c.color, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                              <span style={{ fontSize: mob ? 8 : 10, fontWeight: 700, color: "#fff" }}>{c.name[0]}</span>
+                            </div>
+                            <div style={{ minWidth: 0 }}>
+                              <div style={{ fontSize: mob ? 9 : 12, fontWeight: 600, color: "#fff", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.name}</div>
+                              <div style={{ fontSize: mob ? 8 : 10, color: "rgba(255,255,255,0.35)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.msg}</div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    {/* Right — active chat */}
+                    <div style={{ flex: 1, padding: mob ? 8 : 16, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                      {/* Chat header */}
+                      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: mob ? 8 : 16, paddingBottom: mob ? 6 : 10, borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                          <div style={{ width: mob ? 24 : 30, height: mob ? 24 : 30, borderRadius: "50%", background: "#25d366", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                            <span style={{ fontSize: mob ? 10 : 12, fontWeight: 700, color: "#fff" }}>M</span>
+                          </div>
+                          <div>
+                            <span style={{ fontSize: mob ? 11 : 14, fontWeight: 600, color: "#fff" }}>Maria Lopez</span>
+                            <span style={{ fontSize: mob ? 9 : 11, color: V.primary, marginLeft: 8, fontWeight: 500 }}>{en ? "Hot Lead" : "Lead Caliente"}</span>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Messages */}
+                      <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: mob ? 6 : 10, justifyContent: "flex-end" }}>
+                        <div style={{ alignSelf: "flex-start", maxWidth: "70%", padding: mob ? "6px 10px" : "8px 14px", borderRadius: "12px 12px 12px 4px", background: "rgba(255,255,255,0.08)", fontSize: mob ? 10 : 13, color: "#fff", lineHeight: 1.5 }}>
+                          {en ? "Hi! Do you have plans for sales teams?" : "¡Hola! ¿Tienen planes para equipos de ventas?"}
+                        </div>
+                        <div style={{ alignSelf: "flex-end", maxWidth: "70%", padding: mob ? "6px 10px" : "8px 14px", borderRadius: "12px 12px 4px 12px", background: `rgba(255,107,0,0.2)`, border: `1px solid rgba(255,107,0,0.3)`, fontSize: mob ? 10 : 13, color: "#fff", lineHeight: 1.5 }}>
+                          {en ? "Of course! Our Growth plan supports up to 30 users. Want a demo?" : "¡Claro! Nuestro plan Growth incluye hasta 30 usuarios. ¿Quieres una demo?"}
+                        </div>
+                        <div style={{ alignSelf: "flex-start", maxWidth: "70%", padding: mob ? "6px 10px" : "8px 14px", borderRadius: "12px 12px 12px 4px", background: "rgba(255,255,255,0.08)", fontSize: mob ? 10 : 13, color: "#fff", lineHeight: 1.5 }}>
+                          {en ? "Yes! Can we schedule a call?" : "¡Sí! ¿Podemos agendar una llamada?"}
+                        </div>
+                      </div>
+                      {/* Input bar */}
+                      <div style={{
+                        marginTop: mob ? 8 : 14, display: "flex", alignItems: "center", gap: 8,
+                        padding: mob ? "6px 8px" : "8px 12px", borderRadius: 8,
+                        background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)",
+                      }}>
+                        <span style={{ fontSize: mob ? 10 : 13, color: "rgba(255,255,255,0.25)", flex: 1 }}>{en ? "Type a message..." : "Escribe un mensaje..."}</span>
+                        <div style={{ width: mob ? 24 : 28, height: mob ? 24 : 28, borderRadius: 6, background: V.primary, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                          <svg width={mob ? 12 : 14} height={mob ? 12 : 14} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Trusted brands */}
+          <div style={{ marginTop: mob ? 40 : 80, display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+            <div style={{
+              fontSize: mob ? 20 : 30, fontWeight: 600, lineHeight: 1.27,
+              color: "#fff", textAlign: "center",
+              fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            }}>
+              {en ? "Trusted by growing businesses worldwide" : "La confianza de empresas en crecimiento en todo el mundo"}
+            </div>
+
+            {/* Brand logos — using text as placeholders matching the layout */}
+            <div style={{
+              display: "flex", marginTop: 24, alignItems: "center", gap: mob ? 16 : 32,
+              justifyContent: "center", flexWrap: "wrap",
+            }}>
+              {(en
+                ? ["Retail", "Hospitality", "Real Estate", "Healthcare", "Finance", "Education", "Automotive", "SaaS"]
+                : ["Retail", "Hotelería", "Inmobiliaria", "Salud", "Finanzas", "Educación", "Automotriz", "SaaS"]
+              ).map((brand, i) => (
+                <div key={i} style={{
+                  padding: mob ? "6px 12px" : "8px 18px",
+                  border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8,
+                  fontSize: mob ? 11 : 14, fontWeight: 500,
+                  color: "rgba(255,255,255,0.4)",
+                  background: "rgba(255,255,255,0.03)",
+                }}>
+                  {brand}
+                </div>
+              ))}
+            </div>
+
+            {/* Explore link */}
+            <a
+              href="#nexus-hero-original"
+              onClick={e => { e.preventDefault(); document.getElementById("nexus-hero-original")?.scrollIntoView({ behavior: "smooth" }); }}
+              style={{
+                display: "flex", alignItems: "center", gap: 4,
+                marginTop: 24, fontSize: 16, fontWeight: 500,
+                color: "#fff", textDecoration: "none", cursor: "pointer",
+                fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+                transition: "color 0.5s",
+              }}
+              onMouseEnter={e => e.currentTarget.style.color = "#B8B8BB"}
+              onMouseLeave={e => e.currentTarget.style.color = "#fff"}
+            >
+              {en ? "Explore all features" : "Explorar todas las funciones"}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Hero — conversion-focused */}
-      <section style={{ background: V.g900, padding: mob ? "120px 0 60px" : "160px 0 80px" }}>
+      <section id="nexus-hero-original" style={{ background: V.g900, padding: mob ? "120px 0 60px" : "160px 0 80px" }}>
         <Box mob={mob}>
           <div style={{ display: mob ? "flex" : "grid", flexDirection: "column", gridTemplateColumns: mob ? undefined : "1fr 1fr", gap: mob ? 40 : 60, alignItems: "center" }}>
             {/* Left — copy */}
