@@ -2924,6 +2924,30 @@ function OmnichannelPage({ go, lang }) {
               : "La mayoría de plataformas no pueden seguir el ritmo. Nexus unifica WhatsApp, Instagram, Facebook, TikTok, LinkedIn, email, SMS y chat en vivo en una bandeja con Agentes IA y CRM nativo — para que tus conversaciones nunca se rompan, incluso cuando los clientes cambian de canal."}
           </p>
 
+          {/* All your channels in one place */}
+          <div style={{ marginTop: mob ? 24 : 32, display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
+            <div style={{
+              fontSize: mob ? 14 : 16, fontWeight: 600, lineHeight: 1.27,
+              color: "rgba(255,255,255,0.5)", textAlign: "center",
+              fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            }}>
+              {en ? "All your channels. One inbox." : "Todos tus canales. Una bandeja."}
+            </div>
+
+            {/* Channel logos row */}
+            <div style={{
+              display: "flex", marginTop: 16, alignItems: "center", gap: mob ? 12 : 24,
+              justifyContent: "center", flexWrap: "wrap",
+            }}>
+              {["WhatsApp", "Instagram", "Messenger", "TikTok", "LinkedIn", "Gmail", "Outlook", "SMS"].map((ch, i) => (
+                <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
+                  <ChannelIcon name={ch} size={mob ? 28 : 36} />
+                  <span style={{ fontSize: mob ? 9 : 11, fontWeight: 500, color: "rgba(255,255,255,0.4)" }}>{ch}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* CTA buttons */}
           <div style={{
             display: "flex", marginTop: 32, gap: 12,
@@ -3080,47 +3104,6 @@ function OmnichannelPage({ go, lang }) {
             </div>
           </div>
 
-          {/* All your channels in one place */}
-          <div style={{ marginTop: mob ? 40 : 80, display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
-            <div style={{
-              fontSize: mob ? 20 : 30, fontWeight: 600, lineHeight: 1.27,
-              color: "#fff", textAlign: "center",
-              fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-            }}>
-              {en ? "All your channels. One inbox." : "Todos tus canales. Una bandeja."}
-            </div>
-
-            {/* Channel logos row */}
-            <div style={{
-              display: "flex", marginTop: 24, alignItems: "center", gap: mob ? 16 : 32,
-              justifyContent: "center", flexWrap: "wrap",
-            }}>
-              {["WhatsApp", "Instagram", "Messenger", "TikTok", "LinkedIn", "Gmail", "Outlook", "SMS"].map((ch, i) => (
-                <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-                  <ChannelIcon name={ch} size={mob ? 36 : 44} />
-                  <span style={{ fontSize: mob ? 10 : 12, fontWeight: 500, color: "rgba(255,255,255,0.5)" }}>{ch}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Explore link */}
-            <a
-              href="#nexus-hero-original"
-              onClick={e => { e.preventDefault(); document.getElementById("nexus-hero-original")?.scrollIntoView({ behavior: "smooth" }); }}
-              style={{
-                display: "flex", alignItems: "center", gap: 4,
-                marginTop: 24, fontSize: 16, fontWeight: 500,
-                color: "#fff", textDecoration: "none", cursor: "pointer",
-                fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-                transition: "color 0.5s",
-              }}
-              onMouseEnter={e => e.currentTarget.style.color = "#B8B8BB"}
-              onMouseLeave={e => e.currentTarget.style.color = "#fff"}
-            >
-              {en ? "Explore all features" : "Explorar todas las funciones"}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
         </div>
       </section>
 
