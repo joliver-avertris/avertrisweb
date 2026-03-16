@@ -3117,7 +3117,7 @@ function OmnichannelPage({ go, lang }) {
           {/* G2 / Social proof line */}
           <div style={{
             display: "flex", alignItems: "center", gap: 4, marginTop: 24,
-            fontSize: 14, lineHeight: 1.43, justifyContent: mob ? "flex-start" : "center",
+            fontSize: 14, lineHeight: 1.43, justifyContent: "center",
             width: mob ? "100%" : "auto", flexWrap: "wrap",
           }}>
             {/* Stars */}
