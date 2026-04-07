@@ -1321,6 +1321,15 @@ Avertris construye arquitecturas API-first para empresas medianas. Ya sea empeza
         price: { en: "From $99/mo", es: "Desde $99/mes" },
       },
       {
+        slug: "vigil",
+        icon: "☎",
+        name: { en: "Vigil", es: "Vigil" },
+        tagline: { en: "24/7 AI voice receptionist for dental practices", es: "Recepcionista de voz IA 24/7 para consultorios dentales" },
+        desc: { en: "Every unanswered call is a patient walking to your competitor. Vigil answers every call, qualifies every lead, and books every appointment — while you focus on patients.", es: "Cada llamada sin contestar es un paciente yendo a tu competencia. Vigil contesta cada llamada, califica cada lead y agenda cada cita — mientras tú te enfocas en pacientes." },
+        stat: { en: "24/7 call coverage", es: "Cobertura de llamadas 24/7" },
+        price: { en: "Book a demo", es: "Agenda un demo" },
+      },
+      {
         slug: "cash-leak-assessment",
         icon: "◎",
         name: { en: "Cash Leak Assessment", es: "Assessment de Fugas de Dinero" },
@@ -1581,7 +1590,7 @@ function Nav({ page, go, lang, setLang }) {
       mega: {
         cols: [
           { heading: t(T.nav.megaTech, lang), items: [{ t: lang === "en" ? "AI Consulting & Agents" : "Consultoría e Agentes de IA", go: "svc-ai-consulting" }, { t: lang === "en" ? "AI Chatbot Development" : "Desarrollo de Chatbots IA", go: "svc-chatbot-dev" }, { t: lang === "en" ? "AI Voice Integration" : "Integración de Voz con IA", go: "svc-voice" }, { t: lang === "en" ? "Custom Web & Mobile Apps" : "Apps Web y Móviles a Medida", go: "svc-web-mobile" }] },
-          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM", go: "product-ai-crm" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA", go: "product-ai-chatbot" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }, { t: "Nexus", go: "nexus" }] },
+          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM", go: "product-ai-crm" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA", go: "product-ai-chatbot" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }, { t: "Nexus", go: "nexus" }, { t: "Vigil", go: "vigil" }] },
           { heading: t(T.nav.megaGrowth, lang), items: [{ t: lang === "en" ? "Paid Ads & Performance" : "Paid Ads y Performance", go: "svc-paid-ads" }, { t: lang === "en" ? "SEO & Content Strategy" : "SEO y Estrategia de Contenido", go: "svc-seo" }, { t: lang === "en" ? "Analytics & Attribution" : "Analítica y Atribución", go: "svc-analytics" }, { t: lang === "en" ? "Email Marketing & CRO" : "Email Marketing y CRO", go: "svc-email-cro" }] },
         ],
       },
@@ -3584,6 +3593,318 @@ function CashLeakPage({ go, lang }) {
 
 
 /* ═══════════════════════════════════════════════════════════
+   VIGIL – AI Voice Receptionist for Dental Practices
+   ═══════════════════════════════════════════════════════════ */
+
+function VigilPage({ go, lang }) {
+  const { mob, tab } = useMedia();
+  const en = lang === "en";
+
+  const painPoints = en ? [
+    { icon: "📞", title: "Missed calls = missed patients", desc: "67% of new patients call first. If nobody answers, they call the next dentist on Google. Every missed call is revenue you'll never recover." },
+    { icon: "🕐", title: "Your front desk can't answer during procedures", desc: "When your team is chairside, calls go to voicemail. Most patients won't leave a message — they'll just book elsewhere." },
+    { icon: "🌙", title: "After-hours calls go nowhere", desc: "Emergencies don't wait for business hours. Patients calling at 8 PM with a broken tooth need an answer now — not a recording." },
+    { icon: "📋", title: "Intake and scheduling eat up staff time", desc: "Your front desk spends hours collecting insurance info, scheduling, and confirming appointments. That's time not spent on patient experience." },
+  ] : [
+    { icon: "📞", title: "Llamadas perdidas = pacientes perdidos", desc: "67% de los pacientes nuevos llaman primero. Si nadie contesta, llaman al siguiente dentista en Google. Cada llamada perdida es ingreso que nunca recuperarás." },
+    { icon: "🕐", title: "Tu recepción no puede contestar durante procedimientos", desc: "Cuando tu equipo está en el sillón, las llamadas van al buzón. La mayoría de pacientes no dejan mensaje — simplemente agendan con otro." },
+    { icon: "🌙", title: "Las llamadas fuera de horario no llegan a nadie", desc: "Las emergencias no esperan horario de oficina. Un paciente con un diente roto a las 8 PM necesita respuesta ahora — no una grabación." },
+    { icon: "📋", title: "Intake y agendamiento consumen tiempo del staff", desc: "Tu recepción pasa horas recopilando seguros, agendando y confirmando citas. Ese es tiempo que no se dedica a la experiencia del paciente." },
+  ];
+
+  const features = en ? [
+    { title: "Answers every call, 24/7", desc: "Vigil picks up on the first ring — day, night, weekends, holidays. No patient ever hears a busy signal or voicemail again.", icon: "◉" },
+    { title: "Books appointments automatically", desc: "Vigil checks your real-time availability, finds the best slot, and confirms the booking — all in the same call, without human intervention.", icon: "◇" },
+    { title: "Qualifies and routes leads", desc: "New patient vs. existing? Emergency vs. routine? Insurance questions? Vigil handles triage and routes urgent cases to your cell immediately.", icon: "↗" },
+    { title: "Collects intake information", desc: "Insurance details, medical history, contact info — Vigil gathers everything before the patient walks in, so your team is ready.", icon: "◎" },
+    { title: "Speaks naturally in English & Spanish", desc: "Vigil sounds like a real receptionist, not a robot. Natural conversation flow, with bilingual support so no patient feels left out.", icon: "◈" },
+    { title: "Sends confirmations & reminders", desc: "After booking, Vigil texts appointment confirmations and sends reminders to reduce no-shows by up to 35%.", icon: "</>" },
+  ] : [
+    { title: "Contesta cada llamada, 24/7", desc: "Vigil responde al primer timbre — día, noche, fines de semana, feriados. Ningún paciente escucha buzón o tono de ocupado.", icon: "◉" },
+    { title: "Agenda citas automáticamente", desc: "Vigil verifica tu disponibilidad en tiempo real, encuentra el mejor horario y confirma la cita — todo en la misma llamada, sin intervención humana.", icon: "◇" },
+    { title: "Califica y rutea leads", desc: "¿Paciente nuevo o existente? ¿Emergencia o rutina? ¿Preguntas de seguro? Vigil hace el triage y rutea casos urgentes a tu celular de inmediato.", icon: "↗" },
+    { title: "Recopila información de intake", desc: "Detalles de seguro, historial médico, datos de contacto — Vigil recopila todo antes de que el paciente llegue, para que tu equipo esté listo.", icon: "◎" },
+    { title: "Habla naturalmente en inglés y español", desc: "Vigil suena como una recepcionista real, no un robot. Conversación natural y fluida, con soporte bilingüe para que ningún paciente se sienta excluido.", icon: "◈" },
+    { title: "Envía confirmaciones y recordatorios", desc: "Después de agendar, Vigil envía confirmaciones por texto y recordatorios para reducir ausencias hasta un 35%.", icon: "</>" },
+  ];
+
+  const results = [
+    { n: "100", s: "%", l: en ? "Calls answered — zero missed" : "Llamadas contestadas — cero perdidas" },
+    { n: "24", s: "/7", l: en ? "Always on — nights, weekends, holidays" : "Siempre activo — noches, fines de semana, feriados" },
+    { n: "35", s: "%", l: en ? "Reduction in no-shows" : "Reducción en ausencias" },
+    { n: "0", s: "", l: en ? "Voicemails left unanswered" : "Buzones sin contestar" },
+  ];
+
+  return (
+    <>
+      {/* ─── Hero Banner ─── */}
+      <section style={{
+        background: "linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 60%, #242424 100%)",
+        padding: mob ? "120px 0 40px" : "140px 0 60px",
+        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+        color: "#fff",
+        textAlign: "center",
+        overflow: "hidden",
+        position: "relative",
+      }}>
+        {/* Soft Orange Glow */}
+        <div style={{ position: "absolute", inset: 0, zIndex: 0, backgroundImage: "radial-gradient(circle at center, #FF6B00 0%, transparent 70%)", opacity: 0.15 }} />
+        <div style={{ maxWidth: 1194, margin: "0 auto", padding: mob ? "0 20px" : "0 40px", display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 1 }}>
+
+          {/* Announcement pill */}
+          <div style={{
+            display: "flex", alignItems: "center", gap: 2, padding: 4, paddingRight: 12,
+            border: "1px solid rgba(255,255,255,0.15)", borderRadius: 999,
+            background: "transparent",
+          }}>
+            <span style={{
+              display: "inline-flex", alignItems: "center", justifyContent: "center",
+              padding: "3px 12px", fontSize: 12, fontWeight: 600, borderRadius: 999,
+              background: V.g800, color: "#fff",
+            }}>{en ? "New" : "Nuevo"}</span>
+            <span style={{ fontSize: 14, color: "#fff", marginLeft: 8, lineHeight: 1.43 }}>
+              {en ? "AI voice receptionist — never miss a patient call again" : "Recepcionista de voz IA — nunca pierdas una llamada de paciente"}
+            </span>
+          </div>
+
+          {/* Main heading */}
+          <h1 style={{
+            marginTop: 20, marginBottom: 0,
+            fontSize: mob ? 36 : 60, fontWeight: 500, lineHeight: mob ? 1.11 : 1,
+            letterSpacing: mob ? -1 : -2, color: "#fff",
+            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            textAlign: "center", maxWidth: 900,
+          }}>
+            {en
+              ? "Every missed call is a patient you'll never see."
+              : "Cada llamada perdida es un paciente que nunca verás."}
+          </h1>
+
+          {/* Subtitle */}
+          <p style={{
+            marginTop: 20, marginBottom: 0,
+            fontSize: mob ? 16 : 18, lineHeight: mob ? 1.5 : 1.56,
+            color: "#CDCDCF", maxWidth: 788, textAlign: "center",
+            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+          }}>
+            {en
+              ? "Vigil is an AI voice receptionist built for dental practices. It answers every call on the first ring, qualifies leads, books appointments, and collects intake — 24/7, in English and Spanish."
+              : "Vigil es una recepcionista de voz IA diseñada para consultorios dentales. Contesta cada llamada al primer timbre, califica leads, agenda citas y recopila intake — 24/7, en inglés y español."}
+          </p>
+
+          {/* CTA buttons */}
+          <div style={{
+            display: "flex", marginTop: 32, gap: 12,
+            flexDirection: "row", flexWrap: "wrap",
+            justifyContent: "center",
+            width: mob ? "100%" : "auto",
+          }}>
+            <button
+              onClick={() => window.open(en ? "https://api.leadconnectorhq.com/widget/booking/Mn2aZsx0s7okSMweJEwR" : "https://api.leadconnectorhq.com/widget/booking/a9c9ddHOChloAo21t9dk", "_blank")}
+              style={{
+                display: "inline-flex", alignItems: "center", justifyContent: "center",
+                gap: 8, fontWeight: 600, borderRadius: 8, height: 44, padding: "0 24px",
+                fontSize: 16, whiteSpace: "nowrap", cursor: "pointer",
+                background: V.primary, color: "#fff",
+                border: "none", outline: "none", transition: "all 0.2s",
+                fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = V.p800}
+              onMouseLeave={e => e.currentTarget.style.background = V.primary}
+            >
+              {en ? "Book a Demo" : "Agenda un Demo"}
+            </button>
+            <button onClick={() => { const el = document.getElementById("vigil-features"); if (el) el.scrollIntoView({ behavior: "smooth" }); }} style={{
+              display: "inline-flex", alignItems: "center", justifyContent: "center",
+              gap: 8, fontWeight: 600, borderRadius: 8, height: 44, padding: "0 24px",
+              fontSize: 16, whiteSpace: "nowrap", cursor: "pointer",
+              background: "transparent", color: "#fff",
+              border: "1px solid rgba(255,255,255,0.25)", outline: "none",
+              transition: "all 0.2s",
+              fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,0.1)"}
+              onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+            >
+              {en ? "See How It Works" : "Ver Cómo Funciona"}
+            </button>
+          </div>
+
+          {/* Social proof */}
+          <div style={{
+            display: "flex", alignItems: "center", gap: 4, marginTop: 24,
+            fontSize: 14, lineHeight: 1.43, justifyContent: "center",
+            width: mob ? "100%" : "auto", flexWrap: "wrap",
+          }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 1 }}>
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill={V.primary} stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+            </div>
+            <span style={{ color: "#fff", marginLeft: 4 }}>
+              {en ? "Built for dental practices" : "Diseñado para consultorios dentales"}
+            </span>
+          </div>
+
+          {/* Product preview — phone call mockup */}
+          <div style={{
+            marginTop: mob ? 48 : 80, width: "100%", maxWidth: 500,
+            background: "rgba(101,101,106,0.16)", borderRadius: 12,
+            overflow: "hidden",
+            border: "1px solid rgba(255,255,255,0.08)",
+          }}>
+            <div style={{
+              background: "linear-gradient(135deg, #1a1a1a 0%, #242424 100%)",
+              padding: mob ? 20 : 36, display: "flex", flexDirection: "column", alignItems: "center",
+            }}>
+              {/* Phone icon */}
+              <div style={{
+                width: mob ? 64 : 80, height: mob ? 64 : 80, borderRadius: "50%",
+                background: "linear-gradient(135deg, rgba(255,107,0,0.3), rgba(255,107,0,0.1))",
+                border: "2px solid rgba(255,107,0,0.4)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                marginBottom: mob ? 16 : 24,
+              }}>
+                <svg width={mob ? 28 : 36} height={mob ? 28 : 36} viewBox="0 0 24 24" fill="none" stroke={V.primary} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.72 19.79 19.79 0 0 1 0 1.07 2 2 0 0 1 1.99 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.15 6.15l1.28-1.28a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <span style={{ fontSize: mob ? 11 : 13, fontWeight: 600, color: V.primary, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Vigil AI</span>
+              <span style={{ fontSize: mob ? 14 : 16, color: "#fff", fontWeight: 500, marginBottom: mob ? 16 : 24 }}>{en ? "Incoming Call..." : "Llamada Entrante..."}</span>
+
+              {/* Conversation transcript preview */}
+              <div style={{ width: "100%", maxWidth: 380, textAlign: "left" }}>
+                {[
+                  { who: en ? "Patient" : "Paciente", msg: en ? "Hi, I have a toothache and need to see the dentist." : "Hola, tengo dolor de muela y necesito ver al dentista.", align: "left" },
+                  { who: "Vigil", msg: en ? "I'm sorry to hear that. Let me check Dr. Smith's availability today. Are you a current patient?" : "Lamento escuchar eso. Déjeme revisar la disponibilidad del Dr. Smith. ¿Es usted paciente actual?", align: "right" },
+                  { who: en ? "Patient" : "Paciente", msg: en ? "No, I'm new. Found you on Google." : "No, soy nuevo. Los encontré en Google.", align: "left" },
+                  { who: "Vigil", msg: en ? "Welcome! I have a 2:30 PM slot today. I'll text you a confirmation and intake forms right now." : "¡Bienvenido! Tengo un espacio a las 2:30 PM hoy. Le envío confirmación y formularios de intake por texto ahora.", align: "right" },
+                ].map((m, i) => (
+                  <div key={i} style={{
+                    display: "flex", flexDirection: "column",
+                    alignItems: m.align === "right" ? "flex-end" : "flex-start",
+                    marginBottom: mob ? 8 : 12,
+                  }}>
+                    <span style={{ fontSize: mob ? 9 : 10, color: "rgba(255,255,255,0.4)", marginBottom: 4, fontWeight: 600 }}>{m.who}</span>
+                    <div style={{
+                      padding: mob ? "8px 12px" : "10px 16px",
+                      borderRadius: m.align === "right" ? "12px 12px 4px 12px" : "12px 12px 12px 4px",
+                      background: m.align === "right" ? "rgba(255,107,0,0.2)" : "rgba(255,255,255,0.08)",
+                      border: m.align === "right" ? "1px solid rgba(255,107,0,0.3)" : "1px solid rgba(255,255,255,0.1)",
+                      fontSize: mob ? 11 : 13, color: "#fff", lineHeight: 1.5, maxWidth: "85%",
+                    }}>{m.msg}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─── Pain Points ─── */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0" }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{en ? "THE PROBLEM" : "EL PROBLEMA"}</Lbl>
+          <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 48px", fontFamily: F }}>
+            {en ? "Your phone is ringing. Nobody's answering." : "Tu teléfono está sonando. Nadie contesta."}
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : tab ? "repeat(2, 1fr)" : "repeat(2, 1fr)", gap: mob ? 20 : 32 }}>
+            {painPoints.map((pain, i) => (
+              <div key={i} style={{ background: V.g100, borderRadius: 12, padding: mob ? 24 : 36 }}>
+                <span style={{ fontSize: 32, display: "block", marginBottom: 16 }}>{pain.icon}</span>
+                <h3 style={{ fontSize: mob ? 18 : 20, fontWeight: 700, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{pain.title}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, lineHeight: 1.7, margin: 0, fontFamily: F }}>{pain.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* ─── Features ─── */}
+      <section id="vigil-features" style={{ padding: mob ? "64px 0" : "100px 0", background: V.g100 }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{en ? "WHAT VIGIL DOES" : "QUÉ HACE VIGIL"}</Lbl>
+          <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 48px", fontFamily: F }}>
+            {en ? "Your AI receptionist that never takes a break." : "Tu recepcionista IA que nunca toma descanso."}
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : tab ? "repeat(2, 1fr)" : "repeat(3, 1fr)", gap: mob ? 20 : 32 }}>
+            {features.map((feat, i) => (
+              <div key={i} style={{ background: V.white, borderRadius: 12, padding: mob ? 24 : 36, border: `1px solid ${V.g200}` }}>
+                <div style={{ fontSize: 28, fontWeight: 700, color: V.primary, marginBottom: 16, fontFamily: F }}>{feat.icon}</div>
+                <h3 style={{ fontSize: mob ? 18 : 20, fontWeight: 700, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{feat.title}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, lineHeight: 1.7, margin: 0, fontFamily: F }}>{feat.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* ─── Results / Stats ─── */}
+      <section style={{ padding: mob ? "48px 0" : "80px 0" }}>
+        <Box mob={mob}>
+          <h2 style={{ fontSize: mob ? 24 : 36, fontWeight: 700, color: V.g900, margin: "0 0 40px", textAlign: "center", fontFamily: F }}>
+            {en ? "The numbers speak for themselves." : "Los números hablan por sí solos."}
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "repeat(2, 1fr)" : "repeat(4, 1fr)", gap: mob ? 20 : 32, textAlign: "center" }}>
+            {results.map((r, i) => (
+              <div key={i} style={{ padding: mob ? 20 : 32 }}>
+                <div style={{ fontSize: mob ? 36 : 56, fontWeight: 800, color: V.primary, fontFamily: F, lineHeight: 1 }}>{r.n}<span style={{ fontSize: mob ? 24 : 36 }}>{r.s}</span></div>
+                <p style={{ fontSize: mob ? 12 : 14, fontWeight: 400, color: V.g600, margin: "8px 0 0", fontFamily: F }}>{r.l}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* ─── How It Works ─── */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g100 }}>
+        <Box mob={mob}>
+          <Lbl mob={mob}>{en ? "HOW IT WORKS" : "CÓMO FUNCIONA"}</Lbl>
+          <h2 style={{ fontSize: mob ? 28 : 48, fontWeight: 700, lineHeight: 1.15, letterSpacing: -1, color: V.g900, margin: "0 0 48px", fontFamily: F }}>
+            {en ? "Live in 48 hours. Zero disruption." : "En vivo en 48 horas. Cero interrupción."}
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "repeat(3, 1fr)", gap: mob ? 20 : 32 }}>
+            {(en ? [
+              { step: "1", title: "We learn your practice", desc: "We map your services, hours, providers, insurance accepted, and booking rules. Vigil is trained specifically on your practice — not a generic template." },
+              { step: "2", title: "Connect your phone line", desc: "Forward your existing number to Vigil, or get a dedicated line. No hardware, no software installs, no IT headaches." },
+              { step: "3", title: "Vigil starts answering", desc: "Every call is answered, every lead is qualified, every appointment is booked. You get a dashboard with transcripts, analytics, and full control." },
+            ] : [
+              { step: "1", title: "Aprendemos tu consultorio", desc: "Mapeamos tus servicios, horarios, proveedores, seguros aceptados y reglas de agendamiento. Vigil se entrena específicamente en tu práctica — no es una plantilla genérica." },
+              { step: "2", title: "Conectamos tu línea telefónica", desc: "Redirige tu número existente a Vigil, o consigue una línea dedicada. Sin hardware, sin instalaciones de software, sin dolores de cabeza de TI." },
+              { step: "3", title: "Vigil empieza a contestar", desc: "Cada llamada se contesta, cada lead se califica, cada cita se agenda. Recibes un dashboard con transcripciones, analíticas y control total." },
+            ]).map((s, i) => (
+              <div key={i} style={{ background: V.white, borderRadius: 12, padding: mob ? 24 : 36, border: `1px solid ${V.g200}`, position: "relative" }}>
+                <div style={{ fontSize: 48, fontWeight: 800, color: V.p200, fontFamily: F, lineHeight: 1, marginBottom: 16 }}>{s.step}</div>
+                <h3 style={{ fontSize: mob ? 18 : 20, fontWeight: 700, color: V.g900, margin: "0 0 12px", fontFamily: F }}>{s.title}</h3>
+                <p style={{ fontSize: mob ? 13 : 14, fontWeight: 300, color: V.g600, lineHeight: 1.7, margin: 0, fontFamily: F }}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Box>
+      </section>
+
+      {/* ─── Final CTA ─── */}
+      <section style={{ padding: mob ? "64px 0" : "100px 0", background: V.g900 }}>
+        <Box mob={mob} style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h2 style={{ fontSize: mob ? 32 : 56, fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, color: V.white, margin: "0 0 20px", fontFamily: F }}>
+            {en ? "Stop losing patients to voicemail." : "Deja de perder pacientes por el buzón de voz."}
+          </h2>
+          <p style={{ fontSize: mob ? 14 : 16, fontWeight: 300, color: "rgba(255,255,255,0.6)", margin: "0 0 32px", maxWidth: 560, lineHeight: 1.7, fontFamily: F }}>
+            {en ? "Book a 15-minute demo. We'll show you exactly how Vigil works with your practice, your hours, and your patients." : "Agenda un demo de 15 minutos. Te mostraremos exactamente cómo funciona Vigil con tu consultorio, tus horarios y tus pacientes."}
+          </p>
+          <Btn variant="primary" onClick={() => window.open(en ? "https://api.leadconnectorhq.com/widget/booking/Mn2aZsx0s7okSMweJEwR" : "https://api.leadconnectorhq.com/widget/booking/a9c9ddHOChloAo21t9dk", "_blank")} mob={mob}>
+            {en ? "Book a Demo" : "Agenda un Demo"}
+          </Btn>
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", margin: "12px 0 0", fontFamily: F }}>{en ? "No credit card required. Live in 48 hours." : "Sin tarjeta de crédito. En vivo en 48 horas."}</p>
+        </Box>
+      </section>
+    </>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════════════════════ */
 
@@ -3731,6 +4052,7 @@ export default function App() {
     services: <ServicesPage go={go} lang={lang} />,
     products: <ProductsPage go={go} lang={lang} />,
     "nexus": <OmnichannelPage go={go} lang={lang} />,
+    "vigil": <VigilPage go={go} lang={lang} />,
     "product-cash-leak-assessment": <CashLeakPage go={go} lang={lang} />,
     cases: <CasesPage go={go} lang={lang} />,
     about: <AboutPage go={go} lang={lang} />,
