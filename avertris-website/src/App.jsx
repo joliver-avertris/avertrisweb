@@ -54,7 +54,7 @@ const T = {
     ctaTalk: { en: "Book a strategy call", es: "Agendar una llamada estratégica" },
     svc: [
       { t: { en: "Your team deserves better tools", es: "Tu equipo merece mejores herramientas" }, d: { en: "Custom AI agents, chatbots, and software built around how your company actually operates — not another off-the-shelf platform you'll outgrow in 6 months", es: "Agentes IA, chatbots y software diseñados alrededor de cómo opera tu empresa realmente — no otra plataforma genérica que superarás en 6 meses" } },
-      { t: { en: "Your operations should run like a machine", es: "Tus operaciones deberían funcionar como máquina" }, d: { en: "Our AI CRM, chatbot SaaS, and Dealer Manager replace the 5 disconnected tools your team wastes hours navigating every day", es: "Nuestro CRM con IA, chatbot SaaS y Dealer Manager reemplazan las 5 herramientas desconectadas que tu equipo desperdicia horas navegando cada día" } },
+      { t: { en: "Your operations should run like a machine", es: "Tus operaciones deberían funcionar como máquina" }, d: { en: "Nexus, Vigil, and Dealer Manager replace the disconnected tools your team wastes hours navigating every day", es: "Nexus, Vigil y Dealer Manager reemplazan las herramientas desconectadas que tu equipo desperdicia horas navegando cada día" } },
       { t: { en: "Your ad spend should be an investment, not a gamble", es: "Tu inversión en ads debería ser eso — una inversión, no un gasto" }, d: { en: "Full-funnel growth marketing with attribution on every dollar — so you know exactly what's driving revenue and what isn't", es: "Growth marketing de embudo completo con atribución en cada dólar — para que sepas exactamente qué genera ingresos y qué no" } },
     ],
   },
@@ -139,9 +139,9 @@ const T = {
     label: { en: "Frequently asked questions", es: "Preguntas frecuentes" },
     title: { en: "Questions we hear every week", es: "Preguntas que escuchamos cada semana" },
     items: [
-      { q: { en: "What does Avertris do?", es: "¿Qué hace Avertris?" }, a: { en: "Avertris is an AI consulting, custom software development, and growth marketing agency headquartered in Tampa, Florida. We're a remote-first team with members across the USA and Dominican Republic. We help mid-market businesses in the USA, Dominican Republic, and Latin America stop losing money through disconnected tools by building AI-powered software, marketing automation, and data-driven growth systems. Our three pillars are: Technology (AI agents, chatbots, custom apps), Products (AI CRM, Chatbot SaaS, Dealer Manager), and Growth Marketing (paid ads, SEO, email, attribution).", es: "Avertris es una agencia de consultoría de IA, desarrollo de software a medida y marketing de crecimiento con sede en Tampa, Florida. Somos un equipo remoto con miembros en USA y República Dominicana. Ayudamos a empresas medianas en USA, República Dominicana y América Latina a dejar de perder dinero con herramientas desconectadas, construyendo software potenciado con IA, automatización de marketing y sistemas de crecimiento basados en datos." } },
+      { q: { en: "What does Avertris do?", es: "¿Qué hace Avertris?" }, a: { en: "Avertris is an AI consulting, custom software development, and growth marketing agency headquartered in Tampa, Florida. We're a remote-first team with members across the USA and Dominican Republic. We help mid-market businesses in the USA, Dominican Republic, and Latin America stop losing money through disconnected tools by building AI-powered software, marketing automation, and data-driven growth systems. Our three pillars are: Technology (AI agents, chatbots, custom apps), Products (Nexus, Vigil, Dealer Manager), and Growth Marketing (paid ads, SEO, email, attribution).", es: "Avertris es una agencia de consultoría de IA, desarrollo de software a medida y marketing de crecimiento con sede en Tampa, Florida. Somos un equipo remoto con miembros en USA y República Dominicana. Ayudamos a empresas medianas en USA, República Dominicana y América Latina a dejar de perder dinero con herramientas desconectadas, construyendo software potenciado con IA, automatización de marketing y sistemas de crecimiento basados en datos." } },
       { q: { en: "Where is Avertris located?", es: "¿Dónde está ubicada Avertris?" }, a: { en: "We're headquartered in Tampa, Florida with a remote-first team across the USA and Dominican Republic. We also have team members in Mexico, Colombia, and Argentina. We serve clients in all 50 US states, the Dominican Republic, and key Latin American markets. Our team is fully bilingual (English and Spanish) and timezone-aligned with US business hours.", es: "Nuestra sede está en Tampa, Florida con un equipo remoto en USA y República Dominicana. También tenemos miembros en México, Colombia y Argentina. Atendemos clientes en los 50 estados de EE.UU., República Dominicana y mercados clave de América Latina. Nuestro equipo es completamente bilingüe (inglés y español) y alineado con horarios de oficina de USA." } },
-      { q: { en: "How much do your services cost?", es: "¿Cuánto cuestan sus servicios?" }, a: { en: "Our pricing varies by service: Strategic consultations range from $500-$1,500, SEO services start at $1,500/month, growth marketing packages start at $2,500/month, AI CRM subscriptions are $300-$600/month, and custom software development ranges from $600-$5,000+. Every engagement starts with a free 30-minute triage call — no obligation.", es: "Nuestros precios varían por servicio: Consultorías estratégicas van de $500-$1,500, servicios de SEO desde $1,500/mes, paquetes de growth marketing desde $2,500/mes, suscripciones de CRM con IA $300-$600/mes, y desarrollo de software a medida desde $600-$5,000+. Todo comienza con una llamada de triaje gratuita de 30 minutos." } },
+      { q: { en: "How much do your services cost?", es: "¿Cuánto cuestan sus servicios?" }, a: { en: "Our pricing varies by service: Strategic consultations range from $500-$1,500, SEO services start at $1,500/month, growth marketing packages start at $2,500/month, Nexus omnichannel plans start from $99/month, and custom software development ranges from $600-$5,000+. Every engagement starts with a free 30-minute triage call — no obligation.", es: "Nuestros precios varían por servicio: Consultorías estratégicas van de $500-$1,500, servicios de SEO desde $1,500/mes, paquetes de growth marketing desde $2,500/mes, planes Nexus omnicanal desde $99/mes, y desarrollo de software a medida desde $600-$5,000+. Todo comienza con una llamada de triaje gratuita de 30 minutos." } },
       { q: { en: "Do you work with businesses in the Dominican Republic?", es: "¿Trabajan con negocios en República Dominicana?" }, a: { en: "Absolutely. We have team members based in the Dominican Republic and deep roots in the Dominican market. We serve businesses across the DR with AI consulting, custom software, growth marketing, SEO, and our product suite. Our bilingual team understands the local market, regulations, and business culture.", es: "Por supuesto. Tenemos miembros del equipo en República Dominicana y raíces profundas en el mercado dominicano. Atendemos negocios en toda la RD con consultoría de IA, software a medida, growth marketing, SEO y nuestra suite de productos. Nuestro equipo bilingüe entiende el mercado local, regulaciones y cultura de negocios." } },
       { q: { en: "What is the Cash Leak Assessment?", es: "¿Qué es el Assessment de Fugas de Dinero?" }, a: { en: "The Cash Leak Assessment is a free 10-minute diagnostic that reveals exactly where your business is hemorrhaging money through broken processes, wasted ad spend, dead leads, and manual chaos. You get a Cash Leak Score (0-100), a visual Leak Map, a prioritized Fix-It Plan, and benchmark comparisons against 100+ diagnosed businesses. It's free with no obligation.", es: "El Assessment de Fugas de Dinero es un diagnóstico gratuito de 10 minutos que revela exactamente dónde tu negocio pierde dinero por procesos rotos, inversión en ads desperdiciada, leads muertos y caos manual. Obtienes un Puntaje de Fugas (0-100), un Mapa de Fugas visual, un Plan de Reparación priorizado y comparaciones con 100+ negocios diagnosticados. Es gratis sin compromiso." } },
       { q: { en: "How fast will I see results?", es: "¿Qué tan rápido veré resultados?" }, a: { en: "Our average client sees measurable improvements within 2-4 weeks. Quick wins like AI chatbot deployment and ad spend optimization deliver results in days. Larger implementations (custom software, full marketing stack) typically show ROI within 60-90 days. We start every engagement by fixing the biggest, most costly leak first.", es: "Nuestro cliente promedio ve mejoras medibles en 2-4 semanas. Victorias rápidas como implementación de chatbot IA y optimización de ads entregan resultados en días. Implementaciones más grandes (software a medida, stack de marketing completo) típicamente muestran ROI en 60-90 días. Comenzamos cada proyecto arreglando la fuga más grande y costosa primero." } },
@@ -167,8 +167,8 @@ const T = {
       es: ["Consultoría e Agentes de IA", "Desarrollo de Chatbots IA", "Integración de Voz con IA", "Apps Web y Móviles a Medida", "Marketing de Crecimiento y SEO", "Paid Ads y Atribución"],
     },
     products: {
-      en: ["Avertris AI CRM", "AI Chatbot SaaS", "Dealer Manager"],
-      es: ["Avertris AI CRM", "Chatbot SaaS con IA", "Dealer Manager"],
+      en: ["Dealer Manager"],
+      es: ["Dealer Manager"],
     },
     industries: {
       en: ["Automotive Dealerships", "Professional Services", "E-Commerce & Retail", "Healthcare", "SaaS & Technology", "Financial Services"],
@@ -203,8 +203,8 @@ const T = {
         tab: { en: "Products", es: "Productos" }, icon: "⬡",
         title: { en: "Avertris Products", es: "Avertris Products" },
         subtitle: { en: "Ready-to-deploy solutions for businesses that need results today, not six months from now.", es: "Soluciones listas para implementar para negocios que necesitan resultados hoy, no en seis meses." },
-        desc: { en: "Not every business needs a custom build. Our product suite gives you enterprise-grade tools at a fraction of the cost — AI-powered CRM, intelligent chatbots, and Dealer Manager, the complete automotive dealership solution for USA and LATAM markets.", es: "No todo negocio necesita un desarrollo a medida. Nuestra suite de productos te da herramientas de nivel empresarial a una fracción del costo — CRM con IA, chatbots inteligentes, y Dealer Manager, la solución completa para concesionarios automotrices en USA y LATAM." },
-        features: { en: ["Avertris AI CRM — Full CRM with AI automation (from $300/mo)", "AI Chatbot SaaS — Out-of-the-box conversational AI", "Dealer Manager — Complete automotive dealership CRM & operations", "White-label solutions available", "5 users included, $10/extra user", "Bilingual platform (EN/ES)"], es: ["Avertris AI CRM — CRM completo con automatización IA (desde $300/mes)", "Chatbot SaaS con IA — IA conversacional lista para usar", "Dealer Manager — CRM y operaciones completas para concesionarios", "Soluciones white-label disponibles", "5 usuarios incluidos, $10/usuario extra", "Plataforma bilingüe (EN/ES)"] },
+        desc: { en: "Not every business needs a custom build. Our product suite gives you enterprise-grade tools at a fraction of the cost — Nexus omnichannel inbox, Vigil AI voice receptionist, and Dealer Manager for automotive dealerships.", es: "No todo negocio necesita un desarrollo a medida. Nuestra suite de productos te da herramientas de nivel empresarial a una fracción del costo — bandeja omnicanal Nexus, recepcionista de voz IA Vigil, y Dealer Manager para concesionarios automotrices." },
+        features: { en: ["Nexus — Omnichannel inbox with AI employee (from $99/mo)", "Vigil — 24/7 AI voice receptionist for dental practices", "Dealer Manager — Complete automotive dealership CRM & operations", "Cash Leak Assessment — Find hidden revenue leaks", "White-label solutions available", "Bilingual platform (EN/ES)"], es: ["Nexus — Bandeja omnicanal con empleado IA (desde $99/mes)", "Vigil — Recepcionista de voz IA 24/7 para consultorios dentales", "Dealer Manager — CRM y operaciones completas para concesionarios", "Cash Leak Assessment — Encuentra fugas de ingresos ocultas", "Soluciones white-label disponibles", "Plataforma bilingüe (EN/ES)"] },
         tech: "Go High Level, Custom AI Models, React, Node.js, PostgreSQL",
       },
       {
@@ -1285,24 +1285,6 @@ Avertris construye arquitecturas API-first para empresas medianas. Ya sea empeza
     subtitle: { en: "Ready-to-deploy solutions for the problems costing you the most money right now.", es: "Soluciones listas para implementar que atacan los problemas que más dinero te cuestan ahora mismo." },
     products: [
       {
-        slug: "ai-crm",
-        icon: "⟳",
-        name: { en: "Avertris AI CRM", es: "Avertris AI CRM" },
-        tagline: { en: "Stop losing clients to slow follow-ups", es: "Deja de perder clientes por seguimientos lentos" },
-        desc: { en: "AI-powered CRM that responds to leads in seconds, automates your entire pipeline, and ensures zero clients fall through the cracks. Built for teams drowning in manual follow-ups.", es: "CRM potenciado con IA que responde leads en segundos, automatiza todo tu pipeline y asegura que ningún cliente se pierda. Hecho para equipos ahogados en seguimientos manuales." },
-        stat: { en: "70% faster lead response", es: "70% más rápido en respuesta a leads" },
-        price: { en: "From $300/mo", es: "Desde $300/mes" },
-      },
-      {
-        slug: "ai-chatbot",
-        icon: "◇",
-        name: { en: "AI Chatbot SaaS", es: "Chatbot SaaS con IA" },
-        tagline: { en: "Never lose another lead to a slow inbox", es: "Nunca pierdas otro lead por una bandeja lenta" },
-        desc: { en: "Deploy an AI agent on your website in minutes. It qualifies leads, answers questions, and books meetings 24/7 — so your team stops hemorrhaging opportunities while they sleep.", es: "Despliega un agente IA en tu web en minutos. Califica leads, responde preguntas y agenda reuniones 24/7 — para que tu equipo deje de perder oportunidades mientras duermen." },
-        stat: { en: "24/7 lead capture", es: "Captura de leads 24/7" },
-        price: { en: "From $150/mo", es: "Desde $150/mes" },
-      },
-      {
         slug: "dealer-manager",
         icon: "▤",
         name: { en: "Dealer Manager", es: "Dealer Manager" },
@@ -1474,28 +1456,6 @@ Avertris construye arquitecturas API-first para empresas medianas. Ya sea empeza
       price: { en: "Email marketing from $1,500/mo | CRO from $2,000/mo", es: "Email marketing desde $1,500/mes | CRO desde $2,000/mes" },
       cta: { en: "Optimize my conversions", es: "Optimizar mis conversiones" },
     },
-    "product-ai-crm": {
-      label: { en: "Products", es: "Productos" },
-      title: { en: "Avertris AI CRM", es: "Avertris AI CRM" },
-      subtitle: { en: "Stop losing clients to slow follow-ups. AI-powered CRM that responds to leads in seconds, automates your entire pipeline, and ensures zero clients fall through the cracks.", es: "Deja de perder clientes por seguimientos lentos. CRM potenciado con IA que responde leads en segundos, automatiza todo tu pipeline y asegura que ningún cliente se pierda." },
-      problem: { en: "Your CRM is a glorified spreadsheet. Leads sit for hours without follow-up. Your team forgets to update it. And you have zero visibility into which deals are actually moving. Every day, clients slip through the cracks because nobody followed up.", es: "Tu CRM es una hoja de cálculo glorificada. Los leads esperan horas sin seguimiento. Tu equipo olvida actualizarlo. Y no tienes visibilidad sobre qué negocios avanzan realmente." },
-      features: { en: ["AI-Powered Lead Response (under 60 seconds)", "Automated Follow-Up Sequences", "Pipeline & Deal Management", "Contact & Company Management", "Email & SMS Marketing Built-In", "Appointment Scheduling", "Reporting & Revenue Dashboards", "Bilingual Platform (EN/ES)"], es: ["Respuesta a Leads con IA (menos de 60 segundos)", "Secuencias de Seguimiento Automatizadas", "Gestión de Pipeline y Negocios", "Gestión de Contactos y Empresas", "Email & SMS Marketing Integrado", "Agendamiento de Citas", "Reportes y Dashboards de Ingresos", "Plataforma Bilingüe (EN/ES)"] },
-      results: [{ n: "70", s: "%", l: { en: "Faster lead response", es: "Respuesta a leads más rápida" } }, { n: "0", s: "", l: { en: "Leads lost to missed follow-ups", es: "Leads perdidos por seguimientos perdidos" } }, { n: "3.2", s: "x", l: { en: "Revenue from existing pipeline", es: "Ingresos del pipeline existente" } }],
-      tech: "Go High Level, Custom AI Models, Twilio, Stripe, Zapier",
-      price: { en: "From $300/mo (5 users included, $10/extra)", es: "Desde $300/mes (5 usuarios incluidos, $10/extra)" },
-      cta: { en: "Start my AI CRM trial", es: "Iniciar mi prueba de AI CRM" },
-    },
-    "product-ai-chatbot": {
-      label: { en: "Products", es: "Productos" },
-      title: { en: "AI Chatbot SaaS", es: "Chatbot SaaS con IA" },
-      subtitle: { en: "Deploy an AI agent on your website in minutes — not months. It qualifies leads, answers questions, and books meetings 24/7 so your team stops losing opportunities while they sleep.", es: "Despliega un agente IA en tu web en minutos — no meses. Califica leads, responde preguntas y agenda reuniones 24/7 para que tu equipo deje de perder oportunidades mientras duermen." },
-      problem: { en: "Your website gets hundreds of visitors but most leave without talking to anyone. When they do reach out, your team responds hours later — and by then, they've moved on. You're paying for traffic and converting almost none of it.", es: "Tu web recibe cientos de visitantes pero la mayoría se va sin hablar con nadie. Cuando contactan, tu equipo responde horas después — y para entonces, ya se fueron." },
-      features: { en: ["Plug-and-Play Website Chat Widget", "AI-Powered Lead Qualification", "Automatic Meeting Booking", "Custom Knowledge Base Training", "Multi-Language Support (EN/ES)", "CRM Integration", "Analytics & Chat Transcripts", "No Code Required — Deploy in Minutes"], es: ["Widget de Chat Plug-and-Play", "Calificación de Leads con IA", "Agendamiento Automático de Reuniones", "Entrenamiento con Base de Conocimiento Custom", "Soporte Multi-Idioma (EN/ES)", "Integración con CRM", "Analítica y Transcripciones de Chat", "Sin Código — Despliega en Minutos"] },
-      results: [{ n: "24", s: "/7", l: { en: "Lead capture — never miss a visitor", es: "Captura de leads — nunca pierdas un visitante" } }, { n: "3", s: "sec", l: { en: "Average response time", es: "Tiempo promedio de respuesta" } }, { n: "35", s: "%", l: { en: "More qualified meetings booked", es: "Más reuniones calificadas agendadas" } }],
-      tech: "OpenAI, Custom NLP, React Widget, REST API, Webhooks",
-      price: { en: "From $150/mo | 14-day free trial", es: "Desde $150/mes | Prueba gratis de 14 días" },
-      cta: { en: "Try it free for 14 days", es: "Pruébalo gratis 14 días" },
-    },
     "product-dealer-manager": {
       label: { en: "Products", es: "Productos" },
       title: { en: "Dealer Manager", es: "Dealer Manager" },
@@ -1590,7 +1550,7 @@ function Nav({ page, go, lang, setLang }) {
       mega: {
         cols: [
           { heading: t(T.nav.megaTech, lang), items: [{ t: lang === "en" ? "AI Consulting & Agents" : "Consultoría e Agentes de IA", go: "svc-ai-consulting" }, { t: lang === "en" ? "AI Chatbot Development" : "Desarrollo de Chatbots IA", go: "svc-chatbot-dev" }, { t: lang === "en" ? "AI Voice Integration" : "Integración de Voz con IA", go: "svc-voice" }, { t: lang === "en" ? "Custom Web & Mobile Apps" : "Apps Web y Móviles a Medida", go: "svc-web-mobile" }] },
-          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Avertris AI CRM" : "Avertris AI CRM", go: "product-ai-crm" }, { t: lang === "en" ? "AI Chatbot SaaS" : "Chatbot SaaS con IA", go: "product-ai-chatbot" }, { t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }, { t: "Nexus", go: "nexus" }, { t: "Vigil", go: "vigil" }] },
+          { heading: t(T.nav.megaProducts, lang), items: [{ t: lang === "en" ? "Dealer Manager (Automotive)" : "Dealer Manager (Automotriz)", go: "product-dealer-manager" }, { t: lang === "en" ? "Cash Leak Assessment" : "Assessment de Fugas", go: "product-cash-leak-assessment" }, { t: "Nexus", go: "nexus" }, { t: "Vigil", go: "vigil" }] },
           { heading: t(T.nav.megaGrowth, lang), items: [{ t: lang === "en" ? "Paid Ads & Performance" : "Paid Ads y Performance", go: "svc-paid-ads" }, { t: lang === "en" ? "SEO & Content Strategy" : "SEO y Estrategia de Contenido", go: "svc-seo" }, { t: lang === "en" ? "Analytics & Attribution" : "Analítica y Atribución", go: "svc-analytics" }, { t: lang === "en" ? "Email Marketing & CRO" : "Email Marketing y CRO", go: "svc-email-cro" }] },
         ],
       },
@@ -2136,7 +2096,7 @@ function ServicesPage({ go, lang }) {
 
   const featureLinks = [
     { 0: "svc-ai-consulting", 1: "svc-ai-consulting", 2: "svc-chatbot-dev", 3: "svc-voice", 4: "svc-web-mobile", 5: "svc-web-mobile" },
-    { 0: "product-ai-crm", 1: "product-ai-chatbot", 2: "product-dealer-manager" },
+    { 0: "product-dealer-manager" },
     { 0: "svc-paid-ads", 1: "svc-seo", 3: "svc-email-cro", 4: "svc-email-cro", 5: "svc-analytics" },
   ];
 
@@ -2148,8 +2108,6 @@ function ServicesPage({ go, lang }) {
       { key: "svc-web-mobile", icon: "📱", label: { en: "Custom Web & Mobile Apps", es: "Apps Web y Móviles" } },
     ],
     [
-      { key: "product-ai-crm", icon: "⬡", label: { en: "Avertris AI CRM", es: "Avertris AI CRM" } },
-      { key: "product-ai-chatbot", icon: "🤖", label: { en: "AI Chatbot SaaS", es: "Chatbot SaaS con IA" } },
       { key: "product-dealer-manager", icon: "🚗", label: { en: "Dealer Manager", es: "Dealer Manager" } },
       { key: "product-cash-leak-assessment", icon: "💰", label: { en: "Cash Leak Assessment", es: "Evaluación de Fugas de Efectivo" } },
     ],
@@ -3935,7 +3893,7 @@ function FooterSection({ go, lang }) {
               </div>
               <div>
                 <h4 style={{ fontSize: 13, fontWeight: 600, color: V.g900, textTransform: "uppercase", letterSpacing: 1, margin: "0 0 20px" }}>{t(FT.productsTitle, lang)}</h4>
-                {t(FT.products, lang).map((l, i) => <button key={l} onClick={() => go(["product-ai-crm", "product-ai-chatbot", "product-dealer-manager"][i])} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: 400, color: V.g600, marginBottom: 12, padding: 0, fontFamily: F, textAlign: "left" }}>{l}</button>)}
+                {t(FT.products, lang).map((l, i) => <button key={l} onClick={() => go(["product-dealer-manager"][i])} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: 400, color: V.g600, marginBottom: 12, padding: 0, fontFamily: F, textAlign: "left" }}>{l}</button>)}
                 <button onClick={() => go("product-cash-leak-assessment")} style={{ display: "block", background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: 600, color: V.primary, marginBottom: 12, padding: 0, fontFamily: F, textAlign: "left" }}>{lang === "en" ? "Cash Leak Assessment ★" : "Assessment de Fugas ★"}</button>
               </div>
             </>
