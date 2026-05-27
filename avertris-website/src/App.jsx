@@ -2504,51 +2504,10 @@ function BlogPage({ lang, go }) {
 function ContactPage({ lang }) {
   const C = T.contactPage;
   const { mob } = useMedia();
-  const inputStyle = { width: "100%", padding: "14px 16px", border: `1px solid ${V.g200}`, borderRadius: 8, fontSize: 14, fontFamily: F, outline: "none", boxSizing: "border-box", transition: "border-color 0.2s" };
-
-  const [form, setForm] = useState({ name: "", email: "", phone: "", website: "", company: "", service: "", budget: "", message: "" });
-  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
-  const [tried, setTried] = useState(false);
-  const upd = (k, v) => setForm(prev => ({ ...prev, [k]: v }));
-  const missing = (k) => tried && !form[k].trim();
-  const errBorder = (k) => missing(k) ? `1px solid #dc2626` : `1px solid ${V.g200}`;
 
   const calendarUrl = lang === "es"
-    ? "https://api.leadconnectorhq.com/widget/booking/eG5E8UGMopsaePPVEh0z"
-    : "https://api.leadconnectorhq.com/widget/booking/fYKM0aPR3zV1rUrrPImG";
-
-  const allFields = ["name", "email", "phone", "website", "company", "service", "budget", "message"];
-  const handleSubmit = async (e) => {
-    if (e) e.preventDefault();
-    setTried(true);
-    if (allFields.some(k => !form[k].trim())) return;
-    setStatus("sending");
-    try {
-      await fetch("https://services.leadconnectorhq.com/hooks/6sH0vMFyMEooGtwfucvQ/webhook-trigger/4d3c4b8a-2de0-4d7b-896e-b558f1cee83d", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        mode: "no-cors",
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          website: form.website,
-          company: form.company,
-          service: form.service,
-          budget: form.budget,
-          message: form.message,
-          source: "avertris.com/contact",
-          language: lang,
-        }),
-      });
-      setStatus("sent");
-    } catch {
-      setStatus("error");
-    }
-  };
-
-  const errorMsg = { en: "Something went wrong. Please try again or email hello@avertris.com", es: "Algo salió mal. Intenta de nuevo o escríbenos a hello@avertris.com" };
-  const sendingLabel = { en: "Sending...", es: "Enviando..." };
+    ? "https://api.leadconnectorhq.com/widget/booking/5HZPwY1j23QdIhTh2FSh"
+    : "https://api.leadconnectorhq.com/widget/booking/mZP1su0wg7y7B1X5b7R4";
 
   return (
     <>
@@ -2558,38 +2517,9 @@ function ContactPage({ lang }) {
           <div>
             <h2 style={{ fontSize: mob ? 24 : 32, fontWeight: 700, color: V.g900, margin: "0 0 8px", fontFamily: F }}>{t(C.formTitle, lang)}</h2>
             <p style={{ fontSize: mob ? 14 : 15, fontWeight: 300, color: V.g600, margin: "0 0 32px", fontFamily: F }}>{t(C.formDesc, lang)}</p>
-            {status === "sent" ? (
-              <div>
-                <div style={{ padding: 24, background: "#f0fdf4", borderRadius: 12, textAlign: "center", marginBottom: 24 }}>
-                  <p style={{ fontSize: 18, fontWeight: 600, color: "#166534", margin: 0, fontFamily: F }}>✓ {t({ en: "Info received! Now pick a time.", es: "¡Info recibida! Ahora elige un horario." }, lang)}</p>
-                </div>
-                <div style={{ borderRadius: 12, overflow: "hidden", border: `1px solid ${V.g200}` }}>
-                  <iframe src={calendarUrl} style={{ width: "100%", height: mob ? 600 : 700, border: "none", display: "block" }} title="Book a call" />
-                </div>
-              </div>
-            ) : (
-            <form onSubmit={handleSubmit}>
-            {tried && allFields.some(k => !form[k].trim()) && <p style={{ fontSize: 13, color: "#dc2626", margin: "0 0 12px", fontFamily: F }}>{t({ en: "Please fill in all fields before booking.", es: "Por favor completa todos los campos antes de agendar." }, lang)}</p>}
-            <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: 16, marginBottom: 16 }}>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("name") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.name, lang)} *</label><input name="name" value={form.name} onChange={e => upd("name", e.target.value)} style={{ ...inputStyle, border: errBorder("name") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.name.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("email") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.email, lang)} *</label><input name="email" value={form.email} onChange={e => upd("email", e.target.value)} type="email" style={{ ...inputStyle, border: errBorder("email") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.email.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
+            <div style={{ borderRadius: 12, overflow: "hidden", border: `1px solid ${V.g200}` }}>
+              <iframe src={calendarUrl} style={{ width: "100%", height: mob ? 700 : 800, border: "none", display: "block" }} title={lang === "en" ? "Book a call" : "Agendar una llamada"} />
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: 16, marginBottom: 16 }}>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("phone") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.phone, lang)} *</label><input name="phone" value={form.phone} onChange={e => upd("phone", e.target.value)} type="tel" style={{ ...inputStyle, border: errBorder("phone") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.phone.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("company") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.company, lang)} *</label><input name="company" value={form.company} onChange={e => upd("company", e.target.value)} style={{ ...inputStyle, border: errBorder("company") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.company.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("website") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>Website URL *</label><input name="website" value={form.website} onChange={e => upd("website", e.target.value)} placeholder="https://" style={{ ...inputStyle, border: errBorder("website") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.website.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: mob ? "1fr" : "1fr 1fr", gap: 16, marginBottom: 16 }}>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("service") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.service, lang)} *</label>
-                <select name="service" value={form.service} onChange={e => upd("service", e.target.value)} style={{ ...inputStyle, background: V.white, color: form.service ? V.g600 : V.g400, border: errBorder("service") }}><option value="">{t({ en: "Select a service...", es: "Selecciona un servicio..." }, lang)}</option>{t(C.svcOptions, lang).map(o => <option key={o}>{o}</option>)}</select>
-              </div>
-              <div><label style={{ fontSize: 13, fontWeight: 500, color: missing("budget") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.budget, lang)} *</label><select name="budget" value={form.budget} onChange={e => upd("budget", e.target.value)} style={{ ...inputStyle, background: V.white, color: form.budget ? V.g600 : V.g400, border: errBorder("budget") }}><option value="">{t({ en: "Select budget...", es: "Selecciona presupuesto..." }, lang)}</option>{C.budgetOptions.map(o => <option key={o}>{o}</option>)}</select></div>
-            </div>
-            <div style={{ marginBottom: 24 }}><label style={{ fontSize: 13, fontWeight: 500, color: missing("message") ? "#dc2626" : V.g900, display: "block", marginBottom: 6, fontFamily: F }}>{t(C.message, lang)} *</label><textarea name="message" value={form.message} onChange={e => upd("message", e.target.value)} placeholder={t(C.messagePh, lang)} style={{ ...inputStyle, height: 120, resize: "vertical", border: errBorder("message") }} onFocus={e => e.target.style.borderColor = V.primary} onBlur={e => { if (!form.message.trim() && tried) e.target.style.borderColor = "#dc2626"; else e.target.style.borderColor = V.g200; }} /></div>
-            {status === "error" && <p style={{ fontSize: 13, color: "#dc2626", margin: "0 0 12px", fontFamily: F }}>{t(errorMsg, lang)}</p>}
-            <button type="submit" disabled={status === "sending"} style={{ width: "100%", padding: 16, background: status === "sending" ? V.g400 : V.primary, color: "#1a1a1a", border: "none", borderRadius: 8, fontSize: 16, fontWeight: 600, cursor: status === "sending" ? "wait" : "pointer", fontFamily: F }}>{status === "sending" ? t(sendingLabel, lang) : t(C.submit, lang)}</button>
-            </form>
-            )}
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             <div style={{ background: V.g100, borderRadius: 16, padding: mob ? 24 : 40 }}>
@@ -2611,8 +2541,6 @@ function ContactPage({ lang }) {
           </div>
         </div></Box>
       </section>
-
-      {/* Calendar popup modal */}
     </>
   );
 }
