@@ -2588,6 +2588,29 @@ function renderMarkdown(text, mob) {
       const items = block.split("\n").filter(l => l.trim());
       return <ul key={i} style={{ margin: "16px 0", paddingLeft: 24 }}>{items.map((item, j) => <li key={j} style={{ fontSize: mob ? 14 : 16, lineHeight: 1.8, color: V.g600, fontFamily: F, marginBottom: 6 }}>{item.replace(/^[-•]\s*/, "").replace(/\*\*(.+?)\*\*/g, (_, m) => m)}</li>)}</ul>;
     }
+    if (block.trimStart().startsWith("|")) {
+      const rows = block.split("\n").filter(r => r.trim() && !r.trim().match(/^\|[-\s|:]+\|$/));
+      const parseRow = (r) => r.split("|").slice(1, -1).map(c => c.trim());
+      if (rows.length < 2) return null;
+      const headers = parseRow(rows[0]);
+      const body = rows.slice(1).map(parseRow);
+      return (
+        <div key={i} style={{ overflowX: "auto", margin: "24px 0" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: F, fontSize: mob ? 13 : 15 }}>
+            <thead>
+              <tr>{headers.map((h, hi) => <th key={hi} style={{ textAlign: "left", padding: mob ? "10px 12px" : "12px 16px", background: V.g900, color: V.white, fontWeight: 600, fontSize: mob ? 12 : 14, whiteSpace: "nowrap" }}>{h}</th>)}</tr>
+            </thead>
+            <tbody>
+              {body.map((row, ri) => (
+                <tr key={ri} style={{ background: ri % 2 === 0 ? V.g100 : V.white }}>
+                  {row.map((cell, ci) => <td key={ci} style={{ padding: mob ? "10px 12px" : "12px 16px", color: V.g600, borderBottom: `1px solid ${V.g200}`, fontWeight: ci === 0 ? 600 : 400, color: ci === 0 ? V.g900 : V.g600 }}>{cell}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
     const parts = block.split(/(\*\*.*?\*\*)/g);
     return <p key={i} style={{ fontSize: mob ? 14 : 16, lineHeight: 1.9, color: V.g600, margin: "0 0 20px", fontFamily: F }}>{parts.map((part, j) => part.startsWith("**") && part.endsWith("**") ? <strong key={j} style={{ fontWeight: 600, color: V.g900 }}>{part.slice(2, -2)}</strong> : part)}</p>;
   });
@@ -2633,6 +2656,11 @@ function BlogPostPage({ postIndex, go, lang }) {
               </div>
               <div itemProp="articleBody">
                 {content ? renderMarkdown(content, mob) : <p style={{ fontSize: 16, lineHeight: 1.8, color: V.g600, fontFamily: F }}>{t(post.desc, lang)}</p>}
+              </div>
+              <div style={{ marginTop: 48, padding: mob ? 24 : 40, background: V.g900, borderRadius: 12, textAlign: "center" }}>
+                <h3 style={{ fontSize: mob ? 20 : 24, fontWeight: 700, color: V.white, margin: "0 0 8px", fontFamily: F }}>{lang === "en" ? "Ready to talk strategy?" : "¿Listo para hablar de estrategia?"}</h3>
+                <p style={{ fontSize: mob ? 13 : 15, color: "rgba(255,255,255,0.6)", margin: "0 0 24px", lineHeight: 1.6, fontFamily: F }}>{lang === "en" ? "Book a free 30-minute call with our team. No pitch — just answers." : "Agenda una llamada gratuita de 30 minutos con nuestro equipo. Sin pitch — solo respuestas."}</p>
+                <Btn variant="primary" onClick={() => window.open(lang === "en" ? "https://api.leadconnectorhq.com/widget/booking/mZP1su0wg7y7B1X5b7R4" : "https://api.leadconnectorhq.com/widget/booking/5HZPwY1j23QdIhTh2FSh", "_blank")} mob={mob}>{lang === "en" ? "Book a Free Call" : "Agenda una Llamada Gratis"}</Btn>
               </div>
             </article>
 
