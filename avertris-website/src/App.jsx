@@ -267,6 +267,266 @@ const T = {
     subtitle: { en: "Actionable insights on AI, growth marketing, and software for mid-market businesses in the Dominican Republic, USA, and Latin America.", es: "Perspectivas accionables sobre IA, marketing de crecimiento y software para empresas medianas en República Dominicana, USA y América Latina." },
     filters: { en: ["All", "AI", "Marketing", "Software", "Dominican Republic"], es: ["Todos", "IA", "Marketing", "Software", "República Dominicana"] },
     posts: [
+      /* — Marketing / Lead Quality — */
+      { slug: "how-to-measure-lead-quality-scoring-checklist", isoDate: "2026-06-02", cat: "Marketing", title: { en: "How to Measure Lead Quality (+ Scoring Checklist You Can Use Today)", es: "Cómo Medir la Calidad de Leads (+ Checklist de Scoring que Puedes Usar Hoy)" }, desc: { en: "Lead count is a trap. 200 leads that close at 5% is worse than 80 that close at 40%. Here's exactly how to score lead quality — signal by signal — with a checklist and a path to automating the whole process.", es: "El conteo de leads es una trampa. 200 leads que cierran al 5% es peor que 80 que cierran al 40%. Así es exactamente cómo evaluar la calidad de leads — señal por señal — con un checklist y un camino para automatizar todo el proceso." }, date: { en: "Jun 2, 2026", es: "2 Jun, 2026" }, read: { en: "10 min read", es: "10 min de lectura" }, keywords: "lead quality, lead scoring, lead qualification, marketing ROI, lead scoring checklist, measure lead quality", content: { en: `**TL;DR:** Lead count is a vanity metric. The campaigns that look best in your dashboard are often the ones driving the cheapest, lowest-quality leads. This article gives you a scoring checklist to separate real prospects from noise — and shows you how to automate it so every lead arrives pre-qualified.
+
+## Why You Need to Be Measuring Lead Quality
+
+Lead qualification is usually treated as a sales problem. Marketing generates traffic and conversions, then the sales team sorts through whatever makes it into the CRM.
+
+Here's the problem with that approach: **marketers need lead quality data in order to do their jobs well.**
+
+Without it, you're forced to optimize using the only number you can see — volume. But the highest-volume campaigns are often the ones driving the cheapest, lowest-quality leads.
+
+Look at this scenario:
+
+| | Total Leads | Cost per Lead |
+|---|---|---|
+| Campaign A | 120 | $42 |
+| Campaign B | 45 | $111 |
+
+Any marketer would conclude Campaign A is the winner. They'd increase its spend and cut Campaign B.
+
+But watch what happens when you add lead quality data:
+
+| | Total Leads | CPL | Qualified Leads | Cost per Qualified Lead |
+|---|---|---|---|---|
+| Campaign A | 120 | $42 | 8 | $630 |
+| Campaign B | 45 | $111 | 38 | $132 |
+
+Campaign B is bringing in almost **5x as many qualified leads at 20% of the cost**. Without lead quality data, you're not just making the wrong call — you're actively sabotaging your best campaigns.
+
+## Where to Find Lead Quality Data
+
+The signals are out there. They're just scattered across the tools you're already using. Here's where to look:
+
+**Marketing Attribution Data** — your ad platforms (Google Ads, Meta Ads, etc.) tell you where the lead came from: source, channel, campaign, landing page, and keywords. Keywords are especially valuable because they reveal purchase intent.
+
+**Call Metrics** — your call tracking or phone system tells you call duration (short calls are usually spam), time of call, and whether it was answered. A 3-minute inbound call during business hours is worth 10x more than a 15-second call at midnight.
+
+**Message Content** — call recordings, form submissions, and chat logs reveal what the lead actually wants: product or service intent, buyer readiness, budget signals, timeline, and geographic fit.
+
+The challenge is that none of this lives in one place unless you have a centralized lead management system. More on that below.
+
+## Lead Quality Scoring Checklist
+
+Use this checklist to score leads manually — or as the blueprint for automated rules you'll build later.
+
+### Fit Signals
+*Does this lead match who you actually serve?*
+
+- **Service Match** — The lead mentioned a specific service you offer (not a general inquiry or wrong-category request). *+10-20 pts*
+- **Geography** — The lead is within your service area. *+10 pts*
+- **New vs. Existing Customer** — The lead is a new prospect, not a current customer with a support question. *+5-10 pts*
+- **Company or Industry Match** — The lead's industry or company type aligns with your target customer profile. *+10 pts*
+
+### Intent Signals
+*Is this person actively trying to solve a problem?*
+
+- **Call Duration > 60 Seconds** — Short calls are rarely qualified. Conversations over a minute indicate genuine interest. *+15 pts*
+- **Specific Request or Question** — The lead asked about pricing, timeline, availability, or a specific outcome — not just "what do you do?" *+10 pts*
+- **Mentioned a Trigger Event** — The lead referenced a reason for reaching out now (equipment failure, upcoming deadline, competitive pressure, growth milestone). *+15 pts*
+- **Requested a Quote or Appointment** — The lead asked for next steps. This is the clearest intent signal available. *+20 pts*
+
+### Readiness Signals
+*Can this lead actually move forward?*
+
+- **Budget Signal** — The lead mentioned a budget range, referenced a competitor's price, or asked about financing. *+10 pts*
+- **Urgency Indicated** — The lead expressed a specific timeline or said something needed to happen soon. *+10 pts*
+- **Decision-Maker on the Line** — The lead is the person who makes (or heavily influences) the purchase decision. *+10 pts*
+- **Appointment Booked** — The call or form resulted in a scheduled consultation, quote, or meeting. *+25 pts*
+
+### Disqualifiers
+*These signals reduce or eliminate lead value.*
+
+- **Call Under 30 Seconds** — Likely a misdial, spam, or wrong number. *-20 pts or DQ*
+- **Existing Customer Service Call** — Not a new opportunity. *-10 pts or DQ*
+- **Out-of-Area Request** — You can't serve this lead. *DQ*
+- **Spam or Solicitation** — Vendor pitch, recruiter, or robocall. *DQ*
+
+### Score Interpretation
+
+- **50+ pts** — Strong lead. Qualified and worth prioritizing.
+- **25-49 pts** — Moderate lead. Worth follow-up, needs more context.
+- **Under 25 pts** — Weak lead. Review before spending sales time.
+- **DQ** — Remove from reporting entirely.
+
+## How to Capture Lead Quality Signals at Scale
+
+Here's the real-world problem: unless you have a centralized lead management system, these signals are scattered across ad platforms, call tracking tools, CRMs, and appointment calendars.
+
+It is technically possible to pull them all together manually by cross-referencing everything. But that method is slow, inconsistent, and impossible to maintain once your lead volume picks up.
+
+What you need is a system where all of an individual lead's data — every conversion action, call transcript, form submission, and sales outcome — is tied to a single lead profile, not documented as separate events across different platforms.
+
+When you have that centralized view, you can:
+
+1. **Qualify leads** because all the quality data from all sources is tied to the person behind it
+2. **Optimize campaigns based on quality** because you can boost the campaigns bringing in real leads, not just high volume
+3. **Report marketing impact in results, not activity** by showing qualified leads generated by each channel, campaign, and keyword
+
+## From Manual Checklist to Automatic Scoring
+
+The checklist above is valuable, but running it manually on every lead is an unnecessary chore. The real power comes when you automate it.
+
+Map each checklist item to an automated if/then condition:
+
+- IF call duration > 60 seconds AND lead mentioned "appointment" → add +35 points
+- IF form submission includes [service keyword] AND a budget range → add +20 points
+- IF call duration < 30 seconds AND transcript includes "wrong number" → mark as disqualified
+
+Once the rules are live, every lead arrives pre-scored. Qualified leads feed into your reporting and get synced back to your ad platforms as high-value conversions. Disqualified leads get filtered out before they inflate your CPL or poison your optimization data.
+
+The result: your campaigns start chasing the leads that actually close — not just the ones that are cheapest to generate.
+
+## Bonus: Add Actual Revenue Value
+
+Lead scoring uses numerical values to indicate how promising a lead is. But there's one other metric that significantly impacts prioritization: **potential revenue**.
+
+Assign a monetary quote value to each lead based on the product or service they're interested in.
+
+A lead who's a good fit but has a longer timeline might have an average score. But if the service they want costs $10,000, that quote value tells you this is a prospect worth following up with — even if they aren't as hot as a higher-urgency, lower-value lead.
+
+Understanding which leads are both qualified AND high-value is the difference between optimizing for volume and optimizing for revenue.
+
+## The Bottom Line
+
+Lead quality isn't something you read from a dashboard that only shows counts. It's something you measure — signal by signal, lead by lead — and then systematize so it runs without you.
+
+Start with the checklist. Score a week's worth of leads. Then build the rules that make it automatic.
+
+If you're running campaigns that generate leads but you can't tell which ones are actually worth pursuing, you're optimizing blind. Fix the measurement first — everything else follows.
+
+**Need help building a lead scoring system that actually works?** Avertris builds AI-powered lead qualification workflows that score, route, and prioritize leads automatically — across every channel, in English and Spanish. Book a free strategy call to see how it works for your business.`, es: `**TL;DR:** El conteo de leads es una métrica de vanidad. Las campañas que mejor lucen en tu dashboard suelen ser las que generan los leads más baratos y de menor calidad. Este artículo te da un checklist de scoring para separar prospectos reales del ruido — y te muestra cómo automatizarlo para que cada lead llegue pre-calificado.
+
+## Por Qué Necesitas Medir la Calidad de Leads
+
+La calificación de leads usualmente se trata como un problema de ventas. Marketing genera tráfico y conversiones, luego el equipo de ventas clasifica lo que llega al CRM.
+
+El problema con ese enfoque: **los marketers necesitan datos de calidad de leads para hacer bien su trabajo.**
+
+Sin ellos, te ves forzado a optimizar usando el único número que puedes ver — volumen. Pero las campañas de mayor volumen frecuentemente son las que traen los leads más baratos y de menor calidad.
+
+Mira este escenario:
+
+| | Total de Leads | Costo por Lead |
+|---|---|---|
+| Campaña A | 120 | $42 |
+| Campaña B | 45 | $111 |
+
+Cualquier marketer concluiría que la Campaña A es la ganadora. Aumentaría su presupuesto y recortaría el de la Campaña B.
+
+Pero mira qué pasa cuando agregas datos de calidad:
+
+| | Total de Leads | CPL | Leads Calificados | Costo por Lead Calificado |
+|---|---|---|---|---|
+| Campaña A | 120 | $42 | 8 | $630 |
+| Campaña B | 45 | $111 | 38 | $132 |
+
+La Campaña B trae casi **5x más leads calificados al 20% del costo**. Sin datos de calidad, no solo tomas la decisión equivocada — estás saboteando activamente tus mejores campañas.
+
+## Dónde Encontrar Datos de Calidad de Leads
+
+Las señales están ahí. Solo están dispersas entre las herramientas que ya usas. Aquí es donde buscar:
+
+**Datos de Atribución de Marketing** — tus plataformas de ads (Google Ads, Meta Ads, etc.) te dicen de dónde vino el lead: fuente, canal, campaña, landing page y keywords. Las keywords son especialmente valiosas porque revelan intención de compra.
+
+**Métricas de Llamadas** — tu sistema de seguimiento de llamadas te dice la duración (llamadas cortas usualmente son spam), hora de la llamada y si fue contestada. Una llamada entrante de 3 minutos en horario de oficina vale 10x más que una llamada de 15 segundos a medianoche.
+
+**Contenido del Mensaje** — grabaciones de llamadas, formularios y chats revelan lo que el lead realmente quiere: intención de producto o servicio, disposición de compra, señales de presupuesto, timeline y encaje geográfico.
+
+El desafío es que nada de esto vive en un solo lugar a menos que tengas un sistema centralizado de gestión de leads. Más sobre eso abajo.
+
+## Checklist de Scoring de Calidad de Leads
+
+Usa este checklist para calificar leads manualmente — o como blueprint para las reglas automatizadas que construirás después.
+
+### Señales de Encaje
+*¿Este lead encaja con a quién realmente sirves?*
+
+- **Encaje de Servicio** — El lead mencionó un servicio específico que ofreces (no una consulta general o categoría incorrecta). *+10-20 pts*
+- **Geografía** — El lead está dentro de tu área de servicio. *+10 pts*
+- **Nuevo vs. Cliente Existente** — El lead es un prospecto nuevo, no un cliente actual con una pregunta de soporte. *+5-10 pts*
+- **Encaje de Industria o Empresa** — La industria o tipo de empresa del lead se alinea con tu perfil de cliente objetivo. *+10 pts*
+
+### Señales de Intención
+*¿Esta persona está tratando activamente de resolver un problema?*
+
+- **Duración de Llamada > 60 Segundos** — Las llamadas cortas raramente son calificadas. Conversaciones de más de un minuto indican interés genuino. *+15 pts*
+- **Solicitud o Pregunta Específica** — El lead preguntó sobre precios, plazos, disponibilidad o un resultado específico — no solo "¿qué hacen?" *+10 pts*
+- **Mencionó un Evento Detonador** — El lead mencionó una razón para contactar ahora (fallo de equipo, deadline próximo, presión competitiva, hito de crecimiento). *+15 pts*
+- **Solicitó Cotización o Cita** — El lead pidió siguientes pasos. Esta es la señal de intención más clara disponible. *+20 pts*
+
+### Señales de Preparación
+*¿Este lead puede realmente avanzar?*
+
+- **Señal de Presupuesto** — El lead mencionó un rango de presupuesto, referencia el precio de un competidor o preguntó sobre financiamiento. *+10 pts*
+- **Urgencia Indicada** — El lead expresó un timeline específico o dijo que algo necesitaba pasar pronto. *+10 pts*
+- **Tomador de Decisión en Línea** — El lead es la persona que toma (o influye fuertemente) la decisión de compra. *+10 pts*
+- **Cita Agendada** — La llamada o formulario resultó en una consulta, cotización o reunión programada. *+25 pts*
+
+### Descalificadores
+*Estas señales reducen o eliminan el valor del lead.*
+
+- **Llamada Menor a 30 Segundos** — Probablemente marcación errónea, spam o número equivocado. *-20 pts o DQ*
+- **Llamada de Servicio al Cliente Existente** — No es una nueva oportunidad. *-10 pts o DQ*
+- **Solicitud Fuera de Área** — No puedes atender a este lead. *DQ*
+- **Spam o Venta** — Pitch de proveedor, reclutador o robocall. *DQ*
+
+### Interpretación del Score
+
+- **50+ pts** — Lead fuerte. Calificado y vale la pena priorizar.
+- **25-49 pts** — Lead moderado. Vale seguimiento, necesita más contexto.
+- **Menos de 25 pts** — Lead débil. Revisa antes de invertir tiempo de ventas.
+- **DQ** — Eliminar del reporte completamente.
+
+## Cómo Capturar Señales de Calidad a Escala
+
+El problema real: a menos que tengas un sistema centralizado de gestión de leads, estas señales están dispersas entre plataformas de ads, herramientas de tracking de llamadas, CRMs y calendarios de citas.
+
+Es técnicamente posible juntar todo manualmente cruzando referencias de cada plataforma. Pero ese método es lento, inconsistente e imposible de mantener cuando el volumen de leads aumenta.
+
+Lo que necesitas es un sistema donde todos los datos de un lead individual — cada acción de conversión, transcripción de llamada, formulario y resultado de venta — estén vinculados a un solo perfil de lead, no documentados como eventos separados en diferentes plataformas.
+
+Cuando tienes esa vista centralizada, puedes:
+
+1. **Calificar leads** porque todos los datos de calidad de todas las fuentes están vinculados a la persona detrás
+2. **Optimizar campañas basándote en calidad** porque puedes potenciar las campañas que traen leads reales, no solo alto volumen
+3. **Reportar impacto del marketing en resultados, no actividad** mostrando leads calificados generados por cada canal, campaña y keyword
+
+## De Checklist Manual a Scoring Automático
+
+El checklist de arriba es valioso, pero ejecutarlo manualmente en cada lead es una tarea innecesaria. El poder real viene cuando lo automatizas.
+
+Mapea cada ítem del checklist a una condición automatizada si/entonces:
+
+- SI duración de llamada > 60 segundos Y el lead mencionó "cita" → agregar +35 puntos
+- SI el formulario incluye [keyword de servicio] Y un rango de presupuesto → agregar +20 puntos
+- SI duración de llamada < 30 segundos Y la transcripción incluye "número equivocado" → marcar como descalificado
+
+Una vez que las reglas están activas, cada lead llega pre-calificado. Los leads calificados alimentan tu reporte y se sincronizan con tus plataformas de ads como conversiones de alto valor. Los leads descalificados se filtran antes de inflar tu CPL o envenenar tus datos de optimización.
+
+El resultado: tus campañas empiezan a perseguir los leads que realmente cierran — no solo los más baratos de generar.
+
+## Bonus: Agrega Valor Real de Ingresos
+
+El lead scoring usa valores numéricos para indicar qué tan prometedor es un lead. Pero hay otra métrica que impacta significativamente la priorización: **el ingreso potencial**.
+
+Asigna un valor monetario de cotización a cada lead basado en el producto o servicio que le interesa.
+
+Un lead que encaja bien pero tiene un timeline más largo podría tener un score promedio. Pero si el servicio que quiere cuesta $10,000, ese valor de cotización te dice que es un prospecto que vale seguir — incluso si no es tan caliente como un lead de mayor urgencia pero menor valor.
+
+Entender qué leads están tanto calificados COMO son de alto valor es la diferencia entre optimizar por volumen y optimizar por ingresos.
+
+## La Conclusión
+
+La calidad de leads no es algo que lees de un dashboard que solo muestra conteos. Es algo que mides — señal por señal, lead por lead — y luego sistematizas para que funcione sin ti.
+
+Empieza con el checklist. Califica una semana de leads. Luego construye las reglas que lo hagan automático.
+
+Si estás corriendo campañas que generan leads pero no puedes distinguir cuáles realmente valen la pena, estás optimizando a ciegas. Arregla la medición primero — todo lo demás sigue.
+
+**¿Necesitas ayuda construyendo un sistema de lead scoring que funcione?** Avertris construye flujos de calificación de leads con IA que califican, rutean y priorizan leads automáticamente — en todos los canales, en inglés y español. Agenda una llamada estratégica gratuita para ver cómo funciona para tu negocio.` } },
       /* — DR / Local SEO — */
       { slug: "ai-dominican-republic-businesses-2026", isoDate: "2026-02-10", cat: "Dominican Republic", title: { en: "AI for Dominican Republic Businesses: How Local Companies Are Automating in 2026", es: "IA para Negocios en República Dominicana: Cómo las Empresas Locales Automatizan en 2026" }, desc: { en: "From Santo Domingo to Santiago, Dominican businesses are deploying AI chatbots, CRM automation, and marketing analytics to compete globally. Here's what's working — and what's wasting money.", es: "Desde Santo Domingo hasta Santiago, empresas dominicanas están implementando chatbots de IA, automatización de CRM y analítica de marketing para competir globalmente. Esto es lo que funciona — y lo que desperdicia dinero." }, date: { en: "Feb 10, 2026", es: "10 Feb, 2026" }, read: { en: "10 min read", es: "10 min de lectura" }, keywords: "AI Dominican Republic, chatbot Santo Domingo, CRM automation Dominican Republic, AI consulting DR", content: { en: `**TL;DR:** Dominican Republic businesses are bleeding $5K-$30K/month through manual processes that AI can automate in weeks. From Santo Domingo retail to Santiago manufacturing, here's what's actually working — and what's burning cash.
 
