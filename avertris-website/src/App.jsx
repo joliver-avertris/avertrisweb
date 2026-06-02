@@ -312,44 +312,50 @@ The challenge is that none of this lives in one place unless you have a centrali
 
 Use this checklist to score leads manually — or as the blueprint for automated rules you'll build later.
 
-### Fit Signals
-*Does this lead match who you actually serve?*
+### Fit Signals — Does this lead match who you actually serve?
 
-- **Service Match** — The lead mentioned a specific service you offer (not a general inquiry or wrong-category request). *+10-20 pts*
-- **Geography** — The lead is within your service area. *+10 pts*
-- **New vs. Existing Customer** — The lead is a new prospect, not a current customer with a support question. *+5-10 pts*
-- **Company or Industry Match** — The lead's industry or company type aligns with your target customer profile. *+10 pts*
+| Signal | What to Look For | Points |
+|---|---|---|
+| Service Match | The lead mentioned a specific service you offer (not a general inquiry or wrong-category request) | +10-20 pts |
+| Geography | The lead is within your service area | +10 pts |
+| New vs. Existing Customer | The lead is a new prospect, not a current customer with a support question | +5-10 pts |
+| Company or Industry Match | The lead's industry or company type aligns with your target customer profile | +10 pts |
 
-### Intent Signals
-*Is this person actively trying to solve a problem?*
+### Intent Signals — Is this person actively trying to solve a problem?
 
-- **Call Duration > 60 Seconds** — Short calls are rarely qualified. Conversations over a minute indicate genuine interest. *+15 pts*
-- **Specific Request or Question** — The lead asked about pricing, timeline, availability, or a specific outcome — not just "what do you do?" *+10 pts*
-- **Mentioned a Trigger Event** — The lead referenced a reason for reaching out now (equipment failure, upcoming deadline, competitive pressure, growth milestone). *+15 pts*
-- **Requested a Quote or Appointment** — The lead asked for next steps. This is the clearest intent signal available. *+20 pts*
+| Signal | What to Look For | Points |
+|---|---|---|
+| Call Duration > 60 Seconds | Short calls are rarely qualified. Conversations over a minute indicate genuine interest | +15 pts |
+| Specific Request or Question | The lead asked about pricing, timeline, availability, or a specific outcome — not just "what do you do?" | +10 pts |
+| Mentioned a Trigger Event | The lead referenced a reason for reaching out now (equipment failure, upcoming deadline, competitive pressure) | +15 pts |
+| Requested a Quote or Appointment | The lead asked for next steps. This is the clearest intent signal available | +20 pts |
 
-### Readiness Signals
-*Can this lead actually move forward?*
+### Readiness Signals — Can this lead actually move forward?
 
-- **Budget Signal** — The lead mentioned a budget range, referenced a competitor's price, or asked about financing. *+10 pts*
-- **Urgency Indicated** — The lead expressed a specific timeline or said something needed to happen soon. *+10 pts*
-- **Decision-Maker on the Line** — The lead is the person who makes (or heavily influences) the purchase decision. *+10 pts*
-- **Appointment Booked** — The call or form resulted in a scheduled consultation, quote, or meeting. *+25 pts*
+| Signal | What to Look For | Points |
+|---|---|---|
+| Budget Signal | The lead mentioned a budget range, referenced a competitor's price, or asked about financing | +10 pts |
+| Urgency Indicated | The lead expressed a specific timeline or said something needed to happen soon | +10 pts |
+| Decision-Maker on the Line | The lead is the person who makes (or heavily influences) the purchase decision | +10 pts |
+| Appointment Booked | The call or form resulted in a scheduled consultation, quote, or meeting | +25 pts |
 
-### Disqualifiers
-*These signals reduce or eliminate lead value.*
+### Disqualifiers — These signals reduce or eliminate lead value
 
-- **Call Under 30 Seconds** — Likely a misdial, spam, or wrong number. *-20 pts or DQ*
-- **Existing Customer Service Call** — Not a new opportunity. *-10 pts or DQ*
-- **Out-of-Area Request** — You can't serve this lead. *DQ*
-- **Spam or Solicitation** — Vendor pitch, recruiter, or robocall. *DQ*
+| Signal | What to Look For | Points |
+|---|---|---|
+| Call Under 30 Seconds | Likely a misdial, spam, or wrong number | -20 pts or DQ |
+| Existing Customer Service Call | Not a new opportunity | -10 pts or DQ |
+| Out-of-Area Request | You can't serve this lead | DQ |
+| Spam or Solicitation | Vendor pitch, recruiter, or robocall | DQ |
 
 ### Score Interpretation
 
-- **50+ pts** — Strong lead. Qualified and worth prioritizing.
-- **25-49 pts** — Moderate lead. Worth follow-up, needs more context.
-- **Under 25 pts** — Weak lead. Review before spending sales time.
-- **DQ** — Remove from reporting entirely.
+| Score | Meaning | Action |
+|---|---|---|
+| 50+ pts | Strong lead | Qualified and worth prioritizing |
+| 25-49 pts | Moderate lead | Worth follow-up, needs more context |
+| Under 25 pts | Weak lead | Review before spending sales time |
+| DQ | Disqualified | Remove from reporting entirely |
 
 ## How to Capture Lead Quality Signals at Scale
 
@@ -441,44 +447,50 @@ El desafío es que nada de esto vive en un solo lugar a menos que tengas un sist
 
 Usa este checklist para calificar leads manualmente — o como blueprint para las reglas automatizadas que construirás después.
 
-### Señales de Encaje
-*¿Este lead encaja con a quién realmente sirves?*
+### Señales de Encaje — ¿Este lead encaja con a quién realmente sirves?
 
-- **Encaje de Servicio** — El lead mencionó un servicio específico que ofreces (no una consulta general o categoría incorrecta). *+10-20 pts*
-- **Geografía** — El lead está dentro de tu área de servicio. *+10 pts*
-- **Nuevo vs. Cliente Existente** — El lead es un prospecto nuevo, no un cliente actual con una pregunta de soporte. *+5-10 pts*
-- **Encaje de Industria o Empresa** — La industria o tipo de empresa del lead se alinea con tu perfil de cliente objetivo. *+10 pts*
+| Señal | Qué Buscar | Puntos |
+|---|---|---|
+| Encaje de Servicio | El lead mencionó un servicio específico que ofreces (no una consulta general o categoría incorrecta) | +10-20 pts |
+| Geografía | El lead está dentro de tu área de servicio | +10 pts |
+| Nuevo vs. Cliente Existente | El lead es un prospecto nuevo, no un cliente actual con una pregunta de soporte | +5-10 pts |
+| Encaje de Industria o Empresa | La industria o tipo de empresa del lead se alinea con tu perfil de cliente objetivo | +10 pts |
 
-### Señales de Intención
-*¿Esta persona está tratando activamente de resolver un problema?*
+### Señales de Intención — ¿Esta persona está tratando activamente de resolver un problema?
 
-- **Duración de Llamada > 60 Segundos** — Las llamadas cortas raramente son calificadas. Conversaciones de más de un minuto indican interés genuino. *+15 pts*
-- **Solicitud o Pregunta Específica** — El lead preguntó sobre precios, plazos, disponibilidad o un resultado específico — no solo "¿qué hacen?" *+10 pts*
-- **Mencionó un Evento Detonador** — El lead mencionó una razón para contactar ahora (fallo de equipo, deadline próximo, presión competitiva, hito de crecimiento). *+15 pts*
-- **Solicitó Cotización o Cita** — El lead pidió siguientes pasos. Esta es la señal de intención más clara disponible. *+20 pts*
+| Señal | Qué Buscar | Puntos |
+|---|---|---|
+| Duración de Llamada > 60 Segundos | Las llamadas cortas raramente son calificadas. Conversaciones de más de un minuto indican interés genuino | +15 pts |
+| Solicitud o Pregunta Específica | El lead preguntó sobre precios, plazos, disponibilidad o un resultado específico — no solo "¿qué hacen?" | +10 pts |
+| Mencionó un Evento Detonador | El lead mencionó una razón para contactar ahora (fallo de equipo, deadline próximo, presión competitiva) | +15 pts |
+| Solicitó Cotización o Cita | El lead pidió siguientes pasos. Esta es la señal de intención más clara disponible | +20 pts |
 
-### Señales de Preparación
-*¿Este lead puede realmente avanzar?*
+### Señales de Preparación — ¿Este lead puede realmente avanzar?
 
-- **Señal de Presupuesto** — El lead mencionó un rango de presupuesto, referencia el precio de un competidor o preguntó sobre financiamiento. *+10 pts*
-- **Urgencia Indicada** — El lead expresó un timeline específico o dijo que algo necesitaba pasar pronto. *+10 pts*
-- **Tomador de Decisión en Línea** — El lead es la persona que toma (o influye fuertemente) la decisión de compra. *+10 pts*
-- **Cita Agendada** — La llamada o formulario resultó en una consulta, cotización o reunión programada. *+25 pts*
+| Señal | Qué Buscar | Puntos |
+|---|---|---|
+| Señal de Presupuesto | El lead mencionó un rango de presupuesto, referencia el precio de un competidor o preguntó sobre financiamiento | +10 pts |
+| Urgencia Indicada | El lead expresó un timeline específico o dijo que algo necesitaba pasar pronto | +10 pts |
+| Tomador de Decisión en Línea | El lead es la persona que toma (o influye fuertemente) la decisión de compra | +10 pts |
+| Cita Agendada | La llamada o formulario resultó en una consulta, cotización o reunión programada | +25 pts |
 
-### Descalificadores
-*Estas señales reducen o eliminan el valor del lead.*
+### Descalificadores — Estas señales reducen o eliminan el valor del lead
 
-- **Llamada Menor a 30 Segundos** — Probablemente marcación errónea, spam o número equivocado. *-20 pts o DQ*
-- **Llamada de Servicio al Cliente Existente** — No es una nueva oportunidad. *-10 pts o DQ*
-- **Solicitud Fuera de Área** — No puedes atender a este lead. *DQ*
-- **Spam o Venta** — Pitch de proveedor, reclutador o robocall. *DQ*
+| Señal | Qué Buscar | Puntos |
+|---|---|---|
+| Llamada Menor a 30 Segundos | Probablemente marcación errónea, spam o número equivocado | -20 pts o DQ |
+| Llamada de Servicio al Cliente Existente | No es una nueva oportunidad | -10 pts o DQ |
+| Solicitud Fuera de Área | No puedes atender a este lead | DQ |
+| Spam o Venta | Pitch de proveedor, reclutador o robocall | DQ |
 
 ### Interpretación del Score
 
-- **50+ pts** — Lead fuerte. Calificado y vale la pena priorizar.
-- **25-49 pts** — Lead moderado. Vale seguimiento, necesita más contexto.
-- **Menos de 25 pts** — Lead débil. Revisa antes de invertir tiempo de ventas.
-- **DQ** — Eliminar del reporte completamente.
+| Score | Significado | Acción |
+|---|---|---|
+| 50+ pts | Lead fuerte | Calificado y vale la pena priorizar |
+| 25-49 pts | Lead moderado | Vale seguimiento, necesita más contexto |
+| Menos de 25 pts | Lead débil | Revisa antes de invertir tiempo de ventas |
+| DQ | Descalificado | Eliminar del reporte completamente |
 
 ## Cómo Capturar Señales de Calidad a Escala
 
